@@ -449,7 +449,7 @@ export default function HomePage() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2.5 text-[var(--primary)] px-8 py-4 border-2 border-[var(--primary)] rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-[var(--primary)] hover:text-white hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2.5 text-[var(--primary)] px-9 py-[18px] border-2 border-[var(--primary)] rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-[var(--primary)] hover:text-white hover:-translate-y-0.5"
           >
             Let's Talk
             <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
