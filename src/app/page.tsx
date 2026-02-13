@@ -806,55 +806,66 @@ export default function HomePage() {
           CTA/CONTACT SECTION
           ============================================ */}
       <section className="cta-section bg-gradient-to-b from-[var(--bg-light)] to-white py-[60px] md:py-[80px] lg:py-[120px]" id="contact">
-        <div className="container-main grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="cta-content">
-            <h2 className="font-headline text-2xl md:text-3xl lg:text-[42px] font-medium text-[var(--text-dark)] mb-4 tracking-tight leading-tight">
-              What problem should AI solve for you?
-            </h2>
-            <p className="text-[17px] text-[var(--text-body)] leading-[1.7]">
-              We start with the business problem, not the technology. Tell us what you're trying to accomplish.
-            </p>
+        <div className="container-main grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+          {/* Left: Motion Blur Image */}
+          <div className="relative rounded-[20px] overflow-hidden min-h-[300px] lg:min-h-0 order-2 lg:order-1 shadow-[0_24px_64px_rgba(0,0,0,0.12)]">
+            <img
+              src="/images/cta-motion.jpg"
+              alt="Person working with technology"
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
 
-          <div className="cta-form bg-white p-7 lg:p-10 rounded-[20px] shadow-[0_24px_64px_rgba(0,0,0,0.08)] border border-[var(--border-light)]">
-            <form className="space-y-4">
-              <div className="form-group">
-                <label className="block text-sm font-medium mb-1.5 text-[var(--text-dark)]">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  className="w-full px-4 py-3.5 border border-[var(--border-light)] rounded-lg font-body text-[15px] transition-all duration-250 focus:outline-none focus:border-[var(--primary)] focus:shadow-[0_0_0_3px_var(--primary-light)]"
-                />
-              </div>
-              <div className="form-group">
-                <label className="block text-sm font-medium mb-1.5 text-[var(--text-dark)]">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="you@company.com"
-                  className="w-full px-4 py-3.5 border border-[var(--border-light)] rounded-lg font-body text-[15px] transition-all duration-250 focus:outline-none focus:border-[var(--primary)] focus:shadow-[0_0_0_3px_var(--primary-light)]"
-                />
-              </div>
-              <div className="form-group">
-                <label className="block text-sm font-medium mb-1.5 text-[var(--text-dark)]">
-                  What's on your mind?
-                </label>
-                <textarea
-                  placeholder="Tell us about your project, challenge, or question..."
-                  rows={4}
-                  className="w-full px-4 py-3.5 border border-[var(--border-light)] rounded-lg font-body text-[15px] transition-all duration-250 focus:outline-none focus:border-[var(--primary)] focus:shadow-[0_0_0_3px_var(--primary-light)] resize-none"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-[var(--primary)] text-white py-4 border-none rounded-lg font-body text-[15px] font-semibold cursor-pointer transition-all duration-250 mt-2 hover:bg-[var(--primary-dark)] hover:-translate-y-0.5 shadow-lg"
-              >
-                Get a Free Assessment
-              </button>
-            </form>
+          {/* Right: Title + Form */}
+          <div className="flex flex-col justify-center order-1 lg:order-2">
+            <h2 className="font-headline text-[26px] sm:text-[32px] md:text-[42px] font-medium text-[var(--text-dark)] mb-4 leading-[1.2] tracking-[-0.5px]">
+              What problem should AI solve for you?
+            </h2>
+            <p className="text-[17px] text-[var(--text-body)] leading-[1.75] mb-8">
+              We start with the business problem, not the technology. Tell us what you&apos;re trying to accomplish.
+            </p>
+
+            <div className="cta-form bg-white p-7 lg:p-10 rounded-[20px] shadow-[0_24px_64px_rgba(0,0,0,0.08)] border border-[var(--border-light)]">
+              <form className="space-y-4">
+                <div className="form-group">
+                  <label className="block text-sm font-medium mb-1.5 text-[var(--text-dark)]">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Your name"
+                    className="w-full px-4 py-3.5 border border-[var(--border-light)] rounded-lg font-body text-[15px] transition-all duration-250 focus:outline-none focus:border-[var(--primary)] focus:shadow-[0_0_0_3px_var(--primary-light)]"
+                  />
+                </div>
+                <div className="form-group">
+                  <label className="block text-sm font-medium mb-1.5 text-[var(--text-dark)]">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="you@company.com"
+                    className="w-full px-4 py-3.5 border border-[var(--border-light)] rounded-lg font-body text-[15px] transition-all duration-250 focus:outline-none focus:border-[var(--primary)] focus:shadow-[0_0_0_3px_var(--primary-light)]"
+                  />
+                </div>
+                <div className="form-group">
+                  <label className="block text-sm font-medium mb-1.5 text-[var(--text-dark)]">
+                    What&apos;s on your mind?
+                  </label>
+                  <textarea
+                    placeholder="Tell us about your project, challenge, or question..."
+                    rows={4}
+                    className="w-full px-4 py-3.5 border border-[var(--border-light)] rounded-lg font-body text-[15px] transition-all duration-250 focus:outline-none focus:border-[var(--primary)] focus:shadow-[0_0_0_3px_var(--primary-light)] resize-none"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-[var(--primary)] text-white py-4 border-none rounded-lg font-body text-[15px] font-semibold cursor-pointer transition-all duration-250 mt-2 hover:bg-[var(--primary-dark)] hover:-translate-y-0.5 shadow-lg"
+                >
+                  Get a Free Assessment
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
