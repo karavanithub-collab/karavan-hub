@@ -130,7 +130,7 @@ export default function Navbar() {
             {/* AI Solutions */}
             <li className="relative group">
               <button
-                className={`flex items-center gap-1.5 text-sm font-semibold transition-colors duration-300 group-hover:text-accent-cyan ${
+                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 group-hover:text-accent-cyan ${
                   isScrolled
                     ? 'text-text-body group-hover:text-primary'
                     : 'text-white/90'
@@ -166,7 +166,7 @@ export default function Navbar() {
             {/* IT Solutions */}
             <li className="relative group">
               <button
-                className={`flex items-center gap-1.5 text-sm font-semibold transition-colors duration-300 group-hover:text-accent-cyan ${
+                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 group-hover:text-accent-cyan ${
                   isScrolled
                     ? 'text-text-body group-hover:text-primary'
                     : 'text-white/90'
@@ -202,7 +202,7 @@ export default function Navbar() {
             {/* Company */}
             <li className="relative group">
               <button
-                className={`flex items-center gap-1.5 text-sm font-semibold transition-colors duration-300 group-hover:text-accent-cyan ${
+                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 group-hover:text-accent-cyan ${
                   isScrolled
                     ? 'text-text-body group-hover:text-primary'
                     : 'text-white/90'
@@ -255,7 +255,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden flex flex-col justify-center gap-1 w-8 h-8 bg-none border-none cursor-pointer p-1 z-[1001]"
+            className="lg:hidden flex flex-col justify-center gap-[5px] w-8 h-8 bg-none border-none cursor-pointer p-1 z-[1001]"
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
             onClick={toggleMobileMenu}
@@ -265,7 +265,7 @@ export default function Navbar() {
                 isScrolled ? 'bg-text-dark' : 'bg-white'
               } ${
                 mobileMenuOpen
-                  ? 'rotate-45 translate-y-1.5 translate-x-0.5'
+                  ? 'rotate-45 translate-y-[5px] translate-x-[5px]'
                   : ''
               }`}
             ></span>
@@ -279,7 +279,7 @@ export default function Navbar() {
                 isScrolled ? 'bg-text-dark' : 'bg-white'
               } ${
                 mobileMenuOpen
-                  ? '-rotate-45 -translate-y-1.5 translate-x-0.5'
+                  ? '-rotate-45 -translate-y-[5px] translate-x-[5px]'
                   : ''
               }`}
             ></span>
@@ -309,7 +309,7 @@ export default function Navbar() {
             className={`${mobileSubmenus.ai ? 'active' : ''}`}
           >
             <button
-              className="flex items-center justify-between w-full text-2xl font-medium text-text-dark hover:text-primary transition-colors duration-200"
+              className="flex items-center justify-between w-full text-[28px] font-medium text-text-dark hover:text-primary transition-colors duration-200"
               onClick={() => toggleMobileSubmenu('ai')}
               aria-expanded={mobileSubmenus.ai}
             >
@@ -354,7 +354,7 @@ export default function Navbar() {
             className={`${mobileSubmenus.it ? 'active' : ''}`}
           >
             <button
-              className="flex items-center justify-between w-full text-2xl font-medium text-text-dark hover:text-primary transition-colors duration-200"
+              className="flex items-center justify-between w-full text-[28px] font-medium text-text-dark hover:text-primary transition-colors duration-200"
               onClick={() => toggleMobileSubmenu('it')}
               aria-expanded={mobileSubmenus.it}
             >
@@ -399,7 +399,7 @@ export default function Navbar() {
             className={`${mobileSubmenus.company ? 'active' : ''}`}
           >
             <button
-              className="flex items-center justify-between w-full text-2xl font-medium text-text-dark hover:text-primary transition-colors duration-200"
+              className="flex items-center justify-between w-full text-[28px] font-medium text-text-dark hover:text-primary transition-colors duration-200"
               onClick={() => toggleMobileSubmenu('company')}
               aria-expanded={mobileSubmenus.company}
             >
