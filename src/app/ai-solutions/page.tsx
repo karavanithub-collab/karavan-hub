@@ -696,11 +696,11 @@ export default function AISolutionsPage() {
                 {'\n'}
                 <span className="text-[rgba(148,163,184,0.5)]">      ├────────────────────────────────────┤</span>
                 {'\n'}
-                <span className="text-[rgba(148,163,184,0.5)]">      │</span> <span className="text-[#a78bfa]">import</span> <span className="text-[#22d3ee]">{ AIEngine }</span> <span className="text-[#a78bfa]">from</span> <span className="text-[#60a5fa]">'@core'</span> <span className="text-[rgba(148,163,184,0.5)]">│</span>
+                <span className="text-[rgba(148,163,184,0.5)]">      │</span> <span className="text-[#a78bfa]">import</span> <span className="text-[#22d3ee]">{'{'}  AIEngine  {'}'}</span> <span className="text-[#a78bfa]">from</span> <span className="text-[#60a5fa]">'@core'</span> <span className="text-[rgba(148,163,184,0.5)]">│</span>
                 {'\n'}
                 <span className="text-[rgba(148,163,184,0.5)]">      │</span>                                    <span className="text-[rgba(148,163,184,0.5)]">│</span>
                 {'\n'}
-                <span className="text-[rgba(148,163,184,0.5)]">      │</span> <span className="text-[#a78bfa]">const</span> <span className="text-white">app</span> <span className="text-[rgba(148,163,184,0.5)]">=</span> <span className="text-[#22d3ee]">new</span> <span className="text-[#60a5fa]">AIEngine</span><span className="text-[rgba(148,163,184,0.5)]">({</span>       <span className="text-[rgba(148,163,184,0.5)]">│</span>
+                <span className="text-[rgba(148,163,184,0.5)]">      │</span> <span className="text-[#a78bfa]">const</span> <span className="text-white">app</span> <span className="text-[rgba(148,163,184,0.5)]">=</span> <span className="text-[#22d3ee]">new</span> <span className="text-[#60a5fa]">AIEngine</span><span className="text-[rgba(148,163,184,0.5)]">{'{'}(</span>       <span className="text-[rgba(148,163,184,0.5)]">│</span>
                 {'\n'}
                 <span className="text-[rgba(148,163,184,0.5)]">      │</span>   <span className="text-white">model</span><span className="text-[rgba(148,163,184,0.5)]">:</span> <span className="text-[#60a5fa]">'GPT-4'</span><span className="text-[rgba(148,163,184,0.5)]">,</span>                 <span className="text-[rgba(148,163,184,0.5)]">│</span>
                 {'\n'}
@@ -708,7 +708,7 @@ export default function AISolutionsPage() {
                 {'\n'}
                 <span className="text-[rgba(148,163,184,0.5)]">      │</span>   <span className="text-white">vector_db</span><span className="text-[rgba(148,163,184,0.5)]">:</span> <span className="text-[#60a5fa]">'Pinecone'</span>           <span className="text-[rgba(148,163,184,0.5)]">│</span>
                 {'\n'}
-                <span className="text-[rgba(148,163,184,0.5)]">      │</span> <span className="text-[rgba(148,163,184,0.5)]">})</span>                                 <span className="text-[rgba(148,163,184,0.5)]">│</span>
+                <span className="text-[rgba(148,163,184,0.5)]">      │</span> <span className="text-[rgba(148,163,184,0.5)]">{'}'})</span>                                 <span className="text-[rgba(148,163,184,0.5)]">│</span>
                 {'\n'}
                 <span className="text-[rgba(148,163,184,0.5)]">      │</span>                                    <span className="text-[rgba(148,163,184,0.5)]">│</span>
                 {'\n'}
