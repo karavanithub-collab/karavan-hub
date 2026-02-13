@@ -270,7 +270,7 @@ export default function HomePage() {
             <div className="hero-cta-group flex gap-4 flex-wrap">
               <a
                 href="#contact"
-                className="hero-cta inline-flex items-center gap-2.5 bg-white text-[#1e3a8a] px-7 py-4 rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:bg-white/95 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)] w-full sm:w-auto justify-center sm:justify-start"
+                className="hero-cta inline-flex items-center gap-2.5 bg-white text-[#1e3a8a] px-8 py-[18px] rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:bg-white/95 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
               >
                 Get a Free Assessment
                 <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-4.5 h-4.5 transition-transform duration-300 hover:translate-x-1">
@@ -279,7 +279,7 @@ export default function HomePage() {
               </a>
               <a
                 href="#services"
-                className="hero-cta hero-cta-secondary inline-flex items-center gap-2.5 bg-transparent text-white px-7 py-4 border border-white/30 rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/50 w-full sm:w-auto justify-center sm:justify-start"
+                className="hero-cta hero-cta-secondary inline-flex items-center gap-2.5 bg-transparent text-white px-8 py-[18px] border border-white/30 rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/50"
               >
                 See Our Work
               </a>
@@ -304,7 +304,7 @@ export default function HomePage() {
 
               {/* ASCII Art */}
               <div className="circuit-container relative z-10 flex items-center justify-center">
-                <pre className="circuit-ascii organic font-mono text-[14px] leading-[1.45] text-center font-medium tracking-[2px] px-4" style={{ filter: 'drop-shadow(0 0 40px rgba(34, 211, 238, 0.3)) drop-shadow(0 0 80px rgba(139, 92, 246, 0.2))' }}>
+                <pre className="circuit-ascii organic font-mono text-[13px] leading-[1.35] text-center font-medium tracking-[1px] px-4" style={{ filter: 'drop-shadow(0 0 40px rgba(34, 211, 238, 0.3)) drop-shadow(0 0 80px rgba(139, 92, 246, 0.2))' }}>
                   <span className="ascii-dim">                                   </span><span className="ascii-white">✧</span>
                   <br />
                   <span className="ascii-dim">                            </span><span className="ascii-flow">╭</span><span className="ascii-dim">─────────</span><span className="ascii-flow">╮</span>
