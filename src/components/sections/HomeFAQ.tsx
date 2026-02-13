@@ -178,17 +178,17 @@ export function HomeFAQ() {
           </p>
           <a
             href="#contact"
-            className="faq-cta-link inline-flex items-center gap-2 font-headline text-lg md:text-base font-medium text-[var(--primary)] no-underline transition-all duration-200 hover:gap-3.5 hover:text-[var(--accent-purple)]"
+            className="inline-flex items-center gap-2.5 bg-[var(--primary)] text-white px-8 py-4 rounded-lg font-headline text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-[var(--primary-dark)] hover:-translate-y-0.5 shadow-lg"
           >
             Let&apos;s Have a Conversation
             <svg
-              width="20"
-              height="20"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              className="transition-transform duration-200 group-hover:translate-x-1"
+              className="transition-transform duration-200"
             >
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
