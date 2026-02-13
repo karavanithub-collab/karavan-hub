@@ -87,12 +87,12 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-gradient-to-b from-ocean-darkest via-ocean-dark to-ocean-mid text-white pt-16 pb-10"
+      className="bg-gradient-to-b from-ocean-darkest via-ocean-dark to-ocean-mid text-white pt-[80px] pb-10"
       role="contentinfo"
     >
-      <div className="max-w-[1240px] mx-auto px-12 md:px-8 sm:px-6">
+      <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Footer Top */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8 md:gap-10 lg:gap-12 pb-12 md:pb-8 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8 md:gap-10 lg:gap-[64px] pb-12 border-b border-white/10">
           {/* Brand Column */}
           <div>
             <Link href="/" className="inline-block mb-4">
@@ -103,10 +103,10 @@ export default function Footer() {
                 Hub
               </span>
             </Link>
-            <p className="text-sm text-white/60 max-w-xs mb-4 leading-relaxed">
+            <p className="text-sm text-white/60 max-w-[280px] mb-4 leading-[1.7]">
               AI and IT solutions built for how your business actually works.
             </p>
-            <div className="flex items-center gap-2 text-sm text-white/70 mb-5">
+            <div className="flex items-center gap-2 text-[13px] text-white/70 mb-5">
               <CanadianFlag />
               <span>Canadian-Owned</span>
             </div>
