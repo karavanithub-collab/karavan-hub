@@ -462,11 +462,11 @@ export default function HomePage() {
       {/* ============================================
           SERVICES SECTION
           ============================================ */}
-      <section className="services-section bg-gradient-to-b from-[#f0f7ff] to-white py-[60px] md:py-[80px] lg:py-[120px]" id="services">
+      <section className="services-section bg-gradient-to-b from-[#f0f7ff] to-white py-[60px] sm:py-[80px] lg:py-[120px]" id="services">
         <div className="container-main">
           <div className="services-header text-center mb-16">
-            <h2 className="font-headline text-2xl md:text-3xl lg:text-[42px] font-medium text-[var(--text-dark)] mb-4 tracking-tight">
-              Here's how we help.
+            <h2 className="font-headline text-[26px] sm:text-[32px] lg:text-[42px] font-medium text-[var(--text-dark)] mb-4 tracking-[-0.5px]">
+              Here&#8217;s how we help.
             </h2>
             <p className="text-[17px] text-[var(--text-body)] max-w-[600px] mx-auto leading-[1.7]">
               Two specialties. One goal: technology that actually helps your business.
@@ -475,7 +475,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* AI Solutions Card */}
-            <div className="service-card bg-gradient-to-br from-white via-[#f8fafc] to-[#eff6ff] rounded-[20px] p-7 lg:p-10 border border-[rgba(37,99,235,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(37,99,235,0.12)] relative overflow-hidden group">
+            <div className="service-card bg-gradient-to-br from-white via-[#f8fafc] to-[#eff6ff] rounded-[20px] px-5 py-7 sm:p-10 border border-[rgba(37,99,235,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(37,99,235,0.12)] relative overflow-hidden group">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--accent-cyan)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
               <div className="tech-stack flex gap-4 mb-6 flex-wrap items-center">
@@ -523,7 +523,7 @@ export default function HomePage() {
                 AI Solutions
                 <span className="block text-sm font-medium text-[var(--text-muted)] mt-1">Automation & Intelligence</span>
               </h3>
-              <p className="text-[15px] text-[var(--text-body)] mb-6 leading-[1.7]">
+              <p className="text-[16px] text-[var(--text-body)] mb-6 leading-[1.7]">
                 Transform how your business operates with intelligent automation that learns, adapts, and delivers measurable ROI from day one.
               </p>
               <ul className="space-y-0 mb-6">
@@ -552,7 +552,7 @@ export default function HomePage() {
             </div>
 
             {/* IT Solutions Card */}
-            <div className="service-card bg-gradient-to-br from-white via-[#f8fafc] to-[#eff6ff] rounded-[20px] p-7 lg:p-10 border border-[rgba(37,99,235,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(37,99,235,0.12)] relative overflow-hidden group">
+            <div className="service-card bg-gradient-to-br from-white via-[#f8fafc] to-[#eff6ff] rounded-[20px] px-5 py-7 sm:p-10 border border-[rgba(37,99,235,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(37,99,235,0.12)] relative overflow-hidden group">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--accent-cyan)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
               <div className="tech-stack flex gap-4 mb-6 flex-wrap items-center">
@@ -596,7 +596,7 @@ export default function HomePage() {
                 IT Solutions
                 <span className="block text-sm font-medium text-[var(--text-muted)] mt-1">Development & Design</span>
               </h3>
-              <p className="text-[15px] text-[var(--text-body)] mb-6 leading-[1.7]">
+              <p className="text-[16px] text-[var(--text-body)] mb-6 leading-[1.7]">
                 From concept to launch, we build digital infrastructure that powers growth—reliable, scalable, and designed for tomorrow.
               </p>
               <ul className="space-y-0 mb-6">
