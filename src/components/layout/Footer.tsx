@@ -3,7 +3,7 @@ import Link from 'next/link'
 const footerLinks = {
   it: [
     { label: 'Software Development', href: '/it-solutions/software-development' },
-    { label: 'Web Design', href: '/it-solutions/web-design' },
+    { label: 'Web Design & Development', href: '/it-solutions/web-design' },
     { label: 'Data Analytics', href: '/it-solutions/data-analytics' },
     { label: 'Digital Transformation', href: '/it-solutions/digital-transformation' },
   ],
