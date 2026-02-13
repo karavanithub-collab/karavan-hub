@@ -439,17 +439,17 @@ export default function HomePage() {
       {/* ============================================
           VALUE PROPOSITION SECTION
           ============================================ */}
-      <section className="value-section bg-white py-[60px] md:py-[80px] lg:py-[120px]">
+      <section className="value-section bg-white py-[60px] sm:py-[80px] lg:py-[120px]">
         <div className="container-main max-w-[900px] text-center">
-          <h2 className="font-headline text-2xl md:text-3xl lg:text-[48px] font-semibold text-[var(--text-dark)] mb-8 leading-[1.15] tracking-[-1px]">
+          <h2 className="font-headline text-[26px] sm:text-[32px] lg:text-[48px] font-semibold text-[var(--text-dark)] mb-8 leading-[1.15] tracking-[-1px]">
             Everyone&rsquo;s talking about AI. But no one&rsquo;s explaining how to actually use it.
           </h2>
-          <p className="text-base lg:text-[19px] text-[var(--text-body)] leading-[1.8] mb-10 max-w-[800px] mx-auto">
-            You've seen the headlines. You've sat through the demos. Maybe you've even tried a few tools. And yet—nothing's really changed in how your business runs. That's not your fault. You need a partner who can cut through the noise, speak plain English, and tell you honestly what will actually work for your business—and what won't.
+          <p className="font-body text-[19px] text-[var(--text-body)] leading-[1.8] mb-10 max-w-[800px] mx-auto">
+            You&#8217;ve seen the headlines. You&#8217;ve sat through the demos. Maybe you&#8217;ve even tried a few tools. And yet—nothing&#8217;s really changed in how your business runs. That&#8217;s not your fault. You need a partner who can cut through the noise, speak plain English, and tell you honestly what will actually work for your business—and what won&#8217;t.
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2.5 text-[var(--primary)] px-9 py-[18px] border-2 border-[var(--primary)] rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-[var(--primary)] hover:text-white hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2.5 text-[var(--primary)] px-8 py-4 border-2 border-[var(--primary)] rounded-lg text-[15px] font-semibold font-headline no-underline transition-all duration-300 hover:bg-[var(--primary)] hover:text-white hover:-translate-y-0.5"
           >
             Let's Talk
             <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">

@@ -30,10 +30,8 @@
   --success: #10B981;
   --error: #EF4444;
 
-  /* Typography */
-  --font-headline: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  /* Typography — Font CSS variables are set by next/font in layout.tsx */
+  /* --font-headline, --font-body, --font-mono are defined there */
 }
 
 /* ============================================
