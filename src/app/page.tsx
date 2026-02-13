@@ -304,7 +304,7 @@ export default function HomePage() {
 
               {/* ASCII Art */}
               <div className="circuit-container relative z-10 flex items-center justify-center">
-                <pre className="circuit-ascii organic font-mono text-[13px] leading-[1.35] text-center font-medium tracking-[1px] px-4" style={{ filter: 'drop-shadow(0 0 40px rgba(34, 211, 238, 0.3)) drop-shadow(0 0 80px rgba(139, 92, 246, 0.2))' }}>
+                <pre className="circuit-ascii organic font-mono text-[14px] leading-[1.45] text-center font-medium tracking-[2px] px-4" style={{ filter: 'drop-shadow(0 0 40px rgba(34, 211, 238, 0.3)) drop-shadow(0 0 80px rgba(139, 92, 246, 0.2))' }}>
                   <span className="ascii-dim">                                   </span><span className="ascii-white">✧</span>
                   <br />
                   <span className="ascii-dim">                            </span><span className="ascii-flow">╭</span><span className="ascii-dim">─────────</span><span className="ascii-flow">╮</span>
