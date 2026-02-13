@@ -441,10 +441,10 @@ export default function HomePage() {
           ============================================ */}
       <section className="value-section bg-white py-[60px] md:py-[80px] lg:py-[120px]">
         <div className="container-main max-w-[900px] text-center">
-          <h2 className="font-headline text-2xl md:text-3xl lg:text-[42px] font-semibold text-[var(--text-dark)] mb-8 leading-tight tracking-tight">
-            Everyone's talking about AI. But no one's explaining how to actually use it.
+          <h2 className="font-headline text-2xl md:text-3xl lg:text-[48px] font-semibold text-[var(--text-dark)] mb-8 leading-[1.15] tracking-[-1px]">
+            Everyone&rsquo;s talking about AI. But no one&rsquo;s explaining how to actually use it.
           </h2>
-          <p className="text-base lg:text-[17px] text-[var(--text-body)] leading-[1.7] mb-10 max-w-[800px] mx-auto">
+          <p className="text-base lg:text-[19px] text-[var(--text-body)] leading-[1.8] mb-10 max-w-[800px] mx-auto">
             You've seen the headlines. You've sat through the demos. Maybe you've even tried a few tools. And yet—nothing's really changed in how your business runs. That's not your fault. You need a partner who can cut through the noise, speak plain English, and tell you honestly what will actually work for your business—and what won't.
           </p>
           <a
