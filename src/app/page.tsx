@@ -627,17 +627,17 @@ export default function HomePage() {
       {/* ============================================
           TRUST & RESULTS SECTION
           ============================================ */}
-      <section className="trust-results-section bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] py-[60px] md:py-[80px] lg:py-[120px] relative overflow-hidden">
+      <section className="trust-results-section bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] py-[60px] sm:py-[80px] md:py-[120px] relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
 
         <div className="container-main relative z-10">
           {/* Top Row: Copy + Company Stats */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-16 items-center">
             <div className="trust-content">
-              <h2 className="font-serif italic text-2xl md:text-3xl lg:text-[42px] font-medium text-white mb-6 leading-tight tracking-tight">
+              <h2 className="font-serif italic text-[26px] sm:text-[32px] md:text-[42px] font-medium text-white mb-6 leading-[1.2] tracking-[-0.5px]">
                 We&rsquo;ve been doing this a while. Here&rsquo;s what that looks like.
               </h2>
-              <p className="text-[17px] text-white/75 mb-5 leading-[1.7]">
+              <p className="text-[17px] text-white/75 mb-5 leading-[1.75]">
                 We've spent over a decade helping businesses turn fragmented processes into reliable systems they can scale on.
               </p>
               <a
@@ -651,29 +651,29 @@ export default function HomePage() {
               </a>
             </div>
 
-            <div className="company-stats-card bg-white/8 backdrop-blur-2xl rounded-[20px] p-7 lg:p-10 grid grid-cols-2 gap-6 lg:gap-8 shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-white/15">
+            <div className="company-stats-card bg-white/8 backdrop-blur-[24px] rounded-[20px] p-7 md:p-10 grid grid-cols-2 gap-6 md:gap-8 shadow-[0_20px_60px_rgba(0,0,0,0.2)] border border-white/15">
               <div className="company-stat text-center">
-                <div className="company-stat-number font-headline text-5xl lg:text-6xl font-bold text-white leading-none mb-2">
+                <div className="company-stat-number font-headline text-[42px] md:text-[52px] font-bold text-white leading-none mb-2">
                   14<span className="text-[var(--accent-cyan)]">+</span>
                 </div>
-                <div className="company-stat-label text-[11px] lg:text-xs font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
+                <div className="company-stat-label text-xs font-semibold text-white/85 uppercase tracking-[1.5px] leading-[1.4]">
                   Years Combined Experience
                 </div>
               </div>
               <div className="company-stat text-center">
-                <div className="company-stat-number font-headline text-5xl lg:text-6xl font-bold text-white leading-none mb-2">
+                <div className="company-stat-number font-headline text-[42px] md:text-[52px] font-bold text-white leading-none mb-2">
                   6
                 </div>
-                <div className="company-stat-label text-[11px] lg:text-xs font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
+                <div className="company-stat-label text-xs font-semibold text-white/85 uppercase tracking-[1.5px] leading-[1.4]">
                   Years at Fortune 500
                 </div>
               </div>
               <div className="col-span-2 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
               <div className="col-span-2 text-center">
-                <div className="company-stat-number font-headline text-5xl lg:text-6xl font-bold text-white leading-none mb-2">
+                <div className="company-stat-number font-headline text-[42px] md:text-[52px] font-bold text-white leading-none mb-2">
                   10<span className="text-[var(--accent-cyan)]">+</span>
                 </div>
-                <div className="company-stat-label text-[11px] lg:text-xs font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
+                <div className="company-stat-label text-xs font-semibold text-white/85 uppercase tracking-[1.5px] leading-[1.4]">
                   Years Enterprise Healthcare
                 </div>
               </div>
@@ -681,115 +681,115 @@ export default function HomePage() {
           </div>
 
           {/* Bottom Row: ASCII Result Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {/* 92% Efficiency */}
-            <div className="ascii-result-card bg-[rgba(34,211,238,0.12)] border border-[rgba(34,211,238,0.25)] rounded-[20px] p-6 text-center transition-transform duration-300 hover:-translate-y-1">
-              <div className="ascii-result-title text-[10px] font-semibold uppercase tracking-widest text-white/50 mb-3">
+            <div className="ascii-result-card bg-[rgba(34,211,238,0.12)] border border-[rgba(34,211,238,0.25)] rounded-[20px] px-4 py-5 md:px-5 md:py-6 text-center transition-transform duration-300 hover:-translate-y-1">
+              <div className="ascii-result-title text-[10px] font-semibold uppercase tracking-[2px] text-white/50 mb-3">
                 Efficiency
               </div>
-              <div className="ascii-result-visual h-[120px] flex items-center justify-center mb-4">
-                <pre className="result-ascii font-mono text-sm leading-relaxed text-center font-semibold tracking-wide">
-                  <span className="text-[#22d3ee]">  ╭───◉───╮</span>
+              <div className="ascii-result-visual h-[100px] md:h-[120px] flex items-center justify-center mb-4">
+                <pre className="result-ascii font-mono text-[10px] md:text-[14px] leading-[1.4] text-center font-semibold tracking-[0.5px]">
+                  <span className="text-[#22d3ee] glow-c1">  ╭───◉───╮</span>
                   <br />
-                  <span className="text-[#67e8f9]">  │</span><span className="text-[#a5f3fc]"> ◈ ─ ◈ </span><span className="text-[#67e8f9]">│</span>
+                  <span className="text-[#67e8f9] glow-c2">  │</span><span className="text-[#a5f3fc] glow-c3"> ◈ ─ ◈ </span><span className="text-[#67e8f9] glow-c2">│</span>
                   <br />
-                  <span className="text-[#22d3ee]">  │</span><span className="text-[#a5f3fc]">  ╲│╱  </span><span className="text-[#22d3ee]">│</span>
+                  <span className="text-[#22d3ee] glow-c1">  │</span><span className="text-[#a5f3fc] glow-c3">  ╲│╱  </span><span className="text-[#22d3ee] glow-c1">│</span>
                   <br />
-                  <span className="text-[#67e8f9]">  ◈──</span><span className="text-[#a5f3fc]">◉</span><span className="text-[#67e8f9]">──◈</span>
+                  <span className="text-[#67e8f9] glow-c2">  ◈──</span><span className="text-[#a5f3fc] glow-c3">◉</span><span className="text-[#67e8f9] glow-c2">──◈</span>
                   <br />
-                  <span className="text-[#22d3ee]">  │</span><span className="text-[#a5f3fc]">  ╱│╲  </span><span className="text-[#22d3ee]">│</span>
+                  <span className="text-[#22d3ee] glow-c1">  │</span><span className="text-[#a5f3fc] glow-c3">  ╱│╲  </span><span className="text-[#22d3ee] glow-c1">│</span>
                   <br />
-                  <span className="text-[#67e8f9]">  ╰───◉───╯</span>
+                  <span className="text-[#67e8f9] glow-c2">  ╰───◉───╯</span>
                 </pre>
               </div>
-              <div className="font-headline text-[28px] lg:text-[32px] font-bold text-white mb-1">
+              <div className="font-headline text-[26px] md:text-[32px] font-bold text-white mb-1">
                 92%
               </div>
-              <div className="text-[13px] text-white/75">
+              <div className="text-[13px] font-medium text-white/75">
                 Efficiency Gain
               </div>
             </div>
 
             {/* 85% Faster */}
-            <div className="ascii-result-card bg-[rgba(139,92,246,0.12)] border border-[rgba(139,92,246,0.25)] rounded-[20px] p-6 text-center transition-transform duration-300 hover:-translate-y-1">
-              <div className="ascii-result-title text-[10px] font-semibold uppercase tracking-widest text-white/50 mb-3">
+            <div className="ascii-result-card bg-[rgba(139,92,246,0.12)] border border-[rgba(139,92,246,0.25)] rounded-[20px] px-4 py-5 md:px-5 md:py-6 text-center transition-transform duration-300 hover:-translate-y-1">
+              <div className="ascii-result-title text-[10px] font-semibold uppercase tracking-[2px] text-white/50 mb-3">
                 Speed
               </div>
-              <div className="ascii-result-visual h-[120px] flex items-center justify-center mb-4">
-                <pre className="result-ascii font-mono text-sm leading-relaxed text-center font-semibold tracking-wide">
-                  <span className="text-[#a78bfa]">  ╭─────────╮</span>
+              <div className="ascii-result-visual h-[100px] md:h-[120px] flex items-center justify-center mb-4">
+                <pre className="result-ascii font-mono text-[10px] md:text-[14px] leading-[1.4] text-center font-semibold tracking-[0.5px]">
+                  <span className="text-[#a78bfa] glow-p2">  ╭─────────╮</span>
                   <br />
-                  <span className="text-[#8b5cf6]"> ╱</span><span className="text-[#c4b5fd]">  0  50  100 </span><span className="text-[#8b5cf6]">╲</span>
+                  <span className="text-[#8b5cf6] glow-p1"> ╱</span><span className="text-[#c4b5fd] glow-p3">  0  50  100 </span><span className="text-[#8b5cf6] glow-p1">╲</span>
                   <br />
-                  <span className="text-[#a78bfa]">│</span><span className="text-[#c4b5fd]">  ◦   ◦   ◦  </span><span className="text-[#a78bfa]">│</span>
+                  <span className="text-[#a78bfa] glow-p2">│</span><span className="text-[#c4b5fd] glow-p3">  ◦   ◦   ◦  </span><span className="text-[#a78bfa] glow-p2">│</span>
                   <br />
-                  <span className="text-[#8b5cf6]">│</span><span className="text-[#c4b5fd]">      ╱      </span><span className="text-[#8b5cf6]">│</span>
+                  <span className="text-[#8b5cf6] glow-p1">│</span><span className="text-[#c4b5fd] glow-p3">      ╱      </span><span className="text-[#8b5cf6] glow-p1">│</span>
                   <br />
-                  <span className="text-[#a78bfa]">│</span><span className="text-[#c4b5fd]">    ◉╱       </span><span className="text-[#a78bfa]">│</span>
+                  <span className="text-[#a78bfa] glow-p2">│</span><span className="text-[#c4b5fd] glow-p3">    ◉╱       </span><span className="text-[#a78bfa] glow-p2">│</span>
                   <br />
-                  <span className="text-[#8b5cf6]"> ╲</span><span className="text-[#c4b5fd]">───────────</span><span className="text-[#8b5cf6]">╱</span>
+                  <span className="text-[#8b5cf6] glow-p1"> ╲</span><span className="text-[#c4b5fd] glow-p3">───────────</span><span className="text-[#8b5cf6] glow-p1">╱</span>
                 </pre>
               </div>
-              <div className="font-headline text-[28px] lg:text-[32px] font-bold text-white mb-1">
+              <div className="font-headline text-[26px] md:text-[32px] font-bold text-white mb-1">
                 85%
               </div>
-              <div className="text-[13px] text-white/75">
+              <div className="text-[13px] font-medium text-white/75">
                 Faster Processing
               </div>
             </div>
 
             {/* 200+ Hours */}
-            <div className="ascii-result-card bg-[rgba(37,99,235,0.12)] border border-[rgba(37,99,235,0.25)] rounded-[20px] p-6 text-center transition-transform duration-300 hover:-translate-y-1">
-              <div className="ascii-result-title text-[10px] font-semibold uppercase tracking-widest text-white/50 mb-3">
+            <div className="ascii-result-card bg-[rgba(37,99,235,0.12)] border border-[rgba(37,99,235,0.25)] rounded-[20px] px-4 py-5 md:px-5 md:py-6 text-center transition-transform duration-300 hover:-translate-y-1">
+              <div className="ascii-result-title text-[10px] font-semibold uppercase tracking-[2px] text-white/50 mb-3">
                 Time Saved
               </div>
-              <div className="ascii-result-visual h-[120px] flex items-center justify-center mb-4">
-                <pre className="result-ascii font-mono text-sm leading-relaxed text-center font-semibold tracking-wide">
-                  <span className="text-[#3b82f6]">    ╭───────╮</span>
+              <div className="ascii-result-visual h-[100px] md:h-[120px] flex items-center justify-center mb-4">
+                <pre className="result-ascii font-mono text-[10px] md:text-[14px] leading-[1.4] text-center font-semibold tracking-[0.5px]">
+                  <span className="text-[#3b82f6] glow-b2">    ╭───────╮</span>
                   <br />
-                  <span className="text-[#2563eb]">   ╱</span><span className="text-[#60a5fa]">   12    </span><span className="text-[#2563eb]">╲</span>
+                  <span className="text-[#2563eb] glow-b1">   ╱</span><span className="text-[#60a5fa] glow-b3">   12    </span><span className="text-[#2563eb] glow-b1">╲</span>
                   <br />
-                  <span className="text-[#3b82f6]">  │</span><span className="text-[#60a5fa]"> 9   │   3 </span><span className="text-[#3b82f6]">│</span>
+                  <span className="text-[#3b82f6] glow-b2">  │</span><span className="text-[#60a5fa] glow-b3"> 9   │   3 </span><span className="text-[#3b82f6] glow-b2">│</span>
                   <br />
-                  <span className="text-[#2563eb]">  │</span><span className="text-[#60a5fa]">     ◉───  </span><span className="text-[#2563eb]">│</span>
+                  <span className="text-[#2563eb] glow-b1">  │</span><span className="text-[#60a5fa] glow-b3">     ◉───  </span><span className="text-[#2563eb] glow-b1">│</span>
                   <br />
-                  <span className="text-[#3b82f6]">   ╲</span><span className="text-[#60a5fa]">    6    </span><span className="text-[#3b82f6]">╱</span>
+                  <span className="text-[#3b82f6] glow-b2">   ╲</span><span className="text-[#60a5fa] glow-b3">    6    </span><span className="text-[#3b82f6] glow-b2">╱</span>
                   <br />
-                  <span className="text-[#2563eb]">    ╰───────╯</span>
+                  <span className="text-[#2563eb] glow-b1">    ╰───────╯</span>
                 </pre>
               </div>
-              <div className="font-headline text-[28px] lg:text-[32px] font-bold text-white mb-1">
+              <div className="font-headline text-[26px] md:text-[32px] font-bold text-white mb-1">
                 200+
               </div>
-              <div className="text-[13px] text-white/75">
+              <div className="text-[13px] font-medium text-white/75">
                 Hours Saved Monthly
               </div>
             </div>
 
             {/* 3x ROI */}
-            <div className="ascii-result-card bg-[rgba(34,197,94,0.12)] border border-[rgba(34,197,94,0.25)] rounded-[20px] p-6 text-center transition-transform duration-300 hover:-translate-y-1">
-              <div className="ascii-result-title text-[10px] font-semibold uppercase tracking-widest text-white/50 mb-3">
+            <div className="ascii-result-card bg-[rgba(34,197,94,0.12)] border border-[rgba(34,197,94,0.25)] rounded-[20px] px-4 py-5 md:px-5 md:py-6 text-center transition-transform duration-300 hover:-translate-y-1">
+              <div className="ascii-result-title text-[10px] font-semibold uppercase tracking-[2px] text-white/50 mb-3">
                 Returns
               </div>
-              <div className="ascii-result-visual h-[120px] flex items-center justify-center mb-4">
-                <pre className="result-ascii font-mono text-sm leading-relaxed text-center font-semibold tracking-wide">
-                  <span className="text-[#22c55e]">        ╭─╮</span>
+              <div className="ascii-result-visual h-[100px] md:h-[120px] flex items-center justify-center mb-4">
+                <pre className="result-ascii font-mono text-[10px] md:text-[14px] leading-[1.4] text-center font-semibold tracking-[0.5px]">
+                  <span className="text-[#22c55e] glow-g1">        ╭─╮</span>
                   <br />
-                  <span className="text-[#4ade80]">     ╭─╮│</span><span className="text-[#86efac]">▓</span><span className="text-[#4ade80]">│</span>
+                  <span className="text-[#4ade80] glow-g2">     ╭─╮│</span><span className="text-[#86efac] glow-g3">▓</span><span className="text-[#4ade80] glow-g2">│</span>
                   <br />
-                  <span className="text-[#22c55e]">  ╭─╮│</span><span className="text-[#86efac]">▓</span><span className="text-[#22c55e]">││</span><span className="text-[#86efac]">▓</span><span className="text-[#22c55e]">│</span>
+                  <span className="text-[#22c55e] glow-g1">  ╭─╮│</span><span className="text-[#86efac] glow-g3">▓</span><span className="text-[#22c55e] glow-g1">││</span><span className="text-[#86efac] glow-g3">▓</span><span className="text-[#22c55e] glow-g1">│</span>
                   <br />
-                  <span className="text-[#4ade80]">  │</span><span className="text-[#86efac]">▓</span><span className="text-[#4ade80]">││</span><span className="text-[#86efac]">▓</span><span className="text-[#4ade80]">││</span><span className="text-[#86efac]">▓</span><span className="text-[#4ade80]">│↗</span>
+                  <span className="text-[#4ade80] glow-g2">  │</span><span className="text-[#86efac] glow-g3">▓</span><span className="text-[#4ade80] glow-g2">││</span><span className="text-[#86efac] glow-g3">▓</span><span className="text-[#4ade80] glow-g2">││</span><span className="text-[#86efac] glow-g3">▓</span><span className="text-[#4ade80] glow-g2">│↗</span>
                   <br />
-                  <span className="text-[#22c55e]">  │</span><span className="text-[#86efac]">▓</span><span className="text-[#22c55e]">││</span><span className="text-[#86efac]">▓</span><span className="text-[#22c55e]">││</span><span className="text-[#86efac]">▓</span><span className="text-[#22c55e]">│</span>
+                  <span className="text-[#22c55e] glow-g1">  │</span><span className="text-[#86efac] glow-g3">▓</span><span className="text-[#22c55e] glow-g1">││</span><span className="text-[#86efac] glow-g3">▓</span><span className="text-[#22c55e] glow-g1">││</span><span className="text-[#86efac] glow-g3">▓</span><span className="text-[#22c55e] glow-g1">│</span>
                   <br />
-                  <span className="text-[#4ade80]">  ╰─╯╰─╯╰─╯</span>
+                  <span className="text-[#4ade80] glow-g2">  ╰─╯╰─╯╰─╯</span>
                 </pre>
               </div>
-              <div className="font-headline text-[28px] lg:text-[32px] font-bold text-white mb-1">
+              <div className="font-headline text-[26px] md:text-[32px] font-bold text-white mb-1">
                 3x
               </div>
-              <div className="text-[13px] text-white/75">
+              <div className="text-[13px] font-medium text-white/75">
                 Average ROI
               </div>
             </div>
