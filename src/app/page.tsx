@@ -253,7 +253,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
 
         {/* Hero Content */}
-        <div className="hero-content relative z-10 max-w-[1200px] mx-auto px-5 md:px-8 lg:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[60px] items-center">
+        <div className="hero-content relative z-10 max-w-[1200px] mx-auto px-5 md:px-8 lg:px-10 pt-24 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[60px] items-center">
           {/* Left Column - Text */}
           <div className="hero-text max-w-[560px]">
             <h1 className="hero-title font-headline text-[clamp(42px,6vw,64px)] font-bold text-white leading-[1.1] mb-7 tracking-[-1.5px]">
@@ -270,16 +270,16 @@ export default function HomePage() {
             <div className="hero-cta-group flex gap-4 flex-wrap">
               <a
                 href="#contact"
-                className="hero-cta inline-flex items-center gap-2.5 bg-white text-[#1e3a8a] px-8 py-[18px] rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:bg-white/95 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)]"
+                className="hero-cta inline-flex items-center gap-2.5 bg-white text-[#1e3a8a] px-9 py-[18px] rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:bg-white/95 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)] whitespace-nowrap"
               >
                 Get a Free Assessment
-                <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-4.5 h-4.5 transition-transform duration-300 hover:translate-x-1">
+                <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-[18px] h-[18px] flex-shrink-0 transition-transform duration-300 group-hover:translate-x-1">
                   <path d="M5 12h14m-7-7l7 7-7 7" />
                 </svg>
               </a>
               <a
                 href="#services"
-                className="hero-cta hero-cta-secondary inline-flex items-center gap-2.5 bg-transparent text-white px-8 py-[18px] border border-white/30 rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/50"
+                className="hero-cta hero-cta-secondary inline-flex items-center gap-2.5 bg-transparent text-white px-9 py-[18px] border border-white/30 rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/50 whitespace-nowrap"
               >
                 See Our Work
               </a>
