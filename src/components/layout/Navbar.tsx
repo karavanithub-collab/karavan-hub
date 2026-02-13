@@ -106,7 +106,7 @@ export default function Navbar() {
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="max-w-[1240px] mx-auto px-12 py-5 flex justify-between items-center">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 py-5 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-0 no-underline">
             <span

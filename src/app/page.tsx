@@ -243,7 +243,7 @@ export default function HomePage() {
       {/* ============================================
           HERO SECTION
           ============================================ */}
-      <section className="hero relative min-h-[90vh] flex items-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)' }}>
+      <section className="hero relative min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)' }}>
         {/* Animated gradient orbs */}
         <div className="hero-orb-1 absolute top-[-200px] right-[-100px] w-[600px] h-[600px] rounded-full bg-gradient-radial from-[#3b82f6] to-transparent blur-[80px] opacity-40 animate-pulse"></div>
         <div className="hero-orb-2 absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full bg-gradient-radial from-[#22d3ee] to-transparent blur-[80px] opacity-40 animate-pulse" style={{ animationDelay: '-4s' }}></div>
@@ -255,7 +255,7 @@ export default function HomePage() {
         {/* Hero Content */}
         <div className="hero-content relative z-10 max-w-[1200px] mx-auto px-5 md:px-8 lg:px-10 pt-24 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[60px] items-center">
           {/* Left Column - Text */}
-          <div className="hero-text max-w-[560px]">
+          <div className="hero-text max-w-full lg:max-w-[560px]">
             <h1 className="hero-title font-headline text-[clamp(42px,6vw,64px)] font-bold text-white leading-[1.1] mb-7 tracking-[-1.5px]">
               Make AI work for your business—
               <span className="accent block font-bold bg-gradient-to-r from-white to-[#22d3ee] bg-clip-text text-transparent">
@@ -263,14 +263,14 @@ export default function HomePage() {
               </span>
             </h1>
 
-            <p className="hero-subtitle font-body text-[19px] text-white/75 max-w-[500px] leading-[1.75] font-normal mb-9">
+            <p className="hero-subtitle font-body text-[16px] sm:text-[17px] md:text-[19px] text-white/75 max-w-full lg:max-w-[500px] leading-[1.75] font-normal mb-9">
               Everyone's rushing to adopt AI. Most are wasting money on tools they don't need. We help you cut through the noise, find what actually fits your business, and build solutions that drive real results.
             </p>
 
-            <div className="hero-cta-group flex gap-4 flex-wrap">
+            <div className="hero-cta-group flex flex-col sm:flex-row gap-4">
               <a
                 href="#contact"
-                className="hero-cta inline-flex items-center gap-2.5 bg-white text-[#1e3a8a] px-9 py-[18px] rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:bg-white/95 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)] whitespace-nowrap"
+                className="hero-cta inline-flex items-center justify-center gap-2.5 bg-white text-[#1e3a8a] px-7 sm:px-9 py-[16px] sm:py-[18px] rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:bg-white/95 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)] whitespace-nowrap"
               >
                 Get a Free Assessment
                 <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-[18px] h-[18px] flex-shrink-0 transition-transform duration-300 group-hover:translate-x-1">
@@ -279,15 +279,15 @@ export default function HomePage() {
               </a>
               <a
                 href="#services"
-                className="hero-cta hero-cta-secondary inline-flex items-center gap-2.5 bg-transparent text-white px-9 py-[18px] border border-white/30 rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/50 whitespace-nowrap"
+                className="hero-cta hero-cta-secondary inline-flex items-center justify-center gap-2.5 bg-transparent text-white px-7 sm:px-9 py-[16px] sm:py-[18px] border border-white/30 rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/50 whitespace-nowrap"
               >
                 See Our Work
               </a>
             </div>
           </div>
 
-          {/* Right Column - ASCII Visual */}
-          <div className="hero-visual flex items-center justify-center relative order-first lg:order-last">
+          {/* Right Column - ASCII Visual (hidden on mobile — ASCII art needs ~550px+ width) */}
+          <div className="hero-visual hidden lg:flex items-center justify-center relative">
             <div className="ascii-visual w-full max-w-[620px] min-h-[480px] relative flex items-center justify-center">
               {/* Glow layers */}
               <div className="hero-glow-1 absolute top-[10%] left-1/2 -translate-x-1/2 w-[550px] h-[500px] rounded-full bg-gradient-radial from-[rgba(139,92,246,0.35)] via-[rgba(37,99,235,0.2)] to-transparent blur-[80px] opacity-90"></div>
@@ -369,7 +369,7 @@ export default function HomePage() {
               Our Team Has Delivered For
             </p>
           </div>
-          <div className="client-logos flex justify-center items-center gap-14 flex-wrap">
+          <div className="client-logos flex justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-14 flex-wrap">
             {/* Seagate */}
             <div className="client-logo flex items-center justify-center h-10 opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-105">
               <svg viewBox="0 0 130 32" fill="none" className="h-full w-auto max-w-40">
