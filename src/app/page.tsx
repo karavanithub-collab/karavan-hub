@@ -516,7 +516,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-semibold text-[var(--text-dark)] mb-3">
+              <h3 className="font-headline text-2xl font-semibold text-[var(--text-dark)] mb-3">
                 AI Solutions
                 <span className="block text-sm font-medium text-[var(--text-muted)] mt-1">Automation & Intelligence</span>
               </h3>
@@ -589,7 +589,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-semibold text-[var(--text-dark)] mb-3">
+              <h3 className="font-headline text-2xl font-semibold text-[var(--text-dark)] mb-3">
                 IT Solutions
                 <span className="block text-sm font-medium text-[var(--text-muted)] mt-1">Development & Design</span>
               </h3>
