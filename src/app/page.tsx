@@ -527,16 +527,16 @@ export default function HomePage() {
                 Transform how your business operates with intelligent automation that learns, adapts, and delivers measurable ROI from day one.
               </p>
               <ul className="space-y-0 mb-6">
-                <li className="py-2.5 pl-7 relative text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%232563EB%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%2720 6 9 17 4 12%27%3E%3C/polyline%3E%3C/svg%3E")', backgroundSize: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'left center', backgroundOrigin: 'content-box' }}>
+                <li className="py-2.5 text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0">
                   AI Automation & Integration
                 </li>
-                <li className="py-2.5 pl-7 relative text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%232563EB%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%2720 6 9 17 4 12%27%3E%3C/polyline%3E%3C/svg%3E")', backgroundSize: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'left center', backgroundOrigin: 'content-box' }}>
+                <li className="py-2.5 text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0">
                   Custom AI Applications (RAG, Chatbots, Agents)
                 </li>
-                <li className="py-2.5 pl-7 relative text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%232563EB%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%2720 6 9 17 4 12%27%3E%3C/polyline%3E%3C/svg%3E")', backgroundSize: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'left center', backgroundOrigin: 'content-box' }}>
+                <li className="py-2.5 text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0">
                   AI Strategy Consulting
                 </li>
-                <li className="py-2.5 pl-7 relative text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%232563EB%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%2720 6 9 17 4 12%27%3E%3C/polyline%3E%3C/svg%3E")', backgroundSize: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'left center', backgroundOrigin: 'content-box' }}>
+                <li className="py-2.5 text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0">
                   LLM Fine-Tuning & Implementation
                 </li>
               </ul>
@@ -600,16 +600,16 @@ export default function HomePage() {
                 From concept to launch, we build digital infrastructure that powers growth—reliable, scalable, and designed for tomorrow.
               </p>
               <ul className="space-y-0 mb-6">
-                <li className="py-2.5 pl-7 relative text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%232563EB%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%2720 6 9 17 4 12%27%3E%3C/polyline%3E%3C/svg%3E")', backgroundSize: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'left center', backgroundOrigin: 'content-box' }}>
+                <li className="py-2.5 text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0">
                   Custom Software Development
                 </li>
-                <li className="py-2.5 pl-7 relative text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%232563EB%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%2720 6 9 17 4 12%27%3E%3C/polyline%3E%3C/svg%3E")', backgroundSize: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'left center', backgroundOrigin: 'content-box' }}>
+                <li className="py-2.5 text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0">
                   Web Design & E-Commerce
                 </li>
-                <li className="py-2.5 pl-7 relative text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%232563EB%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%2720 6 9 17 4 12%27%3E%3C/polyline%3E%3C/svg%3E")', backgroundSize: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'left center', backgroundOrigin: 'content-box' }}>
+                <li className="py-2.5 text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0">
                   Data Analytics & Dashboards
                 </li>
-                <li className="py-2.5 pl-7 relative text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%232563EB%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%2720 6 9 17 4 12%27%3E%3C/polyline%3E%3C/svg%3E")', backgroundSize: '10px', backgroundRepeat: 'no-repeat', backgroundPosition: 'left center', backgroundOrigin: 'content-box' }}>
+                <li className="py-2.5 text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0">
                   Digital Transformation
                 </li>
               </ul>
