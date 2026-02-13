@@ -253,24 +253,24 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
 
         {/* Hero Content */}
-        <div className="hero-content relative z-10 max-w-[1200px] mx-auto px-10 md:px-8 sm:px-5 w-full grid md:grid-cols-1 grid-cols-2 gap-12 md:gap-12 items-center">
+        <div className="hero-content relative z-10 max-w-[1200px] mx-auto px-5 md:px-8 lg:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text */}
           <div className="hero-text max-w-[560px]">
-            <h1 className="hero-title font-headline text-5xl md:text-4xl sm:text-[36px] font-bold text-white leading-tight mb-7 tracking-tight">
+            <h1 className="hero-title font-headline text-[36px] md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-7 tracking-tight">
               Make AI work for your business—
               <span className="accent block font-bold bg-gradient-to-r from-white to-[#22d3ee] bg-clip-text text-transparent">
                 not the other way around.
               </span>
             </h1>
 
-            <p className="hero-subtitle font-body text-lg md:text-base text-white/75 max-w-[500px] leading-relaxed font-normal mb-9">
+            <p className="hero-subtitle font-body text-base lg:text-lg text-white/75 max-w-[500px] leading-relaxed font-normal mb-9">
               Everyone's rushing to adopt AI. Most are wasting money on tools they don't need. We help you cut through the noise, find what actually fits your business, and build solutions that drive real results.
             </p>
 
             <div className="hero-cta-group flex gap-4 flex-wrap">
               <a
                 href="#contact"
-                className="hero-cta inline-flex items-center gap-2.5 bg-white text-[#1e3a8a] px-8 py-4.5 md:px-6 md:py-3.5 rounded-lg text-base md:text-sm font-semibold no-underline transition-all duration-300 hover:bg-white/95 hover:-translate-y-0.5 hover:shadow-lg sm:w-full sm:justify-center"
+                className="hero-cta inline-flex items-center gap-2.5 bg-white text-[#1e3a8a] px-6 py-3.5 lg:px-8 lg:py-4.5 rounded-lg text-sm lg:text-base font-semibold no-underline transition-all duration-300 hover:bg-white/95 hover:-translate-y-0.5 hover:shadow-lg w-full sm:w-auto justify-center sm:justify-start"
               >
                 Get a Free Assessment
                 <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-4.5 h-4.5 transition-transform duration-300 hover:translate-x-1">
@@ -279,7 +279,7 @@ export default function HomePage() {
               </a>
               <a
                 href="#services"
-                className="hero-cta hero-cta-secondary inline-flex items-center gap-2.5 bg-transparent text-white px-8 py-4.5 md:px-6 md:py-3.5 border border-white/30 rounded-lg text-base md:text-sm font-semibold no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/50 sm:w-full sm:justify-center"
+                className="hero-cta hero-cta-secondary inline-flex items-center gap-2.5 bg-transparent text-white px-6 py-3.5 lg:px-8 lg:py-4.5 border border-white/30 rounded-lg text-sm lg:text-base font-semibold no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/50 w-full sm:w-auto justify-center sm:justify-start"
               >
                 See Our Work
               </a>
@@ -287,7 +287,7 @@ export default function HomePage() {
           </div>
 
           {/* Right Column - ASCII Visual */}
-          <div className="hero-visual md:order-first flex items-center justify-center relative">
+          <div className="hero-visual flex items-center justify-center relative order-first lg:order-last">
             <div className="ascii-visual w-full max-w-[620px] min-h-[480px] relative flex items-center justify-center">
               {/* Glow layers */}
               <div className="hero-glow-1 absolute top-[10%] left-1/2 -translate-x-1/2 w-[550px] h-[500px] rounded-full bg-gradient-radial from-[rgba(139,92,246,0.35)] via-[rgba(37,99,235,0.2)] to-transparent blur-[80px] opacity-90"></div>
@@ -362,7 +362,7 @@ export default function HomePage() {
       {/* ============================================
           CLIENT LOGO BAR - Trust Signal
           ============================================ */}
-      <section className="logo-bar bg-[var(--bg-light)] py-[72px] md:py-12 sm:py-10 border-b border-[var(--border-light)]">
+      <section className="logo-bar bg-[var(--bg-light)] py-10 md:py-12 lg:py-[72px] border-b border-[var(--border-light)]">
         <div className="container-main">
           <div className="logo-bar-header text-center mb-12">
             <p className="text-sm text-[var(--text-body)] uppercase tracking-wider font-semibold">
@@ -439,12 +439,12 @@ export default function HomePage() {
       {/* ============================================
           VALUE PROPOSITION SECTION
           ============================================ */}
-      <section className="value-section bg-white py-[120px] md:py-[80px] sm:py-[60px]">
+      <section className="value-section bg-white py-[60px] md:py-[80px] lg:py-[120px]">
         <div className="container-main max-w-[900px] text-center">
-          <h2 className="font-headline text-5xl md:text-4xl sm:text-3xl font-semibold text-[var(--text-dark)] mb-8 leading-tight tracking-tight">
+          <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-semibold text-[var(--text-dark)] mb-8 leading-tight tracking-tight">
             Everyone's talking about AI. But no one's explaining how to actually use it.
           </h2>
-          <p className="text-lg md:text-base text-[var(--text-body)] leading-relaxed mb-10 max-w-[800px] mx-auto">
+          <p className="text-base lg:text-lg text-[var(--text-body)] leading-relaxed mb-10 max-w-[800px] mx-auto">
             You've seen the headlines. You've sat through the demos. Maybe you've even tried a few tools. And yet—nothing's really changed in how your business runs. That's not your fault. You need a partner who can cut through the noise, speak plain English, and tell you honestly what will actually work for your business—and what won't.
           </p>
           <a
@@ -462,10 +462,10 @@ export default function HomePage() {
       {/* ============================================
           SERVICES SECTION
           ============================================ */}
-      <section className="services-section bg-gradient-to-b from-[#f0f7ff] to-white py-[120px] md:py-[80px] sm:py-[60px]" id="services">
+      <section className="services-section bg-gradient-to-b from-[#f0f7ff] to-white py-[60px] md:py-[80px] lg:py-[120px]" id="services">
         <div className="container-main">
           <div className="services-header text-center mb-16">
-            <h2 className="font-headline text-4xl md:text-3xl sm:text-2xl font-medium text-[var(--text-dark)] mb-4 tracking-tight">
+            <h2 className="font-headline text-2xl md:text-3xl lg:text-4xl font-medium text-[var(--text-dark)] mb-4 tracking-tight">
               Here's how we help.
             </h2>
             <p className="text-lg text-[var(--text-body)] max-w-[600px] mx-auto">
@@ -473,9 +473,9 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-1 grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* AI Solutions Card */}
-            <div className="service-card bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-3xl p-10 md:p-7 sm:p-7 border border-blue-100/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative overflow-hidden group">
+            <div className="service-card bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-3xl p-7 lg:p-10 border border-blue-100/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative overflow-hidden group">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--accent-cyan)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
               <div className="tech-stack flex gap-4 mb-6 flex-wrap items-center">
@@ -536,7 +536,7 @@ export default function HomePage() {
             </div>
 
             {/* IT Solutions Card */}
-            <div className="service-card bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-3xl p-10 md:p-7 sm:p-7 border border-blue-100/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative overflow-hidden group">
+            <div className="service-card bg-gradient-to-br from-white via-slate-50 to-blue-50 rounded-3xl p-7 lg:p-10 border border-blue-100/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative overflow-hidden group">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--accent-cyan)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
               <div className="tech-stack flex gap-4 mb-6 flex-wrap items-center">
@@ -596,14 +596,14 @@ export default function HomePage() {
       {/* ============================================
           TRUST & RESULTS SECTION
           ============================================ */}
-      <section className="trust-results-section bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] py-[120px] md:py-[80px] sm:py-[60px] relative overflow-hidden">
+      <section className="trust-results-section bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] py-[60px] md:py-[80px] lg:py-[120px] relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
 
         <div className="container-main relative z-10">
           {/* Top Row: Copy + Company Stats */}
-          <div className="grid md:grid-cols-1 grid-cols-2 gap-20 md:gap-12 mb-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-16 items-center">
             <div className="trust-content">
-              <h2 className="font-headline text-4xl md:text-3xl sm:text-2xl font-medium text-white mb-6 leading-tight tracking-tight">
+              <h2 className="font-headline text-2xl md:text-3xl lg:text-4xl font-medium text-white mb-6 leading-tight tracking-tight">
                 We've been doing this a while. Here's what that looks like.
               </h2>
               <p className="text-lg text-white/75 mb-5 leading-relaxed">
@@ -620,9 +620,9 @@ export default function HomePage() {
               </a>
             </div>
 
-            <div className="company-stats-card bg-white/8 backdrop-blur-2xl rounded-3xl p-10 md:p-7 grid grid-cols-2 gap-8 md:gap-6 shadow-2xl border border-white/15">
+            <div className="company-stats-card bg-white/8 backdrop-blur-2xl rounded-3xl p-7 lg:p-10 grid grid-cols-2 gap-6 lg:gap-8 shadow-2xl border border-white/15">
               <div className="company-stat text-center">
-                <div className="company-stat-number font-headline text-6xl md:text-5xl font-bold text-white leading-none mb-2">
+                <div className="company-stat-number font-headline text-5xl lg:text-6xl font-bold text-white leading-none mb-2">
                   14<span className="text-[var(--accent-cyan)]">+</span>
                 </div>
                 <div className="company-stat-label text-xs md:text-[11px] font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
@@ -630,7 +630,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="company-stat text-center">
-                <div className="company-stat-number font-headline text-6xl md:text-5xl font-bold text-white leading-none mb-2">
+                <div className="company-stat-number font-headline text-5xl lg:text-6xl font-bold text-white leading-none mb-2">
                   6
                 </div>
                 <div className="company-stat-label text-xs md:text-[11px] font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
@@ -639,7 +639,7 @@ export default function HomePage() {
               </div>
               <div className="col-span-2 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
               <div className="col-span-2 text-center">
-                <div className="company-stat-number font-headline text-6xl md:text-5xl font-bold text-white leading-none mb-2">
+                <div className="company-stat-number font-headline text-5xl lg:text-6xl font-bold text-white leading-none mb-2">
                   10<span className="text-[var(--accent-cyan)]">+</span>
                 </div>
                 <div className="company-stat-label text-xs md:text-[11px] font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
@@ -650,7 +650,7 @@ export default function HomePage() {
           </div>
 
           {/* Bottom Row: ASCII Result Cards */}
-          <div className="grid md:grid-cols-2 sm:grid-cols-1 grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* 92% Efficiency */}
             <div className="ascii-result-card bg-[rgba(34,211,238,0.12)] border border-[rgba(34,211,238,0.25)] rounded-3xl p-6 text-center transition-transform duration-300 hover:-translate-y-1">
               <div className="ascii-result-title text-xs font-semibold uppercase tracking-widest text-white/50 mb-3">
@@ -671,7 +671,7 @@ export default function HomePage() {
                   <span className="text-[#67e8f9]">  ╰───◉───╯</span>
                 </pre>
               </div>
-              <div className="font-headline text-4xl md:text-3xl font-bold text-white mb-1">
+              <div className="font-headline text-3xl lg:text-4xl font-bold text-white mb-1">
                 92%
               </div>
               <div className="text-sm text-white/75">
@@ -699,7 +699,7 @@ export default function HomePage() {
                   <span className="text-[#8b5cf6]"> ╲</span><span className="text-[#c4b5fd]">───────────</span><span className="text-[#8b5cf6]">╱</span>
                 </pre>
               </div>
-              <div className="font-headline text-4xl md:text-3xl font-bold text-white mb-1">
+              <div className="font-headline text-3xl lg:text-4xl font-bold text-white mb-1">
                 85%
               </div>
               <div className="text-sm text-white/75">
@@ -727,7 +727,7 @@ export default function HomePage() {
                   <span className="text-[#2563eb]">    ╰───────╯</span>
                 </pre>
               </div>
-              <div className="font-headline text-4xl md:text-3xl font-bold text-white mb-1">
+              <div className="font-headline text-3xl lg:text-4xl font-bold text-white mb-1">
                 200+
               </div>
               <div className="text-sm text-white/75">
@@ -755,7 +755,7 @@ export default function HomePage() {
                   <span className="text-[#4ade80]">  ╰─╯╰─╯╰─╯</span>
                 </pre>
               </div>
-              <div className="font-headline text-4xl md:text-3xl font-bold text-white mb-1">
+              <div className="font-headline text-3xl lg:text-4xl font-bold text-white mb-1">
                 3x
               </div>
               <div className="text-sm text-white/75">
@@ -774,10 +774,10 @@ export default function HomePage() {
       {/* ============================================
           CTA/CONTACT SECTION
           ============================================ */}
-      <section className="cta-section bg-gradient-to-b from-[var(--bg-light)] to-white py-[120px] md:py-[80px] sm:py-[60px]" id="contact">
-        <div className="container-main grid md:grid-cols-1 grid-cols-2 gap-20 md:gap-12 items-center">
+      <section className="cta-section bg-gradient-to-b from-[var(--bg-light)] to-white py-[60px] md:py-[80px] lg:py-[120px]" id="contact">
+        <div className="container-main grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="cta-content">
-            <h2 className="font-headline text-4xl md:text-3xl sm:text-2xl font-medium text-[var(--text-dark)] mb-4 tracking-tight leading-tight">
+            <h2 className="font-headline text-2xl md:text-3xl lg:text-4xl font-medium text-[var(--text-dark)] mb-4 tracking-tight leading-tight">
               What problem should AI solve for you?
             </h2>
             <p className="text-lg text-[var(--text-body)] leading-relaxed">
@@ -785,7 +785,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="cta-form bg-white p-10 md:p-7 sm:p-7 rounded-3xl shadow-xl border border-[var(--border-light)]">
+          <div className="cta-form bg-white p-7 lg:p-10 rounded-3xl shadow-xl border border-[var(--border-light)]">
             <form className="space-y-4">
               <div className="form-group">
                 <label className="block text-sm font-medium mb-1.5 text-[var(--text-dark)]">

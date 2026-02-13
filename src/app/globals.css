@@ -62,9 +62,9 @@ body {
   /* Grid Pattern Background */
   .bg-grid-pattern {
     background-image:
-      linear-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.08) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
   }
 
   /* Radial Gradient Utility */
@@ -133,14 +133,14 @@ body {
    ============================================ */
 
 /* Homepage ASCII art colors */
-.ascii-dim { color: rgba(148, 163, 184, 0.4); }
+.ascii-dim { color: rgba(148, 163, 184, 0.35); }
 .ascii-mid { color: rgba(148, 163, 184, 0.7); }
 .ascii-bright {
   color: #93c5fd;
   text-shadow:
-    0 0 10px rgba(147, 197, 253, 0.6),
-    0 0 30px rgba(96, 165, 250, 0.4),
-    0 0 50px rgba(59, 130, 246, 0.2);
+    0 0 12px rgba(147, 197, 253, 1),
+    0 0 30px rgba(96, 165, 250, 0.7),
+    0 0 55px rgba(59, 130, 246, 0.4);
 }
 .ascii-cyan {
   color: #22d3ee;
@@ -152,24 +152,34 @@ body {
 .ascii-white {
   color: #ffffff;
   text-shadow:
-    0 0 15px rgba(255, 255, 255, 0.7),
-    0 0 35px rgba(147, 197, 253, 0.4),
-    0 0 55px rgba(59, 130, 246, 0.2);
+    0 0 12px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 255, 255, 0.7),
+    0 0 50px rgba(255, 255, 255, 0.3),
+    0 0 80px rgba(147, 197, 253, 0.2);
 }
-.ascii-flow { color: #60a5fa; }
-.ascii-core {
-  color: #e0f2fe;
+.ascii-flow {
+  color: #22d3ee;
   text-shadow:
-    0 0 15px rgba(224, 242, 254, 0.8),
-    0 0 30px rgba(147, 197, 253, 0.5),
-    0 0 50px rgba(59, 130, 246, 0.3),
-    0 0 80px rgba(37, 99, 235, 0.15);
+    0 0 15px rgba(34, 211, 238, 1),
+    0 0 35px rgba(34, 211, 238, 0.7),
+    0 0 65px rgba(34, 211, 238, 0.4),
+    0 0 100px rgba(34, 211, 238, 0.2);
+}
+.ascii-core {
+  color: #ffffff;
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 1),
+    0 0 40px rgba(34, 211, 238, 0.8),
+    0 0 70px rgba(139, 92, 246, 0.6),
+    0 0 100px rgba(34, 211, 238, 0.4);
 }
 .ascii-purple {
-  color: #a78bfa;
+  color: #c4b5fd;
   text-shadow:
-    0 0 8px rgba(167, 139, 250, 0.5),
-    0 0 25px rgba(167, 139, 250, 0.3);
+    0 0 15px rgba(196, 181, 253, 1),
+    0 0 35px rgba(167, 139, 250, 0.7),
+    0 0 65px rgba(139, 92, 246, 0.4),
+    0 0 100px rgba(139, 92, 246, 0.2);
 }
 
 /* Cyberpunk neon text glows (IT Solutions page) */
