@@ -259,19 +259,7 @@ export default function BlogPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Share on LinkedIn"
-                className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all"
-                style={{
-                  border: '1px solid #E0E0E0',
-                  color: '#1A1A1A',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#1A1A1A';
-                  e.currentTarget.style.color = '#F5F5F0';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.color = '#1A1A1A';
-                }}
+                className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all border border-[#E0E0E0] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-[#F5F5F0]"
               >
                 <svg
                   className="w-4.5 h-4.5"
