@@ -634,8 +634,8 @@ export default function HomePage() {
           {/* Top Row: Copy + Company Stats */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-16 items-center">
             <div className="trust-content">
-              <h2 className="font-serif italic text-[26px] sm:text-[32px] md:text-[42px] font-medium text-white mb-6 leading-[1.2] tracking-[-0.5px]">
-                We&rsquo;ve been doing this a while. Here&rsquo;s what that looks like.
+              <h2 className="font-headline text-[26px] sm:text-[32px] md:text-[42px] font-medium text-white mb-6 leading-[1.2] tracking-[-0.5px]">
+                We&rsquo;ve been at this for years. Here&rsquo;s what that looks like.
               </h2>
               <p className="text-[17px] text-white/75 mb-5 leading-[1.75]">
                 We've spent over a decade helping businesses turn fragmented processes into reliable systems they can scale on.
