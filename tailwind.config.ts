@@ -51,9 +51,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        headline: ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        body: ['DM Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Courier New', 'monospace'],
+        headline: ['var(--font-headline)', 'Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        body: ['var(--font-body)', 'DM Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        mono: ['var(--font-mono)', 'JetBrains Mono', 'Courier New', 'monospace'],
         // Blog-specific fonts
         serif: ['var(--font-serif)', 'Playfair Display', 'Georgia', 'serif'],
         geist: ['Geist', '-apple-system', 'sans-serif'],
