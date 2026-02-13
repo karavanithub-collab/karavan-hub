@@ -243,7 +243,7 @@ export default function HomePage() {
       {/* ============================================
           HERO SECTION
           ============================================ */}
-      <section className="hero relative min-h-[90vh] bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden">
+      <section className="hero relative min-h-[90vh] flex items-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)' }}>
         {/* Animated gradient orbs */}
         <div className="hero-orb-1 absolute top-[-200px] right-[-100px] w-[600px] h-[600px] rounded-full bg-gradient-radial from-[#3b82f6] to-transparent blur-[80px] opacity-40 animate-pulse"></div>
         <div className="hero-orb-2 absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full bg-gradient-radial from-[#22d3ee] to-transparent blur-[80px] opacity-40 animate-pulse" style={{ animationDelay: '-4s' }}></div>
@@ -253,24 +253,31 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
 
         {/* Hero Content */}
-        <div className="hero-content relative z-10 max-w-[1200px] mx-auto px-5 md:px-8 lg:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="hero-content relative z-10 max-w-[1200px] mx-auto px-5 md:px-8 lg:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[60px] items-center">
           {/* Left Column - Text */}
           <div className="hero-text max-w-[560px]">
-            <h1 className="hero-title font-headline text-[36px] md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-7 tracking-tight">
+            {/* Hero Meta */}
+            <div className="hero-meta flex items-center gap-10 mb-10 text-white/50 text-xs font-medium tracking-[2px] uppercase">
+              <span>Karavan IT HUB</span>
+              <span className="w-1 h-1 bg-white/30 rounded-full"></span>
+              <span>AI &amp; IT Solutions</span>
+            </div>
+
+            <h1 className="hero-title font-headline text-[clamp(42px,6vw,64px)] font-bold text-white leading-[1.1] mb-7 tracking-[-1.5px]">
               Make AI work for your business—
               <span className="accent block font-bold bg-gradient-to-r from-white to-[#22d3ee] bg-clip-text text-transparent">
                 not the other way around.
               </span>
             </h1>
 
-            <p className="hero-subtitle font-body text-base lg:text-lg text-white/75 max-w-[500px] leading-relaxed font-normal mb-9">
+            <p className="hero-subtitle font-body text-[19px] text-white/75 max-w-[500px] leading-[1.75] font-normal mb-9">
               Everyone's rushing to adopt AI. Most are wasting money on tools they don't need. We help you cut through the noise, find what actually fits your business, and build solutions that drive real results.
             </p>
 
             <div className="hero-cta-group flex gap-4 flex-wrap">
               <a
                 href="#contact"
-                className="hero-cta inline-flex items-center gap-2.5 bg-white text-[#1e3a8a] px-6 py-3.5 lg:px-8 lg:py-4.5 rounded-lg text-sm lg:text-base font-semibold no-underline transition-all duration-300 hover:bg-white/95 hover:-translate-y-0.5 hover:shadow-lg w-full sm:w-auto justify-center sm:justify-start"
+                className="hero-cta inline-flex items-center gap-2.5 bg-white text-[#1e3a8a] px-8 py-[18px] rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:bg-white/95 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)] w-full sm:w-auto justify-center sm:justify-start"
               >
                 Get a Free Assessment
                 <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-4.5 h-4.5 transition-transform duration-300 hover:translate-x-1">
@@ -279,7 +286,7 @@ export default function HomePage() {
               </a>
               <a
                 href="#services"
-                className="hero-cta hero-cta-secondary inline-flex items-center gap-2.5 bg-transparent text-white px-6 py-3.5 lg:px-8 lg:py-4.5 border border-white/30 rounded-lg text-sm lg:text-base font-semibold no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/50 w-full sm:w-auto justify-center sm:justify-start"
+                className="hero-cta hero-cta-secondary inline-flex items-center gap-2.5 bg-transparent text-white px-8 py-[18px] border border-white/30 rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/50 w-full sm:w-auto justify-center sm:justify-start"
               >
                 See Our Work
               </a>
@@ -304,7 +311,7 @@ export default function HomePage() {
 
               {/* ASCII Art */}
               <div className="circuit-container relative z-10 flex items-center justify-center">
-                <pre className="circuit-ascii organic font-mono text-sm md:text-xs leading-relaxed text-center font-medium tracking-wider px-4 drop-shadow-lg" style={{ filter: 'drop-shadow(0 0 40px rgba(34, 211, 238, 0.3)) drop-shadow(0 0 80px rgba(139, 92, 246, 0.2))' }}>
+                <pre className="circuit-ascii organic font-mono text-[14px] leading-[1.45] text-center font-medium tracking-[2px] px-4" style={{ filter: 'drop-shadow(0 0 40px rgba(34, 211, 238, 0.3)) drop-shadow(0 0 80px rgba(139, 92, 246, 0.2))' }}>
                   <span className="ascii-dim">                                   </span><span className="ascii-white">✧</span>
                   <br />
                   <span className="ascii-dim">                            </span><span className="ascii-flow">╭</span><span className="ascii-dim">─────────</span><span className="ascii-flow">╮</span>
@@ -625,7 +632,7 @@ export default function HomePage() {
                 <div className="company-stat-number font-headline text-5xl lg:text-6xl font-bold text-white leading-none mb-2">
                   14<span className="text-[var(--accent-cyan)]">+</span>
                 </div>
-                <div className="company-stat-label text-xs md:text-[11px] font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
+                <div className="company-stat-label text-[11px] lg:text-xs font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
                   Years Combined Experience
                 </div>
               </div>
@@ -633,7 +640,7 @@ export default function HomePage() {
                 <div className="company-stat-number font-headline text-5xl lg:text-6xl font-bold text-white leading-none mb-2">
                   6
                 </div>
-                <div className="company-stat-label text-xs md:text-[11px] font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
+                <div className="company-stat-label text-[11px] lg:text-xs font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
                   Years at Fortune 500
                 </div>
               </div>
@@ -642,7 +649,7 @@ export default function HomePage() {
                 <div className="company-stat-number font-headline text-5xl lg:text-6xl font-bold text-white leading-none mb-2">
                   10<span className="text-[var(--accent-cyan)]">+</span>
                 </div>
-                <div className="company-stat-label text-xs md:text-[11px] font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
+                <div className="company-stat-label text-[11px] lg:text-xs font-semibold text-white/85 uppercase tracking-wider leading-relaxed">
                   Years Enterprise Healthcare
                 </div>
               </div>
