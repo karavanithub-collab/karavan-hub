@@ -18,62 +18,10 @@ const footerLinks = {
     { label: 'Insights', href: '/insights' },
     { label: 'Contact', href: '/contact' },
   ],
-  contact: [
-    { type: 'email', label: 'hello@karavanhub.com', href: 'mailto:hello@karavanhub.com', icon: 'email' },
-    { type: 'phone', label: '+1 (647) 555-0123', href: 'tel:+16475550123', icon: 'phone' },
-    { type: 'address', label: '123 Tech Avenue, Toronto, ON M5H 2B2', href: '#', icon: 'address' },
-  ],
 }
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-
-  // Email Icon SVG
-  const EmailIcon = () => (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      aria-hidden="true"
-    >
-      <rect x="2" y="4" width="20" height="16" rx="2" />
-      <path d="m22 7-10 5L2 7" />
-    </svg>
-  )
-
-  // Phone Icon SVG
-  const PhoneIcon = () => (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      aria-hidden="true"
-    >
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-    </svg>
-  )
-
-  // Address Icon SVG
-  const AddressIcon = () => (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      aria-hidden="true"
-    >
-      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-      <circle cx="12" cy="10" r="3" />
-    </svg>
-  )
 
   // Instagram SVG
   const InstagramIcon = () => (
@@ -139,12 +87,12 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-gradient-to-b from-ocean-darkest via-ocean-dark to-ocean-mid text-white py-20 md:py-20"
+      className="bg-gradient-to-b from-ocean-darkest via-ocean-dark to-ocean-mid text-white pt-16 pb-10"
       role="contentinfo"
     >
       <div className="max-w-[1240px] mx-auto px-12 md:px-8 sm:px-6">
         {/* Footer Top */}
-        <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr] lg:grid-cols-2 md:grid-cols-1 gap-16 lg:gap-10 md:gap-8 pb-12 md:pb-8 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8 md:gap-10 lg:gap-12 pb-12 md:pb-8 border-b border-white/10">
           {/* Brand Column */}
           <div>
             <Link href="/" className="inline-block mb-4">
@@ -242,29 +190,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Column */}
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-5">Contact</h4>
-            <ul className="space-y-4">
-              {footerLinks.contact.map((contact) => (
-                <li key={contact.label} className="flex items-start gap-3">
-                  {contact.icon === 'email' && <EmailIcon />}
-                  {contact.icon === 'phone' && <PhoneIcon />}
-                  {contact.icon === 'address' && <AddressIcon />}
-                  {contact.type === 'address' ? (
-                    <span className="text-sm text-white/60">{contact.label}</span>
-                  ) : (
-                    <Link
-                      href={contact.href}
-                      className="text-sm text-white/60 hover:text-white transition-colors duration-250"
-                    >
-                      {contact.label}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         {/* Footer Bottom */}

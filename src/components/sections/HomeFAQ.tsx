@@ -95,10 +95,10 @@ export function HomeFAQ() {
   };
 
   return (
-    <section className="faq-section bg-white py-[120px] md:py-[80px] sm:py-[60px]">
+    <section className="faq-section bg-white py-[60px] md:py-[80px] lg:py-[120px]">
       <div className="container-main max-w-[800px]">
         <div className="faq-header text-center mb-16">
-          <h2 className="font-headline text-4xl md:text-3xl sm:text-2xl font-medium text-[var(--text-dark)] mb-4 leading-tight tracking-tight">
+          <h2 className="font-headline text-2xl md:text-3xl lg:text-[42px] font-medium text-[var(--text-dark)] mb-4 leading-tight tracking-tight">
             Questions you&apos;re probably asking.
           </h2>
           <p className="text-lg text-[var(--text-body)]">
@@ -117,7 +117,7 @@ export function HomeFAQ() {
               itemType="https://schema.org/Question"
             >
               <button
-                className="faq-question font-headline text-base md:text-sm font-medium text-[var(--text-dark)] py-6 md:py-5 cursor-pointer flex justify-between items-center gap-6 transition-colors duration-200 hover:text-[var(--primary)] w-full text-left leading-relaxed disabled:cursor-default disabled:text-[var(--text-dark)]"
+                className="faq-question font-headline text-base lg:text-[17px] font-medium text-[var(--text-dark)] py-5 lg:py-6 cursor-pointer flex justify-between items-center gap-6 transition-colors duration-200 hover:text-[var(--primary)] w-full text-left leading-relaxed disabled:cursor-default disabled:text-[var(--text-dark)]"
                 onClick={() => toggleFAQ(item.id)}
                 itemProp="name"
                 aria-expanded={activeId === item.id}
@@ -145,7 +145,7 @@ export function HomeFAQ() {
                 itemType="https://schema.org/Answer"
               >
                 <div
-                  className="faq-answer-inner pb-6 text-sm md:text-xs text-[var(--text-body)] leading-relaxed"
+                  className="faq-answer-inner pb-6 text-[15px] text-[var(--text-body)] leading-[1.8]"
                   itemProp="text"
                 >
                   {item.answer}
