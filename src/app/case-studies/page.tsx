@@ -8,7 +8,9 @@ export const metadata: Metadata = {
   title: 'Case Studies | Karavan Hub - Real Results for Real Businesses',
   description:
     'Explore 7 real-world case studies showcasing how Karavan IT Solutions helps businesses solve complex challenges with custom software, cloud migration, AI automation, and enterprise solutions. See verified results: 85% faster processing, 99.9% uptime, 40% cost reduction.',
-  canonical: 'https://karavanhub.com/case-studies',
+  alternates: {
+    canonical: 'https://karavanhub.com/case-studies',
+  },
   openGraph: {
     title: 'Case Studies | Karavan IT Solutions — Real Results for Real Businesses',
     description:

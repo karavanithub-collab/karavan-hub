@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     description: 'Founded by a former RN who saw how tech fails people.',
     images: 'https://karavanhub.com/images/twitter-about.jpg',
   },
-  canonical: 'https://karavanhub.com/about',
   alternates: {
     canonical: 'https://karavanhub.com/about',
     languages: {

@@ -33,6 +33,16 @@ export const metadata: Metadata = {
       'IT solutions built around how your business actually operates. Custom software, web design, data analytics, and digital transformation—no workarounds required.',
     images: ['https://karavanhub.com/images/twitter-it-solutions.jpg'],
   },
+  robots: 'index, follow, max-image-preview:large, max-snippet:-1',
+  alternates: {
+    canonical: 'https://karavanhub.com/it-solutions',
+  },
+  other: {
+    'geo.region': 'CA-ON',
+    'geo.placename': 'Niagara, Ontario',
+    'geo.position': '43.0896;-79.0849',
+    ICBM: '43.0896, -79.0849',
+  },
 };
 
 // Schema.org JSON-LD
@@ -138,6 +148,49 @@ const faqJsonLd = {
       },
     },
   ],
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://karavanhub.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'IT Solutions',
+      item: 'https://karavanhub.com/it-solutions',
+    },
+  ],
+};
+
+const howToJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How Karavan IT HUB Delivers Custom IT Solutions',
+  description: 'Our proven process for delivering IT solutions that fit how your business actually operates.',
+  step: [
+    { '@type': 'HowToStep', name: 'Discovery Call', text: 'We learn how your business operates and where technology can help.', position: 1 },
+    { '@type': 'HowToStep', name: 'Solution Planning', text: 'We map your workflows and design a solution that fits.', position: 2 },
+    { '@type': 'HowToStep', name: 'Build and Iterate', text: 'We build in stages so you can test and refine as we go.', position: 3 },
+    { '@type': 'HowToStep', name: 'Launch and Support', text: 'We deploy your solution and provide ongoing support.', position: 4 },
+  ],
+};
+
+const speakableJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'IT Solutions for Small & Medium Businesses',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['#software-heading', '#webdesign-heading', '#analytics-heading', '#transform-heading'],
+  },
+  url: 'https://karavanhub.com/it-solutions',
 };
 
 export default function ITSolutionsPage() {
@@ -423,6 +476,18 @@ export default function ITSolutionsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableJsonLd) }}
       />
 
       {/* ============================================

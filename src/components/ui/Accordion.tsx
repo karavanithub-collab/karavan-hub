@@ -34,9 +34,11 @@ export default function Accordion({ items, type, defaultOpen = 0 }: AccordionPro
           }`}
         >
           <button
+            id={`${type}-header-${index}`}
             className={baseClasses.header}
             onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
             aria-expanded={openIndex === index}
+            aria-controls={`${type}-panel-${index}`}
           >
             <h4>{item.title}</h4>
             <div className={baseClasses.icon}>
@@ -50,7 +52,13 @@ export default function Accordion({ items, type, defaultOpen = 0 }: AccordionPro
               </svg>
             </div>
           </button>
-          <div className={baseClasses.body}>
+          <div
+            id={`${type}-panel-${index}`}
+            role="region"
+            aria-labelledby={`${type}-header-${index}`}
+            aria-hidden={openIndex !== index}
+            className={baseClasses.body}
+          >
             {item.content}
           </div>
         </div>

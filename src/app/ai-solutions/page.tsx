@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   title: 'AI Solutions | Karavan Hub - AI Automation & Consulting in Niagara',
   description:
     'Make AI work for your business. Vertical AI automation, custom AI software solutions, and strategic AI consulting. 85% faster processing, 92% fewer errors.',
-  canonical: 'https://karavanhub.com/ai-solutions',
+  alternates: {
+    canonical: 'https://karavanhub.com/ai-solutions',
+  },
   openGraph: {
     type: 'website',
     url: 'https://karavanhub.com/ai-solutions',
