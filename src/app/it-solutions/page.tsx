@@ -528,17 +528,18 @@ export default function ITSolutionsPage() {
         className="relative min-h-[100vh] bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
         aria-label="IT Solutions Overview"
       >
-        {/* Animated gradient orbs */}
+        {/* Animated gradient orbs — GPU-promoted to avoid scroll jank */}
         <div
           className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] rounded-full bg-gradient-radial from-[#3b82f6] to-transparent blur-[80px] opacity-40 animate-pulse"
+          style={{ willChange: 'transform, opacity', transform: 'translateZ(0)' }}
         ></div>
         <div
           className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full bg-gradient-radial from-[#22d3ee] to-transparent blur-[80px] opacity-40 animate-pulse"
-          style={{ animationDelay: '-4s' }}
+          style={{ animationDelay: '-4s', willChange: 'transform, opacity', transform: 'translateZ(0)' }}
         ></div>
         <div
           className="absolute top-[40%] left-[30%] w-[350px] h-[350px] rounded-full bg-gradient-radial from-[#8b5cf6] to-transparent blur-[80px] opacity-40 animate-pulse"
-          style={{ animationDelay: '-8s' }}
+          style={{ animationDelay: '-8s', willChange: 'transform, opacity', transform: 'translateZ(0)' }}
         ></div>
 
         {/* Grid pattern overlay */}
@@ -579,21 +580,21 @@ export default function ITSolutionsPage() {
           {/* Right Column - ASCII Tech Visual */}
           <div className="hidden lg:flex items-center justify-center relative">
             <div className="w-full max-w-[650px] min-h-[550px] relative flex items-center justify-center">
-              {/* Glow layers */}
+              {/* Glow layers — GPU-promoted */}
               <div
                 className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[500px] h-[450px] rounded-full blur-[80px]"
-                style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 40%, rgba(139, 92, 246, 0.12) 0%, rgba(37, 99, 235, 0.08) 30%, transparent 60%)' }}
+                style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 40%, rgba(139, 92, 246, 0.12) 0%, rgba(37, 99, 235, 0.08) 30%, transparent 60%)', willChange: 'transform', transform: 'translateZ(0)' }}
               ></div>
               <div
                 className="absolute top-[30%] left-[45%] -translate-x-1/2 w-[350px] h-[300px] rounded-full blur-[70px]"
-                style={{ background: 'radial-gradient(ellipse at center, rgba(34, 211, 238, 0.1) 0%, rgba(96, 165, 250, 0.05) 40%, transparent 70%)' }}
+                style={{ background: 'radial-gradient(ellipse at center, rgba(34, 211, 238, 0.1) 0%, rgba(96, 165, 250, 0.05) 40%, transparent 70%)', willChange: 'transform', transform: 'translateZ(0)' }}
               ></div>
 
-              {/* Floating particles */}
-              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '15%', left: '20%', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)' }}></div>
-              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '30%', right: '15%', animationDelay: '1.5s', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)' }}></div>
-              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ bottom: '25%', left: '15%', animationDelay: '3s', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)' }}></div>
-              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '50%', right: '25%', animationDelay: '4.5s', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)' }}></div>
+              {/* Floating particles — GPU-promoted */}
+              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '15%', left: '20%', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)', willChange: 'transform', transform: 'translateZ(0)' }}></div>
+              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '30%', right: '15%', animationDelay: '1.5s', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)', willChange: 'transform', transform: 'translateZ(0)' }}></div>
+              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ bottom: '25%', left: '15%', animationDelay: '3s', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)', willChange: 'transform', transform: 'translateZ(0)' }}></div>
+              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '50%', right: '25%', animationDelay: '4.5s', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)', willChange: 'transform', transform: 'translateZ(0)' }}></div>
 
               {/* Flow lines */}
               <div className="absolute top-[22%] left-[10%] w-[150px] h-px rotate-[15deg] opacity-30" style={{ background: 'linear-gradient(90deg, transparent, rgba(103, 232, 249, 0.3), rgba(147, 197, 253, 0.4), transparent)' }}></div>

@@ -100,7 +100,7 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/98 backdrop-blur-[20px] shadow-nav'
+            ? 'bg-white/98 backdrop-blur-[12px] shadow-nav'
             : 'bg-transparent'
         }`}
         role="navigation"
