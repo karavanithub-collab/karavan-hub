@@ -749,6 +749,16 @@ button:focus-visible,
   text-align: left;
 }
 
+@media (max-width: 768px) {
+  .software-accordion-header,
+  .webdesign-accordion-header,
+  .analytics-accordion-header,
+  .transform-accordion-header {
+    padding: 18px 4px;
+    min-height: 48px;
+  }
+}
+
 .software-accordion-header:hover h4,
 .webdesign-accordion-header:hover h4,
 .analytics-accordion-header:hover h4,
