@@ -129,18 +129,17 @@ export default function Navbar() {
           <ul className="hidden lg:flex gap-9 list-none">
             {/* AI Solutions */}
             <li className="relative group">
-              <button
-                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 group-hover:text-accent-cyan ${
+              <Link
+                href="/ai-solutions"
+                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline group-hover:text-accent-cyan ${
                   isScrolled
                     ? 'text-text-body group-hover:text-primary'
                     : 'text-white/90'
                 }`}
-                aria-expanded="false"
-                aria-haspopup="true"
               >
                 AI Solutions
                 <DropdownArrow />
-              </button>
+              </Link>
               <div className="absolute top-full left-0 pt-4 opacity-0 invisible transform -translate-y-2 transition-all duration-250 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
                 <div className="bg-white rounded-xl shadow-dropdown border border-border-light py-3 min-w-[220px]">
                   {navDropdowns.ai.map((item) => (
@@ -165,18 +164,17 @@ export default function Navbar() {
 
             {/* IT Solutions */}
             <li className="relative group">
-              <button
-                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 group-hover:text-accent-cyan ${
+              <Link
+                href="/it-solutions"
+                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline group-hover:text-accent-cyan ${
                   isScrolled
                     ? 'text-text-body group-hover:text-primary'
                     : 'text-white/90'
                 }`}
-                aria-expanded="false"
-                aria-haspopup="true"
               >
                 IT Solutions
                 <DropdownArrow />
-              </button>
+              </Link>
               <div className="absolute top-full left-0 pt-4 opacity-0 invisible transform -translate-y-2 transition-all duration-250 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
                 <div className="bg-white rounded-xl shadow-dropdown border border-border-light py-3 min-w-[220px]">
                   {navDropdowns.it.map((item) => (
@@ -201,18 +199,17 @@ export default function Navbar() {
 
             {/* Company */}
             <li className="relative group">
-              <button
-                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 group-hover:text-accent-cyan ${
+              <Link
+                href="/about"
+                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline group-hover:text-accent-cyan ${
                   isScrolled
                     ? 'text-text-body group-hover:text-primary'
                     : 'text-white/90'
                 }`}
-                aria-expanded="false"
-                aria-haspopup="true"
               >
                 Company
                 <DropdownArrow />
-              </button>
+              </Link>
               <div className="absolute top-full left-0 pt-4 opacity-0 invisible transform -translate-y-2 transition-all duration-250 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
                 <div className="bg-white rounded-xl shadow-dropdown border border-border-light py-3 min-w-[220px]">
                   {navDropdowns.company.map((item) => {
@@ -309,7 +306,7 @@ export default function Navbar() {
             className={`${mobileSubmenus.ai ? 'active' : ''}`}
           >
             <button
-              className="flex items-center justify-between w-full text-[28px] font-medium text-text-dark hover:text-primary transition-colors duration-200"
+              className="flex items-center justify-between w-full text-[28px] font-semibold text-text-dark hover:text-primary transition-colors duration-200"
               onClick={() => toggleMobileSubmenu('ai')}
               aria-expanded={mobileSubmenus.ai}
             >
@@ -339,7 +336,7 @@ export default function Navbar() {
                 <li key={item.href} className="mb-3">
                   <Link
                     href={item.href}
-                    className="text-lg text-text-body hover:text-primary transition-colors duration-200"
+                    className="text-lg font-medium text-text-dark hover:text-primary transition-colors duration-200"
                     onClick={closeMobileMenu}
                   >
                     {item.label}
@@ -354,7 +351,7 @@ export default function Navbar() {
             className={`${mobileSubmenus.it ? 'active' : ''}`}
           >
             <button
-              className="flex items-center justify-between w-full text-[28px] font-medium text-text-dark hover:text-primary transition-colors duration-200"
+              className="flex items-center justify-between w-full text-[28px] font-semibold text-text-dark hover:text-primary transition-colors duration-200"
               onClick={() => toggleMobileSubmenu('it')}
               aria-expanded={mobileSubmenus.it}
             >
@@ -384,7 +381,7 @@ export default function Navbar() {
                 <li key={item.href} className="mb-3">
                   <Link
                     href={item.href}
-                    className="text-lg text-text-body hover:text-primary transition-colors duration-200"
+                    className="text-lg font-medium text-text-dark hover:text-primary transition-colors duration-200"
                     onClick={closeMobileMenu}
                   >
                     {item.label}
@@ -399,7 +396,7 @@ export default function Navbar() {
             className={`${mobileSubmenus.company ? 'active' : ''}`}
           >
             <button
-              className="flex items-center justify-between w-full text-[28px] font-medium text-text-dark hover:text-primary transition-colors duration-200"
+              className="flex items-center justify-between w-full text-[28px] font-semibold text-text-dark hover:text-primary transition-colors duration-200"
               onClick={() => toggleMobileSubmenu('company')}
               aria-expanded={mobileSubmenus.company}
             >
@@ -431,7 +428,7 @@ export default function Navbar() {
                   <li key={item.href} className={`mb-3 ${isAggregate ? 'pt-2 border-t border-text-body/20' : ''}`}>
                     <Link
                       href={item.href}
-                      className="text-lg text-text-body hover:text-primary transition-colors duration-200"
+                      className="text-lg font-medium text-text-dark hover:text-primary transition-colors duration-200"
                       onClick={closeMobileMenu}
                     >
                       {item.label}

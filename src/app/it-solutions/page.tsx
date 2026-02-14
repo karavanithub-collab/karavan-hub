@@ -552,7 +552,7 @@ export default function ITSolutionsPage() {
         <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
           {/* Left Column - Text */}
           <div className="max-w-[560px] lg:max-w-[560px] text-center lg:text-left mx-auto lg:mx-0">
-            <h1 className="font-headline text-[32px] sm:text-[40px] md:text-[48px] lg:text-[clamp(48px,7vw,80px)] font-bold text-white leading-[1.05] tracking-[-1.5px] mb-7">
+            <h1 className="font-headline text-[clamp(32px,6vw,64px)] font-bold text-white leading-[1.1] tracking-[-1.5px] mb-7">
               Technology built around you,<br />
               <span
                 className="block font-bold bg-gradient-to-r from-white to-[#22d3ee] bg-clip-text"
@@ -648,7 +648,22 @@ export default function ITSolutionsPage() {
         aria-labelledby="software-heading"
       >
         <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-          {/* Left Column: Content */}
+          {/* Image — shown first on mobile, right column on desktop */}
+          <div className="lg:sticky lg:top-24 lg:order-last">
+            <div className="rounded-2xl overflow-hidden">
+              <Image
+                src="/images/software-dev.jpg"
+                alt="Custom software development for small business applications"
+                width={800}
+                height={700}
+                priority
+                className="w-full h-auto object-cover rounded-2xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+
+          {/* Content */}
           <div>
             <h2
               id="software-heading"
@@ -676,21 +691,6 @@ export default function ITSolutionsPage() {
               </Link>
             </div>
           </div>
-
-          {/* Right Column: Image */}
-          <div className="lg:sticky lg:top-24">
-            <div className="rounded-2xl overflow-hidden">
-              <Image
-                src="/images/software-dev.jpg"
-                alt="Custom software development for small business applications"
-                width={800}
-                height={700}
-                priority
-                className="w-full h-auto object-cover rounded-2xl"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -703,8 +703,8 @@ export default function ITSolutionsPage() {
         aria-labelledby="webdesign-heading"
       >
         <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-          {/* Left Column: Image */}
-          <div className="lg:sticky lg:top-24 lg:order-none order-last">
+          {/* Image — shown first on mobile, left column on desktop */}
+          <div className="lg:sticky lg:top-24">
             <div className="rounded-2xl overflow-hidden">
               <Image
                 src="/images/web-design.jpg"
@@ -717,7 +717,7 @@ export default function ITSolutionsPage() {
             </div>
           </div>
 
-          {/* Right Column: Content */}
+          {/* Content */}
           <div>
             <h2
               id="webdesign-heading"
@@ -757,7 +757,21 @@ export default function ITSolutionsPage() {
         aria-labelledby="analytics-heading"
       >
         <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-          {/* Left Column: Content */}
+          {/* Image — shown first on mobile, right column on desktop */}
+          <div className="lg:sticky lg:top-24 lg:order-last">
+            <div className="rounded-2xl overflow-hidden">
+              <Image
+                src="/images/data-analytics.jpg"
+                alt="Business intelligence dashboard with real-time data analytics"
+                width={800}
+                height={700}
+                className="w-full h-auto object-cover rounded-2xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+
+          {/* Content */}
           <div>
             <h2
               id="analytics-heading"
@@ -785,20 +799,6 @@ export default function ITSolutionsPage() {
               </Link>
             </div>
           </div>
-
-          {/* Right Column: Image */}
-          <div className="lg:sticky lg:top-24">
-            <div className="rounded-2xl overflow-hidden">
-              <Image
-                src="/images/data-analytics.jpg"
-                alt="Business intelligence dashboard with real-time data analytics"
-                width={800}
-                height={700}
-                className="w-full h-auto object-cover rounded-2xl"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -811,8 +811,8 @@ export default function ITSolutionsPage() {
         aria-labelledby="transform-heading"
       >
         <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-          {/* Left Column: Image */}
-          <div className="lg:sticky lg:top-24 lg:order-none order-last">
+          {/* Image — shown first on mobile, left column on desktop */}
+          <div className="lg:sticky lg:top-24">
             <div className="rounded-2xl overflow-hidden">
               <Image
                 src="/images/digital-transformation.jpg"
@@ -825,7 +825,7 @@ export default function ITSolutionsPage() {
             </div>
           </div>
 
-          {/* Right Column: Content */}
+          {/* Content */}
           <div>
             <h2
               id="transform-heading"
