@@ -26,43 +26,49 @@ export default function Accordion({ items, type, defaultOpen = 0 }: AccordionPro
 
   return (
     <div className={baseClasses.container}>
-      {items.map((item, index) => (
-        <div
-          key={index}
-          className={`${baseClasses.item} ${openIndex === index ? 'active' : ''} ${
-            item.isHighlight ? 'accordion-highlight' : ''
-          }`}
-        >
-          <button
-            id={`${type}-header-${index}`}
-            className={baseClasses.header}
-            onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
-            aria-expanded={openIndex === index}
-            aria-controls={`${type}-panel-${index}`}
-          >
-            <h4>{item.title}</h4>
-            <div className={baseClasses.icon}>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-          </button>
+      {items.map((item, index) => {
+        const headerId = `${type}-header-${index}`;
+        const panelId = `${type}-panel-${index}`;
+
+        return (
           <div
-            id={`${type}-panel-${index}`}
-            role="region"
-            aria-labelledby={`${type}-header-${index}`}
-            aria-hidden={openIndex !== index}
-            className={baseClasses.body}
+            key={index}
+            className={`${baseClasses.item} ${openIndex === index ? 'active' : ''} ${
+              item.isHighlight ? 'accordion-highlight' : ''
+            }`}
           >
-            {item.content}
+            <button
+              id={headerId}
+              className={baseClasses.header}
+              onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
+              aria-expanded={openIndex === index}
+              aria-controls={panelId}
+            >
+              <h4>{item.title}</h4>
+              <div className={baseClasses.icon}>
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+            </button>
+            <div
+              id={panelId}
+              role="region"
+              aria-labelledby={headerId}
+              aria-hidden={openIndex !== index}
+              className={baseClasses.body}
+            >
+              {item.content}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

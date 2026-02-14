@@ -1,14 +1,13 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-const Check = ({ className = '', size = 24 }: { className?: string; size?: number }) => (
-  <svg className={className} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-);
+import Image from 'next/image';
+import { Check } from 'lucide-react';
 import AccordionWrapper from '@/components/it-solutions/AccordionWrapper';
 
 export const metadata: Metadata = {
   title: 'IT Solutions for Small & Medium Businesses | Karavan IT HUB',
   description:
-    'IT solutions built around how your business actually operates. Custom software, web design, data analytics, and digital transformation—no workarounds required. Book a free consultation.',
+    'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation. No workarounds required.',
   keywords:
     'IT solutions, custom software development, web design, data analytics, digital transformation, SMB technology, business software, cloud applications, mobile app development',
   openGraph: {
@@ -16,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://karavanhub.com/it-solutions',
     title: 'IT Solutions for Small & Medium Businesses | Karavan IT HUB',
     description:
-      'IT solutions built around how your business actually operates. Custom software, web design, data analytics, and digital transformation—no workarounds required.',
+      'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation. No workarounds required.',
     images: [
       {
         url: 'https://karavanhub.com/images/og-it-solutions.jpg',
@@ -30,18 +29,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'IT Solutions for Small & Medium Businesses | Karavan IT HUB',
     description:
-      'IT solutions built around how your business actually operates. Custom software, web design, data analytics, and digital transformation—no workarounds required.',
+      'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation. No workarounds required.',
     images: ['https://karavanhub.com/images/twitter-it-solutions.jpg'],
   },
-  robots: 'index, follow, max-image-preview:large, max-snippet:-1',
   alternates: {
     canonical: 'https://karavanhub.com/it-solutions',
-  },
-  other: {
-    'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara, Ontario',
-    'geo.position': '43.0896;-79.0849',
-    ICBM: '43.0896, -79.0849',
   },
 };
 
@@ -55,6 +47,11 @@ const jsonLd = {
     name: 'Karavan IT HUB',
     url: 'https://karavanhub.com',
     logo: 'https://karavanhub.com/images/logo.png',
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: 'Ontario',
+      addressCountry: 'CA',
+    },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'sales',
@@ -63,10 +60,11 @@ const jsonLd = {
   },
   description:
     'Custom IT solutions for small and medium businesses including software development, web design, data analytics, and digital transformation services.',
-  areaServed: {
-    '@type': 'Country',
-    name: 'Canada',
-  },
+  areaServed: [
+    { '@type': 'Country', name: 'Canada' },
+    { '@type': 'State', name: 'Ontario' },
+    { '@type': 'City', name: 'Niagara' },
+  ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'IT Solutions Services',
@@ -120,7 +118,7 @@ const faqJsonLd = {
       name: 'What IT solutions does Karavan IT HUB offer for small businesses?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Karavan IT HUB provides custom software development, web design and development, data analytics dashboards, and digital transformation services specifically designed for small and medium businesses.',
+        text: 'Karavan IT HUB provides custom software development, web design and development, data analytics dashboards, and digital transformation services specifically designed for small and medium businesses in Canada.',
       },
     },
     {
@@ -128,7 +126,7 @@ const faqJsonLd = {
       name: 'How is custom software different from off-the-shelf solutions?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Custom software is built around your specific workflows and business processes, eliminating workarounds and unnecessary features. It grows with your business and integrates seamlessly with your existing tools.',
+        text: 'Custom software is built around your specific workflows and business processes, eliminating workarounds and unnecessary features. It grows with your business and connects with your existing tools.',
       },
     },
     {
@@ -144,7 +142,39 @@ const faqJsonLd = {
       name: 'How can data analytics help my business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Data analytics transforms scattered information into clear dashboards that show what\'s actually happening in your business. It helps you make decisions based on facts rather than gut feelings.',
+        text: "Data analytics turns scattered information into clear dashboards that show what is happening in your business. It helps you make decisions based on facts rather than gut feelings.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does a custom software project typically take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Timelines depend on scope. A focused project like a customer portal or internal tool can take 6 to 12 weeks. Larger systems with multiple integrations may take 3 to 6 months. We share a clear timeline before any work begins.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the first step to working with Karavan IT HUB?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The first step is a free consultation where we learn how your business operates and identify where technology can help. No pitch, no pressure. We listen first and recommend second.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Karavan IT HUB work with businesses outside Ontario?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. While Karavan IT HUB is headquartered in Niagara, Ontario, we work with small and medium businesses across Canada. Most of our collaboration happens remotely with regular video check-ins.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does custom software development cost for a small business?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Costs vary based on complexity and scope. A simple web application may start around $15,000 to $30,000 CAD, while larger enterprise systems can range higher. We provide detailed estimates after understanding your needs during the free consultation.',
       },
     },
   ],
@@ -173,12 +203,33 @@ const howToJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: 'How Karavan IT HUB Delivers Custom IT Solutions',
-  description: 'Our proven process for delivering IT solutions that fit how your business actually operates.',
+  description:
+    'Our process for building custom IT solutions for small and medium businesses in Canada.',
   step: [
-    { '@type': 'HowToStep', name: 'Discovery Call', text: 'We learn how your business operates and where technology can help.', position: 1 },
-    { '@type': 'HowToStep', name: 'Solution Planning', text: 'We map your workflows and design a solution that fits.', position: 2 },
-    { '@type': 'HowToStep', name: 'Build and Iterate', text: 'We build in stages so you can test and refine as we go.', position: 3 },
-    { '@type': 'HowToStep', name: 'Launch and Support', text: 'We deploy your solution and provide ongoing support.', position: 4 },
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Discovery',
+      text: 'We learn how your business operates and identify where technology can remove friction.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Planning',
+      text: 'We create a prioritized roadmap, deciding what to tackle first and what to phase in later.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Build and Iterate',
+      text: 'Senior engineers build your solution with regular check-ins so you see progress throughout.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Launch and Support',
+      text: 'We handle deployment and provide ongoing support to make sure everything runs smoothly.',
+    },
   ],
 };
 
@@ -200,7 +251,7 @@ export default function ITSolutionsPage() {
       title: 'Cloud-Native Applications',
       content: (
         <p>
-          Apps that grow with you—scale up when you need more, scale down when you don't. No more paying for servers collecting dust or panicking during busy seasons.
+          No more paying for servers that sit idle. Your app scales up during busy periods and scales back down when things are quiet. You only pay for what you use.
         </p>
       ),
     },
@@ -208,7 +259,7 @@ export default function ITSolutionsPage() {
       title: 'Full-Stack Development',
       content: (
         <p>
-          Everything from the user interface to the database, handled by one team. No finger-pointing, no handoffs between vendors—just people who understand the whole picture.
+          One team handles everything, from the screens your customers see to the database underneath. No finger-pointing. No handoffs between vendors. Just people who understand the whole picture.
         </p>
       ),
     },
@@ -216,45 +267,41 @@ export default function ITSolutionsPage() {
       title: 'System Modernization',
       content: (
         <p>
-          That legacy system everyone's afraid to touch? We help you move forward—carefully, methodically, without disrupting what's working.
+          That old system everyone&apos;s nervous about touching? We help you move off it carefully, one piece at a time, without breaking what&apos;s already working.
         </p>
       ),
     },
     {
-      title: 'Mobile App Development',
+      title: 'Mobile Apps',
       content: (
         <p>
-          Your customers are on their phones. Meet them there. iOS, Android, or both—apps that feel polished and work flawlessly.
+          We build iOS and Android apps that feel like they belong on your phone. Clean, fast, and designed around how people actually use them.
         </p>
       ),
     },
     {
-      title: 'API Development & Integration',
+      title: 'Connecting Your Tools',
       content: (
         <p>
-          Tired of copying data between systems? We connect your tools so information flows automatically—no more double-entry, no more version confusion.
+          If your team is copying data between systems by hand, something is broken. We connect your tools so information moves on its own.
         </p>
       ),
     },
     {
       title: 'The Business Impact',
       content: (
-        <ul className="impact-list">
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Stop paying for features you don't use—and missing ones you need</span>
+        <ul className="list-none p-0 pb-5 m-0">
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Stop paying for features you don&apos;t use, and missing ones you need</span>
           </li>
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Reduce training time when software matches how your team already thinks</span>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Less training time because the software matches how your team already thinks</span>
           </li>
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Scale without switching platforms every time you outgrow a tool</span>
-          </li>
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Own your technology instead of renting someone else's limitations</span>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Own your technology instead of renting someone else&apos;s limitations</span>
           </li>
         </ul>
       ),
@@ -268,7 +315,7 @@ export default function ITSolutionsPage() {
       title: 'Responsive Website Design',
       content: (
         <p>
-          Your site should look and feel right whether someone's on a laptop, tablet, or phone. We make sure it does—no pinching, no awkward scrolling.
+          Your site should look and feel right on a laptop, a tablet, and a phone. No pinching. No awkward scrolling. We test on real devices, not just browser windows.
         </p>
       ),
     },
@@ -276,7 +323,7 @@ export default function ITSolutionsPage() {
       title: 'E-Commerce Development',
       content: (
         <p>
-          An online store that's easy for customers to buy from—and easy for you to manage. Secure checkout, sensible product organization, and the tools you need behind the scenes.
+          An online store that&apos;s easy for your customers to buy from and easy for you to manage. We handle the checkout, the product organization, and the behind-the-scenes tools so you can focus on selling.
         </p>
       ),
     },
@@ -284,7 +331,7 @@ export default function ITSolutionsPage() {
       title: 'Web Applications',
       content: (
         <p>
-          Sometimes you need more than a website—you need something that does work. Customer portals, booking systems, interactive tools that solve real problems.
+          Sometimes a website isn&apos;t enough. You need something that does real work. Customer portals, booking systems, internal tools. We build those too.
         </p>
       ),
     },
@@ -292,37 +339,37 @@ export default function ITSolutionsPage() {
       title: 'CMS Implementation',
       content: (
         <p>
-          You should be able to update your own content—without waiting on us or worrying you'll break something. We set you up with a system that makes sense for your team.
+          You should be able to update your own content without calling us or worrying you&apos;ll break something. We set you up with a system your team can manage on their own.
         </p>
       ),
     },
     {
-      title: 'Performance Optimization',
+      title: 'Speed and Performance',
       content: (
         <p>
-          Slow sites frustrate visitors and hurt your search rankings. We make sure yours loads fast—because first impressions matter.
+          A three-second load time costs you roughly half your visitors. We make sure your site is fast, and we keep it that way.
         </p>
       ),
     },
     {
       title: 'The Business Impact',
       content: (
-        <ul className="impact-list">
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Convert more of the traffic you're already paying for</span>
+        <ul className="list-none p-0 pb-5 m-0">
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Convert more of the traffic you&apos;re already paying for</span>
           </li>
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Rank higher when Google rewards your site speed and mobile experience</span>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Rank higher on Google because your site is fast and works on every device</span>
           </li>
-          <li>
-            <Check className="check-icon" size={18} />
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
             <span>Update content yourself without waiting (or paying) for developer time</span>
           </li>
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Build credibility before the first sales conversation even happens</span>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Look credible before the first sales conversation even happens</span>
           </li>
         </ul>
       ),
@@ -333,63 +380,59 @@ export default function ITSolutionsPage() {
   // Analytics Accordion Items
   const analyticsItems = [
     {
-      title: 'Business Intelligence Dashboards',
+      title: 'Dashboards That Make Sense',
       content: (
         <p>
-          The numbers that actually matter to your business, updated in real-time and visible to the people who need them. No more frantic Monday morning data pulls.
+          The numbers that matter to your business, updated live and visible to the people who need them. No more frantic Monday morning data pulls.
         </p>
       ),
     },
     {
-      title: 'Data Integration & ETL',
+      title: 'Connecting Your Data',
       content: (
         <p>
-          Your CRM says one thing, your accounting software says another. We connect everything so you have one version of the truth—not twelve conflicting spreadsheets.
+          Your CRM says one thing. Your accounting software says another. We connect everything so you have one set of numbers you can trust, not twelve conflicting spreadsheets.
         </p>
       ),
     },
     {
-      title: 'Data Warehousing',
+      title: 'Organizing It All',
       content: (
         <p>
-          A proper home for all that data—organized, searchable, and ready to answer whatever questions come up next quarter.
+          A proper home for all that data. Organized, searchable, and ready to answer whatever questions come up next quarter.
         </p>
       ),
     },
     {
-      title: 'Automated Reporting',
+      title: 'Reports That Write Themselves',
       content: (
         <p>
-          Weekly reports that write themselves. Monthly board decks that don't consume three days of someone's week. Your team has better things to do.
+          Weekly reports. Monthly board decks. The ones that used to eat three days of someone&apos;s week. We automate them so your team can do work that matters.
         </p>
       ),
     },
     {
-      title: 'Predictive Analytics',
+      title: "Seeing What's Coming",
       content: (
         <p>
-          What if you could see problems before they happen? Churn prediction, demand forecasting, opportunity scoring—data that helps you get ahead instead of catch up.
+          We build models that help you spot patterns before they become problems. Which customers might leave. Where demand is heading. Where the next opportunity is. That kind of thing.
         </p>
       ),
     },
     {
       title: 'The Business Impact',
       content: (
-        <ul className="impact-list">
-          <li>
-            <Check className="check-icon" size={18} />
+        <ul className="list-none p-0 pb-5 m-0">
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
             <span>Make decisions in hours that used to take weeks of analysis</span>
           </li>
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Spot problems and opportunities before your competitors do</span>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Free up the people currently stuck compiling reports</span>
           </li>
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Free up the people currently stuck compiling reports to do actual work</span>
-          </li>
-          <li>
-            <Check className="check-icon" size={18} />
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
             <span>Walk into meetings with answers instead of excuses</span>
           </li>
         </ul>
@@ -401,64 +444,52 @@ export default function ITSolutionsPage() {
   // Transform Accordion Items
   const transformItems = [
     {
-      title: 'Digital Strategy Development',
+      title: 'A Plan That Makes Sense',
       content: (
         <p>
-          A clear plan that makes sense for your business—what to tackle first, what to phase in, and honestly, what to skip. No trying to change everything at once.
+          We help you figure out what to tackle first, what to phase in later, and honestly, what to skip. No trying to change everything at once.
         </p>
       ),
     },
     {
-      title: 'Process Automation',
+      title: 'Automating the Tedious Stuff',
       content: (
         <p>
-          Your team didn't sign up to copy data between systems or chase down approvals. We automate the tedious stuff so they can focus on work that actually matters.
+          Your team didn&apos;t sign up to copy data between systems or chase down approvals all day. We automate those tasks so they can focus on work that matters to them.
         </p>
       ),
     },
     {
-      title: 'Legacy System Modernization',
+      title: 'Moving to the Cloud',
       content: (
         <p>
-          That system everyone's afraid to touch? We'll help you move forward—carefully, step by step—without disrupting what's still working.
+          Less hardware to maintain. Lower costs. Your team can work from anywhere. We handle the migration so the switch feels easy, not scary.
         </p>
       ),
     },
     {
-      title: 'Cloud Migration',
+      title: 'Making It Easier for Your Customers',
       content: (
         <p>
-          Infrastructure that grows with you, costs less to maintain, and lets your team work from anywhere. We handle the migration so you can focus on running your business.
-        </p>
-      ),
-    },
-    {
-      title: 'Customer Experience Transformation',
-      content: (
-        <p>
-          Make it easier for customers to work with you. Self-service options, simpler processes, faster responses—the kind of experience that builds loyalty.
+          Self-service portals. Faster responses. Simpler processes. When it&apos;s easy to work with you, people come back.
         </p>
       ),
     },
     {
       title: 'The Business Impact',
       content: (
-        <ul className="impact-list">
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Recover the hours your team loses to manual workarounds every week</span>
+        <ul className="list-none p-0 pb-5 m-0">
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Get back the hours your team loses to manual workarounds every week</span>
           </li>
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Reduce the errors that come from humans doing repetitive tasks</span>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Fewer mistakes from people doing the same repetitive task over and over</span>
           </li>
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Scale operations without hiring proportionally more people</span>
-          </li>
-          <li>
-            <Check className="check-icon" size={18} />
-            <span>Compete with larger players who've already made these investments</span>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Handle more work without needing to hire at the same rate</span>
           </li>
         </ul>
       ),
@@ -467,7 +498,7 @@ export default function ITSolutionsPage() {
   ];
 
   return (
-    <main>
+    <>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -493,180 +524,170 @@ export default function ITSolutionsPage() {
       {/* ============================================
            HERO SECTION
            ============================================ */}
-      <section className="hero" aria-label="IT Solutions Overview">
+      <section
+        className="relative min-h-[100vh] bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
+        aria-label="IT Solutions Overview"
+      >
         {/* Animated gradient orbs */}
-        <div className="hero-orb hero-orb-1"></div>
-        <div className="hero-orb hero-orb-2"></div>
-        <div className="hero-orb hero-orb-3"></div>
+        <div
+          className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] rounded-full bg-gradient-radial from-[#3b82f6] to-transparent blur-[80px] opacity-40 animate-pulse"
+        ></div>
+        <div
+          className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full bg-gradient-radial from-[#22d3ee] to-transparent blur-[80px] opacity-40 animate-pulse"
+          style={{ animationDelay: '-4s' }}
+        ></div>
+        <div
+          className="absolute top-[40%] left-[30%] w-[350px] h-[350px] rounded-full bg-gradient-radial from-[#8b5cf6] to-transparent blur-[80px] opacity-40 animate-pulse"
+          style={{ animationDelay: '-8s' }}
+        ></div>
 
-        {/* Grid pattern */}
-        <div className="hero-grid-pattern"></div>
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
 
         {/* Grain texture */}
-        <div className="grain-overlay"></div>
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }}></div>
 
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1 className="hero-title">
+        {/* Hero Content */}
+        <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
+          {/* Left Column - Text */}
+          <div className="max-w-[560px] lg:max-w-[560px] text-center lg:text-left mx-auto lg:mx-0">
+            <h1 className="font-headline text-[32px] sm:text-[40px] md:text-[48px] lg:text-[clamp(48px,7vw,80px)] font-bold text-white leading-[1.05] tracking-[-1.5px] mb-7">
               Technology built around you,<br />
-              <span className="accent">not the other way around.</span>
+              <span
+                className="block font-bold bg-gradient-to-r from-white to-[#22d3ee] bg-clip-text"
+                style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+              >
+                not the other way around.
+              </span>
             </h1>
-            <p className="hero-subtitle">
-              Most IT forces you to adapt. We take a different approach—understanding how your business actually operates, then building solutions that fit. No workarounds required.
+            <p className="text-[16px] md:text-[19px] text-white/75 max-w-[500px] leading-[1.75] font-medium mb-9 mx-auto lg:mx-0">
+              We learn how your business works first. Then we build the technology to match.
             </p>
-            <Link href="#" className="hero-cta">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2.5 bg-white text-[#1e3a8a] px-9 py-[18px] rounded-lg text-[15px] font-semibold leading-none no-underline transition-all duration-300 hover:bg-white/95 hover:-translate-y-0.5 mx-auto lg:mx-0"
+              style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.15)' }}
+            >
               Book a Consultation
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-[18px] h-[18px] transition-transform duration-300">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </Link>
           </div>
 
-          {/* ASCII Tech Visual - Abstract Tech Flow */}
-          <div className="hero-visual">
-            <div className="ascii-visual">
-              {/* Ethereal glow layers */}
-              <div className="hero-glow-1"></div>
-              <div className="hero-glow-2"></div>
-              <div className="hero-glow-3"></div>
+          {/* Right Column - ASCII Tech Visual */}
+          <div className="hidden lg:flex items-center justify-center relative">
+            <div className="w-full max-w-[650px] min-h-[550px] relative flex items-center justify-center">
+              {/* Glow layers */}
+              <div
+                className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[500px] h-[450px] rounded-full blur-[80px]"
+                style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 40%, rgba(139, 92, 246, 0.12) 0%, rgba(37, 99, 235, 0.08) 30%, transparent 60%)' }}
+              ></div>
+              <div
+                className="absolute top-[30%] left-[45%] -translate-x-1/2 w-[350px] h-[300px] rounded-full blur-[70px]"
+                style={{ background: 'radial-gradient(ellipse at center, rgba(34, 211, 238, 0.1) 0%, rgba(96, 165, 250, 0.05) 40%, transparent 70%)' }}
+              ></div>
 
               {/* Floating particles */}
-              <div className="hero-particle hero-particle-1"></div>
-              <div className="hero-particle hero-particle-2"></div>
-              <div className="hero-particle hero-particle-3"></div>
-              <div className="hero-particle hero-particle-4"></div>
-              <div className="hero-particle hero-particle-5"></div>
-              <div className="hero-particle hero-particle-6"></div>
-              <div className="hero-particle hero-particle-7"></div>
+              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '15%', left: '20%', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)' }}></div>
+              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '30%', right: '15%', animationDelay: '1.5s', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)' }}></div>
+              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ bottom: '25%', left: '15%', animationDelay: '3s', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)' }}></div>
+              <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '50%', right: '25%', animationDelay: '4.5s', boxShadow: '0 0 15px rgba(147, 197, 253, 0.4)' }}></div>
 
               {/* Flow lines */}
-              <div className="flow-line flow-line-1"></div>
-              <div className="flow-line flow-line-2"></div>
-              <div className="flow-line flow-line-3"></div>
-              <div className="flow-line flow-line-4"></div>
+              <div className="absolute top-[22%] left-[10%] w-[150px] h-px rotate-[15deg] opacity-30" style={{ background: 'linear-gradient(90deg, transparent, rgba(103, 232, 249, 0.3), rgba(147, 197, 253, 0.4), transparent)' }}></div>
+              <div className="absolute top-[38%] right-[5%] w-[120px] h-px -rotate-[20deg] opacity-30" style={{ background: 'linear-gradient(90deg, transparent, rgba(103, 232, 249, 0.3), rgba(147, 197, 253, 0.4), transparent)' }}></div>
 
-              {/* ASCII Tech Flow Pattern */}
-              <div className="circuit-container">
-                <pre className="circuit-ascii">
-{`          ·    ·    ·    ·    ·    ·    ·    ·
-       ·                                         ·
-    ╭─────────○───────────○───────────○─────────╮
-    │         │           │           │         │
- ───┼─────────┼───────────┼───────────┼─────────┼───
-    │         │           │           │         │
-    │   ╔═════════════════════════════════════╗   │
-    │   ║                                     ║   │
-    │   ║    ██╗████████╗                   ║   │
-    │   ║    ██║╚══██╔══╝                   ║   │
- ○──┤   ║    ██║   ██║     SOLUTIONS       ║   ├──○
-    │   ║    ██║   ██║     THAT WORK       ║   │
-    │   ║    ██║   ██║                      ║   │
-    │   ║    ╚═╝   ╚═╝                      ║   │
-    │   ║                                     ║   │
-    │   ║          ◈      ◈      ◈          ║   │
-    │   ╚═════════════════════════════════════╝   │
-    │         │           │           │         │
- ───┼─────────┼───────────┼───────────┼─────────┼───
-    │         │           │           │         │
-    ╰─────────○───────────○───────────○─────────╯
-       ·                                         ·
-          ·    ·    ·    ·    ·    ·    ·    ·`}
+              {/* ASCII Art */}
+              <div className="relative z-10 flex items-center justify-center">
+                <pre className="font-mono text-[13px] leading-[1.35] tracking-[1px] whitespace-pre text-center font-medium" style={{ filter: 'drop-shadow(0 0 40px rgba(34, 211, 238, 0.3)) drop-shadow(0 0 80px rgba(139, 92, 246, 0.2))' }}>
+                  <span className="ascii-dim">{`          `}</span><span className="ascii-dim">{`·    ·    ·    ·    ·    ·    ·    ·`}</span>{'\n'}
+                  <span className="ascii-dim">{`       ·                                         ·`}</span>{'\n'}
+                  <span className="ascii-flow">{`    ╭─────────`}</span><span className="ascii-bright">{`○`}</span><span className="ascii-flow">{`───────────`}</span><span className="ascii-bright">{`○`}</span><span className="ascii-flow">{`───────────`}</span><span className="ascii-bright">{`○`}</span><span className="ascii-flow">{`─────────╮`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │         │           │           │         │`}</span>{'\n'}
+                  <span className="ascii-dim">{` ───┼─────────┼───────────┼───────────┼─────────┼───`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │         │           │           │         │`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │   `}</span><span className="ascii-flow">{`╔═════════════════════════════════════╗`}</span><span className="ascii-dim">{`   │`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │   `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`                                     `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`   │`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │   `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-white">{`    ██╗████████╗`}</span><span className="ascii-dim">{`                   `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`   │`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │   `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-white">{`    ██║╚══██╔══╝`}</span><span className="ascii-dim">{`                   `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`   │`}</span>{'\n'}
+                  <span className="ascii-bright">{` ○──┤`}</span><span className="ascii-dim">{`   `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-white">{`    ██║   ██║`}</span><span className="ascii-cyan">{`     SOLUTIONS`}</span><span className="ascii-dim">{`       `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`   `}</span><span className="ascii-bright">{`├──○`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │   `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-white">{`    ██║   ██║`}</span><span className="ascii-cyan">{`     THAT WORK`}</span><span className="ascii-dim">{`       `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`   │`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │   `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-white">{`    ██║   ██║`}</span><span className="ascii-dim">{`                      `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`   │`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │   `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-white">{`    ╚═╝   ╚═╝`}</span><span className="ascii-dim">{`                      `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`   │`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │   `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`                                     `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`   │`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │   `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`          `}</span><span className="ascii-purple">{`◈`}</span><span className="ascii-dim">{`      `}</span><span className="ascii-purple">{`◈`}</span><span className="ascii-dim">{`      `}</span><span className="ascii-purple">{`◈`}</span><span className="ascii-dim">{`          `}</span><span className="ascii-flow">{`║`}</span><span className="ascii-dim">{`   │`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │   `}</span><span className="ascii-flow">{`╚═════════════════════════════════════╝`}</span><span className="ascii-dim">{`   │`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │         │           │           │         │`}</span>{'\n'}
+                  <span className="ascii-dim">{` ───┼─────────┼───────────┼───────────┼─────────┼───`}</span>{'\n'}
+                  <span className="ascii-dim">{`    │         │           │           │         │`}</span>{'\n'}
+                  <span className="ascii-flow">{`    ╰─────────`}</span><span className="ascii-bright">{`○`}</span><span className="ascii-flow">{`───────────`}</span><span className="ascii-bright">{`○`}</span><span className="ascii-flow">{`───────────`}</span><span className="ascii-bright">{`○`}</span><span className="ascii-flow">{`─────────╯`}</span>{'\n'}
+                  <span className="ascii-dim">{`       ·                                         ·`}</span>{'\n'}
+                  <span className="ascii-dim">{`          ·    ·    ·    ·    ·    ·    ·    ·`}</span>
                 </pre>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="scroll-indicator">
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-[10px] tracking-[2px] uppercase">
           <span>Scroll</span>
-          <div className="scroll-line"></div>
+          <div className="w-px h-[60px] bg-gradient-to-b from-white/40 to-transparent animate-pulse"></div>
         </div>
       </section>
 
       {/* ============================================
            SOFTWARE SOLUTIONS SECTION
            ============================================ */}
-      <section className="software-section" id="software-solutions" aria-labelledby="software-heading">
-        <div className="software-container">
+      <section
+        className="py-[40px] md:py-[56px] lg:py-[80px] bg-white border-t border-gray-200"
+        id="software-solutions"
+        aria-labelledby="software-heading"
+      >
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Left Column: Content */}
-          <div className="software-content">
-            <h2 id="software-heading">Software Solutions</h2>
+          <div>
+            <h2
+              id="software-heading"
+              className="font-headline text-[28px] sm:text-[34px] md:text-[42px] font-medium text-[var(--text-dark)] mb-3 leading-[1.15] tracking-[-0.5px]"
+            >
+              Software Solutions
+            </h2>
 
-            <p className="software-lead">Your business is unique. Your software should be too.</p>
+            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-0 leading-[1.6]">
+              Your business is unique. Your software should be too.
+            </p>
 
-            <p className="software-intro">
-              We've watched too many SMBs struggle with off-the-shelf tools that almost work—but not quite. The workarounds pile up, the team gets frustrated, and eventually someone asks: <em>isn't there something built for how we actually operate?</em>
-            </p>
-            <p className="software-intro">
-              That's what we build. Customer portals, internal tools, mobile apps—shaped around your workflows, not the other way around. No forcing your team to adapt to rigid software. No paying for features you'll never use.
-            </p>
+            <hr className="border-t border-gray-200 mt-6 mb-0" />
 
             {/* Accordion Items */}
             <AccordionWrapper items={softwareItems} type="software" />
 
             {/* CTA Button */}
-            <div className="software-cta">
-              <Link href="#" className="software-cta-btn">
+            <div className="mt-8">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-[var(--primary)] text-white px-8 py-4 rounded-lg text-[15px] font-semibold leading-none uppercase tracking-[0.5px] no-underline transition-all duration-300 hover:bg-[var(--primary-dark)] hover:-translate-y-0.5"
+              >
                 Schedule a Consultation
               </Link>
             </div>
           </div>
 
-          {/* Right Column: Stunning ASCII App Interface */}
-          <div className="software-visual">
-            {/* Cyberpunk visual layers */}
-            <div className="circuit-overlay"></div>
-            <div className="scanline-overlay"></div>
-            <div className="edge-glow"></div>
-
-            {/* Depth glow layers */}
-            <div className="depth-glow cyan-1"></div>
-            <div className="depth-glow purple-1"></div>
-            <div className="depth-glow cyan-2"></div>
-
-            {/* Corner accents */}
-            <div className="corner-accent top-left"></div>
-            <div className="corner-accent top-right"></div>
-            <div className="corner-accent bottom-left"></div>
-            <div className="corner-accent bottom-right"></div>
-
-            {/* Holographic floating labels */}
-            <div className="holo-label left" style={{ top: '25%', left: '8%' }}>API Ready</div>
-            <div className="holo-label purple right" style={{ top: '45%', right: '5%' }}>Cloud Native</div>
-            <div className="holo-label left" style={{ bottom: '30%', left: '5%' }}>Real-time</div>
-
-            {/* Hotspot glow points */}
-            <div className="hotspot" style={{ top: '15%', left: '25%' }}></div>
-            <div className="hotspot purple small" style={{ top: '35%', right: '20%' }}></div>
-            <div className="hotspot small" style={{ bottom: '25%', left: '30%' }}></div>
-            <div className="hotspot purple" style={{ bottom: '15%', right: '35%' }}></div>
-
-            <div className="software-ascii-wrap">
-              <pre className="software-ascii">
-{`    ╔════════════════════════════════════════════════════════════╗
-    ║  ●  ●  ●   │  Custom Application                        ║
-    ╠════════════════════════════════════════════════════════════╣
-    ║                                                            ║
-    ║   ┌──────────────────────────────────────────────────┐   ║
-    ║   │                                                  │   ║
-    ║   │   ┌────────────┐   ┌────────────┐   ┌────────────┐   ║
-    ║   │   │  $47,250   │   │   1,284    │   │  +23.5%    │   ║
-    ║   │   │  Revenue   │   │   Users    │   │  Growth    │   ║
-    ║   │   └────────────┘   └────────────┘   └────────────┘   ║
-    ║   │                                                  │   ║
-    ║   │   ● Dashboard          │   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 92%   │   ║
-    ║   │   ○ Analytics           │   ▓▓▓▓▓▓▓▓▓▓▓▓    78%   │   ║
-    ║   │   ○ Reports             │   ▓▓▓▓▓▓▓▓▓       64%   │   ║
-    ║   │   ○ Integrations        │   ▓▓▓▓▓▓▓▓▓▓▓▓▓   85%   │   ║
-    ║   │   ○ Settings            │   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓  91%   │   ║
-    ║   │                                                  │   ║
-    ║   └──────────────────────────────────────────────────┘   ║
-    ║                                                            ║
-    ║          ◈  CUSTOM  •  SCALABLE  •  YOURS  ◈           ║
-    ║                                                            ║
-    ╚════════════════════════════════════════════════════════════╝`}
-              </pre>
+          {/* Right Column: Image */}
+          <div className="lg:sticky lg:top-24">
+            <div className="rounded-2xl overflow-hidden">
+              <Image
+                src="/images/software-dev.jpg"
+                alt="Custom software development for small business applications"
+                width={800}
+                height={700}
+                priority
+                className="w-full h-auto object-cover rounded-2xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>
@@ -675,86 +696,50 @@ export default function ITSolutionsPage() {
       {/* ============================================
            WEB DESIGN & DEVELOPMENT SECTION
            ============================================ */}
-      <section className="webdesign-section" id="web-design" aria-labelledby="webdesign-heading">
-        <div className="webdesign-container">
-          {/* Left Column: Stunning ASCII Browser Window */}
-          <div className="webdesign-visual">
-            {/* Cyberpunk visual layers */}
-            <div className="circuit-overlay" style={{ opacity: 0.3 }}></div>
-            <div className="scanline-overlay"></div>
-            <div className="edge-glow"></div>
-
-            {/* Depth glow layers - purple accent */}
-            <div className="depth-glow purple-1" style={{ top: '15%', left: '15%' }}></div>
-            <div className="depth-glow cyan-1" style={{ bottom: '20%', right: '10%' }}></div>
-            <div className="depth-glow purple-1" style={{ top: '55%', right: '25%', width: '180px' }}></div>
-
-            {/* Corner accents - purple variant */}
-            <div className="corner-accent top-left" style={{ borderColor: 'rgba(157, 78, 221, 0.4)' }}></div>
-            <div className="corner-accent top-right" style={{ borderColor: 'rgba(157, 78, 221, 0.4)' }}></div>
-            <div className="corner-accent bottom-left" style={{ borderColor: 'rgba(157, 78, 221, 0.4)' }}></div>
-            <div className="corner-accent bottom-right" style={{ borderColor: 'rgba(157, 78, 221, 0.4)' }}></div>
-
-            {/* Holographic floating labels */}
-            <div className="holo-label purple left" style={{ top: '20%', left: '5%' }}>Responsive</div>
-            <div className="holo-label right" style={{ top: '50%', right: '3%' }}>SEO Ready</div>
-            <div className="holo-label purple left" style={{ bottom: '25%', left: '8%' }}>Fast Load</div>
-
-            {/* Hotspot glow points */}
-            <div className="hotspot purple" style={{ top: '12%', left: '20%' }}></div>
-            <div className="hotspot small" style={{ top: '40%', right: '15%' }}></div>
-            <div className="hotspot purple small" style={{ bottom: '35%', left: '25%' }}></div>
-            <div className="hotspot" style={{ bottom: '18%', right: '30%' }}></div>
-
-            <div className="webdesign-ascii-wrap">
-              <pre className="webdesign-ascii">
-{`    ╔════════════════════════════════════════════════════════════╗
-    ║  ●  ●  ●   │  🔒 yoursite.com                          ║
-    ╠════════════════════════════════════════════════════════════╣
-    ║                                                            ║
-    ║   ┌──────────────────────────────────────────────────┐   ║
-    ║   │                                                  │   ║
-    ║   │   ██████████████████████████████████████████   │   ║
-    ║   │   ██                                      ██   │   ║
-    ║   │   ██      Your Brand Here                ██   │   ║
-    ║   │   ██      Tagline that converts          ██   │   ║
-    ║   │   ██                                      ██   │   ║
-    ║   │   ██      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓      ██   │   ║
-    ║   │   ██████████████████████████████████████████   │   ║
-    ║   │                                                  │   ║
-    ║   └──────────────────────────────────────────────────┘   ║
-    ║                                                            ║
-    ║   ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐   ║
-    ║   │ ████████ │ │ ████████ │ │ ████████ │ │ ████████ │   ║
-    ║   │ Services │ │ About    │ │ Work     │ │ Contact  │   ║
-    ║   └──────────┘ └──────────┘ └──────────┘ └──────────┘   ║
-    ║                                                            ║
-    ║        ◈  FAST  •  RESPONSIVE  •  CONVERTS  ◈         ║
-    ║                                                            ║
-    ╚════════════════════════════════════════════════════════════╝`}
-              </pre>
+      <section
+        className="py-[40px] md:py-[56px] lg:py-[80px] bg-white border-t border-gray-200"
+        id="web-design"
+        aria-labelledby="webdesign-heading"
+      >
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          {/* Left Column: Image */}
+          <div className="lg:sticky lg:top-24 lg:order-none order-last">
+            <div className="rounded-2xl overflow-hidden">
+              <Image
+                src="/images/web-design.jpg"
+                alt="Responsive web design and development for small businesses"
+                width={800}
+                height={700}
+                className="w-full h-auto object-cover rounded-2xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
 
           {/* Right Column: Content */}
-          <div className="webdesign-content">
-            <h2 id="webdesign-heading">Web Design & Development</h2>
+          <div>
+            <h2
+              id="webdesign-heading"
+              className="font-headline text-[28px] sm:text-[34px] md:text-[42px] font-medium text-[var(--text-dark)] mb-3 leading-[1.15] tracking-[-0.5px]"
+            >
+              Web Design & Development
+            </h2>
 
-            <p className="webdesign-lead">A website that works as hard as you do.</p>
+            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-0 leading-[1.6]">
+              A website that works as hard as you do.
+            </p>
 
-            <p className="webdesign-intro">
-              Your website is often the first conversation you have with potential customers. It should feel like you—professional, clear, and genuinely helpful. Not just pretty, but purposeful.
-            </p>
-            <p className="webdesign-intro">
-              We design sites that guide visitors toward action. Fast because people don't wait. Mobile-first because that's where they're browsing. And easy for you to update, because you shouldn't need a developer every time something changes.
-            </p>
+            <hr className="border-t border-gray-200 mt-6 mb-0" />
 
             {/* Accordion Items */}
             <AccordionWrapper items={webdesignItems} type="webdesign" />
 
             {/* CTA Button */}
-            <div className="webdesign-cta">
-              <Link href="#" className="webdesign-cta-btn">
+            <div className="mt-8">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-[var(--primary)] text-white px-8 py-4 rounded-lg text-[15px] font-semibold leading-none uppercase tracking-[0.5px] no-underline transition-all duration-300 hover:bg-[var(--primary-dark)] hover:-translate-y-0.5"
+              >
                 Discuss Your Project
               </Link>
             </div>
@@ -765,86 +750,52 @@ export default function ITSolutionsPage() {
       {/* ============================================
            DATA ANALYTICS & DASHBOARDS SECTION
            ============================================ */}
-      <section className="analytics-section" id="data-analytics" aria-labelledby="analytics-heading">
-        <div className="analytics-container">
+      <section
+        className="py-[40px] md:py-[56px] lg:py-[80px] bg-white border-t border-gray-200"
+        id="data-analytics"
+        aria-labelledby="analytics-heading"
+      >
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Left Column: Content */}
-          <div className="analytics-content">
-            <h2 id="analytics-heading">Data Analytics & Dashboards</h2>
+          <div>
+            <h2
+              id="analytics-heading"
+              className="font-headline text-[28px] sm:text-[34px] md:text-[42px] font-medium text-[var(--text-dark)] mb-3 leading-[1.15] tracking-[-0.5px]"
+            >
+              Data Analytics & Dashboards
+            </h2>
 
-            <p className="analytics-lead">See what's really happening in your business.</p>
+            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-0 leading-[1.6]">
+              Your data is telling you something. Let&apos;s help you hear it.
+            </p>
 
-            <p className="analytics-intro">
-              You've got data scattered across a dozen systems. The answers are in there somewhere—but pulling them together takes hours, and by the time you do, the numbers are already stale.
-            </p>
-            <p className="analytics-intro">
-              We bring it all together. Live dashboards that show you what matters: which customers are most engaged, where the bottlenecks are, what's actually driving revenue. Real answers, updated automatically—so you can make decisions instead of compiling spreadsheets.
-            </p>
+            <hr className="border-t border-gray-200 mt-6 mb-0" />
 
             {/* Accordion Items */}
             <AccordionWrapper items={analyticsItems} type="analytics" />
 
             {/* CTA Button */}
-            <div className="analytics-cta">
-              <Link href="#" className="analytics-cta-btn">
+            <div className="mt-8">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-[var(--primary)] text-white px-8 py-4 rounded-lg text-[15px] font-semibold leading-none uppercase tracking-[0.5px] no-underline transition-all duration-300 hover:bg-[var(--primary-dark)] hover:-translate-y-0.5"
+              >
                 Discover Your Data
               </Link>
             </div>
           </div>
 
-          {/* Right Column: Stunning ASCII Dashboard */}
-          <div className="analytics-visual">
-            {/* Cyberpunk visual layers */}
-            <div className="circuit-overlay"></div>
-            <div className="scanline-overlay"></div>
-            <div className="edge-glow"></div>
-
-            {/* Depth glow layers - cyan accent */}
-            <div className="depth-glow cyan-1" style={{ top: '20%', right: '10%' }}></div>
-            <div className="depth-glow cyan-2" style={{ bottom: '25%', left: '15%' }}></div>
-            <div className="depth-glow purple-1" style={{ top: '50%', left: '60%' }}></div>
-
-            {/* Corner accents */}
-            <div className="corner-accent top-left"></div>
-            <div className="corner-accent top-right"></div>
-            <div className="corner-accent bottom-left"></div>
-            <div className="corner-accent bottom-right"></div>
-
-            {/* Holographic floating labels */}
-            <div className="holo-label left" style={{ top: '18%', left: '6%' }}>Live Data</div>
-            <div className="holo-label purple right" style={{ top: '42%', right: '4%' }}>AI Insights</div>
-            <div className="holo-label left" style={{ bottom: '22%', left: '4%' }}>KPI Metrics</div>
-
-            {/* Hotspot glow points */}
-            <div className="hotspot" style={{ top: '10%', right: '25%' }}></div>
-            <div className="hotspot purple small" style={{ top: '38%', left: '18%' }}></div>
-            <div className="hotspot small" style={{ bottom: '30%', right: '20%' }}></div>
-            <div className="hotspot purple" style={{ bottom: '12%', left: '35%' }}></div>
-
-            <div className="analytics-ascii-wrap">
-              <pre className="analytics-ascii">
-{`    ╔════════════════════════════════════════════════════════════╗
-    ║  ●  ●  ●   │  📊 Analytics Dashboard                    ║
-    ╠════════════════════════════════════════════════════════════╣
-    ║                                                            ║
-    ║   ┌────────────────┐  ┌────────────────┐  ┌────────────────┐  ║
-    ║   │   $124,500     │  │    1,847       │  │   +23.5%       │  ║
-    ║   │   Revenue      │  │   Customers    │  │   ↑ Growth     │  ║
-    ║   └────────────────┘  └────────────────┘  └────────────────┘  ║
-    ║                                                            ║
-    ║   ┌──────────────────────────────────────────────────┐   ║
-    ║   │                         ▄▄                       │   ║
-    ║   │                    ▄▄  ██                       │   ║
-    ║   │               ▄▄  ██  ██  ▄▄                  │   ║
-    ║   │          ▄▄  ██  ██  ██  ██  ▄▄             │   ║
-    ║   │     ▄▄  ██  ██  ██  ██  ██  ██  ▄▄        │   ║
-    ║   │    ─────────────────────────────────────────   │   ║
-    ║   │     Jan  Feb  Mar  Apr  May  Jun  Jul  Aug      │   ║
-    ║   └──────────────────────────────────────────────────┘   ║
-    ║                                                            ║
-    ║          ◈  DATA  →  INSIGHTS  →  ACTION  ◈           ║
-    ║                                                            ║
-    ╚════════════════════════════════════════════════════════════╝`}
-              </pre>
+          {/* Right Column: Image */}
+          <div className="lg:sticky lg:top-24">
+            <div className="rounded-2xl overflow-hidden">
+              <Image
+                src="/images/data-analytics.jpg"
+                alt="Business intelligence dashboard with real-time data analytics"
+                width={800}
+                height={700}
+                className="w-full h-auto object-cover rounded-2xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>
@@ -853,86 +804,50 @@ export default function ITSolutionsPage() {
       {/* ============================================
            DIGITAL TRANSFORMATION SECTION
            ============================================ */}
-      <section className="transform-section" id="digital-transformation" aria-labelledby="transform-heading">
-        <div className="transform-container">
-          {/* Left Column: Stunning ASCII Transformation */}
-          <div className="transform-visual">
-            {/* Cyberpunk visual layers - purple variant */}
-            <div className="circuit-overlay"></div>
-            <div className="scanline-overlay"></div>
-            <div className="edge-glow" style={{ boxShadow: 'inset 0 1px 0 rgba(157, 78, 221, 0.3), inset 0 -1px 0 rgba(191, 0, 255, 0.2), inset 1px 0 0 rgba(157, 78, 221, 0.2), inset -1px 0 0 rgba(191, 0, 255, 0.2)' }}></div>
-
-            {/* Depth glow layers - strong purple */}
-            <div className="depth-glow purple-1" style={{ top: '15%', left: '20%', width: '280px', background: 'rgba(157, 78, 221, 0.18)' }}></div>
-            <div className="depth-glow purple-1" style={{ bottom: '20%', right: '15%', width: '250px', background: 'rgba(191, 0, 255, 0.15)' }}></div>
-            <div className="depth-glow cyan-1" style={{ top: '45%', right: '50%', width: '200px', background: 'rgba(0, 212, 255, 0.08)' }}></div>
-
-            {/* Corner accents - purple */}
-            <div className="corner-accent top-left" style={{ borderColor: 'rgba(191, 0, 255, 0.5)' }}></div>
-            <div className="corner-accent top-right" style={{ borderColor: 'rgba(191, 0, 255, 0.5)' }}></div>
-            <div className="corner-accent bottom-left" style={{ borderColor: 'rgba(191, 0, 255, 0.5)' }}></div>
-            <div className="corner-accent bottom-right" style={{ borderColor: 'rgba(191, 0, 255, 0.5)' }}></div>
-
-            {/* Holographic floating labels */}
-            <div className="holo-label purple left" style={{ top: '22%', left: '5%' }}>Automation</div>
-            <div className="holo-label left" style={{ top: '48%', right: '3%' }}>AI Powered</div>
-            <div className="holo-label purple left" style={{ bottom: '20%', left: '6%' }}>Future Ready</div>
-
-            {/* Hotspot glow points - more purple */}
-            <div className="hotspot purple" style={{ top: '15%', left: '30%' }}></div>
-            <div className="hotspot purple" style={{ top: '35%', right: '18%' }}></div>
-            <div className="hotspot small" style={{ bottom: '40%', left: '22%' }}></div>
-            <div className="hotspot purple" style={{ bottom: '15%', right: '28%' }}></div>
-            <div className="hotspot purple small" style={{ top: '55%', left: '50%' }}></div>
-
-            <div className="transform-ascii-wrap">
-              <pre className="transform-ascii">
-{`    ╔════════════════════════════════════════════════════════════╗
-    ║                                                            ║
-    ║            ⚡ DIGITAL TRANSFORMATION ⚡                   ║
-    ║                                                            ║
-    ║   ┌─────────────────┐              ┌─────────────────┐   ║
-    ║   │     LEGACY      │              │     MODERN      │   ║
-    ║   │                 │              │                 │   ║
-    ║   │   ░░░░░░░░░   │              │   █████████   │   ║
-    ║   │   ░░░░░░░░░   │  ═══════▶   │   █████████   │   ║
-    ║   │   ░░░░░░░░░   │              │   █████████   │   ║
-    ║   │                 │              │                 │   ║
-    ║   └─────────────────┘              └─────────────────┘   ║
-    ║                                                            ║
-    ║   ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ║
-    ║   │    CLOUD     │──│   AUTOMATE   │──│    SCALE     │  ║
-    ║   │     ☁️       │  │     ⚙️       │  │     📈       │  ║
-    ║   └──────────────┘  └──────────────┘  └──────────────┘  ║
-    ║          │               │                │             ║
-    ║          ◇───────────────◇────────────────◇             ║
-    ║                                                            ║
-    ║          ◈  EVOLVE  •  ADAPT  •  GROW  ◈            ║
-    ║                                                            ║
-    ╚════════════════════════════════════════════════════════════╝`}
-              </pre>
+      <section
+        className="py-[40px] md:py-[56px] lg:py-[80px] bg-white border-t border-gray-200"
+        id="digital-transformation"
+        aria-labelledby="transform-heading"
+      >
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          {/* Left Column: Image */}
+          <div className="lg:sticky lg:top-24 lg:order-none order-last">
+            <div className="rounded-2xl overflow-hidden">
+              <Image
+                src="/images/digital-transformation.jpg"
+                alt="Digital transformation and cloud migration for Canadian businesses"
+                width={800}
+                height={700}
+                className="w-full h-auto object-cover rounded-2xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
 
           {/* Right Column: Content */}
-          <div className="transform-content">
-            <h2 id="transform-heading">Digital Transformation</h2>
+          <div>
+            <h2
+              id="transform-heading"
+              className="font-headline text-[28px] sm:text-[34px] md:text-[42px] font-medium text-[var(--text-dark)] mb-3 leading-[1.15] tracking-[-0.5px]"
+            >
+              Digital Transformation
+            </h2>
 
-            <p className="transform-lead">Technology that actually makes your life easier.</p>
+            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-0 leading-[1.6]">
+              Technology that gets out of your way.
+            </p>
 
-            <p className="transform-intro">
-              "Digital transformation" gets thrown around a lot. Here's what it means to us: finding the parts of your operation that waste time, create errors, or frustrate your team—and fixing them with technology that genuinely helps.
-            </p>
-            <p className="transform-intro">
-              We're not interested in change for change's sake. We look for practical improvements that pay for themselves: automating the repetitive work nobody wants to do, connecting systems that should talk to each other, building tools that grow with you instead of holding you back.
-            </p>
+            <hr className="border-t border-gray-200 mt-6 mb-0" />
 
             {/* Accordion Items */}
             <AccordionWrapper items={transformItems} type="transform" />
 
             {/* CTA Button */}
-            <div className="transform-cta">
-              <Link href="#" className="transform-cta-btn">
+            <div className="mt-8">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-[var(--primary)] text-white px-8 py-4 rounded-lg text-[15px] font-semibold leading-none uppercase tracking-[0.5px] no-underline transition-all duration-300 hover:bg-[var(--primary-dark)] hover:-translate-y-0.5"
+              >
                 Start Your Transformation
               </Link>
             </div>
@@ -943,87 +858,95 @@ export default function ITSolutionsPage() {
       {/* ============================================
            TECHNOLOGY STACK SECTION
            ============================================ */}
-      <section className="tech-section" id="technology-stack" aria-labelledby="tech-heading">
+      <section
+        className="py-[60px] md:py-[80px] lg:py-[120px] relative overflow-hidden"
+        id="technology-stack"
+        aria-labelledby="tech-heading"
+        style={{ background: 'linear-gradient(135deg, #020617 0%, #0f172a 25%, #1e3a8a 60%, #2563eb 100%)' }}
+      >
         {/* Animated glow orbs */}
-        <div className="tech-glow tech-glow-1"></div>
-        <div className="tech-glow tech-glow-2"></div>
-        <div className="tech-glow tech-glow-3"></div>
+        <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] rounded-full bg-gradient-radial from-[#3b82f6] to-transparent blur-[100px] opacity-40 animate-pulse"></div>
+        <div className="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] rounded-full bg-gradient-radial from-[#06b6d4] to-transparent blur-[100px] opacity-40 animate-pulse" style={{ animationDelay: '-5s' }}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-gradient-radial from-[#8b5cf6] to-transparent blur-[100px] opacity-40 animate-pulse" style={{ animationDelay: '-10s' }}></div>
 
-        <div className="tech-container">
-          <div className="tech-header">
-            <h2 id="tech-heading" className="tech-headline">
-              We pick tools that <strong>solve your problem</strong>—<br />
-              not chase trends.
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 relative z-[2]">
+          <div className="text-center mb-[50px] lg:mb-[70px]">
+            <h2
+              id="tech-heading"
+              className="font-headline text-[26px] sm:text-[32px] md:text-[clamp(32px,4vw,42px)] font-light text-white leading-[1.15] tracking-[-1.5px] mb-6"
+            >
+              We pick tools that <strong className="font-bold bg-gradient-to-r from-[#60a5fa] via-[#22d3ee] to-[#a78bfa] bg-clip-text" style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>solve your problem.</strong><br />
+              Not chase trends.
             </h2>
-            <p className="tech-subheadline">
-              The right technology depends on what you're building. We match proven solutions to your specific needs—no buzzwords, no overkill.
+            <p className="text-[16px] md:text-[18px] text-white/60 max-w-[600px] mx-auto leading-[1.7]">
+              The right technology depends on what you&apos;re building. We pick what works for your situation, not what&apos;s trending on Twitter.
             </p>
           </div>
 
-          <div className="tech-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
             {/* Software Solutions Card */}
-            <div className="tech-card">
-              <h3 className="tech-card-title">Software Solutions</h3>
-              <div className="tech-tags">
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/dotnet/512BD4" alt=".NET Core logo" />.NET Core</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/openjdk/ED8B00" alt="Java logo" />Java</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo" />Python</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js logo" />Node.js</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/springboot/6DB33F" alt="Spring Boot logo" />Spring Boot</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React logo" />React</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/angular/DD0031" alt="Angular logo" />Angular</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript logo" />TypeScript</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/graphql/E10098" alt="GraphQL logo" />GraphQL</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker logo" />Docker</span>
+            <div className="bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-[24px] p-7 lg:p-9 transition-all duration-400 relative overflow-hidden hover:-translate-y-1 hover:bg-white/[0.08] hover:border-white/20 group" style={{ WebkitBackdropFilter: 'blur(20px)' }}>
+              <h3 className="text-[18px] font-semibold text-white mb-5 relative z-[1]">Software Solutions</h3>
+              <div className="flex flex-wrap gap-2 md:gap-2.5 relative z-[1]">
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/dotnet/512BD4" alt=".NET Core" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />.NET Core</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/openjdk/ED8B00" alt="Java" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Java</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Python</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Node.js</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/springboot/6DB33F" alt="Spring Boot" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Spring Boot</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />React</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/angular/DD0031" alt="Angular" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Angular</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />TypeScript</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/graphql/E10098" alt="GraphQL" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />GraphQL</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Docker</span>
               </div>
             </div>
 
             {/* Website Design & Development Card */}
-            <div className="tech-card">
-              <h3 className="tech-card-title">Website Design & Development</h3>
-              <div className="tech-tags">
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React logo" />React</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js logo" />Next.js</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript logo" />JavaScript</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 logo" />HTML5</span>
-                <span className="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo" />CSS3</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/wordpress/21759B" alt="WordPress logo" />WordPress</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/shopify/7AB55C" alt="Shopify logo" />Shopify</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/woocommerce/96588A" alt="WooCommerce logo" />WooCommerce</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma logo" />Figma</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/stripe/626CD9" alt="Stripe logo" />Stripe</span>
+            <div className="bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-[24px] p-7 lg:p-9 transition-all duration-400 relative overflow-hidden hover:-translate-y-1 hover:bg-white/[0.08] hover:border-white/20 group" style={{ WebkitBackdropFilter: 'blur(20px)' }}>
+              <h3 className="text-[18px] font-semibold text-white mb-5 relative z-[1]">Website Design & Development</h3>
+              <div className="flex flex-wrap gap-2 md:gap-2.5 relative z-[1]">
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />React</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/nextdotjs/ffffff" alt="Next.js" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Next.js</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />JavaScript</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />HTML5</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />CSS3</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/wordpress/21759B" alt="WordPress" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />WordPress</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/shopify/7AB55C" alt="Shopify" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Shopify</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/woocommerce/96588A" alt="WooCommerce" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />WooCommerce</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Figma</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/stripe/626CD9" alt="Stripe" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Stripe</span>
               </div>
             </div>
 
             {/* Data Analytics & Dashboards Card */}
-            <div className="tech-card">
-              <h3 className="tech-card-title">Data Analytics & Dashboards</h3>
-              <div className="tech-tags">
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo" />Python</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas logo" />Pandas</span>
-                <span className="tech-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI logo" />Power BI</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/tableau/E97627" alt="Tableau logo" />Tableau</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/apachespark/E25A1C" alt="Apache Spark logo" />Apache Spark</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/apacheairflow/017CEE" alt="Airflow logo" />Airflow</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/chartdotjs/FF6384" alt="Chart.js logo" />Chart.js</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman logo" />Postman</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL logo" />MySQL</span>
+            <div className="bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-[24px] p-7 lg:p-9 transition-all duration-400 relative overflow-hidden hover:-translate-y-1 hover:bg-white/[0.08] hover:border-white/20 group" style={{ WebkitBackdropFilter: 'blur(20px)' }}>
+              <h3 className="text-[18px] font-semibold text-white mb-5 relative z-[1]">Data Analytics & Dashboards</h3>
+              <div className="flex flex-wrap gap-2 md:gap-2.5 relative z-[1]">
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Python</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Pandas</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Power BI</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/tableau/E97627" alt="Tableau" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Tableau</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/apachespark/E25A1C" alt="Apache Spark" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Apache Spark</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/apacheairflow/017CEE" alt="Airflow" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Airflow</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/chartdotjs/FF6384" alt="Chart.js" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Chart.js</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Postman</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />MySQL</span>
               </div>
             </div>
 
             {/* Digital Transformation Card */}
-            <div className="tech-card">
-              <h3 className="tech-card-title">Digital Transformation</h3>
-              <div className="tech-tags">
-                <span className="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS logo" />AWS</span>
-                <span className="tech-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure logo" />Azure</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="Google Cloud logo" />Google Cloud</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker logo" />Docker</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes logo" />Kubernetes</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="CI/CD logo" />CI/CD</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL logo" />PostgreSQL</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB logo" />MongoDB</span>
-                <span className="tech-tag"><img src="https://cdn.simpleicons.org/redis/DC382D" alt="Redis logo" />Redis</span>
+            <div className="bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-[24px] p-7 lg:p-9 transition-all duration-400 relative overflow-hidden hover:-translate-y-1 hover:bg-white/[0.08] hover:border-white/20 group" style={{ WebkitBackdropFilter: 'blur(20px)' }}>
+              <h3 className="text-[18px] font-semibold text-white mb-5 relative z-[1]">Digital Transformation</h3>
+              <div className="flex flex-wrap gap-2 md:gap-2.5 relative z-[1]">
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />AWS</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Azure</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="Google Cloud" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Google Cloud</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Docker</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Kubernetes</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="CI/CD" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />CI/CD</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />PostgreSQL</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />MongoDB</span>
+                <span className="inline-flex items-center gap-2.5 py-3.5 px-5 bg-white/[0.08] border border-white/[0.12] rounded-full text-[13px] md:text-[14px] font-medium text-white/90 transition-all duration-300 hover:bg-white/[0.15] hover:border-white/30 hover:-translate-y-0.5"><img src="https://cdn.simpleicons.org/redis/DC382D" alt="Redis" className="w-5 h-5 md:w-6 md:h-6 object-contain" width={24} height={24} loading="lazy" decoding="async" />Redis</span>
               </div>
             </div>
           </div>
@@ -1031,47 +954,72 @@ export default function ITSolutionsPage() {
       </section>
 
       {/* ============================================
-           TRUST/STATS SECTION
+           TRUST/STATS STRIP
            ============================================ */}
-      <section className="trust-section" id="why-karavan" aria-labelledby="trust-headline">
-        <div className="trust-container">
-          <div className="trust-header">
-            <p className="trust-label">We don't disappear after the contract is signed.</p>
-            <h2 className="trust-headline" id="trust-headline">
-              <strong>Senior engineers.</strong> Direct access. No runaround.
-            </h2>
-          </div>
+      <section
+        className="py-10 md:py-12 border-t border-b border-gray-200/60"
+        id="why-karavan"
+        aria-labelledby="trust-headline"
+        style={{ background: 'linear-gradient(180deg, #f8fafc 0%, #f0f7ff 50%, #f8fafc 100%)' }}
+      >
+        <div className="max-w-[1100px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10">
+          <h2
+            className="font-headline text-[18px] md:text-[22px] font-medium text-[var(--text-dark)] text-center leading-[1.3] tracking-[-0.3px] mb-7 md:mb-8"
+            id="trust-headline"
+          >
+            <strong className="font-bold text-[var(--primary)]">Senior engineers.</strong> Direct access. No runaround.
+          </h2>
 
-          <div className="stats-grid">
-            <div className="stat-card">
-              <div className="stat-value">30+</div>
-              <div className="stat-label">Years Combined Experience</div>
+          <div className="flex flex-wrap justify-center items-center gap-y-5">
+            <div className="text-center px-5 sm:px-6 md:px-8 lg:px-10">
+              <div className="font-headline text-[26px] md:text-[32px] font-bold text-[var(--primary)] leading-none tracking-[-1px]">30+</div>
+              <div className="text-[11px] md:text-[12px] text-[var(--text-muted)] font-medium mt-1 uppercase tracking-[0.5px]">Years Experience</div>
             </div>
-            <div className="stat-card">
-              <div className="stat-value">Senior</div>
-              <div className="stat-label">Engineers—No Handoffs</div>
+            <div className="hidden sm:block w-px h-9 bg-gray-300/60"></div>
+            <div className="text-center px-5 sm:px-6 md:px-8 lg:px-10">
+              <div className="font-headline text-[26px] md:text-[32px] font-bold text-[var(--primary)] leading-none tracking-[-1px]">Senior</div>
+              <div className="text-[11px] md:text-[12px] text-[var(--text-muted)] font-medium mt-1 uppercase tracking-[0.5px]">Engineers Only</div>
             </div>
-            <div className="stat-card">
-              <div className="stat-value">Fortune</div>
-              <div className="stat-label">500 Background</div>
+            <div className="hidden sm:block w-px h-9 bg-gray-300/60"></div>
+            <div className="text-center px-5 sm:px-6 md:px-8 lg:px-10">
+              <div className="font-headline text-[26px] md:text-[32px] font-bold text-[var(--primary)] leading-none tracking-[-1px]">Fortune 500</div>
+              <div className="text-[11px] md:text-[12px] text-[var(--text-muted)] font-medium mt-1 uppercase tracking-[0.5px]">Background</div>
             </div>
-            <div className="stat-card">
-              <div className="stat-value">100%</div>
-              <div className="stat-label">Canadian-Owned</div>
+            <div className="hidden sm:block w-px h-9 bg-gray-300/60"></div>
+            <div className="text-center px-5 sm:px-6 md:px-8 lg:px-10">
+              <div className="font-headline text-[26px] md:text-[32px] font-bold text-[var(--primary)] leading-none tracking-[-1px]">100%</div>
+              <div className="text-[11px] md:text-[12px] text-[var(--text-muted)] font-medium mt-1 uppercase tracking-[0.5px]">Canadian-Owned</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="cta-banner" aria-label="Contact Call to Action">
-        <div className="cta-banner-container">
-          <div className="cta-card">
-            <h2>Tired of working around your technology?</h2>
-            <p>Let's figure out what's getting in your way and build something that fits how you actually work.</p>
-            <Link href="#" className="hero-cta" aria-label="Book a free consultation with Karavan IT HUB">
+      {/* ============================================
+           FINAL CTA BANNER
+           ============================================ */}
+      <section
+        className="py-[60px] md:py-[80px] lg:py-[100px] bg-gradient-to-b from-[#f0f9ff] to-[#e0f2fe] text-center relative"
+        aria-label="Contact Call to Action"
+      >
+        <div className="max-w-[900px] mx-auto px-5 sm:px-6">
+          <div
+            className="bg-white rounded-[24px] py-[40px] px-6 md:py-[60px] md:px-12 border border-[rgba(37,99,235,0.08)]"
+            style={{ boxShadow: '0 4px 6px rgba(0,0,0,0.02), 0 12px 24px rgba(0,0,0,0.04), 0 24px 48px rgba(37,99,235,0.06)' }}
+          >
+            <h2 className="font-headline text-[24px] md:text-[clamp(24px,4vw,36px)] font-semibold text-[var(--text-dark)] mb-4 tracking-[-0.5px]">
+              Tired of working around your technology?
+            </h2>
+            <p className="text-[16px] md:text-[18px] text-[var(--text-muted)] mb-8 leading-[1.7] max-w-[550px] mx-auto">
+              Let&apos;s talk about what&apos;s getting in your way. No pitch, no pressure. Just a conversation.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2.5 bg-[var(--primary)] text-white px-8 py-4 rounded-lg text-[15px] font-semibold leading-none uppercase tracking-[0.5px] no-underline transition-all duration-300 hover:bg-[var(--primary-deeper)] hover:-translate-y-0.5"
+              style={{ boxShadow: '0 4px 20px rgba(37, 99, 235, 0.3)' }}
+              aria-label="Book a free consultation with Karavan IT HUB"
+            >
               Book a Free Consultation
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-[18px] h-[18px] transition-transform duration-300">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
@@ -1079,6 +1027,6 @@ export default function ITSolutionsPage() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }
