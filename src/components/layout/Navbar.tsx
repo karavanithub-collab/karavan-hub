@@ -14,10 +14,10 @@ const navDropdowns = {
     { label: 'AI Consulting', href: '/ai-solutions/consulting' },
   ],
   it: [
-    { label: 'Software Development', href: '/it-solutions/software-development' },
-    { label: 'Web Design', href: '/it-solutions/web-design' },
-    { label: 'Data Analytics', href: '/it-solutions/data-analytics' },
-    { label: 'Digital Transformation', href: '/it-solutions/digital-transformation' },
+    { label: 'Software Development', href: '/it-solutions#software-solutions' },
+    { label: 'Web Design', href: '/it-solutions#web-design' },
+    { label: 'Data Analytics', href: '/it-solutions#data-analytics' },
+    { label: 'Digital Transformation', href: '/it-solutions#digital-transformation' },
   ],
   company: [
     { label: 'About Us', href: '/about' },
