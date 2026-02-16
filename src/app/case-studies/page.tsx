@@ -679,7 +679,7 @@ export default function CaseStudiesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
 
-      <main id="main-content" role="main" className="overflow-x-hidden">
+      <main id="main-content" role="main">
         {/* HERO SECTION */}
         <section
           className="relative py-20 sm:py-24 md:py-32 text-center overflow-hidden"
