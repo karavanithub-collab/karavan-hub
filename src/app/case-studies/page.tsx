@@ -373,7 +373,7 @@ function CaseStudyCard({
               <div className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold leading-none sm:mb-1 text-white">
                 {result.value}
               </div>
-              <div className="text-xs text-slate-400 uppercase tracking-tight">{result.label}</div>
+              <div className="text-xs sm:text-sm text-slate-300 uppercase tracking-tight">{result.label}</div>
             </div>
           ))}
         </div>
@@ -384,7 +384,7 @@ function CaseStudyCard({
 
       {/* Solution */}
       <div className="px-5 sm:px-6 md:px-8 pb-5 sm:pb-6 md:pb-8">
-        <p className="font-body text-slate-300 text-sm leading-relaxed">{solution}</p>
+        <p className="font-body text-slate-200 text-sm sm:text-base leading-relaxed">{solution}</p>
 
         {/* Service tags */}
         <div className="flex flex-wrap gap-1.5 mt-5">
