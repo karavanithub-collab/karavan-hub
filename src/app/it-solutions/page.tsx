@@ -552,17 +552,20 @@ export default function ITSolutionsPage() {
         <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
           {/* Left Column - Text */}
           <div className="max-w-full lg:max-w-[560px] text-center lg:text-left mx-auto lg:mx-0">
-            <h1 className="font-headline text-[clamp(42px,6vw,64px)] font-bold text-white leading-[1.1] tracking-[-1.5px] mb-7">
-              Technology built around you,<br />
+            <h1
+              className="font-headline font-bold text-white leading-[1.05] tracking-[-1.5px] mb-7"
+              style={{ fontSize: 'clamp(48px, 7vw, 80px)' }}
+            >
+              Software that fits
               <span
                 className="block font-bold bg-gradient-to-r from-white to-[#22d3ee] bg-clip-text"
                 style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
               >
-                not the other way around.
+                how you work.
               </span>
             </h1>
             <p className="text-[16px] md:text-[19px] text-white/75 max-w-full lg:max-w-[500px] leading-[1.75] font-medium mb-9 mx-auto lg:mx-0">
-              We learn how your business works first. Then we build the technology to match.
+              Custom apps, web platforms, data systems. We start with your workflow, not a template. If off-the-shelf works better, we&apos;ll tell you that too.
             </p>
             <Link
               href="/contact"
