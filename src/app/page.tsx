@@ -256,7 +256,10 @@ export default function HomePage() {
         <div className="hero-content relative z-10 max-w-[1200px] mx-auto px-5 md:px-8 lg:px-10 pt-24 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[60px] items-center">
           {/* Left Column - Text */}
           <div className="hero-text max-w-full lg:max-w-[560px]">
-            <h1 className="hero-title font-headline text-[clamp(42px,6vw,64px)] font-bold text-white leading-[1.1] mb-7 tracking-[-1.5px]">
+            <h1
+              className="hero-title font-headline font-bold text-white leading-[1.05] mb-7 tracking-[-1.5px]"
+              style={{ fontSize: 'clamp(48px, 7vw, 80px)' }}
+            >
               Technology that works
               <span className="accent block font-bold bg-gradient-to-r from-white to-[#22d3ee] bg-clip-text text-transparent">
                 for your business.
