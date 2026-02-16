@@ -363,10 +363,10 @@ function ResultsBox({ results, accentColor }: { results: Array<{ value: string; 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4">
         {results.map((result, idx) => (
           <div key={idx} className="text-center">
-            <div className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold leading-none mb-1.5 text-white">
+            <div className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold leading-none mb-1.5 text-white">
               {result.value}
             </div>
-            <div className="text-[11px] sm:text-xs text-slate-400 uppercase tracking-tight">{result.label}</div>
+            <div className="text-xs text-slate-400 uppercase tracking-tight">{result.label}</div>
           </div>
         ))}
       </div>
