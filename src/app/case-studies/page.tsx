@@ -345,61 +345,57 @@ function GradientVisual({ study, index }: { study: CaseStudy; index: number }) {
   );
 }
 
-function ResultsBox({ results, accentColor }: { results: Array<{ value: string; label: string }>; accentColor: string }) {
+function CaseStudyCard({
+  results,
+  accentColor,
+  solution,
+  services,
+}: {
+  results: Array<{ value: string; label: string }>;
+  accentColor: string;
+  solution: string;
+  services: string[];
+}) {
   return (
     <div
-      className="rounded-xl p-5 sm:p-6 md:p-8 mb-6"
+      className="rounded-2xl overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
       }}
     >
-      <div className="flex items-center gap-2 mb-5 font-semibold text-xs uppercase tracking-wider" style={{ color: accentColor }}>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-          <polyline points="22 4 12 14.01 9 11.01" />
-        </svg>
-        What Changed
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4">
-        {results.map((result, idx) => (
-          <div key={idx} className="text-center">
-            <div className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold leading-none mb-1.5 text-white">
-              {result.value}
+      {/* Metrics */}
+      <div className="p-5 sm:p-6 md:p-8 pb-0 sm:pb-0 md:pb-0">
+        <div className="grid grid-cols-3 gap-3 sm:gap-4">
+          {results.map((result, idx) => (
+            <div key={idx} className="text-center">
+              <div className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold leading-none mb-1 text-white">
+                {result.value}
+              </div>
+              <div className="text-xs text-slate-400 uppercase tracking-tight">{result.label}</div>
             </div>
-            <div className="text-xs text-slate-400 uppercase tracking-tight">{result.label}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  );
-}
 
-function SolutionBox({ solution }: { solution: string }) {
-  return (
-    <div className="bg-blue-50 rounded-xl p-6 mb-6">
-      <div className="flex items-center gap-2 mb-3 text-[var(--primary)] font-semibold text-sm uppercase tracking-wider">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-          <line x1="12" y1="17" x2="12.01" y2="17" />
-        </svg>
-        How We Solved It
-      </div>
-      <p className="font-body text-[var(--text-body)] text-sm leading-relaxed">{solution}</p>
-    </div>
-  );
-}
+      {/* Divider */}
+      <div className="mx-5 sm:mx-6 md:mx-8 my-5 sm:my-6 h-px bg-white/[0.06]" />
 
-function ServiceTags({ services }: { services: string[] }) {
-  return (
-    <div className="mt-6">
-      <div className="text-sm font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-3">What We Used</div>
-      <div className="flex flex-wrap gap-2">
-        {services.map((service, idx) => (
-          <span key={idx} className="px-3 py-1.5 bg-gray-100 text-[var(--text-body)] text-xs font-medium rounded border border-[var(--border-light)]">
-            {service}
-          </span>
-        ))}
+      {/* Solution */}
+      <div className="px-5 sm:px-6 md:px-8 pb-5 sm:pb-6 md:pb-8">
+        <p className="font-body text-slate-300 text-sm leading-relaxed">{solution}</p>
+
+        {/* Service tags */}
+        <div className="flex flex-wrap gap-1.5 mt-5">
+          {services.map((service, idx) => (
+            <span
+              key={idx}
+              className="px-2.5 py-1 text-[11px] font-medium rounded-full uppercase tracking-wide"
+              style={{ color: accentColor, background: 'rgba(255,255,255,0.04)', border: `1px solid ${accentColor}20` }}
+            >
+              {service}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -763,9 +759,12 @@ export default function CaseStudiesPage() {
                     <h2 id={`study-heading-${study.id}`} className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--text-dark)] mb-3 sm:mb-4">{study.title}</h2>
                     <p className="font-body text-base sm:text-lg text-[var(--text-dark)] mb-6 sm:mb-8 leading-relaxed">{study.intro}</p>
 
-                    <ResultsBox results={study.results} accentColor={getCategoryAccentColor(study.category)} />
-                    <SolutionBox solution={study.solution} />
-                    <ServiceTags services={study.services} />
+                    <CaseStudyCard
+                      results={study.results}
+                      accentColor={getCategoryAccentColor(study.category)}
+                      solution={study.solution}
+                      services={study.services}
+                    />
                   </div>
                 </div>
               </div>
