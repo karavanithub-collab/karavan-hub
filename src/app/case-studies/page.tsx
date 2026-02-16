@@ -294,6 +294,8 @@ function GradientVisual({ study, index }: { study: CaseStudy; index: number }) {
       style={{
         background: `linear-gradient(135deg, ${study.gradientFrom} 0%, ${study.gradientTo} 100%)`,
       }}
+      role="img"
+      aria-label={`Visual placeholder for ${study.title} case study`}
     >
       {/* Grid overlay */}
       <div
@@ -308,7 +310,7 @@ function GradientVisual({ study, index }: { study: CaseStudy; index: number }) {
 
       {/* Radial glow */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full opacity-30"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] rounded-full opacity-30"
         style={{
           background: `radial-gradient(circle, ${study.iconColor} 0%, transparent 70%)`,
           filter: 'blur(60px)',
@@ -317,7 +319,7 @@ function GradientVisual({ study, index }: { study: CaseStudy; index: number }) {
       />
 
       {/* Study number */}
-      <div className="absolute top-6 left-8 font-mono text-white/20 text-sm tracking-widest uppercase">
+      <div className="absolute top-4 left-5 sm:top-6 sm:left-8 font-mono text-white/20 text-xs sm:text-sm tracking-widest uppercase">
         Case {String(index + 1).padStart(2, '0')}
       </div>
 
@@ -325,7 +327,7 @@ function GradientVisual({ study, index }: { study: CaseStudy; index: number }) {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center">
           <div
-            className="font-headline text-[120px] md:text-[140px] font-bold leading-none opacity-[0.08] text-white select-none"
+            className="font-headline text-[80px] sm:text-[120px] md:text-[140px] font-bold leading-none opacity-[0.08] text-white select-none"
             aria-hidden="true"
           >
             {String(index + 1).padStart(2, '0')}
@@ -334,11 +336,11 @@ function GradientVisual({ study, index }: { study: CaseStudy; index: number }) {
       </div>
 
       {/* Corner accents */}
-      <div className="absolute top-5 left-5 w-12 h-12 border-t border-l border-white/20" aria-hidden="true" />
-      <div className="absolute bottom-5 right-5 w-12 h-12 border-b border-r border-white/20" aria-hidden="true" />
+      <div className="absolute top-3 left-3 sm:top-5 sm:left-5 w-8 h-8 sm:w-12 sm:h-12 border-t border-l border-white/20" aria-hidden="true" />
+      <div className="absolute bottom-3 right-3 sm:bottom-5 sm:right-5 w-8 h-8 sm:w-12 sm:h-12 border-b border-r border-white/20" aria-hidden="true" />
 
       {/* Category label */}
-      <div className="absolute bottom-6 left-8 font-mono text-xs tracking-[0.2em] uppercase" style={{ color: study.iconColor }}>
+      <div className="absolute bottom-4 left-5 sm:bottom-6 sm:left-8 font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase" style={{ color: study.iconColor }}>
         {study.category}
       </div>
     </div>
@@ -365,10 +367,10 @@ function CaseStudyCard({
     >
       {/* Metrics */}
       <div className="p-5 sm:p-6 md:p-8 pb-0 sm:pb-0 md:pb-0">
-        <div className="grid grid-cols-3 gap-3 sm:gap-4">
+        <div className="flex flex-col gap-4 sm:grid sm:grid-cols-3 sm:gap-4">
           {results.map((result, idx) => (
-            <div key={idx} className="text-center">
-              <div className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold leading-none mb-1 text-white">
+            <div key={idx} className="flex items-baseline gap-3 sm:block sm:text-center">
+              <div className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold leading-none sm:mb-1 text-white">
                 {result.value}
               </div>
               <div className="text-xs text-slate-400 uppercase tracking-tight">{result.label}</div>
@@ -389,7 +391,7 @@ function CaseStudyCard({
           {services.map((service, idx) => (
             <span
               key={idx}
-              className="px-2.5 py-1 text-[11px] font-medium rounded-full uppercase tracking-wide"
+              className="px-2.5 py-1 text-[11px] sm:text-xs font-medium rounded-full uppercase tracking-wide"
               style={{ color: accentColor, background: 'rgba(255,255,255,0.04)', border: `1px solid ${accentColor}20` }}
             >
               {service}
@@ -677,7 +679,7 @@ export default function CaseStudiesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
 
-      <main id="main-content" role="main">
+      <main id="main-content" role="main" className="overflow-x-hidden">
         {/* HERO SECTION */}
         <section
           className="relative py-20 sm:py-24 md:py-32 text-center overflow-hidden"
@@ -687,8 +689,8 @@ export default function CaseStudiesPage() {
           }}
         >
           {/* Gradient orbs */}
-          <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-blue-500 to-transparent rounded-full blur-3xl opacity-40 -mr-16 sm:-mr-32 -mt-16 sm:-mt-32" aria-hidden="true" />
-          <div className="absolute bottom-0 left-0 w-48 sm:w-72 h-48 sm:h-72 bg-gradient-to-tr from-cyan-400 to-transparent rounded-full blur-3xl opacity-40 -ml-16 sm:-ml-32 -mb-8 sm:-mb-16" aria-hidden="true" />
+          <div className="absolute top-0 right-0 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-gradient-to-br from-blue-500 to-transparent rounded-full blur-3xl opacity-40 -mr-12 sm:-mr-16 md:-mr-32 -mt-12 sm:-mt-16 md:-mt-32" aria-hidden="true" />
+          <div className="absolute bottom-0 left-0 w-36 sm:w-48 md:w-72 h-36 sm:h-48 md:h-72 bg-gradient-to-tr from-cyan-400 to-transparent rounded-full blur-3xl opacity-40 -ml-12 sm:-ml-16 md:-ml-32 -mb-6 sm:-mb-8 md:-mb-16" aria-hidden="true" />
 
           {/* Grid overlay */}
           <div
@@ -702,7 +704,7 @@ export default function CaseStudiesPage() {
           />
 
           <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 relative z-10">
-            <div className="font-mono text-cyan-400/60 text-xs sm:text-sm tracking-widest uppercase mb-4 sm:mb-6">7 Case Studies</div>
+            <div className="font-mono text-cyan-400/80 text-xs sm:text-sm tracking-widest uppercase mb-4 sm:mb-6">7 Case Studies</div>
             <h1 id="hero-heading" className="font-headline text-[clamp(2.5rem,8vw,3.75rem)] font-bold text-white mb-4 sm:mb-6 leading-[1.1] tracking-[-0.02em]">
               Real Problems.<br />
               <span className="text-cyan-400">Real Results.</span>
@@ -790,8 +792,8 @@ export default function CaseStudiesPage() {
                   itemType="https://schema.org/Question"
                 >
                   <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none font-semibold text-[var(--text-dark)] hover:text-[var(--primary)] min-h-[48px]">
-                    <h3 className="font-headline text-sm md:text-base" itemProp="name">{faq.question}</h3>
-                    <div className="w-6 h-6 flex-shrink-0 bg-gray-100 rounded-full flex items-center justify-center transition-transform">
+                    <h3 className="font-headline text-sm sm:text-[15px] md:text-base pr-3" itemProp="name">{faq.question}</h3>
+                    <div className="w-6 h-6 flex-shrink-0 bg-gray-100 rounded-full flex items-center justify-center transition-transform" aria-hidden="true">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <polyline points="6 9 12 15 18 9" />
                       </svg>
