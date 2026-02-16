@@ -3,7 +3,7 @@ import { HomeFAQ } from '@/components/sections/HomeFAQ';
 
 export const metadata: Metadata = {
   title: 'Karavan IT HUB — AI & IT Solutions | Custom Software Development',
-  description: 'Technology that works for your business. Canadian-owned AI and IT solutions with 14+ years enterprise experience. Custom software, AI automation, and digital transformation.',
+  description: 'Technology that works for your business. Canadian-owned AI and IT solutions in Niagara, Ontario. Custom software, AI automation, web development, and digital transformation for SMBs.',
   keywords: 'AI solutions, IT solutions, custom software development, AI automation, digital transformation, Canadian tech company',
   authors: [{ name: 'Karavan IT HUB' }],
   openGraph: {
@@ -257,14 +257,14 @@ export default function HomePage() {
           {/* Left Column - Text */}
           <div className="hero-text max-w-full lg:max-w-[560px]">
             <h1 className="hero-title font-headline text-[clamp(42px,6vw,64px)] font-bold text-white leading-[1.1] mb-7 tracking-[-1.5px]">
-              Make AI work for your business—
+              Technology that works
               <span className="accent block font-bold bg-gradient-to-r from-white to-[#22d3ee] bg-clip-text text-transparent">
-                not the other way around.
+                for your business.
               </span>
             </h1>
 
             <p className="hero-subtitle font-body text-[16px] sm:text-[17px] md:text-[19px] text-white/75 max-w-full lg:max-w-[500px] leading-[1.75] font-normal mb-9">
-              Everyone's rushing to adopt AI. Most are wasting money on tools they don't need. We help you cut through the noise, find what actually fits your business, and build solutions that drive real results.
+              AI automation, custom software, web development. We build what your business actually needs and skip what it doesn't. 14+ years of enterprise experience, now working for SMBs across North America.
             </p>
 
             <div className="hero-cta-group flex flex-col sm:flex-row gap-4">
