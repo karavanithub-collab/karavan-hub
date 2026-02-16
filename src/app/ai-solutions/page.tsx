@@ -333,7 +333,7 @@ export default function AISolutionsPage() {
         <div>
           <p className="text-sm text-[#4a4a68] leading-relaxed mb-3">
             Most chatbots are terrible. Yours won&apos;t be. We train them on your actual data, wire
-            them into your systems, and they give real answers — not &apos;let me transfer you to an agent.&apos;
+            them into your systems, and they give real answers. Not &apos;let me transfer you to an agent.&apos;
           </p>
           <ul className="accordion-list space-y-3">
             <li>
@@ -508,7 +508,7 @@ export default function AISolutionsPage() {
         <div>
           <p className="text-sm text-[#4a4a68] leading-relaxed mb-3">
             Right now, someone on your team is copying data from one system to another. That&apos;s not
-            their job — it&apos;s a wiring problem. We connect your CRM, accounting, inventory, and email
+            their job. It&apos;s a wiring problem. We connect your CRM, accounting, inventory, and email
             so information flows on its own.
           </p>
           <ul className="tech-list space-y-2">

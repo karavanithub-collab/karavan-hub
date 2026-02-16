@@ -197,7 +197,7 @@ const schemaFAQ = {
       name: 'Will my website work on mobile and show up on Google?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes—every website we build is mobile-responsive and optimized for search engines. Mobile-first design and technical SEO are standard, not add-ons. We handle fast loading speeds, proper structure, meta tags, and schema markup.'
+        text: 'Yes. Every website we build is mobile-responsive and optimized for search engines. Mobile-first design and technical SEO are standard, not add-ons. We handle fast loading speeds, proper structure, meta tags, and schema markup.'
       }
     },
     {
@@ -205,7 +205,7 @@ const schemaFAQ = {
       name: 'What does digital transformation actually mean for a small business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Digital transformation means using technology to solve real business problems—not chasing trends. For small businesses, it often starts with eliminating paper processes, connecting disconnected systems, or giving your team better tools to serve customers.'
+        text: 'Digital transformation means using technology to solve real business problems, not chasing trends. For small businesses, it often starts with eliminating paper processes, connecting disconnected systems, or giving your team better tools to serve customers.'
       }
     },
     {
@@ -448,7 +448,7 @@ export default function HomePage() {
             Everyone&rsquo;s talking about AI. But no one&rsquo;s explaining how to actually use it.
           </h2>
           <p className="font-body text-[19px] text-[var(--text-body)] leading-[1.8] mb-10 max-w-[800px] mx-auto">
-            You&#8217;ve seen the headlines. You&#8217;ve sat through the demos. Maybe you&#8217;ve even tried a few tools. And yet—nothing&#8217;s really changed in how your business runs. That&#8217;s not your fault. You need a partner who can cut through the noise, speak plain English, and tell you honestly what will actually work for your business—and what won&#8217;t.
+            You&#8217;ve seen the headlines. You&#8217;ve sat through the demos. Maybe you&#8217;ve even tried a few tools. And yet nothing&#8217;s really changed in how your business runs. That&#8217;s not your fault. You need a partner who can cut through the noise, speak plain English, and tell you honestly what will actually work for your business and what won&#8217;t.
           </p>
           <a
             href="#contact"
@@ -597,7 +597,7 @@ export default function HomePage() {
                 <span className="block text-sm font-medium text-[var(--text-muted)] mt-1">Development & Design</span>
               </h3>
               <p className="text-[16px] text-[var(--text-body)] mb-6 leading-[1.7]">
-                From concept to launch, we build digital infrastructure that powers growth—reliable, scalable, and designed for tomorrow.
+                From concept to launch, we build digital infrastructure that powers growth. Reliable, scalable, and designed for tomorrow.
               </p>
               <ul className="space-y-0 mb-6">
                 <li className="py-2.5 text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0">
