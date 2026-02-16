@@ -722,21 +722,30 @@ button:focus-visible,
 .software-accordion,
 .webdesign-accordion,
 .analytics-accordion,
-.transform-accordion {
+.transform-accordion,
+.aiautomation-accordion,
+.aisoftware-accordion,
+.aistrategy-accordion {
   margin-top: 32px;
 }
 
 .software-accordion-item,
 .webdesign-accordion-item,
 .analytics-accordion-item,
-.transform-accordion-item {
+.transform-accordion-item,
+.aiautomation-accordion-item,
+.aisoftware-accordion-item,
+.aistrategy-accordion-item {
   border-bottom: 1px solid var(--border-light);
 }
 
 .software-accordion-header,
 .webdesign-accordion-header,
 .analytics-accordion-header,
-.transform-accordion-header {
+.transform-accordion-header,
+.aiautomation-accordion-header,
+.aisoftware-accordion-header,
+.aistrategy-accordion-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -753,7 +762,10 @@ button:focus-visible,
   .software-accordion-header,
   .webdesign-accordion-header,
   .analytics-accordion-header,
-  .transform-accordion-header {
+  .transform-accordion-header,
+  .aiautomation-accordion-header,
+  .aisoftware-accordion-header,
+  .aistrategy-accordion-header {
     padding: 18px 4px;
     min-height: 48px;
   }
@@ -762,14 +774,20 @@ button:focus-visible,
 .software-accordion-header:hover h4,
 .webdesign-accordion-header:hover h4,
 .analytics-accordion-header:hover h4,
-.transform-accordion-header:hover h4 {
+.transform-accordion-header:hover h4,
+.aiautomation-accordion-header:hover h4,
+.aisoftware-accordion-header:hover h4,
+.aistrategy-accordion-header:hover h4 {
   color: var(--primary);
 }
 
 .software-accordion-header h4,
 .webdesign-accordion-header h4,
 .analytics-accordion-header h4,
-.transform-accordion-header h4 {
+.transform-accordion-header h4,
+.aiautomation-accordion-header h4,
+.aisoftware-accordion-header h4,
+.aistrategy-accordion-header h4 {
   font-family: var(--font-body);
   font-size: 17px;
   font-weight: 600;
@@ -782,7 +800,10 @@ button:focus-visible,
 .software-accordion-icon,
 .webdesign-accordion-icon,
 .analytics-accordion-icon,
-.transform-accordion-icon {
+.transform-accordion-icon,
+.aiautomation-accordion-icon,
+.aisoftware-accordion-icon,
+.aistrategy-accordion-icon {
   width: 24px;
   height: 24px;
   display: flex;
@@ -795,7 +816,10 @@ button:focus-visible,
 .software-accordion-icon svg,
 .webdesign-accordion-icon svg,
 .analytics-accordion-icon svg,
-.transform-accordion-icon svg {
+.transform-accordion-icon svg,
+.aiautomation-accordion-icon svg,
+.aisoftware-accordion-icon svg,
+.aistrategy-accordion-icon svg {
   width: 14px;
   height: 14px;
   stroke: var(--text-muted);
@@ -805,14 +829,20 @@ button:focus-visible,
 .software-accordion-item.active .software-accordion-icon svg,
 .webdesign-accordion-item.active .webdesign-accordion-icon svg,
 .analytics-accordion-item.active .analytics-accordion-icon svg,
-.transform-accordion-item.active .transform-accordion-icon svg {
+.transform-accordion-item.active .transform-accordion-icon svg,
+.aiautomation-accordion-item.active .aiautomation-accordion-icon svg,
+.aisoftware-accordion-item.active .aisoftware-accordion-icon svg,
+.aistrategy-accordion-item.active .aistrategy-accordion-icon svg {
   transform: rotate(180deg);
 }
 
 .software-accordion-body,
 .webdesign-accordion-body,
 .analytics-accordion-body,
-.transform-accordion-body {
+.transform-accordion-body,
+.aiautomation-accordion-body,
+.aisoftware-accordion-body,
+.aistrategy-accordion-body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
@@ -821,7 +851,10 @@ button:focus-visible,
 .software-accordion-item.active .software-accordion-body,
 .webdesign-accordion-item.active .webdesign-accordion-body,
 .analytics-accordion-item.active .analytics-accordion-body,
-.transform-accordion-item.active .transform-accordion-body {
+.transform-accordion-item.active .transform-accordion-body,
+.aiautomation-accordion-item.active .aiautomation-accordion-body,
+.aisoftware-accordion-item.active .aisoftware-accordion-body,
+.aistrategy-accordion-item.active .aistrategy-accordion-body {
   max-height: 500px;
   transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -829,7 +862,10 @@ button:focus-visible,
 .software-accordion-body p,
 .webdesign-accordion-body p,
 .analytics-accordion-body p,
-.transform-accordion-body p {
+.transform-accordion-body p,
+.aiautomation-accordion-body p,
+.aisoftware-accordion-body p,
+.aistrategy-accordion-body p {
   font-size: 15px;
   color: var(--text-body);
   line-height: 1.7;
@@ -840,14 +876,20 @@ button:focus-visible,
 .software-accordion-body > p:first-child,
 .webdesign-accordion-body > p:first-child,
 .analytics-accordion-body > p:first-child,
-.transform-accordion-body > p:first-child {
+.transform-accordion-body > p:first-child,
+.aiautomation-accordion-body > p:first-child,
+.aisoftware-accordion-body > p:first-child,
+.aistrategy-accordion-body > p:first-child {
   padding-top: 0;
 }
 
 .software-accordion-body > *:last-child,
 .webdesign-accordion-body > *:last-child,
 .analytics-accordion-body > *:last-child,
-.transform-accordion-body > *:last-child {
+.transform-accordion-body > *:last-child,
+.aiautomation-accordion-body > *:last-child,
+.aisoftware-accordion-body > *:last-child,
+.aistrategy-accordion-body > *:last-child {
   margin-bottom: 0;
   padding-bottom: 18px;
 }
@@ -904,20 +946,39 @@ button:focus-visible,
 .accordion-highlight .software-accordion-header,
 .accordion-highlight .webdesign-accordion-header,
 .accordion-highlight .analytics-accordion-header,
-.accordion-highlight .transform-accordion-header {
+.accordion-highlight .transform-accordion-header,
+.accordion-highlight .aiautomation-accordion-header,
+.accordion-highlight .aisoftware-accordion-header,
+.accordion-highlight .aistrategy-accordion-header {
   padding: 18px 20px;
 }
 
 .accordion-highlight .software-accordion-body,
 .accordion-highlight .webdesign-accordion-body,
 .accordion-highlight .analytics-accordion-body,
-.accordion-highlight .transform-accordion-body {
+.accordion-highlight .transform-accordion-body,
+.accordion-highlight .aiautomation-accordion-body,
+.accordion-highlight .aisoftware-accordion-body,
+.accordion-highlight .aistrategy-accordion-body {
   padding: 0 20px;
 }
 
 .accordion-highlight .software-accordion-body > *:last-child,
 .accordion-highlight .webdesign-accordion-body > *:last-child,
 .accordion-highlight .analytics-accordion-body > *:last-child,
-.accordion-highlight .transform-accordion-body > *:last-child {
+.accordion-highlight .transform-accordion-body > *:last-child,
+.accordion-highlight .aiautomation-accordion-body > *:last-child,
+.accordion-highlight .aisoftware-accordion-body > *:last-child,
+.accordion-highlight .aistrategy-accordion-body > *:last-child {
   padding-bottom: 20px;
+}
+
+/* ============================================
+   MOBILE OPTIMIZATIONS
+   ============================================ */
+@media (max-width: 768px) {
+  .accordion-list li,
+  .tech-list li {
+    font-size: 13px;
+  }
 }

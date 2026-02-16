@@ -9,7 +9,7 @@ interface AccordionItem {
 
 interface AccordionProps {
   items: AccordionItem[];
-  type: 'software' | 'webdesign' | 'analytics' | 'transform';
+  type: 'software' | 'webdesign' | 'analytics' | 'transform' | 'aiautomation' | 'aisoftware' | 'aistrategy';
   defaultOpen?: number;
 }
 
