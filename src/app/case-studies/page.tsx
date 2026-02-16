@@ -194,17 +194,17 @@ const caseStudies: CaseStudy[] = [
     categoryTag: 'Hospitality',
     title: 'Aegean Escape Villas',
     intro:
-      'Luxury villas on Turkey\'s Aegean coast, launching to the Canadian market. The properties were stunning. The website didn\'t exist yet. And peak booking season was six weeks out.',
+      'Luxury villas on Turkey\'s Aegean coast, launching to the Canadian market. The properties were stunning. The website didn\'t exist yet. And peak booking season was six weeks out. The client had never captured a single booking during this window before.',
     gradientFrom: '#0c4a6e',
     gradientTo: '#0891b2',
     iconColor: '#22d3ee',
     results: [
-      { value: '6', label: 'Weeks to Launch' },
-      { value: '<3s', label: 'Load Time' },
+      { value: '40%', label: 'More Bookings' },
+      { value: '3 Weeks', label: 'To First Results' },
       { value: '5', label: 'Villas Live' },
     ],
     solution:
-      'Custom WordPress theme built around full-screen video, parallax scrolling, and high-res galleries that load fast. Every page is designed to move visitors toward an inquiry form without feeling pushy. We built a custom image pipeline so the visuals stay sharp without tanking page speed.',
+      'Custom WordPress theme built around full-screen video, parallax scrolling, and high-res galleries that load fast. Every page moves visitors toward an inquiry form without feeling pushy. We built a custom image pipeline so the visuals stay sharp without tanking page speed. Within three weeks of going live, bookings jumped 40% during a period the client had written off as dead. They\'d never seen a single booking in that window before we launched.',
     services: ['Web Design', 'WordPress Development', 'SEO', 'Performance Optimization'],
     layout: 'normal',
   },
