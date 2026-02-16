@@ -243,20 +243,20 @@ const faqs: FAQItem[] = [
 
 function getCategoryColor(category: string): string {
   const colorMap: Record<string, string> = {
-    'Enterprise': 'bg-blue-600',
-    'Travel & Tourism': 'bg-orange-500',
-    'Information Security': 'bg-purple-600',
-    'Mobile & Mobility': 'bg-pink-600',
-    'Data Engineering': 'bg-red-600',
-    'E-Commerce': 'bg-green-600',
+    'Enterprise': 'bg-[#2563EB]',
+    'Travel & Tourism': 'bg-[#F59E0B]',
+    'Information Security': 'bg-[#1E3A8A]',
+    'Mobile & Mobility': 'bg-[#7C3AED]',
+    'Data Engineering': 'bg-[#DC2626]',
+    'E-Commerce': 'bg-[#059669]',
   };
-  return colorMap[category] || 'bg-blue-600';
+  return colorMap[category] || 'bg-[#2563EB]';
 }
 
 function ResultsBox({ results }: { results: Array<{ value: string; label: string }> }) {
   return (
-    <div className="bg-gray-50 rounded-lg p-6 mb-6">
-      <div className="flex items-center gap-2 mb-4 text-green-600 font-semibold text-xs uppercase tracking-wider">
+    <div className="rounded-lg p-6 mb-6" style={{ background: '#F8F9FA' }}>
+      <div className="flex items-center gap-2 mb-4 text-[#10B981] font-semibold text-xs uppercase tracking-wider">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
           <polyline points="22 4 12 14.01 9 11.01" />
@@ -527,7 +527,7 @@ export default function CaseStudiesPage() {
         </section>
 
         {/* FAQ SECTION */}
-        <section id="faq" aria-labelledby="faq-heading" className="py-24 bg-amber-50">
+        <section id="faq" aria-labelledby="faq-heading" className="py-24" style={{ background: '#FAFAF8' }}>
           <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12">
             <div className="text-center mb-16">
               <h2 id="faq-heading" className="font-headline text-4xl font-bold text-[var(--text-dark)] mb-4">Frequently Asked Questions</h2>
