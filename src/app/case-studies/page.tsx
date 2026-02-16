@@ -246,6 +246,21 @@ const faqs: FAQItem[] = [
     answer:
       'An MVP usually takes 3-4 months. Larger systems can run 6-12 months. We give you a detailed timeline before any work starts, with milestones you can actually hold us to.',
   },
+  {
+    question: 'How much does custom software development cost?',
+    answer:
+      'It varies a lot. A focused MVP might start around $15-25K. A full enterprise system with integrations, security layers, and ongoing support runs higher. We scope everything upfront so there are no surprises midway through.',
+  },
+  {
+    question: 'Can you work with our existing systems?',
+    answer:
+      'That\'s actually most of what we do. Ripping everything out and starting fresh is rarely the right move. We integrate with your current stack, whether that\'s legacy databases, third-party APIs, or internal tools your team already knows.',
+  },
+  {
+    question: 'Do you offer ongoing support after launch?',
+    answer:
+      'Yes. We offer maintenance and support contracts, and several of our projects (like the enterprise security platform) have been running for 6+ years with us managing updates, monitoring, and CI/CD. We don\'t build and disappear.',
+  },
 ];
 
 function getCategoryColor(category: string): string {
@@ -333,7 +348,7 @@ function GradientVisual({ study, index }: { study: CaseStudy; index: number }) {
 function ResultsBox({ results, accentColor }: { results: Array<{ value: string; label: string }>; accentColor: string }) {
   return (
     <div
-      className="rounded-xl p-6 md:p-8 mb-6"
+      className="rounded-xl p-5 sm:p-6 md:p-8 mb-6"
       style={{
         background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
       }}
@@ -345,13 +360,13 @@ function ResultsBox({ results, accentColor }: { results: Array<{ value: string; 
         </svg>
         What Changed
       </div>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4">
         {results.map((result, idx) => (
           <div key={idx} className="text-center">
-            <div className="font-headline text-3xl md:text-4xl font-bold leading-none mb-1.5 text-white">
+            <div className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold leading-none mb-1.5 text-white">
               {result.value}
             </div>
-            <div className="text-xs text-slate-400 uppercase tracking-tight">{result.label}</div>
+            <div className="text-[11px] sm:text-xs text-slate-400 uppercase tracking-tight">{result.label}</div>
           </div>
         ))}
       </div>
@@ -395,6 +410,7 @@ function ServiceTags({ services }: { services: string[] }) {
 const jsonLdGraph = {
   '@context': 'https://schema.org',
   '@graph': [
+    // Organization entity (GEO: anchor for entity linking)
     {
       '@type': 'Organization',
       '@id': 'https://karavanhub.com/#organization',
@@ -412,6 +428,7 @@ const jsonLdGraph = {
         streetAddress: 'Suite 31',
         addressLocality: 'Pelham',
         addressRegion: 'Ontario',
+        postalCode: 'L0S 1E0',
         addressCountry: 'CA',
       },
       contactPoint: {
@@ -447,6 +464,7 @@ const jsonLdGraph = {
         'https://www.tiktok.com/@karavanhub',
       ],
     },
+    // WebPage entity (GEO: page-level entity with speakable + mentions)
     {
       '@type': 'WebPage',
       '@id': 'https://karavanhub.com/case-studies/#webpage',
@@ -456,16 +474,17 @@ const jsonLdGraph = {
         'How Karavan Hub helped businesses fix broken payment systems, rebuild booking platforms, and automate what used to take days. 7 projects, real numbers.',
       datePublished: '2026-01-15',
       dateModified: '2026-02-16',
+      inLanguage: 'en-CA',
       isPartOf: {
         '@type': 'WebSite',
         '@id': 'https://karavanhub.com/#website',
         name: 'Karavan Hub',
         url: 'https://karavanhub.com',
       },
-      about: { '@id': 'https://karavanhub.com/case-studies/#itemlist' },
+      about: { '@id': 'https://karavanhub.com/case-studies/#service' },
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['#hero-heading', '#faq-heading'],
+        cssSelector: ['#hero-heading', '#faq-heading', '#cta-heading'],
       },
       mentions: [
         { '@type': 'Thing', name: 'React', url: 'https://react.dev' },
@@ -476,8 +495,75 @@ const jsonLdGraph = {
         { '@type': 'Thing', name: 'MongoDB', url: 'https://mongodb.com' },
         { '@type': 'Thing', name: 'Python', url: 'https://python.org' },
         { '@type': 'Thing', name: 'TypeScript', url: 'https://typescriptlang.org' },
+        { '@type': 'Thing', name: 'Amazon Kinesis', url: 'https://aws.amazon.com/kinesis' },
+        { '@type': 'Thing', name: 'Tableau', url: 'https://tableau.com' },
+        { '@type': 'Thing', name: 'WordPress', url: 'https://wordpress.org' },
       ],
     },
+    // Service entity (SEO: service catalog for case study work)
+    {
+      '@type': 'Service',
+      '@id': 'https://karavanhub.com/case-studies/#service',
+      name: 'Custom Software & IT Solutions',
+      description:
+        'Custom software development, cloud migration, AI automation, mobile apps, data engineering, and web design for small and medium businesses.',
+      provider: { '@id': 'https://karavanhub.com/#organization' },
+      serviceType: 'IT Consulting and Custom Software Development',
+      areaServed: [
+        { '@type': 'Country', name: 'Canada' },
+        { '@type': 'State', name: 'Ontario' },
+        { '@type': 'City', name: 'Niagara' },
+        { '@type': 'Country', name: 'United States' },
+        { '@type': 'Country', name: 'Saudi Arabia' },
+      ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'IT & Software Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Custom Software Development',
+              description: 'Full-stack software built for specific business workflows, from payment systems to booking platforms.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Cloud Migration & Architecture',
+              description: 'Microservices architecture, containerized deployments, and auto-scaling cloud infrastructure on AWS.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'AI Automation & Data Engineering',
+              description: 'Real-time data pipelines, anomaly detection, and AI-powered process automation.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Mobile App Development',
+              description: 'Native Android and cross-platform mobile applications with offline-first architecture.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Web Design & E-Commerce',
+              description: 'Custom websites and multi-tenant e-commerce platforms built for performance and conversion.',
+            },
+          },
+        ],
+      },
+    },
+    // ItemList entity (SEO: enriched case study list)
     {
       '@type': 'ItemList',
       '@id': 'https://karavanhub.com/case-studies/#itemlist',
@@ -488,12 +574,52 @@ const jsonLdGraph = {
         '@type': 'ListItem',
         position: idx + 1,
         item: {
-          '@type': 'Article',
+          '@type': 'CreativeWork',
           name: study.title,
           description: study.intro,
+          about: {
+            '@type': 'Service',
+            name: study.services[0],
+            provider: { '@id': 'https://karavanhub.com/#organization' },
+          },
+          genre: study.category,
         },
       })),
     },
+    // HowTo entity (SEO: project delivery process)
+    {
+      '@type': 'HowTo',
+      '@id': 'https://karavanhub.com/case-studies/#howto',
+      name: 'How Karavan Hub delivers custom software projects',
+      description: 'Our project delivery process from discovery to production support.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Discovery & Scoping',
+          text: 'We sit down with your team, map out what is broken and what needs building, and define clear deliverables with a fixed timeline.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Architecture & Planning',
+          text: 'We design the system architecture, pick the right tech stack for the job, and set up project milestones you can track.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Build & Iterate',
+          text: 'Agile sprints with working demos every two weeks. You see real progress, not slide decks.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 4,
+          name: 'Launch & Support',
+          text: 'We deploy to production, monitor performance, and provide ongoing maintenance. Several of our projects have been running for 6+ years.',
+        },
+      ],
+    },
+    // FAQPage entity (AEO: expanded with cost + integration + support questions)
     {
       '@type': 'FAQPage',
       '@id': 'https://karavanhub.com/case-studies/#faq',
@@ -506,12 +632,43 @@ const jsonLdGraph = {
         },
       })),
     },
+    // BreadcrumbList entity
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://karavanhub.com' },
         { '@type': 'ListItem', position: 2, name: 'Case Studies', item: 'https://karavanhub.com/case-studies' },
       ],
+    },
+    // ProfessionalService entity (GEO: local business signals)
+    {
+      '@type': 'ProfessionalService',
+      '@id': 'https://karavanhub.com/#localbusiness',
+      name: 'Karavan Hub',
+      url: 'https://karavanhub.com',
+      telephone: '+1-905-301-3936',
+      email: 'karavan.it.hub@gmail.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Suite 31',
+        addressLocality: 'Pelham',
+        addressRegion: 'Ontario',
+        postalCode: 'L0S 1E0',
+        addressCountry: 'CA',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 43.0896,
+        longitude: -79.0849,
+      },
+      priceRange: '$$',
+      openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '17:00',
+      },
+      sameAs: { '@id': 'https://karavanhub.com/#organization' },
     },
   ],
 };
@@ -527,15 +684,15 @@ export default function CaseStudiesPage() {
       <main id="main-content" role="main">
         {/* HERO SECTION */}
         <section
-          className="relative py-32 text-center overflow-hidden"
+          className="relative py-20 sm:py-24 md:py-32 text-center overflow-hidden"
           aria-labelledby="hero-heading"
           style={{
             background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)',
           }}
         >
           {/* Gradient orbs */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-500 to-transparent rounded-full blur-3xl opacity-40 -mr-32 -mt-32" aria-hidden="true" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-cyan-400 to-transparent rounded-full blur-3xl opacity-40 -ml-32 -mb-16" aria-hidden="true" />
+          <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-br from-blue-500 to-transparent rounded-full blur-3xl opacity-40 -mr-16 sm:-mr-32 -mt-16 sm:-mt-32" aria-hidden="true" />
+          <div className="absolute bottom-0 left-0 w-48 sm:w-72 h-48 sm:h-72 bg-gradient-to-tr from-cyan-400 to-transparent rounded-full blur-3xl opacity-40 -ml-16 sm:-ml-32 -mb-8 sm:-mb-16" aria-hidden="true" />
 
           {/* Grid overlay */}
           <div
@@ -543,26 +700,26 @@ export default function CaseStudiesPage() {
             style={{
               backgroundImage:
                 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-              backgroundSize: '60px 60px',
+              backgroundSize: '40px 40px',
             }}
             aria-hidden="true"
           />
 
           <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 relative z-10">
-            <div className="font-mono text-cyan-400/60 text-sm tracking-widest uppercase mb-6">7 Case Studies</div>
-            <h1 id="hero-heading" className="font-headline text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <div className="font-mono text-cyan-400/60 text-xs sm:text-sm tracking-widest uppercase mb-4 sm:mb-6">7 Case Studies</div>
+            <h1 id="hero-heading" className="font-headline text-[clamp(2.5rem,8vw,3.75rem)] font-bold text-white mb-4 sm:mb-6 leading-[1.1] tracking-[-0.02em]">
               Real Problems.<br />
               <span className="text-cyan-400">Real Results.</span>
             </h1>
-            <p className="font-body text-lg text-white/85 max-w-2xl mx-auto mb-8 leading-relaxed">
-              Every project started with a business that needed something fixed, built, or rebuilt. Here's what we did and what actually happened.
+            <p className="font-body text-base sm:text-lg text-white/85 max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+              Every project started with a business that needed something fixed, built, or rebuilt. Here&apos;s what we did and what actually happened.
             </p>
             <a
               href="#case-studies"
-              className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-headline font-semibold transition-all hover:bg-white/95 hover:shadow-xl hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-white text-blue-900 px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-headline font-semibold text-sm sm:text-base transition-all hover:bg-white/95 hover:shadow-xl hover:-translate-y-0.5"
             >
               See the Work
-              <ChevronRight size={20} />
+              <ChevronRight size={18} />
             </a>
           </div>
         </section>
@@ -572,19 +729,19 @@ export default function CaseStudiesPage() {
           {caseStudies.map((study, idx) => (
             <section
               key={study.id}
-              className={`py-24 lg:py-28 ${idx % 2 === 1 ? '' : ''}`}
+              className={`py-16 sm:py-20 lg:py-28 ${idx % 2 === 1 ? '' : ''}`}
               style={{ background: idx % 2 === 1 ? '#FAFAF8' : '#ffffff' }}
               aria-labelledby={`study-heading-${study.id}`}
             >
               <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-                  {/* Gradient Visual - sticky, alternates position */}
-                  <div className={`lg:sticky lg:top-24 ${study.layout === 'reverse' ? 'lg:order-first' : ''}`}>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+                  {/* Gradient Visual — always first on mobile (DOM order), alternates on desktop */}
+                  <div className={`lg:sticky lg:top-24 ${study.layout === 'reverse' ? 'lg:order-last' : ''}`}>
                     <GradientVisual study={study} index={idx} />
                   </div>
 
-                  {/* Content */}
-                  <div className={study.layout === 'reverse' ? 'lg:order-last' : ''}>
+                  {/* Content — always second on mobile (DOM order) */}
+                  <div className={study.layout === 'reverse' ? 'lg:order-first' : ''}>
                     {/* Study number + badges */}
                     <div className="flex items-center gap-3 mb-5">
                       <span className="font-mono text-[var(--text-muted)] text-sm tracking-widest">
@@ -603,8 +760,8 @@ export default function CaseStudiesPage() {
                       </div>
                     </div>
 
-                    <h2 id={`study-heading-${study.id}`} className="font-headline text-3xl md:text-4xl font-bold text-[var(--text-dark)] mb-4">{study.title}</h2>
-                    <p className="font-body text-lg text-[var(--text-dark)] mb-8 leading-relaxed">{study.intro}</p>
+                    <h2 id={`study-heading-${study.id}`} className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--text-dark)] mb-3 sm:mb-4">{study.title}</h2>
+                    <p className="font-body text-base sm:text-lg text-[var(--text-dark)] mb-6 sm:mb-8 leading-relaxed">{study.intro}</p>
 
                     <ResultsBox results={study.results} accentColor={getCategoryAccentColor(study.category)} />
                     <SolutionBox solution={study.solution} />
@@ -617,10 +774,10 @@ export default function CaseStudiesPage() {
         </section>
 
         {/* FAQ SECTION */}
-        <section id="faq" aria-labelledby="faq-heading" className="py-24" style={{ background: '#FAFAF8' }}>
+        <section id="faq" aria-labelledby="faq-heading" className="py-16 sm:py-20 lg:py-24" style={{ background: '#FAFAF8' }}>
           <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12">
-            <div className="text-center mb-16">
-              <h2 id="faq-heading" className="font-headline text-4xl font-bold text-[var(--text-dark)] mb-4">Frequently Asked Questions</h2>
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 id="faq-heading" className="font-headline text-3xl sm:text-4xl font-bold text-[var(--text-dark)] mb-4">Frequently Asked Questions</h2>
               <p className="font-body text-[var(--text-body)] max-w-2xl mx-auto">
                 What people usually want to know before reaching out.
               </p>
@@ -633,7 +790,7 @@ export default function CaseStudiesPage() {
                   itemScope
                   itemType="https://schema.org/Question"
                 >
-                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none font-semibold text-[var(--text-dark)] hover:text-[var(--primary)]">
+                  <summary className="flex items-center justify-between p-4 sm:p-5 cursor-pointer list-none font-semibold text-[var(--text-dark)] hover:text-[var(--primary)] min-h-[48px]">
                     <h3 className="font-headline text-sm md:text-base" itemProp="name">{faq.question}</h3>
                     <div className="w-6 h-6 flex-shrink-0 bg-gray-100 rounded-full flex items-center justify-center transition-transform">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -642,7 +799,7 @@ export default function CaseStudiesPage() {
                     </div>
                   </summary>
                   <div
-                    className="px-5 pb-5 text-[var(--text-body)] text-sm leading-relaxed border-t border-[var(--border-light)]"
+                    className="px-4 sm:px-5 pb-4 sm:pb-5 text-[var(--text-body)] text-sm leading-relaxed border-t border-[var(--border-light)]"
                     itemScope
                     itemType="https://schema.org/Answer"
                     itemProp="acceptedAnswer"
@@ -658,15 +815,15 @@ export default function CaseStudiesPage() {
         {/* CTA SECTION */}
         <section
           aria-labelledby="cta-heading"
-          className="py-[60px] md:py-[80px] lg:py-[100px] text-center relative"
+          className="py-12 sm:py-[60px] md:py-[80px] lg:py-[100px] text-center relative"
           style={{ background: 'linear-gradient(180deg, #f0f9ff, #e0f2fe)' }}
         >
           <div className="max-w-[900px] mx-auto px-5 sm:px-6">
             <div
-              className="bg-white rounded-[24px] py-[40px] px-6 md:py-[60px] md:px-12 border border-[rgba(37,99,235,0.08)]"
+              className="bg-white rounded-2xl sm:rounded-[24px] py-8 px-5 sm:py-[40px] sm:px-6 md:py-[60px] md:px-12 border border-[rgba(37,99,235,0.08)]"
               style={{ boxShadow: '0 4px 6px rgba(0,0,0,0.02), 0 12px 24px rgba(0,0,0,0.04), 0 24px 48px rgba(37,99,235,0.06)' }}
             >
-              <h2 id="cta-heading" className="font-headline text-[24px] md:text-[clamp(24px,4vw,36px)] font-semibold text-[var(--text-dark)] mb-4 tracking-[-0.5px]">
+              <h2 id="cta-heading" className="font-headline text-xl sm:text-[24px] md:text-[clamp(24px,4vw,36px)] font-semibold text-[var(--text-dark)] mb-3 sm:mb-4 tracking-[-0.5px]">
                 Got a project like these?
               </h2>
               <p className="font-body text-[16px] md:text-[18px] text-[var(--text-muted)] mb-8 leading-[1.7] max-w-[550px] mx-auto">
