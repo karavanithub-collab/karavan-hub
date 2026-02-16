@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+
 const ChevronRight = ({ size = 24 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
 );
@@ -7,14 +9,21 @@ const ChevronRight = ({ size = 24 }: { size?: number }) => (
 export const metadata: Metadata = {
   title: 'Case Studies | Karavan Hub - Real Results for Real Businesses',
   description:
-    'Explore 7 real-world case studies showcasing how Karavan IT Solutions helps businesses solve complex challenges with custom software, cloud migration, AI automation, and enterprise solutions. See verified results: 85% faster processing, 99.9% uptime, 40% cost reduction.',
+    '7 real-world case studies from Karavan Hub. See how we helped businesses solve real challenges with custom software, cloud migration, and AI automation. Verified results: 85% faster processing, 99.9% uptime, 40% cost reduction.',
+  keywords:
+    'case studies, IT solutions, custom software, cloud migration, AI automation, business results, Karavan Hub, Niagara',
+  robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   alternates: {
     canonical: 'https://karavanhub.com/case-studies',
+    languages: {
+      'en-CA': 'https://karavanhub.com/case-studies',
+      en: 'https://karavanhub.com/case-studies',
+    },
   },
   openGraph: {
-    title: 'Case Studies | Karavan IT Solutions — Real Results for Real Businesses',
+    title: 'Case Studies - Real Results for Real Businesses | Karavan Hub',
     description:
-      'Real problems. Real solutions. Real results. See how we\'ve helped 50+ businesses transform with technology that works. Verified case studies with measurable outcomes.',
+      'Real problems. Real results. See how we\'ve helped businesses with technology that actually works. Verified case studies with measurable outcomes.',
     type: 'website',
     url: 'https://karavanhub.com/case-studies',
     images: [
@@ -22,27 +31,25 @@ export const metadata: Metadata = {
         url: 'https://karavanhub.com/images/case-studies-og.jpg',
         width: 1200,
         height: 630,
-        alt: 'Karavan IT Solutions Case Studies - Real Results for Real Businesses',
+        alt: 'Karavan Hub Case Studies - Real Results for Real Businesses',
       },
     ],
-    siteName: 'Karavan IT Solutions',
+    siteName: 'Karavan Hub',
     locale: 'en_CA',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Case Studies | Karavan IT Solutions',
+    title: 'Case Studies | Karavan Hub',
     description:
-      'Real problems. Real solutions. Real results. See verified case studies with measurable business outcomes.',
+      'Real problems. Real results. See verified case studies with measurable business outcomes.',
     images: ['https://karavanhub.com/images/case-studies-twitter.jpg'],
   },
-  robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-  authors: [{ name: 'Karavan IT Solutions', url: 'https://karavanhub.com/about' }],
-  alternates: {
-    canonical: 'https://karavanhub.com/case-studies',
-    languages: {
-      'en-CA': 'https://karavanhub.com/case-studies',
-      'x-default': 'https://karavanhub.com/case-studies',
-    },
+  authors: [{ name: 'Karavan Hub', url: 'https://karavanhub.com/about' }],
+  other: {
+    'geo.region': 'CA-ON',
+    'geo.placename': 'Niagara, Ontario',
+    'geo.position': '43.0896;-79.0849',
+    ICBM: '43.0896, -79.0849',
   },
 };
 
@@ -52,9 +59,8 @@ interface CaseStudy {
   categoryTag: string;
   title: string;
   intro: string;
-  asciiArt: string;
-  visualTitle: string;
-  visualType: string;
+  image: string;
+  imageAlt: string;
   results: Array<{ value: string; label: string }>;
   solution: string;
   services: string[];
@@ -68,40 +74,16 @@ const caseStudies: CaseStudy[] = [
     categoryTag: 'Fintech',
     title: 'Enterprise Payment Management',
     intro:
-      'A multi-branch organization was losing thousands monthly to payment errors, duplicate invoices, and compliance gaps. Manual verification couldn\'t scale—they needed a system that could.',
-    asciiArt: `     ╔══════════════════════════════════════════════════╗
-     ║           PAYMENT PROCESSING METRICS             ║
-     ╠══════════════════════════════════════════════════╣
-     ║                                                  ║
-     ║   PROCESSING TIME          ACCURACY RATE        ║
-     ║   ┌────────────────┐       ┌────────────────┐   ║
-     ║   │▓▓▓▓▓▓▓▓▓▓▓▓░░░░│       │▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│   ║
-     ║   │    85% FASTER  │       │     100%       │   ║
-     ║   └────────────────┘       └────────────────┘   ║
-     ║                                                  ║
-     ║   ┌──────────────────────────────────────────┐  ║
-     ║   │  BEFORE        AFTER                     │  ║
-     ║   │    █                                     │  ║
-     ║   │    █                                     │  ║
-     ║   │    █                                     │  ║
-     ║   │    █             █                       │  ║
-     ║   │    █             █                       │  ║
-     ║   │   24h           3.6h                     │  ║
-     ║   └──────────────────────────────────────────┘  ║
-     ║                                                  ║
-     ║   DUPLICATES: ████████████████████████ 0        ║
-     ║   AUDIT COVERAGE: ████████████████████ 100%     ║
-     ║                                                  ║
-     ╚══════════════════════════════════════════════════╝`,
-    visualTitle: 'Payment',
-    visualType: 'fintech',
+      'A multi-branch organization was losing thousands monthly to payment errors, duplicate invoices, and compliance gaps. Manual verification couldn\'t scale. They needed a system that could.',
+    image: '/images/software-dev.jpg',
+    imageAlt: 'Custom payment management software dashboard for enterprise fintech',
     results: [
       { value: '85%', label: 'Faster Processing' },
       { value: 'Zero', label: 'Duplicate Payments' },
       { value: '100%', label: 'Audit Coverage' },
     ],
     solution:
-      'Built a role-based workflow system (Accountant → Validator → Approver → Executor) with automated duplicate detection, tax compliance checks, and complete audit logging. AI-powered anomaly detection flags suspicious patterns before payments execute.',
+      'Built a role-based workflow system (Accountant, Validator, Approver, Executor) with automated duplicate detection, tax compliance checks, and complete audit logging. AI-powered anomaly detection flags suspicious patterns before payments execute.',
     services: ['Custom Software', 'AI Automation', 'System Integration'],
     layout: 'normal',
   },
@@ -111,39 +93,16 @@ const caseStudies: CaseStudy[] = [
     categoryTag: 'Enterprise',
     title: 'Saudi Travel Platform',
     intro:
-      'A rapidly growing Saudi travel company hit a wall. Their monolithic booking system couldn\'t handle peak demand—slow response times were costing bookings and damaging their reputation with hotels.',
-    asciiArt: `     ╔══════════════════════════════════════════════════╗
-     ║            CLOUD MIGRATION DASHBOARD             ║
-     ╠══════════════════════════════════════════════════╣
-     ║                                                  ║
-     ║   TRAFFIC CAPACITY        RESPONSE TIME         ║
-     ║   ┌────────────────┐      ┌────────────────┐    ║
-     ║   │ BEFORE:   1x   │      │ BEFORE: 2.5s   │    ║
-     ║   │ AFTER:   10x   │      │ AFTER:  1.0s   │    ║
-     ║   │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓ │      │ ▓▓▓▓▓▓▓▓▓▓░░░░ │    ║
-     ║   └────────────────┘      └────────────────┘    ║
-     ║                                                  ║
-     ║   UPTIME CHART (30 DAYS)                        ║
-     ║   ┌──────────────────────────────────────────┐  ║
-     ║   │▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│  ║
-     ║   │▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│  ║
-     ║   │                                99.9%    │  ║
-     ║   └──────────────────────────────────────────┘  ║
-     ║                                                  ║
-     ║   MICROSERVICES     ┌───┐ ┌───┐ ┌───┐ ┌───┐    ║
-     ║   DEPLOYED:    4    │ B │ │ H │ │ U │ │ P │    ║
-     ║                     └───┘ └───┘ └───┘ └───┘    ║
-     ║                                                  ║
-     ╚══════════════════════════════════════════════════╝`,
-    visualTitle: 'Cloud',
-    visualType: 'travel',
+      'A rapidly growing Saudi travel company hit a wall. Their monolithic booking system couldn\'t handle peak demand. Slow response times were costing bookings and damaging their reputation with hotels.',
+    image: '/images/digital-transformation.jpg',
+    imageAlt: 'Cloud migration dashboard for Saudi travel booking platform',
     results: [
       { value: '10x', label: 'Traffic Capacity' },
       { value: '60%', label: 'Faster Response' },
       { value: '99.9%', label: 'Uptime During Peak' },
     ],
     solution:
-      'Decomposed the monolith into specialized microservices—booking, hotel reservations, user management, payment processing. Containerized with Docker, implemented API gateway routing, and built auto-scaling that responds to demand in real-time.',
+      'Decomposed the monolith into specialized microservices: booking, hotel reservations, user management, payment processing. Containerized with Docker, implemented API gateway routing, and built auto-scaling that responds to demand in real-time.',
     services: ['Cloud Migration', 'Microservices', 'System Architecture', 'Horizontal Scaling'],
     layout: 'reverse',
   },
@@ -154,32 +113,8 @@ const caseStudies: CaseStudy[] = [
     title: 'Enterprise Security & Data Platform',
     intro:
       'A global technology manufacturer with 40,000+ employees needed to modernize their security infrastructure. Legacy systems couldn\'t keep pace with threat detection requirements, and manual monitoring was creating dangerous blind spots.',
-    asciiArt: `     ╔══════════════════════════════════════════════════╗
-     ║            SECURITY OPERATIONS CENTER            ║
-     ╠══════════════════════════════════════════════════╣
-     ║                                                  ║
-     ║   USERS PROTECTED        YEARS IN PRODUCTION    ║
-     ║   ┌────────────────┐     ┌────────────────┐     ║
-     ║   │                │     │                │     ║
-     ║   │    40,000+     │     │       6        │     ║
-     ║   │                │     │     YEARS      │     ║
-     ║   └────────────────┘     └────────────────┘     ║
-     ║                                                  ║
-     ║   THREAT DETECTION STATUS                       ║
-     ║   ┌──────────────────────────────────────────┐  ║
-     ║   │  ◉ REAL-TIME MONITORING        ACTIVE   │  ║
-     ║   │  ◉ ANOMALY DETECTION           ACTIVE   │  ║
-     ║   │  ◉ INCIDENT RESPONSE           READY    │  ║
-     ║   │  ◉ COMPLIANCE AUDIT            PASSED   │  ║
-     ║   └──────────────────────────────────────────┘  ║
-     ║                                                  ║
-     ║   COVERAGE     ████████████████████████ GLOBAL  ║
-     ║   UPTIME       ████████████████████████ 24/7    ║
-     ║   INCIDENTS    ░░░░░░░░░░░░░░░░░░░░░░░░ 0       ║
-     ║                                                  ║
-     ╚══════════════════════════════════════════════════╝`,
-    visualTitle: 'Security',
-    visualType: 'security',
+    image: '/images/data-analytics.jpg',
+    imageAlt: 'Security operations center with real-time threat monitoring dashboard',
     results: [
       { value: '6 Years', label: 'Production Support' },
       { value: 'Real-time', label: 'Threat Detection' },
@@ -196,40 +131,16 @@ const caseStudies: CaseStudy[] = [
     categoryTag: 'Enterprise',
     title: 'Enterprise Mobility Suite',
     intro:
-      'A Fortune 500 technology company\'s field teams were drowning in disconnected apps and manual processes. Sales reps spent more time on data entry than selling. Service technicians couldn\'t access critical information on-site.',
-    asciiArt: `     ╔══════════════════════════════════════════════════╗
-     ║            MOBILE PRODUCTIVITY METRICS           ║
-     ╠══════════════════════════════════════════════════╣
-     ║                                                  ║
-     ║   ADMIN TIME REDUCTION     PLATFORM SUPPORT     ║
-     ║   ┌────────────────┐       ┌────────────────┐   ║
-     ║   │ BEFORE   AFTER │       │  ◉ iOS         │   ║
-     ║   │  100%     60%  │       │  ◉ Android     │   ║
-     ║   │   █       █    │       │  ◉ Tablet      │   ║
-     ║   │   █       █    │       │  ◉ Offline     │   ║
-     ║   │   █             │       └────────────────┘   ║
-     ║   │   █       40%   │                           ║
-     ║   │  SAVED         │                            ║
-     ║   └────────────────┘                            ║
-     ║                                                  ║
-     ║   FEATURE ADOPTION                              ║
-     ║   ┌──────────────────────────────────────────┐  ║
-     ║   │ Field Sync    ████████████████████  95%  │  ║
-     ║   │ Offline Mode  ██████████████████░░  88%  │  ║
-     ║   │ Push Alerts   █████████████████░░░  82%  │  ║
-     ║   │ Data Entry    ████████████████████  96%  │  ║
-     ║   └──────────────────────────────────────────┘  ║
-     ║                                                  ║
-     ╚══════════════════════════════════════════════════╝`,
-    visualTitle: 'Mobile',
-    visualType: 'mobile',
+      'A large technology company\'s field teams were drowning in disconnected apps and manual processes. Sales reps spent more time on data entry than selling. Service technicians couldn\'t access information on-site.',
+    image: '/images/ai-workflows.jpg',
+    imageAlt: 'Mobile enterprise application for field teams on iOS and Android',
     results: [
       { value: '40%', label: 'Less Admin Time' },
       { value: 'iOS + Android', label: 'Cross-Platform' },
       { value: 'Offline', label: 'Field-Ready' },
     ],
     solution:
-      'Developed native Android applications with Kotlin/Java alongside cross-platform solutions. Built offline-first architecture so field teams stay productive without connectivity. Integrated with enterprise backend systems via REST APIs and implemented secure authentication for sensitive corporate data.',
+      'Developed native Android applications with Kotlin/Java alongside cross-platform solutions. Built offline-first architecture so field teams stay productive without connectivity. Integrated with backend systems via REST APIs and implemented secure authentication for sensitive corporate data.',
     services: ['Mobile Development', 'Android Native', 'API Integration', 'Offline Sync'],
     layout: 'reverse',
   },
@@ -240,35 +151,10 @@ const caseStudies: CaseStudy[] = [
     title: 'Real-time Data Pipeline',
     intro:
       'A global manufacturer\'s business intelligence was always 24 hours behind. Executives made decisions on yesterday\'s data while competitors moved faster. The batch-processing approach couldn\'t support real-time operations.',
-    asciiArt: `     ╔══════════════════════════════════════════════════╗
-     ║            REAL-TIME DATA ANALYTICS              ║
-     ╠══════════════════════════════════════════════════╣
-     ║                                                  ║
-     ║   DATA LATENCY             DAILY THROUGHPUT     ║
-     ║   ┌────────────────┐       ┌────────────────┐   ║
-     ║   │ BEFORE: 24 hrs │       │                │   ║
-     ║   │ AFTER:  <1 sec │       │    TERABYTES   │   ║
-     ║   │                │       │    PROCESSED   │   ║
-     ║   │  24h    <1s    │       │                │   ║
-     ║   │   █             │       │      TB+       │   ║
-     ║   │   █      ░      │       │                │   ║
-     ║   └────────────────┘       └────────────────┘   ║
-     ║                                                  ║
-     ║   PIPELINE RELIABILITY (90 DAYS)                ║
-     ║   ┌──────────────────────────────────────────┐  ║
-     ║   │▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│  ║
-     ║   │▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓│  ║
-     ║   │             UPTIME: 99.9%               │  ║
-     ║   └──────────────────────────────────────────┘  ║
-     ║                                                  ║
-     ║   STAGES    ┌───────┐┌───────┐┌───────┐┌─────┐ ║
-     ║   ACTIVE:   │INGEST ││PROCESS││ANALYZE││ OUT │ ║
-     ║      4      └───────┘└───────┘└───────┘└─────┘ ║
-     ╚══════════════════════════════════════════════════╝`,
-    visualTitle: 'Pipeline',
-    visualType: 'data',
+    image: '/images/cta-motion.jpg',
+    imageAlt: 'Real-time data pipeline architecture with streaming analytics',
     results: [
-      { value: '24hrs → Real-time', label: 'Data Latency' },
+      { value: '24hrs to Real-time', label: 'Data Latency' },
       { value: 'TB-scale', label: 'Daily Processing' },
       { value: '99.9%', label: 'Pipeline Reliability' },
     ],
@@ -284,32 +170,8 @@ const caseStudies: CaseStudy[] = [
     title: 'Multi-tenant E-commerce Platform',
     intro:
       'A growing tech company needed to launch e-commerce solutions for multiple clients without rebuilding from scratch each time. Custom development for every client was eating margins and slowing delivery.',
-    asciiArt: `     ╔══════════════════════════════════════════════════╗
-     ║            E-COMMERCE PLATFORM STATS             ║
-     ╠══════════════════════════════════════════════════╣
-     ║                                                  ║
-     ║   DEVELOPMENT TIME       LAUNCH SPEED           ║
-     ║   ┌────────────────┐     ┌────────────────┐     ║
-     ║   │                │     │ TRADITIONAL    │     ║
-     ║   │    6+ YEARS    │     │      █         │     ║
-     ║   │    PLATFORM    │     │      █         │     ║
-     ║   │   MATURITY     │     │      █   70%   │     ║
-     ║   │                │     │      █  FASTER │     ║
-     ║   └────────────────┘     │      █    █    │     ║
-     ║                          │           █    │     ║
-     ║                          └────────────────┘     ║
-     ║   MULTI-TENANT ARCHITECTURE                     ║
-     ║   ┌──────────────────────────────────────────┐  ║
-     ║   │  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐ │  ║
-     ║   │  │SHOP A│  │SHOP B│  │SHOP C│  │SHOP D│ │  ║
-     ║   │  │ $$$  │  │ $$$  │  │ $$$  │  │ $$$  │ │  ║
-     ║   │  └──────┘  └──────┘  └──────┘  └──────┘ │  ║
-     ║   │         SHARED INFRASTRUCTURE           │  ║
-     ║   └──────────────────────────────────────────┘  ║
-     ║                                                  ║
-     ╚══════════════════════════════════════════════════╝`,
-    visualTitle: 'Store',
-    visualType: 'ecommerce',
+    image: '/images/web-design.jpg',
+    imageAlt: 'Multi-tenant e-commerce platform with customizable storefronts',
     results: [
       { value: '6+ Years', label: 'Platform Development' },
       { value: '70%', label: 'Faster Client Launch' },
@@ -326,40 +188,16 @@ const caseStudies: CaseStudy[] = [
     categoryTag: 'Hospitality',
     title: 'Aegean Escape Villas',
     intro:
-      'A Canadian real estate company launching luxury villa rentals on Turkey\'s coast needed a digital presence that matched the properties—sophisticated, immersive, and conversion-focused. Peak booking season was 6 weeks away.',
-    asciiArt: `     ╔══════════════════════════════════════════════════╗
-     ║            VILLA WEBSITE PERFORMANCE             ║
-     ╠══════════════════════════════════════════════════╣
-     ║                                                  ║
-     ║   PROJECT TIMELINE        PAGE LOAD SPEED       ║
-     ║   ┌────────────────┐      ┌────────────────┐    ║
-     ║   │                │      │  INDUSTRY  US  │    ║
-     ║   │   6 WEEKS      │      │     █          │    ║
-     ║   │   TO LAUNCH    │      │     █          │    ║
-     ║   │                │      │     █     █    │    ║
-     ║   │  ▓▓▓▓▓▓▓▓▓▓▓▓  │      │    5s    <3s   │    ║
-     ║   └────────────────┘      └────────────────┘    ║
-     ║                                                  ║
-     ║   PROPERTIES SHOWCASE                           ║
-     ║   ┌──────────────────────────────────────────┐  ║
-     ║   │  ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐│  ║
-     ║   │  │VILLA│ │VILLA│ │VILLA│ │VILLA│ │VILLA││  ║
-     ║   │  │  1  │ │  2  │ │  3  │ │  4  │ │  5  ││  ║
-     ║   │  │ ◉◉◉ │ │ ◉◉◉ │ │ ◉◉◉ │ │ ◉◉◉ │ │ ◉◉◉ ││  ║
-     ║   │  └─────┘ └─────┘ └─────┘ └─────┘ └─────┘│  ║
-     ║   │            5 VILLAS LIVE                 │  ║
-     ║   └──────────────────────────────────────────┘  ║
-     ║                                                  ║
-     ╚══════════════════════════════════════════════════╝`,
-    visualTitle: 'Villa',
-    visualType: 'hospitality',
+      'A Canadian real estate company launching luxury villa rentals on Turkey\'s coast needed a digital presence that matched the properties: sophisticated and conversion-focused. Peak booking season was 6 weeks away.',
+    image: '/images/software-dev.jpg',
+    imageAlt: 'Luxury villa rental website with immersive property galleries',
     results: [
       { value: '6', label: 'Weeks to Launch' },
       { value: '<3s', label: 'Load Time' },
       { value: '5', label: 'Villas Live' },
     ],
     solution:
-      'Custom WordPress theme with full-screen hero videos, parallax scrolling, and high-resolution galleries. Conversion-optimized UX with strategic inquiry form placement. Image pipeline delivering visual quality at fast load speeds.',
+      'Custom WordPress theme with full-screen hero videos, parallax scrolling, and high-resolution galleries. UX designed to convert, with strategic inquiry form placement. Custom image pipeline that keeps visual quality high without killing load speeds.',
     services: ['Web Design', 'WordPress Development', 'SEO', 'Performance Optimization'],
     layout: 'normal',
   },
@@ -372,38 +210,38 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: 'What industries does Karavan IT Solutions specialize in?',
+    question: 'What industries does Karavan Hub specialize in?',
     answer:
-      'We specialize in fintech, healthcare, travel, e-commerce, and property management. Our case studies showcase successful projects including enterprise payment systems, mobile banking apps, healthcare compliance platforms, travel booking systems, and IoT-integrated property management solutions.',
+      'We specialize in fintech, healthcare, travel, e-commerce, and hospitality. Our case studies cover projects including payment management systems, mobile apps, cloud migration platforms, travel booking systems, and villa booking websites.',
   },
   {
-    question: 'What results can I expect from working with Karavan IT?',
+    question: 'What results can I expect from working with Karavan Hub?',
     answer:
       'Our case studies show consistent, measurable results: 85% faster processing times, 99.9% system uptime, 40% cost reduction, 60% faster decision-making with AI analytics, and 3x performance improvements through cloud migration.',
   },
   {
-    question: 'Do you work with startups or only enterprises?',
+    question: 'Do you work with startups or only large companies?',
     answer:
-      'We work with businesses of all sizes, from funded startups to Fortune 500 enterprises. Our scalable solutions are designed to grow with your business, whether you\'re processing your first transactions or handling millions daily.',
+      'We focus on small and medium businesses, though we have experience with projects at every scale. Every solution we build is designed to grow with your business, whether you\'re processing your first transactions or handling thousands daily.',
   },
   {
-    question: 'What technologies does Karavan IT Solutions use?',
+    question: 'What technologies does Karavan Hub use?',
     answer:
-      'We use industry-leading technologies including React, Node.js, Python, AWS, TypeScript, Docker, Kubernetes, MongoDB, PostgreSQL, and TensorFlow. Our stack is chosen based on each project\'s specific requirements for scalability, security, and performance.',
+      'We build with React, Node.js, Python, AWS, TypeScript, Docker, Kubernetes, MongoDB, PostgreSQL, and TensorFlow. Our stack is chosen based on what each project actually needs for security and performance.',
   },
   {
-    question: 'Where is Karavan IT Solutions located?',
+    question: 'Where is Karavan Hub located?',
     answer:
-      'We\'re headquartered in Niagara, Ontario, Canada. We serve clients across North America and globally, with experience delivering projects for companies in Canada, the United States, and international markets.',
+      'Niagara, Ontario. We work with clients across Canada, the US, and internationally.',
   },
   {
     question: 'How long does a typical project take?',
     answer:
-      'Project timelines vary based on complexity. MVP development typically takes 3-4 months, while enterprise solutions may require 6-12 months. We provide detailed timelines during our discovery phase, with regular milestones and transparent progress tracking.',
+      'Project timelines vary based on complexity. MVP development typically takes 3-4 months, while larger solutions may require 6-12 months. We provide detailed timelines during our discovery phase, with regular milestones and transparent progress tracking.',
   },
 ];
 
-function getCategoryColor(category: string, visualType: string): string {
+function getCategoryColor(category: string): string {
   const colorMap: Record<string, string> = {
     'Enterprise': 'bg-blue-600',
     'Travel & Tourism': 'bg-orange-500',
@@ -428,8 +266,8 @@ function ResultsBox({ results }: { results: Array<{ value: string; label: string
       <div className="grid grid-cols-3 gap-4">
         {results.map((result, idx) => (
           <div key={idx} className="text-center">
-            <div className="text-2xl font-bold text-blue-600 leading-none mb-1">{result.value}</div>
-            <div className="text-xs text-gray-500 uppercase tracking-tight">{result.label}</div>
+            <div className="font-headline text-2xl font-bold text-[var(--primary)] leading-none mb-1">{result.value}</div>
+            <div className="text-xs text-[var(--text-muted)] uppercase tracking-tight">{result.label}</div>
           </div>
         ))}
       </div>
@@ -440,7 +278,7 @@ function ResultsBox({ results }: { results: Array<{ value: string; label: string
 function SolutionBox({ solution }: { solution: string }) {
   return (
     <div className="bg-blue-50 rounded-lg p-6 mb-6">
-      <div className="flex items-center gap-2 mb-3 text-blue-600 font-semibold text-xs uppercase tracking-wider">
+      <div className="flex items-center gap-2 mb-3 text-[var(--primary)] font-semibold text-xs uppercase tracking-wider">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="10" />
           <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
@@ -448,7 +286,7 @@ function SolutionBox({ solution }: { solution: string }) {
         </svg>
         How We Solved It
       </div>
-      <p className="text-gray-700 text-sm leading-relaxed">{solution}</p>
+      <p className="font-body text-[var(--text-body)] text-sm leading-relaxed">{solution}</p>
     </div>
   );
 }
@@ -456,10 +294,10 @@ function SolutionBox({ solution }: { solution: string }) {
 function ServiceTags({ services }: { services: string[] }) {
   return (
     <div className="mt-6">
-      <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Services Delivered</div>
+      <div className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-3">Services Delivered</div>
       <div className="flex flex-wrap gap-2">
         {services.map((service, idx) => (
-          <span key={idx} className="px-3 py-1.5 bg-gray-100 text-gray-700 text-xs font-medium rounded border border-gray-200">
+          <span key={idx} className="px-3 py-1.5 bg-gray-100 text-[var(--text-body)] text-xs font-medium rounded border border-[var(--border-light)]">
             {service}
           </span>
         ))}
@@ -468,156 +306,148 @@ function ServiceTags({ services }: { services: string[] }) {
   );
 }
 
-function AsciiVisual({ asciiArt, visualTitle, visualType }: { asciiArt: string; visualTitle: string; visualType: string }) {
-  const colorClasses: Record<string, string> = {
-    fintech: 'text-cyan-400',
-    travel: 'text-orange-400',
-    security: 'text-blue-400',
-    mobile: 'text-purple-400',
-    data: 'text-red-400',
-    ecommerce: 'text-green-400',
-    hospitality: 'text-cyan-300',
-  };
-
-  return (
-    <div className="rounded-2xl overflow-hidden shadow-lg border border-cyan-500/20">
-      <div className="aspect-video bg-gradient-to-b from-slate-900 via-slate-950 to-blue-900 flex flex-col items-center justify-center relative overflow-hidden p-8">
-        {/* Ambient glow background */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-48 h-40 rounded-full blur-3xl bg-cyan-500/10 animate-pulse" />
-        </div>
-
-        {/* ASCII Art */}
-        <pre className={`font-mono text-xs leading-tight whitespace-pre relative z-10 ${colorClasses[visualType] || 'text-cyan-400'} drop-shadow-lg`}>
-          {asciiArt}
-        </pre>
-
-        {/* Visual Title */}
-        <div className={`text-xs font-semibold uppercase tracking-wider relative z-10 mt-4 ${colorClasses[visualType] || 'text-cyan-400'} drop-shadow-lg`}>
-          {visualTitle}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Accordion() {
-  return (
-    <div className="flex flex-col gap-3 max-w-2xl mx-auto">
-      {faqs.map((faq, idx) => (
-        <details
-          key={idx}
-          className="bg-white rounded-lg border border-gray-200 overflow-hidden transition-all hover:border-blue-300 open:border-blue-300 open:shadow-md"
-          itemScope
-          itemType="https://schema.org/Question"
-        >
-          <summary className="flex items-center justify-between p-5 cursor-pointer list-none font-semibold text-gray-900 hover:text-blue-600">
-            <h3 className="text-sm md:text-base" itemProp="name">{faq.question}</h3>
-            <div className="w-6 h-6 flex-shrink-0 bg-gray-100 rounded-full flex items-center justify-center transition-transform group-open:rotate-180 [details_&>summary_&_div]:rotate-180">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </div>
-          </summary>
-          <div
-            className="px-5 pb-5 text-gray-700 text-sm leading-relaxed border-t border-gray-100"
-            itemScope
-            itemType="https://schema.org/Answer"
-            itemProp="acceptedAnswer"
-          >
-            <p itemProp="text">{faq.answer}</p>
-          </div>
-        </details>
-      ))}
-    </div>
-  );
-}
+// Consolidated JSON-LD Schema Graph
+const jsonLdGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://karavanhub.com/#organization',
+      name: 'Karavan Hub',
+      alternateName: 'Karavan IT HUB',
+      url: 'https://karavanhub.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://karavanhub.com/logo.png',
+      },
+      description:
+        'Canadian-owned AI and IT solutions company specializing in vertical AI automation, custom software development, and strategic AI consulting for small and medium businesses.',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Suite 31',
+        addressLocality: 'Pelham',
+        addressRegion: 'Ontario',
+        addressCountry: 'CA',
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        telephone: '+1-905-301-3936',
+        email: 'karavan.it.hub@gmail.com',
+        availableLanguage: ['English'],
+      },
+      areaServed: [
+        { '@type': 'Country', name: 'Canada' },
+        { '@type': 'Country', name: 'United States' },
+        { '@type': 'Country', name: 'Saudi Arabia' },
+      ],
+      knowsAbout: [
+        'Custom Software Development',
+        'Cloud Migration',
+        'AI Automation',
+        'Mobile Development',
+        'Data Engineering',
+        'Web Design',
+        'E-Commerce',
+        'System Architecture',
+      ],
+      founder: {
+        '@type': 'Person',
+        name: 'Nyah S.',
+        jobTitle: 'Founder',
+      },
+      sameAs: [
+        'https://www.linkedin.com/company/karavan-hub',
+        'https://www.instagram.com/karavanhub',
+        'https://www.tiktok.com/@karavanhub',
+      ],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': 'https://karavanhub.com/case-studies/#webpage',
+      url: 'https://karavanhub.com/case-studies',
+      name: 'Case Studies | Karavan Hub',
+      description:
+        'Real-world case studies from Karavan Hub. See how we help businesses solve real challenges with custom software, cloud migration, and AI automation.',
+      datePublished: '2026-01-15',
+      dateModified: '2026-02-16',
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': 'https://karavanhub.com/#website',
+        name: 'Karavan Hub',
+        url: 'https://karavanhub.com',
+      },
+      about: { '@id': 'https://karavanhub.com/case-studies/#itemlist' },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['#hero-heading', '#faq-heading'],
+      },
+      mentions: [
+        { '@type': 'Thing', name: 'React', url: 'https://react.dev' },
+        { '@type': 'Thing', name: 'Node.js', url: 'https://nodejs.org' },
+        { '@type': 'Thing', name: 'Amazon Web Services', url: 'https://aws.amazon.com' },
+        { '@type': 'Thing', name: 'Docker', url: 'https://docker.com' },
+        { '@type': 'Thing', name: 'Kubernetes', url: 'https://kubernetes.io' },
+        { '@type': 'Thing', name: 'MongoDB', url: 'https://mongodb.com' },
+        { '@type': 'Thing', name: 'Python', url: 'https://python.org' },
+        { '@type': 'Thing', name: 'TypeScript', url: 'https://typescriptlang.org' },
+      ],
+    },
+    {
+      '@type': 'ItemList',
+      '@id': 'https://karavanhub.com/case-studies/#itemlist',
+      name: 'Karavan Hub Case Studies',
+      description: 'Collection of IT and AI case studies demonstrating real business results',
+      numberOfItems: 7,
+      itemListElement: caseStudies.map((study, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        item: {
+          '@type': 'Article',
+          name: study.title,
+          description: study.intro,
+        },
+      })),
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://karavanhub.com/case-studies/#faq',
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://karavanhub.com' },
+        { '@type': 'ListItem', position: 2, name: 'Case Studies', item: 'https://karavanhub.com/case-studies' },
+      ],
+    },
+  ],
+};
 
 export default function CaseStudiesPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@graph': [
-              {
-                '@type': 'Organization',
-                '@id': 'https://karavanhub.com/#organization',
-                name: 'Karavan IT Solutions',
-                url: 'https://karavanhub.com',
-                logo: {
-                  '@type': 'ImageObject',
-                  url: 'https://karavanhub.com/images/logo.png',
-                  width: 200,
-                  height: 60,
-                },
-                description:
-                  'Enterprise IT consulting and software development company specializing in cloud migration, AI automation, and digital transformation.',
-                address: {
-                  '@type': 'PostalAddress',
-                  addressLocality: 'Niagara',
-                  addressRegion: 'ON',
-                  addressCountry: 'CA',
-                },
-                areaServed: [
-                  { '@type': 'City', name: 'Niagara' },
-                  { '@type': 'Country', name: 'Canada' },
-                  { '@type': 'Country', name: 'United States' },
-                ],
-              },
-              {
-                '@type': 'WebPage',
-                '@id': 'https://karavanhub.com/case-studies/#webpage',
-                url: 'https://karavanhub.com/case-studies',
-                name: 'Case Studies | Karavan IT Solutions',
-                description:
-                  'Explore real-world case studies showcasing how Karavan IT Solutions helps businesses solve complex challenges with custom software, cloud migration, AI automation, and enterprise solutions.',
-                breadcrumb: {
-                  '@type': 'BreadcrumbList',
-                  itemListElement: [
-                    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://karavanhub.com' },
-                    { '@type': 'ListItem', position: 2, name: 'Case Studies', item: 'https://karavanhub.com/case-studies' },
-                  ],
-                },
-              },
-              {
-                '@type': 'ItemList',
-                name: 'Karavan IT Solutions Case Studies',
-                description: 'Collection of enterprise IT case studies demonstrating real business results',
-                numberOfItems: 7,
-                itemListElement: caseStudies.map((study, idx) => ({
-                  '@type': 'ListItem',
-                  position: idx + 1,
-                  item: {
-                    '@type': 'Article',
-                    name: study.title,
-                    description: study.intro,
-                  },
-                })),
-              },
-              {
-                '@type': 'FAQPage',
-                mainEntity: faqs.map((faq) => ({
-                  '@type': 'Question',
-                  name: faq.question,
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: faq.answer,
-                  },
-                })),
-              },
-            ],
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
 
       <main id="main-content" role="main">
         {/* HERO SECTION */}
-        <section className="relative py-32 text-center overflow-hidden" style={{
-          background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)',
-        }}>
+        <section
+          className="relative py-32 text-center overflow-hidden"
+          aria-labelledby="hero-heading"
+          style={{
+            background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)',
+          }}
+        >
           {/* Gradient orbs */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-500 to-transparent rounded-full blur-3xl opacity-40 -mr-32 -mt-32" aria-hidden="true" />
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-cyan-400 to-transparent rounded-full blur-3xl opacity-40 -ml-32 -mb-16" aria-hidden="true" />
@@ -633,18 +463,17 @@ export default function CaseStudiesPage() {
             aria-hidden="true"
           />
 
-          <div className="container-main relative z-10">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 relative z-10">
+            <h1 id="hero-heading" className="font-headline text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Real Problems.<br />
-              <span className="text-cyan-400">Real Solutions.</span>
-              <br />Real Results.
+              <span className="text-cyan-400">Real Results.</span>
             </h1>
-            <p className="text-lg text-white/85 max-w-2xl mx-auto mb-8 leading-relaxed">
-              No fluff. No vanity metrics. Just honest stories of how we helped businesses solve real challenges—with technology that actually works.
+            <p className="font-body text-lg text-white/85 max-w-2xl mx-auto mb-8 leading-relaxed">
+              No fluff. No vanity metrics. Just honest stories of how we helped businesses solve real challenges with technology that actually works.
             </p>
             <a
               href="#case-studies"
-              className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold transition-all hover:bg-white/95 hover:shadow-xl hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-headline font-semibold transition-all hover:bg-white/95 hover:shadow-xl hover:-translate-y-0.5"
             >
               View Our Work
               <ChevronRight size={20} />
@@ -653,70 +482,44 @@ export default function CaseStudiesPage() {
         </section>
 
         {/* CASE STUDIES */}
-        <section id="case-studies" className="py-24">
+        <section id="case-studies" aria-label="Case Studies" className="py-24">
           {caseStudies.map((study, idx) => (
-            <section key={study.id} className="border-b border-gray-200 py-20 last:border-b-0">
-              <div className="container-main">
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${study.layout === 'reverse' ? 'lg:grid-cols-2' : ''}`}>
-                  {study.layout === 'reverse' ? (
-                    <>
-                      {/* Content left on desktop, comes first on mobile */}
-                      <div className="order-2 lg:order-2">
-                        <div className="flex gap-2 mb-4 flex-wrap">
-                          <span className={`px-3 py-1 text-white text-xs font-semibold uppercase rounded-full ${getCategoryColor(study.category, study.visualType)}`}>
-                            {study.category}
-                          </span>
-                          {study.categoryTag !== study.category && (
-                            <span className="px-3 py-1 bg-gray-200 text-gray-700 text-xs font-semibold uppercase rounded-full">
-                              {study.categoryTag}
-                            </span>
-                          )}
-                        </div>
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">{study.title}</h2>
-                        <p className="text-gray-600 mb-6 leading-relaxed">{study.intro}</p>
-                        <ResultsBox results={study.results} />
-                        <SolutionBox solution={study.solution} />
-                        <ServiceTags services={study.services} />
-                      </div>
-                      {/* Visual right on desktop */}
-                      <div className="order-1 lg:order-1">
-                        <AsciiVisual
-                          asciiArt={study.asciiArt}
-                          visualTitle={study.visualTitle}
-                          visualType={study.visualType}
-                        />
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      {/* Visual left on desktop */}
-                      <div>
-                        <AsciiVisual
-                          asciiArt={study.asciiArt}
-                          visualTitle={study.visualTitle}
-                          visualType={study.visualType}
-                        />
-                      </div>
-                      {/* Content right on desktop */}
-                      <div>
-                        <div className="flex gap-2 mb-4 flex-wrap">
-                          <span className={`px-3 py-1 text-white text-xs font-semibold uppercase rounded-full ${getCategoryColor(study.category, study.visualType)}`}>
-                            {study.category}
-                          </span>
-                          {study.categoryTag !== study.category && (
-                            <span className="px-3 py-1 bg-gray-200 text-gray-700 text-xs font-semibold uppercase rounded-full">
-                              {study.categoryTag}
-                            </span>
-                          )}
-                        </div>
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">{study.title}</h2>
-                        <p className="text-gray-600 mb-6 leading-relaxed">{study.intro}</p>
-                        <ResultsBox results={study.results} />
-                        <SolutionBox solution={study.solution} />
-                        <ServiceTags services={study.services} />
-                      </div>
-                    </>
-                  )}
+            <section key={study.id} className="border-b border-[var(--border-light)] py-20 last:border-b-0">
+              <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+                  {/* Image - sticky, alternates position */}
+                  <div className={`lg:sticky lg:top-24 ${study.layout === 'reverse' ? 'lg:order-first' : ''}`}>
+                    <div className="rounded-2xl overflow-hidden">
+                      <Image
+                        src={study.image}
+                        alt={study.imageAlt}
+                        width={800}
+                        height={700}
+                        className="w-full h-auto object-cover rounded-2xl"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        priority={idx === 0}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className={study.layout === 'reverse' ? 'lg:order-last' : ''}>
+                    <div className="flex gap-2 mb-4 flex-wrap">
+                      <span className={`px-3 py-1 text-white text-xs font-semibold uppercase rounded-full ${getCategoryColor(study.category)}`}>
+                        {study.category}
+                      </span>
+                      {study.categoryTag !== study.category && (
+                        <span className="px-3 py-1 bg-gray-200 text-[var(--text-body)] text-xs font-semibold uppercase rounded-full">
+                          {study.categoryTag}
+                        </span>
+                      )}
+                    </div>
+                    <h2 className="font-headline text-4xl font-bold text-[var(--text-dark)] mb-4">{study.title}</h2>
+                    <p className="font-body text-[var(--text-body)] mb-6 leading-relaxed">{study.intro}</p>
+                    <ResultsBox results={study.results} />
+                    <SolutionBox solution={study.solution} />
+                    <ServiceTags services={study.services} />
+                  </div>
                 </div>
               </div>
             </section>
@@ -724,23 +527,49 @@ export default function CaseStudiesPage() {
         </section>
 
         {/* FAQ SECTION */}
-        <section id="faq" className="py-24 bg-amber-50">
-          <div className="container-main">
+        <section id="faq" aria-labelledby="faq-heading" className="py-24 bg-amber-50">
+          <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <h2 id="faq-heading" className="font-headline text-4xl font-bold text-[var(--text-dark)] mb-4">Frequently Asked Questions</h2>
+              <p className="font-body text-[var(--text-body)] max-w-2xl mx-auto">
                 Common questions about our case studies and how we deliver results for our clients.
               </p>
             </div>
-            <Accordion />
+            <div className="flex flex-col gap-3 max-w-2xl mx-auto">
+              {faqs.map((faq, idx) => (
+                <details
+                  key={idx}
+                  className="bg-white rounded-lg border border-[var(--border-light)] overflow-hidden transition-all hover:border-blue-300 open:border-blue-300 open:shadow-md"
+                  itemScope
+                  itemType="https://schema.org/Question"
+                >
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none font-semibold text-[var(--text-dark)] hover:text-[var(--primary)]">
+                    <h3 className="font-headline text-sm md:text-base" itemProp="name">{faq.question}</h3>
+                    <div className="w-6 h-6 flex-shrink-0 bg-gray-100 rounded-full flex items-center justify-center transition-transform">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </div>
+                  </summary>
+                  <div
+                    className="px-5 pb-5 text-[var(--text-body)] text-sm leading-relaxed border-t border-[var(--border-light)]"
+                    itemScope
+                    itemType="https://schema.org/Answer"
+                    itemProp="acceptedAnswer"
+                  >
+                    <p className="font-body" itemProp="text">{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* TECH PARTNERS SECTION */}
-        <section className="py-24 bg-gray-50">
-          <div className="container-main text-center">
-            <div className="text-blue-600 text-xs font-semibold uppercase tracking-widest mb-2">Technology Stack</div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-16">Built With Industry Leaders</h2>
+        <section aria-labelledby="tech-stack-heading" className="py-24 bg-gray-50">
+          <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 text-center">
+            <div className="text-[var(--primary)] text-xs font-semibold uppercase tracking-widest mb-2">Technology Stack</div>
+            <h2 id="tech-stack-heading" className="font-headline text-4xl font-bold text-[var(--text-dark)] mb-16">Tools We Build With</h2>
             <div className="flex flex-wrap justify-center items-center gap-12 max-w-4xl mx-auto">
               {/* React */}
               <div className="w-16 h-16 flex items-center justify-center hover:scale-110 transition-transform" title="React">
@@ -793,7 +622,7 @@ export default function CaseStudiesPage() {
               {/* PostgreSQL */}
               <div className="w-16 h-16 flex items-center justify-center hover:scale-110 transition-transform" title="PostgreSQL">
                 <svg viewBox="0 0 24 24" fill="#4169E1" className="w-12 h-12">
-                  <path d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4643a9.8753 9.8753 0 0 0-1.1549-.0706c-1.0919-.0142-2.0634.2091-2.9187.6654C9.1654.3952 7.5997-.0373 5.9051.0027 4.0283.0474 2.4936.7674 1.404 2.1627.4627 3.3684.0386 5.0085.0036 6.9695c-.0027.1572-.0036.3144-.0036.4701 0 2.6441.7752 6.1227 2.0755 9.3296.4793 1.1829.9774 2.1687 1.4803 2.9289.6078.9177 1.1867 1.4472 1.7595 1.6144.3914.1144.8006.0787 1.1531-.0973.4926-.2456.9324-.7548 1.2195-1.4036.1725-.3885.364-1.0252.4865-1.7336.0122.0144.0245.029.0368.0435.1834.2175.3696.4247.5782.6023.0383.0326.0772.0646.1167.0962-.1792.4145-.2818.8858-.2818 1.4035 0 .9752.3552 1.7722 1.0283 2.3072.7153.5685 1.7107.8573 2.9584.8573.8157 0 1.7035-.0966 2.6423-.2878a.217.217 0 0 0 .0513-.0137c.5765-.1999 1.1455-.4357 1.6893-.7016.5765.2005 1.2174.3078 1.9098.3191h.0135c1.3714 0 2.5298-.4988 3.3541-1.4434.8291-.9501 1.2665-2.2641 1.2665-3.8005 0-.0771-.0021-.1621-.0042-.2475l.0026.0029a.6186.6186 0 0 0 .0127-.1696zm-3.7247-1.2373l-.0047.0124c-.0473.1236-.0969.2505-.1477.3795a8.5765 8.5765 0 0 1-1.4808 2.4759c-.937 1.0793-2.0901 1.6281-3.4259 1.6281-.1422 0-.2891-.0085-.4369-.0254-.0717-.0081-.1442-.0171-.2173-.0271a.5583.5583 0 0 1-.0138-.0023c-.0013-.0002-.0025-.0004-.0037-.0007-.0013-.0004-.0025-.0008-.0037-.0011-.6043-.1449-1.1378-.4743-1.5833-.9746-.4483-.5033-.7882-1.1427-.9985-1.8733-.0013-.0047-.0025-.0094-.0037-.0141-.0011-.0041-.0022-.0083-.0032-.0125-.0609-.2241-.1106-.4575-.1473-.6972-.0398-.2596-.0605-.5212-.0605-.7784 0-.2861.0263-.5688.0787-.8431a4.1823 4.1823 0 0 1 .6127-1.5724c.2914-.4419.6547-.8108 1.0794-1.0953a4.4002 4.4002 0 0 1 2.4482-.758c.1778 0 .3588.0115.5396.0346.3666.0465.7195.1381 1.0513.2725a4.4158 4.4158 0 0 1 1.6412 1.1512c.4709.5268.8186 1.1488 1.0337 1.8497.2067.6739.296 1.3839.2646 2.1095zm-6.8827-9.6051c-.0434-.1775-.0902-.3512-.1412-.5209-.0523-.1736-.1068-.3465-.1634-.5185.0018-.0037.0036-.0075.0053-.0113a.3557.3557 0 0 1 .0325-.0583c.0133-.0212.0266-.0393.0396-.0539a.2378.2378 0 0 1 .0419-.0352c.0152-.0105.032-.0175.0523-.0219a.6713.6713 0 0 1 .1099-.0141 4.647 4.647 0 0 1 .5307-.0196c1.3063.0174 2.3923.5413 3.2259 1.5581.0261.0318.0517.0639.077.0963-.0456.0222-.0907.045-.1352.0684-.0619.0328-.1231.0668-.1837.1019-.0612.0353-.1219.0716-.182.1089-.0608.0377-.1215.0767-.1816.1165l-.0174.0117a13.036 13.036 0 0 0-.1761.1245c-.2067.1524-.4037.3169-.5887.4929l-.0027.0026c-.0127.0122-.0255.0243-.0383.0364a9.8752 9.8752 0 0 0-.3573.3736c-.1228.1369-.2406.2793-.3529.4271a8.6407 8.6407 0 0 0-.3311.455 7.5001 7.5001 0 0 0-.2886.4595l-.0192.0333a.0785.0785 0 0 1-.0051.0087 7.4469 7.4469 0 0 0-.4796.9995c-.1466.3587-.2663.7267-.3568 1.1017a6.7776 6.7776 0 0 0-.1702.9299c-.0267.2507-.0408.5006-.0408.7488 0 .0974.0019.1948.0055.2917.0011.0283.0025.0567.0039.085-.0014.0212-.0027.0424-.0038.0636a6.7345 6.7345 0 0 0 .0134 1.1456c-.3923-.1346-.7782-.3018-1.1545-.5003a8.1472 8.1472 0 0 1-.991-.6224c-.31-.2265-.6087-.4725-.8917-.7345a9.4829 9.4829 0 0 1-.7739-.8338 10.5174 10.5174 0 0 1-.6506-.8871c-.207-.3177-.4018-.6506-.5803-.9943a13.0149 13.0149 0 0 1-.4893-1.0932c-.0267-.0683-.0531-.1369-.0791-.2056-.157-.4155-.2982-.8435-.4216-1.2801-.1223-.4322-.2274-.8738-.3144-1.3219a15.5744 15.5744 0 0 1-.1915-1.376c-.039-.3686-.0606-.7421-.0642-1.1185-.0023-.241-.0026-.4736-.001-.6964a16.8983 16.8983 0 0 1 .0419-1.3522 13.8462 13.8462 0 0 1 .2214-1.8697c.1202-.6689.2961-1.3265.5226-1.9539.2246-.6222.5002-1.2128.8188-1.7545.3199-.5441.687-1.0378 1.0928-1.4703a6.3474 6.3474 0 0 1 1.3389-1.088c.5037-.3037 1.0483-.5194 1.6197-.6416.5678-.1213 1.171-.1573 1.7952-.1071.6233.0501 1.2706.1909 1.9273.4186.1168.0406.2349.0842.3541.1311.1129.0447.2265.0925.3402.1432a9.1515 9.1515 0 0 0-.4274.4179c-.0624.0658-.1242.1332-.1852.2018a10.7425 10.7425 0 0 0-.3462.4159 9.9 9.9 0 0 0-.3168.4298 8.8914 8.8914 0 0 0-.2869.4417c-.0894.1499-.1763.3022-.2604.4573a8.5814 8.5814 0 0 0-.2339.4742c-.0726.1595-.1426.3209-.2095.4843-.0675.1645-.132.3305-.193.4982l-.007.0192c-.1361.3752-.2543.7589-.3537 1.1494a10.7307 10.7307 0 0 0-.2182 1.2032c-.0515.4132-.0832.8338-.0935 1.2594a13.0693 13.0693 0 0 0 .0285 1.3107c.0254.4399.0689.8813.13 1.3228.0292.2134.0622.4269.0993.6401.0168.0964.0345.1927.053.2889-.0027.0157-.0053.0314-.0078.0472a6.4459 6.4459 0 0 0-.0717.7065c-.0083.1678-.0099.3354-.0049.5019.005.1658.0165.3301.0347.4928a5.5324 5.5324 0 0 0 .0756.5053c.0169.0937.0376.1867.0618.2785a3.6174 3.6174 0 0 0 .0949.2861c.0385.0983.0827.1938.1328.286.0506.0932.1073.183.1704.2696.0635.0874.1337.1715.2107.2519.0776.0813.1624.1588.2546.2322.093.0741.1935.1437.3016.209.1087.066.2252.1273.3496.1836.125.0568.2582.1083.3996.1544.1422.0463.2929.0869.4522.1217.1601.035.3291.0637.5069.0862.1787.0227.3666.0387.5636.0481.198.0095.4052.0121.6218.0081.2175-.004.4446-.0149.6811-.0326a15.4012 15.4012 0 0 0 .7275-.0664c.2464-.0296.5001-.0671.7606-.1126.2615-.0456.5299-.0993.8047-.1609a17.0929 17.0929 0 0 0 .8351-.2097c.279-.078.5622-.1637.8488-.257l.0163-.0053c.2887-.0942.5798-.1964.8727-.3066l.0143-.0054c.2916-.1099.5841-.2277.8768-.3534.0011-.0005.0022-.0009.0033-.0014.0018-.0008.0037-.0015.0055-.0023l.0108-.0046c.0107-.0046.0214-.0092.032-.0138.0011-.0005.0023-.001.0034-.0014a28.1306 28.1306 0 0 0 .8622-.3969l.0112-.0055a24.554 24.554 0 0 0 .8463-.4407l.0039-.0021.0068-.0037a21.5SEO 21.5SEO 0 0 0 1.6288-1.0056l.004-.0027a18.6248 18.6248 0 0 0 .7773-.5775l.0047-.0037c.0604-.0465.1205-.0935.1804-.1408.0599-.0474.1195-.0954.1787-.1438.1182-.0968.2348-.1959.3496-.2975.1152-.1021.2287-.207.3404-.3145.1119-.1079.2222-.2186.3308-.3321.1086-.1138.2154-.2305.3204-.35.1049-.1197.2079-.2423.3091-.3678.1009-.1254.1998-.254.2969-.3855.0968-.1313.1914-.266.2839-.4036.0921-.1373.1818-.278.2693-.422.0871-.1438.1716-.291.2535-.4414.0818-.1504.1607-.3043.2369-.4616.076-.1571.1491-.3178.2193-.4821.07-.1641.137-.3318.201-.5032.0638-.1713.1246-.3464.1824-.525.0577-.1786.1123-.3611.1638-.5475a13.3381 13.3381 0 0 0 .2672-1.1623c.0367-.2003.0695-.4038.0986-.6104a12.6264 12.6264 0 0 0 .1204-1.2607c.0146-.2129.0251-.4283.0316-.6462a11.3068 11.3068 0 0 0-.0076-.6811c-.0113-.2266-.0279-.4549-.0498-.6848a10.1594 10.1594 0 0 0-.0927-.6796 9.0534 9.0534 0 0 0-.1367-.6698 7.5556 7.5556 0 0 0-.1816-.6556 6.1424 6.1424 0 0 0-.228-.6368 4.8776 4.8776 0 0 0-.2763-.6133 3.7716 3.7716 0 0 0-.3268-.5849 2.8437 2.8437 0 0 0-.3802-.5516 2.0869 2.0869 0 0 0-.437-.5131 1.4896 1.4896 0 0 0-.4978-.4691 1.0309 1.0309 0 0 0-.5637-.42.6813.6813 0 0 0-.3006-.0355.8515.8515 0 0 0-.2967.0595c-.0988.0394-.1932.0921-.2836.158z"/>
+                  <path d="M23.56 14.72a.53.53 0 0 0-.06-.12c-.14-.26-.48-.34-1.01-.23-1.65.34-2.29.13-2.53-.02 1.34-2.05 2.45-4.52 3.04-6.83.27-1.05.8-3.52.12-4.73a1.56 1.56 0 0 0-.15-.24C21.69.91 19.8.02 17.51 0c-1.49-.02-2.77.35-3.12.46a9.88 9.88 0 0 0-1.15-.07c-1.09-.01-2.06.21-2.92.67C9.17.4 7.6 0 5.91 0 4.03.05 2.49.77 1.4 2.16.46 3.37.04 5.01 0 6.97a35.04 35.04 0 0 0 0 .47c0 2.64.78 6.12 2.08 9.33.48 1.18.98 2.17 1.48 2.93.61.92 1.19 1.45 1.76 1.61.39.11.8.08 1.15-.1.49-.25.93-.75 1.22-1.4.17-.39.36-1.03.49-1.73a7.8 7.8 0 0 0 .62.65c-.18.41-.28.89-.28 1.4 0 .98.36 1.77 1.03 2.31.72.57 1.71.86 2.96.86.82 0 1.7-.1 2.64-.29.58-.2 1.15-.44 1.69-.7.58.2 1.22.31 1.91.32 1.37 0 2.53-.5 3.35-1.44.83-.95 1.27-2.26 1.27-3.8 0-.08 0-.16-.01-.25a.62.62 0 0 0 .01-.17z"/>
                 </svg>
               </div>
               {/* TensorFlow */}
@@ -807,17 +636,20 @@ export default function CaseStudiesPage() {
         </section>
 
         {/* CTA SECTION */}
-        <section className="py-24" style={{ background: 'linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%)' }}>
-          <div className="container-main">
+        <section aria-labelledby="cta-heading" className="py-24" style={{ background: 'linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%)' }}>
+          <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12">
             <div className="bg-white rounded-3xl p-16 max-w-2xl mx-auto shadow-lg border border-blue-100">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">Ready to discuss your project?</h2>
-              <p className="text-gray-600 text-lg text-center mb-8">
-                Whether you're modernizing legacy systems, building AI-powered solutions, or scaling for growth—let's talk.
+              <h2 id="cta-heading" className="font-headline text-4xl font-bold text-[var(--text-dark)] mb-4 text-center">Ready to discuss your project?</h2>
+              <p className="font-body text-[var(--text-body)] text-lg text-center mb-8">
+                Whether you're replacing legacy systems or building something new with AI, let's talk.
               </p>
               <div className="text-center">
-                <button className="bg-blue-600 text-white px-12 py-4 rounded-lg font-semibold transition-all hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5 w-full sm:w-auto">
+                <Link
+                  href="/contact"
+                  className="inline-block bg-[var(--primary)] text-white px-12 py-4 rounded-lg font-headline font-semibold transition-all hover:bg-[var(--primary-dark)] hover:shadow-lg hover:-translate-y-0.5 w-full sm:w-auto text-center"
+                >
                   Start the Conversation
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -826,5 +658,3 @@ export default function CaseStudiesPage() {
     </>
   );
 }
-
-import React from 'react';
