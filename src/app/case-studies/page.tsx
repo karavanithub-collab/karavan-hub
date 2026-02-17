@@ -70,8 +70,8 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: 'payment-management',
-    category: 'Enterprise',
-    categoryTag: 'Fintech',
+    category: 'Fintech',
+    categoryTag: 'AI Automation',
     title: 'Enterprise Payment Management',
     intro:
       'Thousands lost every month to duplicate invoices and payment errors. The finance team was catching mistakes manually, but the volume had outgrown that approach. They called us when the next audit cycle was 90 days out.',
@@ -91,7 +91,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: 'travel-platform',
     category: 'Travel & Tourism',
-    categoryTag: 'Enterprise',
+    categoryTag: 'Cloud Migration',
     title: 'Saudi Travel Platform',
     intro:
       'Peak season hit and the booking system buckled. Pages timing out. Hotels getting duplicate reservations. The existing monolith was built for a smaller company, and growth had broken it.',
@@ -110,8 +110,8 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: 'enterprise-security',
-    category: 'Information Security',
-    categoryTag: 'Healthcare',
+    category: 'Cybersecurity',
+    categoryTag: 'Full-Stack Dev',
     title: 'Enterprise Security & Data Platform',
     intro:
       'Manual threat monitoring across a global operation with 40,000+ employees. The security team was drowning in alerts they couldn\'t triage fast enough. Six years ago, we started building the tools that changed that.',
@@ -131,7 +131,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: 'mobility-suite',
     category: 'Mobile & Mobility',
-    categoryTag: 'Enterprise',
+    categoryTag: 'Native Apps',
     title: 'Enterprise Mobility Suite',
     intro:
       'Sales reps entering the same data into four different apps. Service techs driving back to the office because they couldn\'t pull specs on-site. The field team needed one tool that worked everywhere, including places without cell service.',
@@ -171,7 +171,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: 'ecommerce-platform',
     category: 'E-Commerce',
-    categoryTag: 'SaaS',
+    categoryTag: 'Platform Dev',
     title: 'Multi-tenant E-commerce Platform',
     intro:
       'Every new client meant rebuilding an e-commerce system from zero. Same features, same integrations, but months of work each time. The math stopped making sense around client number five.',
@@ -191,7 +191,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: 'villa-hospitality',
     category: 'Travel & Tourism',
-    categoryTag: 'Hospitality',
+    categoryTag: 'Web Design',
     title: 'Aegean Escape Villas',
     intro:
       'Luxury villas on Turkey\'s Aegean coast, launching to the Canadian market. The properties were stunning. The website didn\'t exist yet. And peak booking season was six weeks out. The client had never captured a single booking during this window before.',
@@ -265,9 +265,9 @@ const faqs: FAQItem[] = [
 
 function getCategoryColor(category: string): string {
   const colorMap: Record<string, string> = {
-    'Enterprise': 'bg-[#2563EB]',
+    'Fintech': 'bg-[#2563EB]',
     'Travel & Tourism': 'bg-[#F59E0B]',
-    'Information Security': 'bg-[#1E3A8A]',
+    'Cybersecurity': 'bg-[#1E3A8A]',
     'Mobile & Mobility': 'bg-[#7C3AED]',
     'Data Engineering': 'bg-[#DC2626]',
     'E-Commerce': 'bg-[#059669]',
