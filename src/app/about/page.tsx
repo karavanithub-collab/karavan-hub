@@ -421,8 +421,8 @@ export default function AboutPage() {
           <div className="max-w-[560px] lg:max-w-none text-center lg:text-left mx-auto lg:mx-0">
             <h1
               id="hero-title"
-              className="font-headline leading-[1.0] text-white mb-6"
-              style={{ fontSize: 'clamp(42px, 6vw, 72px)', fontWeight: 300, letterSpacing: '-2px' }}
+              className="font-headline font-bold text-white leading-[1.05] tracking-[-1.5px] mb-6"
+              style={{ fontSize: 'clamp(48px, 7vw, 80px)' }}
             >
               We make tech<br />
               <span
