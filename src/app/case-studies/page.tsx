@@ -347,14 +347,16 @@ function GradientVisual({ study, index }: { study: CaseStudy; index: number }) {
   );
 }
 
+const CARD_ACCENTS = ['#22D3EE', '#E879F9', '#34D399']; // cyan, magenta, green
+
 function CaseStudyCard({
   results,
-  accentColor,
+  cardAccent,
   solution,
   services,
 }: {
   results: Array<{ value: string; label: string }>;
-  accentColor: string;
+  cardAccent: string;
   solution: string;
   services: string[];
 }) {
@@ -373,18 +375,26 @@ function CaseStudyCard({
               <div className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold leading-none sm:mb-1 text-white">
                 {result.value}
               </div>
-              <div className="text-xs sm:text-sm text-[#22D3EE] uppercase tracking-tight">{result.label}</div>
+              <div
+                className="text-xs sm:text-sm uppercase tracking-tight"
+                style={{ color: cardAccent }}
+              >
+                {result.label}
+              </div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Divider */}
-      <div className="mx-5 sm:mx-6 md:mx-8 my-5 sm:my-6 h-px bg-white/[0.06]" />
+      <div
+        className="mx-5 sm:mx-6 md:mx-8 my-5 sm:my-6 h-px"
+        style={{ background: `${cardAccent}15` }}
+      />
 
       {/* Solution */}
       <div className="px-5 sm:px-6 md:px-8 pb-5 sm:pb-6 md:pb-8">
-        <p className="font-body text-[#E879F9] text-sm sm:text-base leading-relaxed">{solution}</p>
+        <p className="font-body text-white/80 text-sm sm:text-base leading-relaxed">{solution}</p>
 
         {/* Service tags */}
         <div className="flex flex-wrap gap-1.5 mt-5">
@@ -392,7 +402,7 @@ function CaseStudyCard({
             <span
               key={idx}
               className="px-2.5 py-1 text-[11px] sm:text-xs font-medium rounded-full uppercase tracking-wide"
-              style={{ color: accentColor, background: 'rgba(255,255,255,0.04)', border: `1px solid ${accentColor}20` }}
+              style={{ color: cardAccent, background: `${cardAccent}08`, border: `1px solid ${cardAccent}20` }}
             >
               {service}
             </span>
@@ -763,7 +773,7 @@ export default function CaseStudiesPage() {
 
                     <CaseStudyCard
                       results={study.results}
-                      accentColor={getCategoryAccentColor(study.category)}
+                      cardAccent={CARD_ACCENTS[idx % CARD_ACCENTS.length]}
                       solution={study.solution}
                       services={study.services}
                     />
