@@ -347,8 +347,6 @@ function GradientVisual({ study, index }: { study: CaseStudy; index: number }) {
   );
 }
 
-const CARD_ACCENTS = ['#22D3EE', '#E879F9', '#34D399']; // cyan, magenta, green
-
 function CaseStudyCard({
   results,
   cardAccent,
@@ -773,7 +771,7 @@ export default function CaseStudiesPage() {
 
                     <CaseStudyCard
                       results={study.results}
-                      cardAccent={CARD_ACCENTS[idx % CARD_ACCENTS.length]}
+                      cardAccent={study.iconColor}
                       solution={study.solution}
                       services={study.services}
                     />
