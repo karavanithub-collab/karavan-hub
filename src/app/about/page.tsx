@@ -669,10 +669,10 @@ export default function AboutPage() {
           </div>
 
           {/* Values Grid */}
-          <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8" role="list">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" role="list">
             {/* Value 1: Relationships First */}
             <article
-              className="group rounded-[20px] p-10 lg:p-12 text-center transition-all duration-400 hover:translate-y-[-8px]"
+              className="group rounded-[20px] py-12 px-8 text-center relative overflow-hidden transition-all duration-400 hover:translate-y-[-8px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.2),0_0_60px_rgba(147,197,253,0.15)]"
               style={{
                 background: 'rgba(255,255,255,0.08)',
                 backdropFilter: 'blur(12px)',
@@ -686,7 +686,7 @@ export default function AboutPage() {
             >
               <meta itemProp="position" content="1" />
               <div
-                className="w-[90px] h-[90px] lg:w-[110px] lg:h-[110px] rounded-3xl flex items-center justify-center mx-auto mb-7"
+                className="w-[110px] h-[110px] rounded-3xl flex items-center justify-center mx-auto mb-7"
                 style={{
                   background: 'rgba(255,255,255,0.1)',
                   border: '2px solid rgba(255,255,255,0.2)',
@@ -695,8 +695,8 @@ export default function AboutPage() {
                 aria-hidden="true"
               >
                 <pre
-                  className="font-mono text-[11px] lg:text-[14px] text-white text-center whitespace-pre font-semibold"
-                  style={{ textShadow: '0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(147,197,253,0.7), 0 0 40px rgba(147,197,253,0.5)' }}
+                  className="font-mono text-[14px] leading-[1.2] text-white text-center whitespace-pre font-semibold"
+                  style={{ textShadow: '0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(147,197,253,0.7), 0 0 40px rgba(147,197,253,0.5)', animation: 'iconGlow 3s ease-in-out infinite' }}
                 >
 {`    ◇
    /│\\
@@ -705,17 +705,17 @@ export default function AboutPage() {
     ◇`}
                 </pre>
               </div>
-              <h3 itemProp="name" className="font-headline text-[18px] lg:text-xl font-bold text-white mb-3">
+              <h3 itemProp="name" className="font-headline text-xl font-bold text-white mb-3.5 relative">
                 Relationships First
               </h3>
-              <p itemProp="description" className="text-[15px] text-white/70 leading-[1.7]">
+              <p itemProp="description" className="text-[15px] text-white/70 leading-[1.7] relative">
                 We're not here for a quick handoff. If something breaks six months later, we want to know about it.
               </p>
             </article>
 
             {/* Value 2: Honest Advice */}
             <article
-              className="group rounded-[20px] p-10 lg:p-12 text-center transition-all duration-400 hover:translate-y-[-8px]"
+              className="group rounded-[20px] py-12 px-8 text-center relative overflow-hidden transition-all duration-400 hover:translate-y-[-8px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.2),0_0_60px_rgba(147,197,253,0.15)]"
               style={{
                 background: 'rgba(255,255,255,0.08)',
                 backdropFilter: 'blur(12px)',
@@ -729,7 +729,7 @@ export default function AboutPage() {
             >
               <meta itemProp="position" content="2" />
               <div
-                className="w-[90px] h-[90px] lg:w-[110px] lg:h-[110px] rounded-3xl flex items-center justify-center mx-auto mb-7"
+                className="w-[110px] h-[110px] rounded-3xl flex items-center justify-center mx-auto mb-7"
                 style={{
                   background: 'rgba(255,255,255,0.1)',
                   border: '2px solid rgba(255,255,255,0.2)',
@@ -738,8 +738,8 @@ export default function AboutPage() {
                 aria-hidden="true"
               >
                 <pre
-                  className="font-mono text-[11px] lg:text-[14px] text-white text-center whitespace-pre font-semibold"
-                  style={{ textShadow: '0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(147,197,253,0.7), 0 0 40px rgba(147,197,253,0.5)' }}
+                  className="font-mono text-[14px] leading-[1.2] text-white text-center whitespace-pre font-semibold"
+                  style={{ textShadow: '0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(147,197,253,0.7), 0 0 40px rgba(147,197,253,0.5)', animation: 'iconGlow 3s ease-in-out infinite' }}
                 >
 {`    ▲
     │
@@ -748,17 +748,17 @@ export default function AboutPage() {
     ·`}
                 </pre>
               </div>
-              <h3 itemProp="name" className="font-headline text-[18px] lg:text-xl font-bold text-white mb-3">
+              <h3 itemProp="name" className="font-headline text-xl font-bold text-white mb-3.5 relative">
                 Honest Advice
               </h3>
-              <p itemProp="description" className="text-[15px] text-white/70 leading-[1.7]">
+              <p itemProp="description" className="text-[15px] text-white/70 leading-[1.7] relative">
                 Sometimes AI isn't the answer. We'll tell you when a simpler solution works better, even if it means less work for us.
               </p>
             </article>
 
             {/* Value 3: Plain Language */}
             <article
-              className="group rounded-[20px] p-10 lg:p-12 text-center transition-all duration-400 hover:translate-y-[-8px]"
+              className="group rounded-[20px] py-12 px-8 text-center relative overflow-hidden transition-all duration-400 hover:translate-y-[-8px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.2),0_0_60px_rgba(147,197,253,0.15)]"
               style={{
                 background: 'rgba(255,255,255,0.08)',
                 backdropFilter: 'blur(12px)',
@@ -772,7 +772,7 @@ export default function AboutPage() {
             >
               <meta itemProp="position" content="3" />
               <div
-                className="w-[90px] h-[90px] lg:w-[110px] lg:h-[110px] rounded-3xl flex items-center justify-center mx-auto mb-7"
+                className="w-[110px] h-[110px] rounded-3xl flex items-center justify-center mx-auto mb-7"
                 style={{
                   background: 'rgba(255,255,255,0.1)',
                   border: '2px solid rgba(255,255,255,0.2)',
@@ -781,8 +781,8 @@ export default function AboutPage() {
                 aria-hidden="true"
               >
                 <pre
-                  className="font-mono text-[11px] lg:text-[14px] text-white text-center whitespace-pre font-semibold"
-                  style={{ textShadow: '0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(147,197,253,0.7), 0 0 40px rgba(147,197,253,0.5)' }}
+                  className="font-mono text-[14px] leading-[1.2] text-white text-center whitespace-pre font-semibold"
+                  style={{ textShadow: '0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(147,197,253,0.7), 0 0 40px rgba(147,197,253,0.5)', animation: 'iconGlow 3s ease-in-out infinite' }}
                 >
 {`╭───────╮
 │ Hello │
@@ -790,10 +790,10 @@ export default function AboutPage() {
     ╰`}
                 </pre>
               </div>
-              <h3 itemProp="name" className="font-headline text-[18px] lg:text-xl font-bold text-white mb-3">
+              <h3 itemProp="name" className="font-headline text-xl font-bold text-white mb-3.5 relative">
                 Plain Language
               </h3>
-              <p itemProp="description" className="text-[15px] text-white/70 leading-[1.7]">
+              <p itemProp="description" className="text-[15px] text-white/70 leading-[1.7] relative">
                 No jargon, no complexity for complexity's sake. We explain things the way we'd want them explained to us.
               </p>
             </article>
@@ -915,6 +915,16 @@ export default function AboutPage() {
         @keyframes scrollPulse {
           0%, 100% { opacity: 0.4; height: 60px; }
           50% { opacity: 0.8; height: 80px; }
+        }
+        @keyframes iconGlow {
+          0%, 100% {
+            opacity: 0.95;
+            text-shadow: 0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(147,197,253,0.7), 0 0 40px rgba(147,197,253,0.5);
+          }
+          50% {
+            opacity: 1;
+            text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(147,197,253,0.9), 0 0 50px rgba(147,197,253,0.6);
+          }
         }
         @media (prefers-reduced-motion: reduce) {
           *, *::before, *::after {
