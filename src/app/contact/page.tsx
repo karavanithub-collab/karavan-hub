@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: 'https://karavanhub.com/contact',
     title: 'Contact Karavan Hub — Free IT Consultation',
     description:
-      'Tell us what is on your mind. We will listen first, then talk through what actually makes sense. Free consultation, response within 24 hours.',
+      'Free 30-minute consultation. Real answers about your tech, your timeline, your budget. No follow-up spam. Response within 24 hours.',
     images: [
       {
         url: 'https://karavanhub.com/images/og-contact.jpg',
@@ -342,7 +342,7 @@ export default function ContactPage() {
             </h1>
 
             <p className="contact-subtitle text-[16px] md:text-[17px] text-white/70 leading-[1.8] mb-10 md:mb-12 max-w-[500px] mx-auto lg:mx-0">
-              Tell us what's on your mind. We'll listen first, then talk through what actually makes sense.
+              Free 30-minute consultation. Real answers about your tech, your timeline, your budget. No follow-up spam.
             </p>
 
             {/* Contact Details */}
