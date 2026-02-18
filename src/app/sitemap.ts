@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://karavanhub.com/about',
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: 'https://karavanhub.com/contact',

@@ -1,14 +1,24 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 
-// SEO Metadata — matches AI Solutions page pattern
+// SEO Metadata
 export const metadata: Metadata = {
   title: 'About Us | Karavan Hub — Technology That Feels Human',
   description:
-    'Meet Karavan Hub: Founded by a former Registered Nurse who saw firsthand how technology fails the people who need it most. Niagara-based IT consulting that makes technology feel human.',
+    'Meet Karavan Hub: a Niagara, Ontario IT consulting company founded by a former Registered Nurse. We build custom software, AI automation, and web solutions for small and medium businesses across Canada.',
   keywords:
-    'Karavan Hub, about us, IT consulting Niagara, technology consulting Canada, healthcare IT background, human-centered technology, Canadian tech company, Niagara technology services, Ontario IT consulting',
-  robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+    'Karavan Hub, about us, IT consulting Niagara, technology consulting Canada, healthcare IT background, human-centered technology, Canadian tech company, Niagara technology services, Ontario IT consulting, Pelham Ontario, St. Catharines IT, small business technology, AI consulting Canada',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   alternates: {
     canonical: 'https://karavanhub.com/about',
     languages: {
@@ -17,17 +27,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    type: 'profile',
+    type: 'website',
     url: 'https://karavanhub.com/about',
     title: 'About Karavan Hub — Technology That Feels Human',
     description:
-      'Founded by a former Registered Nurse who saw firsthand how technology fails the people who need it most.',
+      'Niagara-based IT consulting founded by a former Registered Nurse. Custom software, AI automation, and web solutions for Canadian SMBs.',
     images: [
       {
         url: 'https://karavanhub.com/images/og-about.jpg',
         width: 1200,
         height: 630,
-        alt: 'Karavan Hub - Technology That Feels Human - Niagara, Canada',
+        alt: 'Karavan Hub - About Us - Technology That Feels Human - Niagara, Ontario, Canada',
       },
     ],
     siteName: 'Karavan Hub',
@@ -36,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'About Karavan Hub — Technology That Feels Human',
-    description: 'Founded by a former RN who saw how tech fails people. Niagara-based IT consulting for Canadian businesses.',
+    description: 'Niagara IT consulting founded by a former RN. Custom software, AI, and web solutions for Canadian SMBs.',
     images: ['https://karavanhub.com/images/twitter-about.jpg'],
   },
   other: {
@@ -44,6 +54,10 @@ export const metadata: Metadata = {
     'geo.placename': 'Niagara, Ontario',
     'geo.position': '43.0896;-79.0849',
     ICBM: '43.0896, -79.0849',
+    'dc.title': 'About Karavan Hub — Technology That Feels Human',
+    'dc.creator': 'Karavan Hub',
+    'dc.subject': 'IT Consulting, AI Solutions, Web Development, Niagara Ontario',
+    'dc.language': 'en-CA',
   },
 }
 
@@ -69,7 +83,7 @@ const schema = {
       },
     },
     {
-      '@type': 'Organization',
+      '@type': ['Organization', 'ProfessionalService'],
       '@id': 'https://karavanhub.com/#organization',
       name: 'Karavan Hub',
       alternateName: ['Karavan Hub IT', 'Karavan Technology'],
@@ -113,9 +127,13 @@ const schema = {
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'Country', name: 'United States' },
+        { '@type': 'Country', name: 'Saudi Arabia' },
         { '@type': 'AdministrativeArea', name: 'Ontario' },
+        { '@type': 'City', name: 'Pelham' },
         { '@type': 'City', name: 'Niagara Falls' },
         { '@type': 'City', name: 'St. Catharines' },
+        { '@type': 'City', name: 'Welland' },
+        { '@type': 'City', name: 'Hamilton' },
         { '@type': 'City', name: 'Toronto' },
       ],
       knowsAbout: [
@@ -168,9 +186,33 @@ const schema = {
         areaServed: ['CA', 'US'],
         availableLanguage: 'English',
       },
+      potentialAction: {
+        '@type': 'ReserveAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://calendly.com/karavanhub/30min',
+          actionPlatform: [
+            'http://schema.org/DesktopWebPlatform',
+            'http://schema.org/MobileWebPlatform',
+          ],
+        },
+        result: {
+          '@type': 'Reservation',
+          name: 'Free 30-Minute Consultation',
+        },
+      },
       sameAs: [
         'https://www.linkedin.com/company/karavanhub',
         'https://www.instagram.com/karavanhub',
+      ],
+      priceRange: '$$',
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '09:00',
+          closes: '17:00',
+        },
       ],
     },
     {
@@ -183,10 +225,13 @@ const schema = {
         'Former Registered Nurse and Care Coordinator with Ontario Health who transitioned to technology consulting after witnessing firsthand how poorly designed systems fail the people who need them most.',
       image: 'https://karavanhub.com/images/founder-nyah.jpg',
       worksFor: { '@id': 'https://karavanhub.com/#organization' },
-      alumniOf: {
-        '@type': 'Organization',
-        name: 'Ontario Health',
-      },
+      alumniOf: [
+        {
+          '@type': 'Organization',
+          name: 'Ontario Health',
+          url: 'https://www.ontariohealth.ca',
+        },
+      ],
       hasCredential: [
         {
           '@type': 'EducationalOccupationalCredential',
@@ -195,6 +240,7 @@ const schema = {
           recognizedBy: {
             '@type': 'Organization',
             name: 'College of Nurses of Ontario',
+            url: 'https://www.cno.org',
           },
         },
       ],
@@ -221,6 +267,9 @@ const schema = {
         'User-Centered Design',
         'Business Workflow Optimization',
       ],
+      sameAs: [
+        'https://www.linkedin.com/company/karavanhub',
+      ],
     },
     {
       '@type': 'AboutPage',
@@ -242,8 +291,33 @@ const schema = {
       dateModified: '2026-02-17',
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.story-headline', '.highlight-quote', '.cta-title'],
+        cssSelector: ['.story-headline', '.highlight-quote', '.cta-title', '.conclusion-statement'],
       },
+      significantLink: [
+        'https://karavanhub.com/contact',
+        'https://karavanhub.com/case-studies',
+        'https://karavanhub.com/ai-solutions',
+        'https://karavanhub.com/it-solutions',
+      ],
+      mentions: [
+        {
+          '@type': 'Organization',
+          name: 'Ontario Health',
+          url: 'https://www.ontariohealth.ca',
+        },
+        {
+          '@type': 'Place',
+          name: 'Niagara Region',
+          containedInPlace: {
+            '@type': 'AdministrativeArea',
+            name: 'Ontario',
+            containedInPlace: {
+              '@type': 'Country',
+              name: 'Canada',
+            },
+          },
+        },
+      ],
     },
     {
       '@type': 'BreadcrumbList',
@@ -355,6 +429,21 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
+      {/* Visually hidden summary for AEO — crawlable by search engines and AI */}
+      <div className="sr-only" role="doc-abstract">
+        <h2>About Karavan Hub</h2>
+        <p>Karavan Hub is an IT consulting company based in Pelham, Niagara, Ontario, Canada. Founded by Nyah S., a former Registered Nurse and Care Coordinator with Ontario Health, Karavan Hub builds custom software, AI automation, web solutions, and data analytics for small and medium businesses. The company serves clients across Canada, the United States, and Saudi Arabia.</p>
+        <p>What makes Karavan Hub different: the founder's healthcare background means every solution is built around the people who actually use it. Karavan Hub tells clients when AI is not the right fit and recommends simpler alternatives when appropriate.</p>
+        <dl>
+          <dt>Location</dt><dd>Pelham, Niagara Region, Ontario, Canada</dd>
+          <dt>Founded</dt><dd>2024</dd>
+          <dt>Founder</dt><dd>Nyah S., former Registered Nurse (Ontario Health)</dd>
+          <dt>Services</dt><dd>Custom software development, web design, AI automation, data analytics, digital transformation</dd>
+          <dt>Markets</dt><dd>Canada, United States, Saudi Arabia</dd>
+          <dt>Contact</dt><dd>905-301-3936, karavan.it.hub@gmail.com</dd>
+        </dl>
+      </div>
+
       {/* ============================================
          HERO SECTION - Brand Blue Gradient
          ============================================ */}
@@ -362,6 +451,7 @@ export default function AboutPage() {
         className="relative min-h-[90vh] overflow-hidden flex items-center"
         style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)' }}
         aria-labelledby="hero-title"
+        role="banner"
       >
         {/* Animated gradient orbs */}
         <div
@@ -430,7 +520,7 @@ export default function AboutPage() {
             <h1
               id="hero-title"
               className="font-headline font-bold text-white leading-[1.05] tracking-[-1.5px] mb-6"
-              style={{ fontSize: 'clamp(48px, 7vw, 80px)' }}
+              style={{ fontSize: 'clamp(40px, 7vw, 80px)' }}
             >
               We make tech<br />
               <span
@@ -514,7 +604,7 @@ export default function AboutPage() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-[10px] tracking-widest uppercase">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 text-white/40 text-[10px] tracking-widest uppercase">
           <span>Scroll</span>
           <div
             className="w-px"
@@ -531,7 +621,7 @@ export default function AboutPage() {
          FOUNDER STORY SECTION
          ============================================ */}
       <section
-        className="py-20 lg:py-[120px]"
+        className="py-14 md:py-20 lg:py-[120px]"
         style={{ background: 'linear-gradient(180deg, #f0f7ff 0%, #ffffff 40%, #ffffff 70%, #fafbff 100%)' }}
         aria-labelledby="story-heading"
         itemScope
@@ -541,12 +631,6 @@ export default function AboutPage() {
         <meta itemProp="publisher" content="Karavan Hub" />
 
         <div className="max-w-[1100px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 relative">
-          {/* Decorative accent line between columns */}
-          <div
-            className="hidden lg:block absolute left-1/2 top-[15%] bottom-[15%] w-px -translate-x-1/2"
-            style={{ background: 'linear-gradient(180deg, transparent 0%, rgba(37,99,235,0.15) 30%, rgba(37,99,235,0.15) 70%, transparent 100%)' }}
-            aria-hidden="true"
-          />
           <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">
             {/* Founder Image */}
             <aside className="lg:sticky lg:top-[100px] max-w-[400px] mx-auto lg:max-w-none" aria-label="Founder portrait" itemScope itemType="https://schema.org/Person">
@@ -570,7 +654,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, transparent 0%, rgba(30,58,138,0.3) 100%)' }} />
                   <span className="relative z-10 flex flex-col items-center justify-center text-center">
                     <span
-                      className="font-headline text-[72px] font-bold leading-none tracking-[-2px]"
+                      className="font-headline text-[56px] md:text-[72px] font-bold leading-none tracking-[-2px]"
                       style={{
                         background: 'linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(147,197,253,0.6) 100%)',
                         WebkitBackgroundClip: 'text',
@@ -611,7 +695,7 @@ export default function AboutPage() {
                 </h2>
               </header>
 
-              <div className="text-[17px] leading-[1.9] text-[var(--text-body)] space-y-6">
+              <div className="text-[16px] md:text-[17px] leading-[1.85] md:leading-[1.9] text-[var(--text-body)] space-y-6">
                 <p>
                   Before Karavan Hub, I worked as a <strong>Registered Nurse and Care Coordinator with Ontario Health</strong>. My job was to connect the dots between patients, specialists, and follow-up care. Make sure nobody slipped through.
                 </p>
@@ -625,7 +709,7 @@ export default function AboutPage() {
                 </p>
 
                 <blockquote
-                  className="highlight-quote text-[22px] font-medium text-[var(--text-dark)] leading-[1.6] pl-6 border-l-[3px] border-[var(--primary)] my-10"
+                  className="highlight-quote text-[19px] md:text-[22px] font-medium text-[var(--text-dark)] leading-[1.55] md:leading-[1.6] pl-5 md:pl-6 border-l-[3px] border-[var(--primary)] my-8 md:my-10"
                   style={{ fontStyle: 'normal' }}
                 >
                   <p>"Technology doesn't have to be intimidating. It just has to be built around the people who actually use it."</p>
@@ -657,7 +741,7 @@ export default function AboutPage() {
 
       {/* Gradient transition: Story → Values */}
       <div
-        className="h-[80px] lg:h-[120px]"
+        className="h-[60px] md:h-[80px] lg:h-[120px]"
         style={{ background: 'linear-gradient(180deg, #fafbff 0%, #1e3a8a 50%, #0f172a 100%)' }}
         aria-hidden="true"
       />
@@ -909,13 +993,13 @@ export default function AboutPage() {
           <h2 id="cta-heading" className="cta-title font-headline text-[24px] sm:text-[28px] lg:text-[36px] font-bold text-white mb-4">
             See what's possible.
           </h2>
-          <p className="text-base lg:text-lg text-white/75 mb-8 leading-[1.7] max-w-[500px] mx-auto">
-            Every business is different. We'd love to hear what yours needs.
+          <p className="text-base lg:text-lg text-white/75 mb-8 leading-[1.7] max-w-[500px] mx-auto text-balance">
+            Every business is different. We'd love to hear about yours.
           </p>
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2.5 bg-white text-[var(--primary-deeper,#1E3A8A)] px-8 lg:px-10 py-4 rounded-xl font-semibold text-base transition-all hover:translate-y-[-2px]"
+            className="inline-flex items-center gap-2.5 bg-white text-[var(--primary-deeper,#1E3A8A)] px-8 lg:px-10 py-4 rounded-xl font-semibold text-base whitespace-nowrap transition-all hover:translate-y-[-2px]"
             style={{ boxShadow: '0 8px 24px rgba(0,0,0,0.2)' }}
             aria-label="Book a free consultation with Karavan Hub"
           >
