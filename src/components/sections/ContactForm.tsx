@@ -141,7 +141,7 @@ export default function ContactForm() {
             >
               Start a conversation
             </h2>
-            <p className="text-sm text-text-muted">Tell us a bit about your project</p>
+            <p className="text-sm text-text-muted">No commitment. Just a real conversation.</p>
           </div>
 
           {/* Success Message */}
@@ -150,10 +150,10 @@ export default function ContactForm() {
               <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
               <div>
                 <p className="text-sm font-medium text-green-900">
-                  Message sent successfully!
+                  Got it. We're on it.
                 </p>
                 <p className="text-xs text-green-700">
-                  We'll get back to you within 24 hours.
+                  You'll hear from a real person within 24 hours.
                 </p>
               </div>
             </div>
@@ -337,7 +337,7 @@ export default function ContactForm() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="What challenges are you facing? What goals would you like to achieve?"
+                placeholder="What's not working the way you want it to?"
                 rows={4}
                 className="w-full px-4 py-4 font-body text-sm text-text-dark bg-white border-[1.5px] border-slate-200 rounded-2xl outline-none transition-all hover:border-slate-300 focus:border-primary focus:ring-4 focus:ring-blue-100"
                 aria-describedby="message-hint"
@@ -354,7 +354,7 @@ export default function ContactForm() {
               className="w-full py-[18px] px-8 font-headline text-base font-semibold text-white bg-primary hover:bg-primary-dark active:bg-primary-deeper border-none rounded-2xl cursor-pointer flex items-center justify-center gap-2.5 transition-all mt-2 disabled:opacity-70 disabled:cursor-not-allowed hover:enabled:-translate-y-0.5 hover:enabled:shadow-lg"
               aria-label="Send contact form message"
             >
-              <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+              <span>{isSubmitting ? 'Sending...' : 'Start the Conversation'}</span>
               <Send className="w-[18px] h-[18px]" />
             </button>
 

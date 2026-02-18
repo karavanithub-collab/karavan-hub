@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: 'https://karavanhub.com/contact',
     title: 'Contact Karavan Hub — Free IT Consultation',
     description:
-      'No sales pitch, no pressure. Just an honest conversation about your business and where technology can help. Free consultation, response within 24 hours.',
+      'No pitch, no pressure. Tell us what is not working and we will be straight with you about what can fix it. Free consultation, response within 24 hours.',
     images: [
       {
         url: 'https://karavanhub.com/images/og-contact.jpg',
@@ -197,7 +197,7 @@ const schema = {
           name: 'What happens after I submit the contact form?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "We review your message and get back to you within 24 hours, usually much sooner. No automated responses. You hear from a real person who is ready to help.",
+            text: "A real person reads it. Not a bot, not an auto-responder. We typically reply within a few hours, always within 24.",
           },
         },
         {
@@ -205,7 +205,7 @@ const schema = {
           name: 'Is the consultation really free?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Yes, completely free with no strings attached. We believe in building relationships first. If we are not the right fit for your project, we will tell you honestly and might even recommend someone who is.",
+            text: "100%. No invoice, no discovery phase that secretly costs money. We would rather have a good conversation and earn your trust than chase a quick sale. And if we are not the right fit, we will say so.",
           },
         },
         {
@@ -213,7 +213,7 @@ const schema = {
           name: 'What if I am not sure what I need?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "That is perfectly fine. Most people do not know exactly what they need when they first reach out. Just tell us about your challenges, and we will help you figure out the best path forward. No pressure, no jargon.",
+            text: "That is most people. You do not need a brief or a spec sheet. Just tell us what is bugging you about how things work right now, and we will figure out the rest together.",
           },
         },
         {
@@ -221,7 +221,7 @@ const schema = {
           name: 'Does Karavan Hub work with businesses outside Ontario?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Absolutely. While we are based in Niagara, Ontario, we work with clients across Canada, the United States, and Saudi Arabia. Most of our collaboration happens remotely, so location is not a barrier.",
+            text: "We are based in Niagara but we work with clients across Canada, the US, and Saudi Arabia. Everything is remote-first. As long as we can get on a call, we are good.",
           },
         },
       ],
@@ -342,7 +342,7 @@ export default function ContactPage() {
             </h1>
 
             <p className="contact-subtitle text-[16px] md:text-[17px] text-white/70 leading-[1.8] mb-10 md:mb-12 max-w-[500px] mx-auto lg:mx-0">
-              No sales pitch, no pressure. Just an honest conversation about where you are and where technology can take you.
+              No pitch, no pressure. Tell us what's not working and we'll be straight with you about what can fix it.
             </p>
 
             {/* Contact Details */}
@@ -458,7 +458,7 @@ export default function ContactPage() {
               </div>
               <h3 className="font-headline text-base font-bold text-[var(--text-dark)] mb-2">Book a Call</h3>
               <p className="text-sm text-[var(--text-muted)] mb-4 leading-[1.6]">
-                Schedule a 30-minute discovery call at a time that works for you.
+                Grab 30 minutes on our calendar. No prep needed.
               </p>
               <a
                 href="https://calendly.com/karavanhub/30min"
@@ -544,7 +544,7 @@ export default function ContactPage() {
         <div className="max-w-[700px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10">
           <div className="text-center mb-10 md:mb-12">
             <h2 id="faq-heading" className="font-headline text-[24px] sm:text-[28px] font-bold text-[var(--text-dark)] mb-2">
-              Common questions
+              Before you ask
             </h2>
             <p className="text-base text-[var(--text-body)]">
               Quick answers to help you decide
@@ -555,28 +555,28 @@ export default function ContactPage() {
             <div className="bg-[#f8fafc] rounded-xl p-6">
               <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">What happens after I submit the form?</h3>
               <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
-                We review your message and get back to you within 24 hours (usually much sooner). No automated responses. You hear from a real person who's ready to help.
+                A real person reads it. Not a bot, not an auto-responder. We typically reply within a few hours, always within 24.
               </p>
             </div>
 
             <div className="bg-[#f8fafc] rounded-xl p-6">
               <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">Is the consultation really free?</h3>
               <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
-                Yes, completely free with no strings attached. We believe in building relationships first. If we're not the right fit, we'll tell you honestly and might even point you toward someone who is.
+                100%. No invoice, no "discovery phase" that secretly costs money. We'd rather have a good conversation and earn your trust than chase a quick sale. And if we're not the right fit, we'll say so.
               </p>
             </div>
 
             <div className="bg-[#f8fafc] rounded-xl p-6">
               <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">What if I'm not sure what I need?</h3>
               <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
-                That's perfectly fine. Most people don't know exactly what they need when they first reach out. Tell us about your challenges, and we'll help figure out the best path forward. No pressure, no jargon.
+                That's most people. Seriously. You don't need a brief or a spec sheet. Just tell us what's bugging you about how things work right now, and we'll figure out the rest together.
               </p>
             </div>
 
             <div className="bg-[#f8fafc] rounded-xl p-6">
               <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">Do you work with businesses outside Ontario?</h3>
               <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
-                Absolutely. While we're based in Niagara, we work with clients across Canada and internationally. Most of our collaboration happens remotely, so location isn't a barrier.
+                We're based in Niagara but we work with clients across Canada, the US, and Saudi Arabia. Everything's remote-first. As long as we can get on a call, we're good.
               </p>
             </div>
           </div>
