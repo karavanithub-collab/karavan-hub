@@ -164,12 +164,12 @@ export default function ContactForm() {
             {/* First Name & Last Name Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-0">
-                <label htmlFor="firstName" className="text-xs font-semibold text-text-muted uppercase letter-spacing-0.5 mb-2">
+                <label htmlFor="firstName" className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
                   First name
                 </label>
                 <div className="relative">
                   <svg
-                    className="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-slate-400 pointer-events-none"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 w-[18px] h-[18px] text-slate-400 pointer-events-none"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -188,7 +188,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                     placeholder="Jane"
                     required
-                    className={`w-full pl-12 pr-4 py-4 font-body text-sm text-text-dark bg-white border-1.5 rounded-2xl outline-none transition-all ${
+                    className={`w-full pl-12 pr-4 py-4 font-body text-sm text-text-dark bg-white border-[1.5px] rounded-2xl outline-none transition-all ${
                       errors.firstName
                         ? 'border-red-500 focus:border-red-600 focus:ring-4 focus:ring-red-100'
                         : 'border-slate-200 hover:border-slate-300 focus:border-primary focus:ring-4 focus:ring-blue-100'
@@ -203,12 +203,12 @@ export default function ContactForm() {
               </div>
 
               <div className="flex flex-col gap-0">
-                <label htmlFor="lastName" className="text-xs font-semibold text-text-muted uppercase letter-spacing-0.5 mb-2">
+                <label htmlFor="lastName" className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
                   Last name
                 </label>
                 <div className="relative">
                   <svg
-                    className="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-slate-400 pointer-events-none"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 w-[18px] h-[18px] text-slate-400 pointer-events-none"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -227,7 +227,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                     placeholder="Smith"
                     required
-                    className={`w-full pl-12 pr-4 py-4 font-body text-sm text-text-dark bg-white border-1.5 rounded-2xl outline-none transition-all ${
+                    className={`w-full pl-12 pr-4 py-4 font-body text-sm text-text-dark bg-white border-[1.5px] rounded-2xl outline-none transition-all ${
                       errors.lastName
                         ? 'border-red-500 focus:border-red-600 focus:ring-4 focus:ring-red-100'
                         : 'border-slate-200 hover:border-slate-300 focus:border-primary focus:ring-4 focus:ring-blue-100'
@@ -244,12 +244,12 @@ export default function ContactForm() {
 
             {/* Email */}
             <div className="flex flex-col gap-0">
-              <label htmlFor="email" className="text-xs font-semibold text-text-muted uppercase letter-spacing-0.5 mb-2">
+              <label htmlFor="email" className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
                 Email address
               </label>
               <div className="relative">
                 <svg
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-slate-400 pointer-events-none"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-[18px] h-[18px] text-slate-400 pointer-events-none"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -268,7 +268,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   placeholder="jane@company.com"
                   required
-                  className={`w-full pl-12 pr-4 py-4 font-body text-sm text-text-dark bg-white border-1.5 rounded-2xl outline-none transition-all ${
+                  className={`w-full pl-12 pr-4 py-4 font-body text-sm text-text-dark bg-white border-[1.5px] rounded-2xl outline-none transition-all ${
                     errors.email
                       ? 'border-red-500 focus:border-red-600 focus:ring-4 focus:ring-red-100'
                       : 'border-slate-200 hover:border-slate-300 focus:border-primary focus:ring-4 focus:ring-blue-100'
@@ -285,7 +285,7 @@ export default function ContactForm() {
 
             {/* Interest Select */}
             <div className="flex flex-col gap-0">
-              <label htmlFor="interest" className="text-xs font-semibold text-text-muted uppercase letter-spacing-0.5 mb-2">
+              <label htmlFor="interest" className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
                 What can we help with?
               </label>
               <div className="relative">
@@ -295,7 +295,7 @@ export default function ContactForm() {
                   value={formData.interest}
                   onChange={handleChange}
                   required
-                  className={`w-full px-4 py-4 pr-12 font-body text-sm text-text-dark bg-white border-1.5 rounded-2xl outline-none transition-all cursor-pointer appearance-none ${
+                  className={`w-full px-4 py-4 pr-12 font-body text-sm text-text-dark bg-white border-[1.5px] rounded-2xl outline-none transition-all cursor-pointer appearance-none ${
                     errors.interest
                       ? 'border-red-500 focus:border-red-600 focus:ring-4 focus:ring-red-100'
                       : 'border-slate-200 hover:border-slate-300 focus:border-primary focus:ring-4 focus:ring-blue-100'
@@ -328,9 +328,9 @@ export default function ContactForm() {
 
             {/* Message Textarea */}
             <div className="flex flex-col gap-0">
-              <label htmlFor="message" className="text-xs font-semibold text-text-muted uppercase letter-spacing-0.5 mb-2">
+              <label htmlFor="message" className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
                 Your message{' '}
-                <span className="font-normal text-slate-500 text-11px">(optional)</span>
+                <span className="font-normal text-slate-500 text-[11px]">(optional)</span>
               </label>
               <textarea
                 id="message"
@@ -339,7 +339,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 placeholder="What challenges are you facing? What goals would you like to achieve?"
                 rows={4}
-                className="w-full px-4 py-4 font-body text-sm text-text-dark bg-white border-1.5 border-slate-200 rounded-2xl outline-none transition-all hover:border-slate-300 focus:border-primary focus:ring-4 focus:ring-blue-100"
+                className="w-full px-4 py-4 font-body text-sm text-text-dark bg-white border-[1.5px] border-slate-200 rounded-2xl outline-none transition-all hover:border-slate-300 focus:border-primary focus:ring-4 focus:ring-blue-100"
                 aria-describedby="message-hint"
               />
               <span id="message-hint" className="sr-only">
@@ -351,11 +351,11 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-4.5 px-8 font-headline text-base font-semibold text-white bg-primary hover:bg-primary-dark active:bg-primary-darker border-none rounded-2xl cursor-pointer flex items-center justify-center gap-2.5 transition-all mt-2 disabled:opacity-70 disabled:cursor-not-allowed hover:enabled:-translate-y-0.5 hover:enabled:shadow-lg"
+              className="w-full py-[18px] px-8 font-headline text-base font-semibold text-white bg-primary hover:bg-primary-dark active:bg-primary-deeper border-none rounded-2xl cursor-pointer flex items-center justify-center gap-2.5 transition-all mt-2 disabled:opacity-70 disabled:cursor-not-allowed hover:enabled:-translate-y-0.5 hover:enabled:shadow-lg"
               aria-label="Send contact form message"
             >
               <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
-              <Send className="w-4.5 h-4.5" />
+              <Send className="w-[18px] h-[18px]" />
             </button>
 
             {/* Trust Indicators */}
