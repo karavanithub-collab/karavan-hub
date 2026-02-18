@@ -407,6 +407,14 @@ export default function AboutPage() {
           aria-hidden="true"
         />
 
+        {/* Floating particles */}
+        <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '15%', left: '20%', boxShadow: '0 0 15px rgba(147,197,253,0.4)', willChange: 'transform', transform: 'translateZ(0)' }} aria-hidden="true" />
+        <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '30%', right: '15%', animationDelay: '1.5s', boxShadow: '0 0 15px rgba(147,197,253,0.4)', willChange: 'transform', transform: 'translateZ(0)' }} aria-hidden="true" />
+        <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ bottom: '25%', left: '15%', animationDelay: '3s', boxShadow: '0 0 15px rgba(147,197,253,0.4)', willChange: 'transform', transform: 'translateZ(0)' }} aria-hidden="true" />
+        <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '50%', right: '25%', animationDelay: '4.5s', boxShadow: '0 0 15px rgba(147,197,253,0.4)', willChange: 'transform', transform: 'translateZ(0)' }} aria-hidden="true" />
+        <div className="absolute w-1.5 h-1.5 bg-[rgba(139,92,246,0.7)] rounded-full animate-float" style={{ bottom: '35%', right: '20%', animationDelay: '6s', boxShadow: '0 0 15px rgba(139,92,246,0.4)', willChange: 'transform', transform: 'translateZ(0)' }} aria-hidden="true" />
+        <div className="absolute w-1.5 h-1.5 bg-[rgba(34,211,238,0.8)] rounded-full animate-float" style={{ bottom: '20%', left: '35%', animationDelay: '5s', boxShadow: '0 0 15px rgba(34,211,238,0.4)', willChange: 'transform', transform: 'translateZ(0)' }} aria-hidden="true" />
+
         {/* Grain overlay */}
         <div
           className="absolute inset-0 opacity-[0.02] pointer-events-none"
@@ -440,6 +448,22 @@ export default function AboutPage() {
             <p className="text-[16px] md:text-[19px] text-white/75 max-w-[500px] leading-[1.75] mb-9 mx-auto lg:mx-0">
               Born from real experience in healthcare operations, where we saw firsthand how technology can fail the people who need it most.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2.5 bg-white text-[#1e3a8a] px-9 py-[18px] rounded-lg text-[15px] font-semibold leading-none uppercase tracking-[0.5px] transition-all duration-300 hover:bg-white/95 hover:-translate-y-0.5 w-full sm:w-auto"
+                style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.2)' }}
+              >
+                Book Free Consultation
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </Link>
+              <a
+                href="#story-heading"
+                className="inline-flex items-center justify-center gap-2 bg-transparent text-white border border-white/30 px-8 py-4 rounded-lg font-semibold text-[15px] leading-none uppercase tracking-[0.5px] transition-all duration-300 hover:bg-white/10 hover:border-white/50 w-full sm:w-auto"
+              >
+                Read Our Story
+              </a>
+            </div>
           </div>
 
           {/* Abstract Tech Visual — hidden on mobile/tablet */}
@@ -507,7 +531,8 @@ export default function AboutPage() {
          FOUNDER STORY SECTION
          ============================================ */}
       <section
-        className="py-20 lg:py-[120px] bg-white"
+        className="py-20 lg:py-[120px]"
+        style={{ background: 'linear-gradient(180deg, #f0f7ff 0%, #ffffff 40%, #ffffff 70%, #fafbff 100%)' }}
         aria-labelledby="story-heading"
         itemScope
         itemType="https://schema.org/Article"
@@ -515,18 +540,22 @@ export default function AboutPage() {
         <meta itemProp="author" content="Nyah S." />
         <meta itemProp="publisher" content="Karavan Hub" />
 
-        <div className="max-w-[1100px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10">
+        <div className="max-w-[1100px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 relative">
+          {/* Decorative accent line between columns */}
+          <div
+            className="hidden lg:block absolute left-1/2 top-[15%] bottom-[15%] w-px -translate-x-1/2"
+            style={{ background: 'linear-gradient(180deg, transparent 0%, rgba(37,99,235,0.15) 30%, rgba(37,99,235,0.15) 70%, transparent 100%)' }}
+            aria-hidden="true"
+          />
           <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">
             {/* Founder Image */}
-            <aside className="lg:sticky lg:top-[100px] max-w-[400px] mx-auto lg:max-w-none" aria-label="Founder portrait">
+            <aside className="lg:sticky lg:top-[100px] max-w-[400px] mx-auto lg:max-w-none" aria-label="Founder portrait" itemScope itemType="https://schema.org/Person">
               <figure
                 className="aspect-[3/4] rounded-xl overflow-hidden relative"
                 style={{
                   background: 'linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%)',
                   boxShadow: '0 32px 64px rgba(37, 99, 235, 0.2)',
                 }}
-                itemScope
-                itemType="https://schema.org/Person"
               >
                 <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
                   <div
@@ -539,26 +568,33 @@ export default function AboutPage() {
                     }}
                   />
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, transparent 0%, rgba(30,58,138,0.3) 100%)' }} />
-                  <span className="relative z-10 text-center text-white/60 text-[11px] tracking-[2px] uppercase">
-                    [ FOUNDER PORTRAIT ]<br /><br />
-                    <span className="block text-[13px] font-semibold text-white/80 mb-3 tracking-[3px]">Editorial / Artistic</span>
-                    <span className="text-[9px] tracking-[1px] leading-relaxed text-white/40 normal-case">
-                      Natural light &middot; Soft focus background<br />
-                      Warm tones &middot; Authentic expression
+                  <span className="relative z-10 flex flex-col items-center justify-center text-center">
+                    <span
+                      className="font-headline text-[72px] font-bold leading-none tracking-[-2px]"
+                      style={{
+                        background: 'linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(147,197,253,0.6) 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                        filter: 'drop-shadow(0 0 30px rgba(147,197,253,0.4))',
+                      }}
+                    >
+                      NS
                     </span>
+                    <span className="block text-[10px] tracking-[4px] uppercase text-white/40 mt-3">Founder</span>
                   </span>
                 </div>
-                <figcaption className="mt-6 text-center">
-                  <h3 itemProp="name" className="font-headline text-[22px] font-bold text-[var(--text-dark)] mb-1">
-                    Nyah S.
-                  </h3>
-                  <p itemProp="jobTitle" className="text-sm text-[var(--primary)] font-medium">
-                    Founder & Principal Consultant
-                  </p>
-                  <meta itemProp="worksFor" content="Karavan Hub" />
-                  <meta itemProp="alumniOf" content="Ontario Health" />
-                </figcaption>
               </figure>
+              <div className="mt-5 text-center lg:text-left">
+                <h3 itemProp="name" className="font-headline text-[22px] font-bold text-[var(--text-dark)] mb-1">
+                  Nyah S.
+                </h3>
+                <p itemProp="jobTitle" className="text-sm text-[var(--primary)] font-medium">
+                  Founder &amp; Principal Consultant
+                </p>
+                <meta itemProp="worksFor" content="Karavan Hub" />
+                <meta itemProp="alumniOf" content="Ontario Health" />
+              </div>
             </aside>
 
             {/* Story Content */}
@@ -568,6 +604,7 @@ export default function AboutPage() {
                 <h2
                   id="story-heading"
                   className="story-headline font-headline text-[28px] sm:text-[32px] lg:text-[36px] font-bold text-[var(--text-dark)] mb-8 leading-[1.2]"
+                  style={{ scrollMarginTop: '100px' }}
                   itemProp="headline"
                 >
                   The software was supposed to help us. Most days, it felt like it was working against us.
@@ -618,11 +655,18 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Gradient transition: Story → Values */}
+      <div
+        className="h-[80px] lg:h-[120px]"
+        style={{ background: 'linear-gradient(180deg, #fafbff 0%, #1e3a8a 50%, #0f172a 100%)' }}
+        aria-hidden="true"
+      />
+
       {/* ============================================
          VALUES SECTION - Brand Blue Gradient
          ============================================ */}
       <section
-        className="py-20 lg:py-[120px] relative overflow-hidden"
+        className="pt-12 pb-20 lg:pt-[80px] lg:pb-[120px] relative overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)' }}
         aria-labelledby="values-heading"
         itemScope
@@ -866,16 +910,16 @@ export default function AboutPage() {
             See what's possible.
           </h2>
           <p className="text-base lg:text-lg text-white/75 mb-8 leading-[1.7] max-w-[500px] mx-auto">
-            Every business is different. Take a look at how we've helped others find the right technology fit.
+            Every business is different. We'd love to hear what yours needs.
           </p>
 
           <Link
-            href="/case-studies"
+            href="/contact"
             className="inline-flex items-center gap-2.5 bg-white text-[var(--primary-deeper,#1E3A8A)] px-8 lg:px-10 py-4 rounded-xl font-semibold text-base transition-all hover:translate-y-[-2px]"
             style={{ boxShadow: '0 8px 24px rgba(0,0,0,0.2)' }}
-            aria-label="View our case studies and client success stories"
+            aria-label="Book a free consultation with Karavan Hub"
           >
-            View Our Work
+            Book a Conversation
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -890,6 +934,11 @@ export default function AboutPage() {
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </Link>
+          <p className="mt-4 text-sm">
+            <Link href="/case-studies" className="text-white/50 underline underline-offset-2 hover:text-white/80 transition-colors">
+              Or explore our work
+            </Link>
+          </p>
         </div>
       </section>
 
