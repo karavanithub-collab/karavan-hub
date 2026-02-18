@@ -613,7 +613,7 @@ export default function AboutPage() {
 
               <div className="text-[17px] leading-[1.9] text-[var(--text-body)] space-y-6">
                 <p>
-                  Before Karavan Hub, I worked as a <strong>Registered Nurse and Care Coordinator with Ontario Health</strong>. My job was to connect the dots: tracking patients across appointments, coordinating between specialists, following up on those who needed extra support.
+                  Before Karavan Hub, I worked as a <strong>Registered Nurse and Care Coordinator with Ontario Health</strong>. My job was to connect the dots between patients, specialists, and follow-up care. Make sure nobody slipped through.
                 </p>
 
                 <p>
@@ -643,7 +643,7 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  That's why Karavan Hub exists. Not to push the flashiest AI or overcomplicate what's simple. But to understand how your business actually works, then find where the right technology can genuinely help.
+                  So that's Karavan Hub. Not the flashiest AI, not complexity for its own sake. We learn how your business actually works, then find where the right technology can make a real difference.
                 </p>
 
                 <p className="text-lg conclusion-statement mt-8">
