@@ -437,7 +437,7 @@ export default function AboutPage() {
                 feel human.
               </span>
             </h1>
-            <p className="text-lg text-white/70 max-w-[480px] leading-[1.8] mx-auto lg:mx-0">
+            <p className="text-[16px] md:text-[19px] text-white/75 max-w-[500px] leading-[1.75] mb-9 mx-auto lg:mx-0">
               Born from real experience in healthcare operations, where we saw firsthand how technology can fail the people who need it most.
             </p>
           </div>
