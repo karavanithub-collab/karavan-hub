@@ -1,45 +1,44 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-// Inline SVG icon components (replacing lucide-react)
-const Calendar = ({ className = '', ...props }: { className?: string; 'aria-hidden'?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-);
-const Linkedin = ({ className = '', ...props }: { className?: string; 'aria-hidden'?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-);
-const Instagram = ({ className = '', ...props }: { className?: string; 'aria-hidden'?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-);
-import ContactForm from '@/components/sections/ContactForm';
+import { Metadata } from 'next'
+import Link from 'next/link'
+import ContactForm from '@/components/sections/ContactForm'
 
+// SEO Metadata
 export const metadata: Metadata = {
-  title: 'Contact Us | Get in Touch with Karavan Hub — IT Solutions in Niagara, Ontario',
+  title: 'Contact Us | Karavan Hub — Free IT Consultation in Niagara, Ontario',
   description:
-    'Contact Karavan Hub for IT consulting, custom software development, and digital transformation services in Niagara, Ontario. Free consultation. Response within 24 hours.',
+    'Contact Karavan Hub for a free IT consultation. Custom software, AI automation, web design, and digital transformation for small and medium businesses. Niagara, Ontario. Response within 24 hours.',
   keywords:
-    'contact Karavan Hub, IT consulting Niagara, software development Ontario, digital transformation contact, free IT consultation, tech support Pelham',
-  authors: [{ name: 'Karavan Hub' }],
-  robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+    'contact Karavan Hub, IT consulting Niagara, free IT consultation, software development Ontario, AI consulting Canada, web design Niagara, digital transformation contact, tech support Pelham, Karavan Hub phone, Karavan Hub email',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   alternates: {
     canonical: 'https://karavanhub.com/contact',
     languages: {
       'en-CA': 'https://karavanhub.com/contact',
-      'en': 'https://karavanhub.com/contact',
-      'x-default': 'https://karavanhub.com/contact',
+      en: 'https://karavanhub.com/contact',
     },
   },
   openGraph: {
     type: 'website',
     url: 'https://karavanhub.com/contact',
-    title: 'Contact Karavan Hub — Let\'s Talk About Your Project',
+    title: 'Contact Karavan Hub — Free IT Consultation',
     description:
-      'No sales pitch, no pressure. Just an honest conversation about where you are and where technology can take you. Free consultation, response within 24 hours.',
+      'No sales pitch, no pressure. Just an honest conversation about your business and where technology can help. Free consultation, response within 24 hours.',
     images: [
       {
-        url: 'https://karavanhub.com/images/contact-og-image.jpg',
+        url: 'https://karavanhub.com/images/og-contact.jpg',
         width: 1200,
         height: 630,
-        alt: 'Contact Karavan Hub - IT Solutions Partner',
+        alt: 'Contact Karavan Hub - Free IT Consultation - Niagara, Ontario, Canada',
       },
     ],
     siteName: 'Karavan Hub',
@@ -47,476 +46,562 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Karavan Hub — Let\'s Talk About Your Project',
-    description:
-      'No sales pitch, no pressure. Free consultation, response within 24 hours. IT solutions for Niagara businesses.',
-    images: ['https://karavanhub.com/images/contact-twitter-card.jpg'],
+    title: 'Contact Karavan Hub — Free IT Consultation',
+    description: 'Free consultation, response within 24 hours. IT solutions for Canadian SMBs. Niagara, Ontario.',
+    images: ['https://karavanhub.com/images/twitter-contact.jpg'],
   },
-};
+  other: {
+    'geo.region': 'CA-ON',
+    'geo.placename': 'Niagara, Ontario',
+    'geo.position': '43.0896;-79.0849',
+    ICBM: '43.0896, -79.0849',
+    'dc.title': 'Contact Karavan Hub — Free IT Consultation',
+    'dc.creator': 'Karavan Hub',
+    'dc.subject': 'IT Consulting Contact, Free Consultation, Niagara Ontario',
+    'dc.language': 'en-CA',
+  },
+}
 
-const SCHEMA_LD = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['.contact-title', '.contact-subtitle', '.response-badge span'],
-    },
-    name: 'Contact Karavan Hub',
-    description: 'Contact page for Karavan Hub IT solutions and consulting services',
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': 'https://karavanhub.com/#organization',
-    name: 'Karavan Hub',
-    url: 'https://karavanhub.com',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://karavanhub.com/images/logo.png',
-      width: 512,
-      height: 512,
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-905-301-3936',
-      contactType: 'customer service',
-      email: 'karavan.it.hub@gmail.com',
-      areaServed: ['CA', 'US'],
-      availableLanguage: 'English',
-      hoursAvailable: {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '09:00',
-        closes: '18:00',
+// Schema.org JSON-LD — consolidated @graph
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': ['Organization', 'ProfessionalService'],
+      '@id': 'https://karavanhub.com/#organization',
+      name: 'Karavan Hub',
+      url: 'https://karavanhub.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://karavanhub.com/images/logo.png',
+        width: 512,
+        height: 512,
       },
-    },
-    sameAs: [
-      'https://www.linkedin.com/company/karavanhub',
-      'https://www.instagram.com/karavanhub',
-    ],
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': 'https://karavanhub.com/#localbusiness',
-    name: 'Karavan Hub',
-    description:
-      'IT consulting and software development company serving Niagara region and beyond',
-    url: 'https://karavanhub.com',
-    telephone: '+1-905-301-3936',
-    email: 'karavan.it.hub@gmail.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Suite 31',
-      addressLocality: 'Pelham',
-      addressRegion: 'Ontario',
-      addressCountry: 'CA',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 43.0334,
-      longitude: -79.3288,
-    },
-    areaServed: [
-      {
-        '@type': 'GeoCircle',
-        geoMidpoint: {
-          '@type': 'GeoCoordinates',
-          latitude: 43.0334,
-          longitude: -79.3288,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-905-301-3936',
+        contactType: 'customer service',
+        email: 'karavan.it.hub@gmail.com',
+        areaServed: ['CA', 'US', 'SA'],
+        availableLanguage: 'English',
+        hoursAvailable: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '09:00',
+          closes: '17:00',
         },
-        geoRadius: '100000',
       },
-      {
-        '@type': 'Country',
-        name: 'Canada',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Suite 31',
+        addressLocality: 'Pelham',
+        addressRegion: 'Ontario',
+        postalCode: 'L0S',
+        addressCountry: 'CA',
       },
-    ],
-    serviceArea: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
+      geo: {
         '@type': 'GeoCoordinates',
-        latitude: 43.0896,
-        longitude: -79.0849,
+        latitude: 43.0334,
+        longitude: -79.3288,
       },
-      geoRadius: '50000',
-    },
-    priceRange: '$$',
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
+      areaServed: [
+        { '@type': 'Country', name: 'Canada' },
+        { '@type': 'Country', name: 'United States' },
+        { '@type': 'Country', name: 'Saudi Arabia' },
+        { '@type': 'AdministrativeArea', name: 'Ontario' },
+        { '@type': 'City', name: 'Pelham' },
+        { '@type': 'City', name: 'Niagara Falls' },
+        { '@type': 'City', name: 'St. Catharines' },
+        { '@type': 'City', name: 'Welland' },
+        { '@type': 'City', name: 'Hamilton' },
+        { '@type': 'City', name: 'Toronto' },
       ],
-      opens: '09:00',
-      closes: '18:00',
-    },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ContactPage',
-    '@id': 'https://karavanhub.com/contact/#webpage',
-    name: 'Contact Karavan Hub',
-    description:
-      'Get in touch with Karavan Hub for IT consulting and digital transformation services',
-    url: 'https://karavanhub.com/contact',
-    isPartOf: {
-      '@id': 'https://karavanhub.com/#website',
-    },
-    about: {
-      '@id': 'https://karavanhub.com/#organization',
-    },
-    mainEntity: {
-      '@type': 'Organization',
-      '@id': 'https://karavanhub.com/#organization',
-    },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://karavanhub.com',
+      potentialAction: {
+        '@type': 'ReserveAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://calendly.com/karavanhub/30min',
+          actionPlatform: [
+            'http://schema.org/DesktopWebPlatform',
+            'http://schema.org/MobileWebPlatform',
+          ],
+        },
+        result: {
+          '@type': 'Reservation',
+          name: 'Free 30-Minute Consultation',
+        },
       },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Contact',
-        item: 'https://karavanhub.com/contact',
+      sameAs: [
+        'https://www.linkedin.com/company/karavanhub',
+        'https://www.instagram.com/karavanhub',
+      ],
+      priceRange: '$$',
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '09:00',
+          closes: '17:00',
+        },
+      ],
+    },
+    {
+      '@type': 'ContactPage',
+      '@id': 'https://karavanhub.com/contact/#webpage',
+      url: 'https://karavanhub.com/contact',
+      name: 'Contact Karavan Hub — Free IT Consultation',
+      description:
+        'Contact Karavan Hub for a free IT consultation. Custom software, AI automation, web design for Canadian SMBs. Response within 24 hours.',
+      isPartOf: { '@id': 'https://karavanhub.com/#website' },
+      about: { '@id': 'https://karavanhub.com/#organization' },
+      mainEntity: { '@id': 'https://karavanhub.com/#organization' },
+      breadcrumb: { '@id': 'https://karavanhub.com/contact/#breadcrumb' },
+      inLanguage: 'en-CA',
+      datePublished: '2024-01-01',
+      dateModified: '2026-02-17',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.contact-title', '.contact-subtitle', '.response-text'],
       },
-    ],
-  },
-];
+      significantLink: [
+        'https://karavanhub.com/about',
+        'https://karavanhub.com/ai-solutions',
+        'https://karavanhub.com/it-solutions',
+        'https://calendly.com/karavanhub/30min',
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://karavanhub.com/contact/#breadcrumb',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://karavanhub.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Contact',
+          item: 'https://karavanhub.com/contact',
+        },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://karavanhub.com/contact/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What happens after I submit the contact form?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "We review your message and get back to you within 24 hours, usually much sooner. No automated responses. You hear from a real person who is ready to help.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is the consultation really free?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Yes, completely free with no strings attached. We believe in building relationships first. If we are not the right fit for your project, we will tell you honestly and might even recommend someone who is.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What if I am not sure what I need?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "That is perfectly fine. Most people do not know exactly what they need when they first reach out. Just tell us about your challenges, and we will help you figure out the best path forward. No pressure, no jargon.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does Karavan Hub work with businesses outside Ontario?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Absolutely. While we are based in Niagara, Ontario, we work with clients across Canada, the United States, and Saudi Arabia. Most of our collaboration happens remotely, so location is not a barrier.",
+          },
+        },
+      ],
+    },
+  ],
+}
 
 export default function ContactPage() {
   return (
     <>
-      {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_LD) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <main id="main-content" role="main">
-        {/* ============================================
-            HERO SECTION WITH FORM
-            ============================================ */}
-        <section
-          className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-blue-600 relative flex items-center overflow-hidden py-20"
-          aria-labelledby="contact-heading"
-          data-geo-signal="availability"
-          data-eeat="trust"
-        >
-          {/* Animated gradient orbs */}
-          <div
-            className="absolute w-96 h-96 -top-24 -right-12 bg-gradient-radial from-blue-500 to-transparent rounded-full blur-3xl opacity-40 animate-pulse"
-            style={{ animationDuration: '12s' }}
-            aria-hidden="true"
-          />
-          <div
-            className="absolute w-64 h-64 -bottom-16 -left-10 bg-gradient-radial from-cyan-500 to-transparent rounded-full blur-3xl opacity-40 animate-pulse"
-            style={{ animationDuration: '12s', animationDelay: '-4s' }}
-            aria-hidden="true"
-          />
-          <div
-            className="absolute w-56 h-56 top-1/2 left-1/5 bg-gradient-radial from-indigo-500 to-transparent rounded-full blur-3xl opacity-40 animate-pulse"
-            style={{ animationDuration: '12s', animationDelay: '-8s' }}
-            aria-hidden="true"
-          />
+      {/* Visually hidden summary for AEO */}
+      <div className="sr-only" role="doc-abstract">
+        <h2>Contact Karavan Hub</h2>
+        <p>Karavan Hub offers free IT consultations for small and medium businesses. Based in Pelham, Niagara, Ontario, Canada. Services include custom software development, AI automation, web design, data analytics, and digital transformation.</p>
+        <dl>
+          <dt>Email</dt><dd>karavan.it.hub@gmail.com</dd>
+          <dt>Phone</dt><dd>905-301-3936</dd>
+          <dt>Location</dt><dd>Suite 31, Pelham, Ontario, Canada</dd>
+          <dt>Response time</dt><dd>Within 24 hours</dd>
+          <dt>Consultation</dt><dd>Free, no commitment</dd>
+          <dt>Book online</dt><dd>https://calendly.com/karavanhub/30min</dd>
+        </dl>
+      </div>
 
-          {/* Grid pattern overlay */}
-          <div
-            className="absolute inset-0 bg-grid-pattern opacity-5"
-            aria-hidden="true"
-          />
+      {/* ============================================
+         HERO SECTION WITH FORM
+         ============================================ */}
+      <section
+        className="relative overflow-hidden flex items-center min-h-[auto] lg:min-h-screen pt-[100px] md:pt-[110px] pb-16 md:pb-20"
+        style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)' }}
+        aria-labelledby="contact-heading"
+      >
+        {/* Animated gradient orbs */}
+        <div
+          className="absolute rounded-full opacity-40"
+          style={{
+            width: 500, height: 500, top: -150, right: -100,
+            background: 'radial-gradient(circle, #3b82f6 0%, transparent 70%)',
+            filter: 'blur(80px)',
+            animation: 'orbFloat 12s ease-in-out infinite',
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute rounded-full opacity-40"
+          style={{
+            width: 350, height: 350, bottom: -100, left: -80,
+            background: 'radial-gradient(circle, #0ea5e9 0%, transparent 70%)',
+            filter: 'blur(80px)',
+            animation: 'orbFloat 12s ease-in-out infinite',
+            animationDelay: '-4s',
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute rounded-full opacity-40"
+          style={{
+            width: 250, height: 250, top: '50%', left: '20%',
+            background: 'radial-gradient(circle, #6366f1 0%, transparent 70%)',
+            filter: 'blur(80px)',
+            animation: 'orbFloat 12s ease-in-out infinite',
+            animationDelay: '-8s',
+          }}
+          aria-hidden="true"
+        />
 
-          <div className="relative z-10 max-w-5xl mx-auto px-12 w-full grid lg:grid-cols-2 gap-20 items-center">
-            {/* Left Side - Contact Info */}
-            <div>
-              <div className="flex items-center gap-2 mb-6" data-geo-signal="availability" data-eeat="trust">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-xs font-semibold text-white/50 uppercase tracking-widest">
-                  Available Now
-                </span>
+        {/* Grid pattern overlay */}
+        <div
+          className="absolute inset-0 opacity-50 pointer-events-none"
+          style={{
+            backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
+          }}
+          aria-hidden="true"
+        />
+
+        {/* Grain overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.02] pointer-events-none"
+          style={{
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%\' height=\'100%\' filter=\'url(%23noise)\'/%3E%3C/svg%3E")',
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 w-full grid lg:grid-cols-2 gap-12 lg:gap-[80px] items-center">
+          {/* Left Side — Contact Info */}
+          <div className="text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 mb-6">
+              <div className="w-2 h-2 bg-green-500 rounded-full" style={{ animation: 'pulseDot 2s ease-in-out infinite' }} />
+              <span className="text-[11px] font-semibold text-white/50 uppercase tracking-[2px]">
+                Available Now
+              </span>
+            </div>
+
+            <h1
+              id="contact-heading"
+              className="contact-title font-headline text-white leading-[1.1] tracking-[-1px] mb-5"
+              style={{ fontSize: 'clamp(36px, 5vw, 52px)', fontWeight: 300 }}
+            >
+              Let's talk about<br />
+              <span
+                className="font-semibold block"
+                style={{
+                  background: 'linear-gradient(90deg, #fff 0%, #93c5fd 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                your project.
+              </span>
+            </h1>
+
+            <p className="contact-subtitle text-[16px] md:text-[17px] text-white/70 leading-[1.8] mb-10 md:mb-12 max-w-[500px] mx-auto lg:mx-0">
+              No sales pitch, no pressure. Just an honest conversation about where you are and where technology can take you.
+            </p>
+
+            {/* Contact Details */}
+            <address className="flex flex-col gap-6 not-italic items-center lg:items-start" itemScope itemType="https://schema.org/PostalAddress">
+              {/* Email */}
+              <div className="flex items-start gap-4">
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)' }}
+                >
+                  <svg className="w-5 h-5 text-white/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-[11px] font-semibold text-white/50 uppercase tracking-[1.5px] mb-1">Email</h4>
+                  <p>
+                    <a href="mailto:karavan.it.hub@gmail.com" className="text-white font-medium hover:text-blue-300 transition-colors" itemProp="email">
+                      karavan.it.hub@gmail.com
+                    </a>
+                  </p>
+                </div>
               </div>
 
-              <h1
-                id="contact-heading"
-                className="contact-title font-headline text-5xl md:text-6xl font-light text-white mb-5 leading-tight tracking-tight"
-                data-speakable="true"
-              >
-                Let's talk about
-                <br />
-                <span className="font-semibold block bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
-                  your project.
-                </span>
-              </h1>
-
-              <p className="contact-subtitle text-lg text-white/70 leading-relaxed mb-12" data-speakable="true" data-geo-signal="value-proposition">
-                No sales pitch, no pressure. Just an honest conversation about where you
-                are and where technology can take you.
-              </p>
-
-              {/* Contact Details */}
-              <address className="flex flex-col gap-6 not-italic" itemScope itemType="https://schema.org/PostalAddress">
-                {/* Email */}
-                <div className="flex items-start gap-4" data-geo-signal="contact">
-                  <div className="w-11 h-11 bg-white/10 border border-white/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-5 h-5 text-white/70"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                      <polyline points="22,6 12,13 2,6" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-semibold text-white/50 uppercase tracking-widest mb-1">
-                      Email
-                    </h4>
-                    <p>
-                      <a
-                        href="mailto:karavan.it.hub@gmail.com"
-                        className="text-white hover:text-blue-300 transition-colors"
-                        itemProp="email"
-                      >
-                        karavan.it.hub@gmail.com
-                      </a>
-                    </p>
-                  </div>
-                </div>
-
-                {/* Phone */}
-                <div className="flex items-start gap-4" data-geo-signal="contact">
-                  <div className="w-11 h-11 bg-white/10 border border-white/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-5 h-5 text-white/70"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-semibold text-white/50 uppercase tracking-widest mb-1">
-                      Phone
-                    </h4>
-                    <p>
-                      <a
-                        href="tel:+19053013936"
-                        className="text-white hover:text-blue-300 transition-colors"
-                        itemProp="telephone"
-                      >
-                        905-301-3936
-                      </a>
-                    </p>
-                  </div>
-                </div>
-
-                {/* Location */}
-                <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 bg-white/10 border border-white/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-5 h-5 text-white/70"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-semibold text-white/50 uppercase tracking-widest mb-1">
-                      Location
-                    </h4>
-                    <p className="text-white">
-                      <span itemProp="streetAddress">Suite 31</span>, <span itemProp="addressLocality">Pelham</span>, <span itemProp="addressRegion">Ontario</span>
-                      <br />
-                      <span itemProp="addressCountry">Canada</span>
-                    </p>
-                  </div>
-                </div>
-              </address>
-
-              {/* Response Badge */}
-              <div className="mt-8 inline-flex items-center gap-2 bg-green-500/15 border border-green-500/30 px-4 py-2.5 rounded-full response-badge" data-eeat="trust" data-geo-signal="responsiveness" role="status" aria-live="polite">
-                <svg
-                  className="w-4 h-4 text-green-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
+              {/* Phone */}
+              <div className="flex items-start gap-4">
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)' }}
                 >
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
+                  <svg className="w-5 h-5 text-white/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-[11px] font-semibold text-white/50 uppercase tracking-[1.5px] mb-1">Phone</h4>
+                  <p>
+                    <a href="tel:+19053013936" className="text-white font-medium hover:text-blue-300 transition-colors" itemProp="telephone">
+                      905-301-3936
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              {/* Location */}
+              <div className="flex items-start gap-4">
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)' }}
+                >
+                  <svg className="w-5 h-5 text-white/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-[11px] font-semibold text-white/50 uppercase tracking-[1.5px] mb-1">Location</h4>
+                  <p className="text-white font-medium">
+                    <span itemProp="streetAddress">Suite 31</span>, <span itemProp="addressLocality">Pelham</span>, <span itemProp="addressRegion">Ontario</span>
+                    <br />
+                    <span itemProp="addressCountry">Canada</span>
+                  </p>
+                </div>
+              </div>
+            </address>
+
+            {/* Response Badge */}
+            <div className="mt-8 inline-flex items-center gap-2 px-4 py-2.5 rounded-full" style={{ background: 'rgba(34,197,94,0.15)', border: '1px solid rgba(34,197,94,0.3)' }} role="status">
+              <svg className="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span className="response-text text-sm text-green-300 font-medium">
+                Usually responds within 24 hours
+              </span>
+            </div>
+          </div>
+
+          {/* Right Side — Form */}
+          <ContactForm />
+        </div>
+      </section>
+
+      {/* ============================================
+         ALTERNATIVE CONTACT OPTIONS
+         ============================================ */}
+      <section
+        className="py-16 md:py-20"
+        style={{ background: '#f9fafb' }}
+        aria-labelledby="alt-contact-heading"
+      >
+        <div className="max-w-[900px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 id="alt-contact-heading" className="font-headline text-[24px] sm:text-[28px] font-bold text-[var(--text-dark)] mb-3">
+              Prefer another way to connect?
+            </h2>
+            <p className="text-base text-[var(--text-body)]">
+              Pick whatever feels easiest.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Book a Call */}
+            <article className="bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style={{ border: '1px solid #e5e7eb' }}>
+              <div className="w-14 h-14 bg-[#eff6ff] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
                 </svg>
-                <span className="text-sm text-green-300 font-medium" data-speakable="true">
-                  Usually responds within 24 hours
-                </span>
               </div>
-            </div>
-
-            {/* Right Side - Form */}
-            <ContactForm />
-          </div>
-        </section>
-
-        {/* ============================================
-            ALTERNATIVE CONTACT OPTIONS
-            ============================================ */}
-        <section
-          className="py-20 bg-stone-50"
-          aria-labelledby="alt-contact-heading"
-          data-geo-signal="multi-channel"
-        >
-          <div className="max-w-4xl mx-auto px-12">
-            <div className="text-center mb-12">
-              <h2
-                id="alt-contact-heading"
-                className="font-headline text-3xl font-bold text-text-dark mb-3"
+              <h3 className="font-headline text-base font-bold text-[var(--text-dark)] mb-2">Book a Call</h3>
+              <p className="text-sm text-[var(--text-muted)] mb-4 leading-[1.6]">
+                Schedule a 30-minute discovery call at a time that works for you.
+              </p>
+              <a
+                href="https://calendly.com/karavanhub/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--primary)] hover:underline"
+                aria-label="View calendar to book a 30-minute discovery call"
               >
-                Prefer another way to connect?
-              </h2>
-              <p className="text-base text-text-body">
-                Choose the method that works best for you.
+                View Calendar
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </article>
+
+            {/* LinkedIn */}
+            <article className="bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style={{ border: '1px solid #e5e7eb' }}>
+              <div className="w-14 h-14 bg-[#eff6ff] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <h3 className="font-headline text-base font-bold text-[var(--text-dark)] mb-2">LinkedIn</h3>
+              <p className="text-sm text-[var(--text-muted)] mb-4 leading-[1.6]">
+                Say hello on LinkedIn. We actually reply.
+              </p>
+              <a
+                href="https://www.linkedin.com/company/karavanhub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--primary)] hover:underline"
+                aria-label="Connect with Karavan Hub on LinkedIn"
+              >
+                Connect
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </article>
+
+            {/* Instagram */}
+            <article className="bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style={{ border: '1px solid #e5e7eb' }}>
+              <div className="w-14 h-14 bg-[#eff6ff] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </div>
+              <h3 className="font-headline text-base font-bold text-[var(--text-dark)] mb-2">Instagram</h3>
+              <p className="text-sm text-[var(--text-muted)] mb-4 leading-[1.6]">
+                Behind the scenes and the occasional hot take.
+              </p>
+              <a
+                href="https://www.instagram.com/karavanhub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--primary)] hover:underline"
+                aria-label="Follow Karavan Hub on Instagram"
+              >
+                Follow
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================
+         FAQ SECTION
+         ============================================ */}
+      <section
+        className="py-16 md:py-20 bg-white"
+        aria-labelledby="faq-heading"
+      >
+        <div className="max-w-[700px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 id="faq-heading" className="font-headline text-[24px] sm:text-[28px] font-bold text-[var(--text-dark)] mb-2">
+              Common questions
+            </h2>
+            <p className="text-base text-[var(--text-body)]">
+              Quick answers to help you decide
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <div className="bg-[#f8fafc] rounded-xl p-6">
+              <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">What happens after I submit the form?</h3>
+              <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
+                We review your message and get back to you within 24 hours (usually much sooner). No automated responses. You hear from a real person who's ready to help.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              {/* Book a Call Card */}
-              <article className="bg-white rounded-2xl p-8 border border-slate-200 transition-all hover:-translate-y-1 hover:shadow-lg hover:border-primary" role="listitem" data-eeat="accessibility">
-                <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-4 mx-auto">
-                  <Calendar className="w-6 h-6 text-primary" aria-hidden="true" />
-                </div>
-                <h3 className="font-headline text-base font-bold text-text-dark text-center mb-2">
-                  Book a Call
-                </h3>
-                <p className="text-sm text-text-muted text-center mb-4">
-                  Schedule a 30-minute discovery call at a time that works for you.
-                </p>
-                <a
-                  href="https://calendly.com/karavanhub/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline mx-auto"
-                  aria-label="View calendar to book a 30-minute discovery call"
-                >
-                  View Calendar
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </a>
-              </article>
+            <div className="bg-[#f8fafc] rounded-xl p-6">
+              <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">Is the consultation really free?</h3>
+              <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
+                Yes, completely free with no strings attached. We believe in building relationships first. If we're not the right fit, we'll tell you honestly and might even point you toward someone who is.
+              </p>
+            </div>
 
-              {/* LinkedIn Card */}
-              <article className="bg-white rounded-2xl p-8 border border-slate-200 transition-all hover:-translate-y-1 hover:shadow-lg hover:border-primary" role="listitem" data-eeat="social-proof">
-                <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-4 mx-auto">
-                  <Linkedin className="w-6 h-6 text-primary" aria-hidden="true" />
-                </div>
-                <h3 className="font-headline text-base font-bold text-text-dark text-center mb-2">
-                  LinkedIn
-                </h3>
-                <p className="text-sm text-text-muted text-center mb-4">
-                  Connect with us professionally on LinkedIn.
-                </p>
-                <a
-                  href="https://www.linkedin.com/company/karavanhub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline mx-auto"
-                  aria-label="Connect with Karavan Hub on LinkedIn"
-                >
-                  Connect
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </a>
-              </article>
+            <div className="bg-[#f8fafc] rounded-xl p-6">
+              <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">What if I'm not sure what I need?</h3>
+              <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
+                That's perfectly fine. Most people don't know exactly what they need when they first reach out. Tell us about your challenges, and we'll help figure out the best path forward. No pressure, no jargon.
+              </p>
+            </div>
 
-              {/* Instagram Card */}
-              <article className="bg-white rounded-2xl p-8 border border-slate-200 transition-all hover:-translate-y-1 hover:shadow-lg hover:border-primary" role="listitem" data-eeat="social-proof">
-                <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-4 mx-auto">
-                  <Instagram className="w-6 h-6 text-primary" aria-hidden="true" />
-                </div>
-                <h3 className="font-headline text-base font-bold text-text-dark text-center mb-2">
-                  Instagram
-                </h3>
-                <p className="text-sm text-text-muted text-center mb-4">
-                  Follow us for updates, insights, and behind the scenes.
-                </p>
-                <a
-                  href="https://www.instagram.com/karavanhub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline mx-auto"
-                  aria-label="Follow Karavan Hub on Instagram"
-                >
-                  Follow
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </a>
-              </article>
+            <div className="bg-[#f8fafc] rounded-xl p-6">
+              <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">Do you work with businesses outside Ontario?</h3>
+              <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
+                Absolutely. While we're based in Niagara, we work with clients across Canada and internationally. Most of our collaboration happens remotely, so location isn't a barrier.
+              </p>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+
+      {/* CSS Keyframe Animations */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes orbFloat {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(30px, -30px) scale(1.05); }
+          66% { transform: translate(-20px, 20px) scale(0.95); }
+        }
+        @keyframes pulseDot {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.6; transform: scale(1.2); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+      `}} />
     </>
-  );
+  )
 }

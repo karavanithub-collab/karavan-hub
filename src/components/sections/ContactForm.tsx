@@ -131,7 +131,7 @@ export default function ContactForm() {
         {/* Gradient accent bar at top */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500" />
 
-        <div className="p-11">
+        <div className="p-6 sm:p-8 md:p-11">
           {/* Form Header */}
           <div className="text-center mb-8 pb-6 border-b border-slate-100 relative" data-eeat="trust">
             <h2
@@ -162,7 +162,7 @@ export default function ContactForm() {
           {/* Form */}
           <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
             {/* First Name & Last Name Row */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-0">
                 <label htmlFor="firstName" className="text-xs font-semibold text-text-muted uppercase letter-spacing-0.5 mb-2">
                   First name
@@ -359,7 +359,7 @@ export default function ContactForm() {
             </button>
 
             {/* Trust Indicators */}
-            <div className="flex items-center justify-center gap-5 mt-5 pt-5 border-t border-slate-100" data-eeat="trust" data-geo-signal="responsiveness">
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-5 pt-5 border-t border-slate-100" data-eeat="trust" data-geo-signal="responsiveness">
               <div className="flex items-center gap-1.5 text-xs text-slate-600 font-medium">
                 <svg
                   className="w-3.5 h-3.5 text-green-600"
