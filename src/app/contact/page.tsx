@@ -340,7 +340,13 @@ export default function ContactPage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 w-full grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[80px] items-center">
+        {/* Floating particle dots */}
+        <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '15%', left: '20%', boxShadow: '0 0 15px rgba(147,197,253,0.4)', willChange: 'transform', transform: 'translateZ(0)' }} aria-hidden="true" />
+        <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ top: '35%', right: '15%', animationDelay: '1.5s', boxShadow: '0 0 15px rgba(147,197,253,0.4)', willChange: 'transform', transform: 'translateZ(0)' }} aria-hidden="true" />
+        <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" style={{ bottom: '25%', left: '15%', animationDelay: '3s', boxShadow: '0 0 15px rgba(147,197,253,0.4)', willChange: 'transform', transform: 'translateZ(0)' }} aria-hidden="true" />
+        <div className="absolute w-1.5 h-1.5 bg-[rgba(34,211,238,0.8)] rounded-full animate-float" style={{ bottom: '20%', left: '35%', animationDelay: '5s', boxShadow: '0 0 15px rgba(34,211,238,0.4)', willChange: 'transform', transform: 'translateZ(0)' }} aria-hidden="true" />
+
+        <div className="relative z-10 max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 w-full grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[80px] items-center">
           {/* Left Side — Contact Info */}
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 mb-6">
@@ -453,6 +459,12 @@ export default function ContactPage() {
           {/* Right Side — Form */}
           <ContactForm />
         </div>
+
+        {/* Scroll indicator */}
+        <div className="hidden lg:flex flex-col items-center mt-12 opacity-40 relative z-10">
+          <span className="text-[10px] font-semibold text-white/60 uppercase tracking-[3px]">Scroll</span>
+          <div className="w-px h-8 mt-2 bg-gradient-to-b from-white/40 to-transparent" />
+        </div>
       </section>
 
       {/* ============================================
@@ -475,8 +487,8 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Book a Call */}
-            <article className="bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style={{ border: '1px solid #e5e7eb' }}>
-              <div className="w-14 h-14 bg-[#eff6ff] rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <article className="bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-[#e5e7eb] border-l-[3px] border-l-transparent hover:border-l-[#2563eb]">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' }}>
                 <svg className="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                   <line x1="16" y1="2" x2="16" y2="6" />
@@ -504,8 +516,8 @@ export default function ContactPage() {
             </article>
 
             {/* LinkedIn */}
-            <article className="bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style={{ border: '1px solid #e5e7eb' }}>
-              <div className="w-14 h-14 bg-[#eff6ff] rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <article className="bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-[#e5e7eb] border-l-[3px] border-l-transparent hover:border-l-[#22d3ee]">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' }}>
                 <svg className="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                   <rect x="2" y="9" width="4" height="12" />
@@ -532,8 +544,8 @@ export default function ContactPage() {
             </article>
 
             {/* Instagram */}
-            <article className="bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style={{ border: '1px solid #e5e7eb' }}>
-              <div className="w-14 h-14 bg-[#eff6ff] rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <article className="bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-[#e5e7eb] border-l-[3px] border-l-transparent hover:border-l-[#8b5cf6]">
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' }}>
                 <svg className="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -580,33 +592,120 @@ export default function ContactPage() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <div className="bg-[#f8fafc] rounded-xl p-6">
+            <div className="bg-[#f8fafc] rounded-xl p-6 border-l-2 border-l-[#2563eb] transition-all duration-200 hover:bg-[#f0f4ff] hover:shadow-sm">
               <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">What happens after I submit the form?</h3>
               <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
                 A real person reads it. Not a bot, not an auto-responder. We typically reply within a few hours, always within 24.
               </p>
             </div>
 
-            <div className="bg-[#f8fafc] rounded-xl p-6">
+            <div className="bg-[#f8fafc] rounded-xl p-6 border-l-2 border-l-[#22d3ee] transition-all duration-200 hover:bg-[#f0f4ff] hover:shadow-sm">
               <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">Is the consultation really free?</h3>
               <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
                 100%. No invoice, no "discovery phase" that secretly costs money. We'd rather have a good conversation and earn your trust than chase a quick sale. And if we're not the right fit, we'll say so.
               </p>
             </div>
 
-            <div className="bg-[#f8fafc] rounded-xl p-6">
+            <div className="bg-[#f8fafc] rounded-xl p-6 border-l-2 border-l-[#8b5cf6] transition-all duration-200 hover:bg-[#f0f4ff] hover:shadow-sm">
               <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">What if I'm not sure what I need?</h3>
               <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
                 That's most people. Seriously. You don't need a brief or a spec sheet. Just tell us what's bugging you about how things work right now, and we'll figure out the rest together.
               </p>
             </div>
 
-            <div className="bg-[#f8fafc] rounded-xl p-6">
+            <div className="bg-[#f8fafc] rounded-xl p-6 border-l-2 border-l-[#2563eb] transition-all duration-200 hover:bg-[#f0f4ff] hover:shadow-sm">
               <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">Do you work with businesses outside Ontario?</h3>
               <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
                 We're based in Niagara but we work with clients across Canada, the US, and Saudi Arabia. Everything's remote-first. As long as we can get on a call, we're good.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================
+         CTA SECTION
+         ============================================ */}
+      <section
+        className="relative py-20 md:py-28 overflow-hidden"
+        style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e293b 100%)' }}
+        aria-labelledby="cta-heading"
+      >
+        {/* Background orbs */}
+        <div
+          className="absolute rounded-full opacity-30"
+          style={{
+            width: 400, height: 400, top: -100, right: -80,
+            background: 'radial-gradient(circle, #3b82f6 0%, transparent 70%)',
+            filter: 'blur(80px)',
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute rounded-full opacity-20"
+          style={{
+            width: 300, height: 300, bottom: -80, left: -60,
+            background: 'radial-gradient(circle, #22d3ee 0%, transparent 70%)',
+            filter: 'blur(80px)',
+          }}
+          aria-hidden="true"
+        />
+
+        {/* Grid overlay */}
+        <div
+          className="absolute inset-0 opacity-30 pointer-events-none"
+          style={{
+            backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative z-10 max-w-[800px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10">
+          <div
+            className="rounded-3xl p-8 md:p-12 text-center"
+            style={{
+              background: 'rgba(255,255,255,0.08)',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255,255,255,0.1)',
+            }}
+          >
+            <h2
+              id="cta-heading"
+              className="font-headline text-[28px] sm:text-[32px] md:text-[36px] font-bold text-white mb-4"
+            >
+              Still not sure?{' '}
+              <span
+                style={{
+                  background: 'linear-gradient(90deg, #93c5fd, #22d3ee)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Let's talk.
+              </span>
+            </h2>
+            <p className="text-white/60 text-base md:text-[17px] leading-[1.7] mb-8 max-w-[520px] mx-auto">
+              No agenda, no pitch deck. Just a real conversation about what's working and what isn't.
+            </p>
+            <a
+              href="https://calendly.com/karavanhub/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-8 py-4 font-headline text-sm font-semibold text-white uppercase tracking-[1.5px] rounded-2xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              style={{
+                background: 'var(--primary)',
+              }}
+              aria-label="Book a free 30-minute consultation call"
+            >
+              Book a Conversation
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
