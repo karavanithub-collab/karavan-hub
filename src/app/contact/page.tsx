@@ -459,12 +459,6 @@ export default function ContactPage() {
           {/* Right Side — Form */}
           <ContactForm />
         </div>
-
-        {/* Scroll indicator */}
-        <div className="hidden lg:flex flex-col items-center mt-12 opacity-40 relative z-10">
-          <span className="text-[10px] font-semibold text-white/60 uppercase tracking-[3px]">Scroll</span>
-          <div className="w-px h-8 mt-2 bg-gradient-to-b from-white/40 to-transparent" />
-        </div>
       </section>
 
       {/* ============================================
