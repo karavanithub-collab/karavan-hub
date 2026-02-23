@@ -59,6 +59,9 @@ export const metadata: Metadata = {
     'dc.creator': 'Karavan Hub',
     'dc.subject': 'IT Consulting Contact, Free Consultation, Niagara Ontario',
     'dc.language': 'en-CA',
+    'dc.type': 'InteractiveResource',
+    'dc.coverage': 'Niagara Region, Ontario, Canada',
+    'dc.format': 'text/html',
   },
 }
 
@@ -104,6 +107,7 @@ const schema = {
         latitude: 43.0334,
         longitude: -79.3288,
       },
+      hasMap: 'https://www.google.com/maps/place/Pelham,+ON,+Canada',
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'Country', name: 'United States' },
@@ -115,6 +119,11 @@ const schema = {
         { '@type': 'City', name: 'Welland' },
         { '@type': 'City', name: 'Hamilton' },
         { '@type': 'City', name: 'Toronto' },
+        {
+          '@type': 'GeoCircle',
+          geoMidpoint: { '@type': 'GeoCoordinates', latitude: 43.0896, longitude: -79.0849 },
+          geoRadius: '80000',
+        },
       ],
       potentialAction: {
         '@type': 'ReserveAction',
@@ -158,7 +167,7 @@ const schema = {
       breadcrumb: { '@id': 'https://karavanhub.com/contact/#breadcrumb' },
       inLanguage: 'en-CA',
       datePublished: '2024-01-01',
-      dateModified: '2026-02-17',
+      dateModified: '2026-02-23',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.contact-title', '.contact-subtitle', '.response-text'],
@@ -169,6 +178,21 @@ const schema = {
         'https://karavanhub.com/it-solutions',
         'https://calendly.com/karavanhub/30min',
       ],
+      mentions: [
+        { '@type': 'Thing', name: 'Custom Software Development' },
+        { '@type': 'Thing', name: 'AI Automation' },
+        { '@type': 'Thing', name: 'Web Design' },
+        { '@type': 'Thing', name: 'Data Analytics' },
+        { '@type': 'Thing', name: 'Digital Transformation' },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://karavanhub.com/#website',
+      url: 'https://karavanhub.com',
+      name: 'Karavan Hub',
+      publisher: { '@id': 'https://karavanhub.com/#organization' },
+      inLanguage: 'en-CA',
     },
     {
       '@type': 'BreadcrumbList',
@@ -246,8 +270,12 @@ export default function ContactPage() {
           <dt>Phone</dt><dd>905-301-3936</dd>
           <dt>Location</dt><dd>Suite 31, Pelham, Ontario, Canada</dd>
           <dt>Response time</dt><dd>Within 24 hours</dd>
-          <dt>Consultation</dt><dd>Free, no commitment</dd>
+          <dt>Consultation</dt><dd>Free 30-minute consultation, no commitment</dd>
           <dt>Book online</dt><dd>https://calendly.com/karavanhub/30min</dd>
+          <dt>Business hours</dt><dd>Monday to Friday, 9:00 AM to 5:00 PM EST</dd>
+          <dt>Service areas</dt><dd>Niagara Region, Ontario, Canada, United States, Saudi Arabia</dd>
+          <dt>Services offered</dt><dd>Custom software development, AI integration and automation, web design and development, data analytics and business intelligence, digital transformation strategy, workflow optimization</dd>
+          <dt>Languages</dt><dd>English</dd>
         </dl>
       </div>
 
@@ -261,7 +289,7 @@ export default function ContactPage() {
       >
         {/* Animated gradient orbs */}
         <div
-          className="absolute rounded-full opacity-40"
+          className="absolute rounded-full opacity-40 hidden md:block"
           style={{
             width: 500, height: 500, top: -150, right: -100,
             background: 'radial-gradient(circle, #3b82f6 0%, transparent 70%)',
@@ -312,7 +340,7 @@ export default function ContactPage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 w-full grid lg:grid-cols-2 gap-12 lg:gap-[80px] items-center">
+        <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 w-full grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[80px] items-center">
           {/* Left Side — Contact Info */}
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 mb-6">
@@ -341,12 +369,12 @@ export default function ContactPage() {
               </span>
             </h1>
 
-            <p className="contact-subtitle text-[16px] md:text-[17px] text-white/70 leading-[1.8] mb-10 md:mb-12 max-w-[500px] mx-auto lg:mx-0">
+            <p className="contact-subtitle text-[15px] md:text-[17px] text-white/70 leading-[1.7] md:leading-[1.8] mb-8 md:mb-12 max-w-[500px] mx-auto lg:mx-0">
               Free 30-minute consultation. Real answers about your tech, your timeline, your budget. No follow-up spam.
             </p>
 
             {/* Contact Details */}
-            <address className="flex flex-col gap-6 not-italic items-center lg:items-start" itemScope itemType="https://schema.org/PostalAddress">
+            <address className="flex flex-col gap-5 md:gap-6 not-italic items-center lg:items-start" itemScope itemType="https://schema.org/PostalAddress">
               {/* Email */}
               <div className="flex items-start gap-4">
                 <div
