@@ -380,7 +380,7 @@ export default function ContactPage() {
             </p>
 
             {/* Contact Details */}
-            <address className="flex flex-col gap-5 md:gap-6 not-italic items-center lg:items-start" itemScope itemType="https://schema.org/PostalAddress">
+            <address className="flex flex-col gap-5 md:gap-6 not-italic w-fit mx-auto lg:mx-0 text-left" itemScope itemType="https://schema.org/PostalAddress">
               {/* Email */}
               <div className="flex items-start gap-4">
                 <div
