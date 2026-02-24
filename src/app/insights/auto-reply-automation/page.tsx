@@ -9,27 +9,47 @@ export const metadata: Metadata = {
   keywords:
     'AI automation Niagara, missed call text back, auto reply automation, small business automation, Niagara IT services, AI consulting Ontario, business automation Canada, automated text response',
   authors: [{ name: 'Nyah S.', url: 'https://karavanhub.com' }],
-  robots: 'index, follow',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   alternates: {
-    canonical: 'https://karavanhub.com/blog/auto-reply-automation',
+    canonical: 'https://karavanhub.com/insights/auto-reply-automation',
+    languages: {
+      'en-CA': 'https://karavanhub.com/insights/auto-reply-automation',
+      en: 'https://karavanhub.com/insights/auto-reply-automation',
+    },
   },
   openGraph: {
     type: 'article',
     title: 'What If You Never Had to Answer "What Are Your Hours?" Again?',
     description:
       'Small businesses miss 62% of calls. Learn how AI-powered auto-reply automation helps retain customers and increase revenue.',
-    url: 'https://karavanhub.com/blog/auto-reply-automation',
+    url: 'https://karavanhub.com/insights/auto-reply-automation',
     siteName: 'Karavan Hub',
     locale: 'en_CA',
     authors: ['Nyah S.'],
     publishedTime: '2026-02-03T00:00:00Z',
     modifiedTime: '2026-02-03T00:00:00Z',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'What If You Never Had to Answer "What Are Your Hours?" Again?',
+    description:
+      'Small businesses miss 62% of calls. AI-powered auto-reply automation helps retain customers by responding instantly.',
+  },
   other: {
     'geo.region': 'CA-ON',
     'geo.placename': 'Niagara Region',
     'geo.position': '43.0896;-79.0849',
-    'ICBM': '43.0896, -79.0849',
+    ICBM: '43.0896, -79.0849',
   },
 };
 
@@ -61,7 +81,7 @@ const SCHEMA_LD = [
     },
     datePublished: '2026-02-03',
     dateModified: '2026-02-03',
-    mainEntityOfPage: 'https://karavanhub.com/blog/auto-reply-automation',
+    mainEntityOfPage: 'https://karavanhub.com/insights/auto-reply-automation',
     keywords: [
       'AI automation',
       'missed call text back',
@@ -115,7 +135,7 @@ const SCHEMA_LD = [
       },
       {
         '@type': 'Question',
-        name: 'Why don\'t customers leave voicemails?',
+        name: "Why don't customers leave voicemails?",
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'An eVoice study found that 80% of callers who reach voicemail hang up without leaving a message. Up to 80% of callers now prefer texting over voicemail.',
@@ -162,6 +182,30 @@ const SCHEMA_LD = [
       longitude: '-79.0849',
     },
   },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://karavanhub.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Insights',
+        item: 'https://karavanhub.com/insights',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Auto-Reply Automation',
+        item: 'https://karavanhub.com/insights/auto-reply-automation',
+      },
+    ],
+  },
 ];
 
 const paragraphStyle = {
@@ -189,7 +233,7 @@ const h3Style = {
   fontWeight: '500',
 };
 
-export default function BlogPage() {
+export default function AutoReplyArticlePage() {
   return (
     <>
       {/* Schema.org JSON-LD */}
@@ -199,7 +243,30 @@ export default function BlogPage() {
       />
 
       <div className="min-h-screen" style={{ backgroundColor: '#F5F5F0' }}>
-        <div className="mx-auto px-6 py-10 lg:py-12" style={{ maxWidth: '900px' }}>
+        <div className="mx-auto px-6 pt-[120px] md:pt-[140px] pb-10 lg:pb-12" style={{ maxWidth: '900px' }}>
+
+          {/* Back to Insights */}
+          <Link
+            href="/insights"
+            className="inline-flex items-center gap-2 font-geist-mono text-xs tracking-wide mb-8 transition-colors duration-200 hover:text-[#1A5A5A]"
+            style={{ color: '#999999', fontWeight: 400 }}
+          >
+            <svg
+              className="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="19" y1="12" x2="5" y2="12" />
+              <polyline points="12 19 5 12 12 5" />
+            </svg>
+            Back to Insights
+          </Link>
+
           {/* Hero Image - ASCII art on dark background */}
           <div className="w-full bg-blog-code rounded-3xl overflow-hidden mb-8">
             <div className="bg-blog-code p-12 lg:p-16 flex items-center justify-center min-h-96">

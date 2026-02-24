@@ -39,9 +39,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: 'https://karavanhub.com/blog',
+      url: 'https://karavanhub.com/insights',
       lastModified: new Date(),
       changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: 'https://karavanhub.com/insights/auto-reply-automation',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
       priority: 0.6,
     },
   ];
