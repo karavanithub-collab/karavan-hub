@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const footerLinks = {
   it: [
@@ -21,6 +24,8 @@ const footerLinks = {
 }
 
 export default function Footer() {
+  const pathname = usePathname()
+  const isInsights = pathname?.startsWith('/insights')
   const currentYear = new Date().getFullYear()
 
   // Instagram SVG
@@ -87,19 +92,23 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-gradient-to-b from-ocean-darkest via-ocean-dark to-ocean-mid text-white pt-[80px] pb-10"
+      className={`text-white pt-[80px] pb-10 ${
+        isInsights
+          ? 'bg-[#2A2A2A]'
+          : 'bg-gradient-to-b from-ocean-darkest via-ocean-dark to-ocean-mid'
+      }`}
       role="contentinfo"
     >
       <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Footer Top */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8 md:gap-10 lg:gap-[64px] pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-8 md:gap-10 lg:gap-[64px] pb-12 border-b border-white/[0.06]">
           {/* Brand Column */}
           <div>
             <Link href="/" className="inline-block mb-4">
               <span className="font-headline text-2xl font-bold tracking-[-0.5px] text-white">
                 Karavan
               </span>
-              <span className="font-headline text-2xl font-bold tracking-[-0.5px] text-accent-cyan">
+              <span className={`font-headline text-2xl font-bold tracking-[-0.5px] ${isInsights ? 'text-[#1A5A5A]' : 'text-accent-cyan'}`}>
                 Hub
               </span>
             </Link>
@@ -116,7 +125,7 @@ export default function Footer() {
                 href="https://www.instagram.com/karavanhub"
                 aria-label="Follow us on Instagram"
                 rel="noopener noreferrer"
-                className="text-white/50 hover:text-primary transition-colors duration-250"
+                className={`text-white/50 transition-colors duration-250 ${isInsights ? 'hover:text-[#1A5A5A]' : 'hover:text-primary'}`}
               >
                 <InstagramIcon />
               </a>
@@ -124,7 +133,7 @@ export default function Footer() {
                 href="https://www.tiktok.com/@karavanhub"
                 aria-label="Follow us on TikTok"
                 rel="noopener noreferrer"
-                className="text-white/50 hover:text-primary transition-colors duration-250"
+                className={`text-white/50 transition-colors duration-250 ${isInsights ? 'hover:text-[#1A5A5A]' : 'hover:text-primary'}`}
               >
                 <TikTokIcon />
               </a>
@@ -132,7 +141,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/karavanhub"
                 aria-label="Follow us on LinkedIn"
                 rel="noopener noreferrer"
-                className="text-white/50 hover:text-primary transition-colors duration-250"
+                className={`text-white/50 transition-colors duration-250 ${isInsights ? 'hover:text-[#1A5A5A]' : 'hover:text-primary'}`}
               >
                 <LinkedInIcon />
               </a>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 type DropdownMenus = {
@@ -33,6 +34,8 @@ type MobileSubmenus = {
 }
 
 export default function Navbar() {
+  const pathname = usePathname()
+  const isInsights = pathname?.startsWith('/insights')
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileSubmenus, setMobileSubmenus] = useState<MobileSubmenus>({
@@ -101,7 +104,9 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
           isScrolled
             ? 'bg-white/98 backdrop-blur-[12px] shadow-nav'
-            : 'bg-transparent'
+            : isInsights
+              ? 'bg-[#F5F5F0]'
+              : 'bg-transparent'
         }`}
         role="navigation"
         aria-label="Main navigation"
@@ -111,14 +116,16 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-0 no-underline">
             <span
               className={`font-headline text-2xl font-bold tracking-[-0.5px] transition-colors duration-300 ${
-                isScrolled ? 'text-text-dark' : 'text-white'
+                isScrolled || isInsights ? 'text-text-dark' : 'text-white'
               }`}
             >
               Karavan
             </span>
             <span
               className={`font-headline text-2xl font-bold tracking-[-0.5px] transition-colors duration-300 ${
-                isScrolled ? 'text-primary' : 'text-accent-cyan'
+                isScrolled || isInsights
+                  ? isInsights ? 'text-[#1A5A5A]' : 'text-primary'
+                  : 'text-accent-cyan'
               }`}
             >
               Hub
@@ -131,10 +138,10 @@ export default function Navbar() {
             <li className="relative group">
               <Link
                 href="/ai-solutions"
-                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline group-hover:text-accent-cyan ${
-                  isScrolled
-                    ? 'text-text-body group-hover:text-primary'
-                    : 'text-white/90'
+                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline ${
+                  isScrolled || isInsights
+                    ? isInsights ? 'text-text-body group-hover:text-[#1A5A5A]' : 'text-text-body group-hover:text-primary'
+                    : 'text-white/90 group-hover:text-accent-cyan'
                 }`}
               >
                 AI Solutions
@@ -166,10 +173,10 @@ export default function Navbar() {
             <li className="relative group">
               <Link
                 href="/it-solutions"
-                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline group-hover:text-accent-cyan ${
-                  isScrolled
-                    ? 'text-text-body group-hover:text-primary'
-                    : 'text-white/90'
+                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline ${
+                  isScrolled || isInsights
+                    ? isInsights ? 'text-text-body group-hover:text-[#1A5A5A]' : 'text-text-body group-hover:text-primary'
+                    : 'text-white/90 group-hover:text-accent-cyan'
                 }`}
               >
                 IT Solutions
@@ -201,10 +208,10 @@ export default function Navbar() {
             <li className="relative group">
               <Link
                 href="/about"
-                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline group-hover:text-accent-cyan ${
-                  isScrolled
-                    ? 'text-text-body group-hover:text-primary'
-                    : 'text-white/90'
+                className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline ${
+                  isScrolled || isInsights
+                    ? isInsights ? 'text-text-body group-hover:text-[#1A5A5A]' : 'text-text-body group-hover:text-primary'
+                    : 'text-white/90 group-hover:text-accent-cyan'
                 }`}
               >
                 Company
@@ -232,23 +239,32 @@ export default function Navbar() {
           </ul>
 
           {/* Desktop CTA Button */}
-          <Link
-            href="/contact"
-            className="hidden lg:inline-block bg-accent-cyan text-slate-900 px-7 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:bg-cyan-500 hover:-translate-y-0.5"
-            style={{
-              boxShadow: '0 4px 20px rgba(34, 211, 238, 0.3)',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow =
-                '0 6px 24px rgba(34, 211, 238, 0.4)'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow =
-                '0 4px 20px rgba(34, 211, 238, 0.3)'
-            }}
-          >
-            CONNECT
-          </Link>
+          {isInsights ? (
+            <Link
+              href="/contact"
+              className="hidden lg:inline-block px-7 py-3 rounded-lg font-semibold text-sm transition-all duration-300 border-[1.5px] border-[#1A5A5A] text-[#1A5A5A] hover:bg-[#1A5A5A] hover:text-white"
+            >
+              CONNECT
+            </Link>
+          ) : (
+            <Link
+              href="/contact"
+              className="hidden lg:inline-block bg-accent-cyan text-slate-900 px-7 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:bg-cyan-500 hover:-translate-y-0.5"
+              style={{
+                boxShadow: '0 4px 20px rgba(34, 211, 238, 0.3)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  '0 6px 24px rgba(34, 211, 238, 0.4)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow =
+                  '0 4px 20px rgba(34, 211, 238, 0.3)'
+              }}
+            >
+              CONNECT
+            </Link>
+          )}
 
           {/* Mobile Menu Button */}
           <button
@@ -259,7 +275,7 @@ export default function Navbar() {
           >
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                isScrolled ? 'bg-text-dark' : 'bg-white'
+                isScrolled || isInsights ? 'bg-text-dark' : 'bg-white'
               } ${
                 mobileMenuOpen
                   ? 'rotate-45 translate-y-[5px] translate-x-[5px]'
@@ -268,12 +284,12 @@ export default function Navbar() {
             ></span>
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                isScrolled ? 'bg-text-dark' : 'bg-white'
+                isScrolled || isInsights ? 'bg-text-dark' : 'bg-white'
               } ${mobileMenuOpen ? 'opacity-0' : ''}`}
             ></span>
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                isScrolled ? 'bg-text-dark' : 'bg-white'
+                isScrolled || isInsights ? 'bg-text-dark' : 'bg-white'
               } ${
                 mobileMenuOpen
                   ? '-rotate-45 -translate-y-[5px] translate-x-[5px]'
