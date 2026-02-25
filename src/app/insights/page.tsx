@@ -195,36 +195,37 @@ export default function InsightsPage() {
            PAGE HEADER
            ============================================ */}
         <section
-          className="pt-[120px] md:pt-[140px] pb-8 md:pb-12"
+          className="pt-[130px] md:pt-[150px] pb-8 md:pb-10 border-b border-[#D4D4D0]"
           aria-labelledby="insights-heading"
         >
-          <div className="mx-auto px-6" style={{ maxWidth: '900px' }}>
-            <h1
-              id="insights-heading"
-              className="insights-title font-serif"
-              style={{
-                fontSize: 'clamp(40px, 5vw, 56px)',
-                fontWeight: 400,
-                lineHeight: 1.1,
-                letterSpacing: '-0.02em',
-                color: '#1A1A1A',
-                marginBottom: '16px',
-              }}
-            >
-              Insights
-            </h1>
-            <p
-              className="insights-subtitle"
-              style={{
-                fontSize: '17px',
-                lineHeight: 1.75,
-                color: '#6B6B6B',
-                fontWeight: 300,
-                maxWidth: '520px',
-              }}
-            >
-              Practical knowledge from people who build the tech. Written for business owners, not developers.
-            </p>
+          <div className="mx-auto px-6 sm:px-8" style={{ maxWidth: '1080px' }}>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-2 md:gap-8">
+              <h1
+                id="insights-heading"
+                className="insights-title font-serif"
+                style={{
+                  fontSize: 'clamp(40px, 5vw, 56px)',
+                  fontWeight: 400,
+                  lineHeight: 1.1,
+                  letterSpacing: '-0.02em',
+                  color: '#1A1A1A',
+                }}
+              >
+                Insights
+              </h1>
+              <p
+                className="insights-subtitle md:text-right md:pb-1"
+                style={{
+                  fontSize: '15px',
+                  lineHeight: 1.7,
+                  color: '#8A8A8A',
+                  fontWeight: 300,
+                  maxWidth: '340px',
+                }}
+              >
+                Practical knowledge from people who build the tech. Written for business owners, not developers.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -232,17 +233,17 @@ export default function InsightsPage() {
            FEATURED ARTICLE
            ============================================ */}
         <section
-          className="pb-12 md:pb-16"
+          className="pt-10 md:pt-14 pb-8 md:pb-10"
           aria-labelledby="featured-article-heading"
         >
-          <div className="mx-auto px-6" style={{ maxWidth: '900px' }}>
+          <div className="mx-auto px-6 sm:px-8" style={{ maxWidth: '1080px' }}>
             <Link
               href="/insights/auto-reply-automation"
-              className="group grid lg:grid-cols-[1.2fr_1fr] gap-6 lg:gap-12 items-center"
+              className="group block bg-white rounded-2xl overflow-hidden border border-[#E8E8E3] transition-all duration-300 hover:shadow-lg"
             >
-              {/* ASCII Hero Image */}
-              <div className="bg-blog-code rounded-2xl overflow-hidden">
-                <div className="p-8 lg:p-10 flex items-center justify-center min-h-[280px] lg:min-h-[360px]">
+              {/* ASCII Hero Image — full width inside card */}
+              <div className="bg-[#1A1A1A]">
+                <div className="px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12 flex items-center justify-center min-h-[200px] sm:min-h-[240px] lg:min-h-[280px]">
                   <pre
                     className="font-mono text-[4px] sm:text-[5px] md:text-[6px] lg:text-[7px] leading-tight text-green-400 whitespace-pre text-center overflow-x-auto select-none"
                     style={{ textShadow: '0 0 20px rgba(74, 222, 128, 0.3)' }}
@@ -285,25 +286,30 @@ export default function InsightsPage() {
                 </div>
               </div>
 
-              {/* Article Info */}
-              <div className="py-2">
-                <span
-                  className="inline-block px-3 py-1.5 rounded-full text-xs font-medium tracking-wide mb-5"
-                  style={{
-                    backgroundColor: 'rgba(26, 90, 90, 0.1)',
-                    color: '#1A5A5A',
-                  }}
-                >
-                  AI Automation
-                </span>
+              {/* Article Info — padded content area below image */}
+              <div className="p-6 sm:p-8 lg:p-10">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6 mb-5">
+                  <span
+                    className="inline-block self-start px-3 py-1.5 rounded-full text-xs font-medium tracking-wide"
+                    style={{
+                      backgroundColor: 'rgba(26, 90, 90, 0.08)',
+                      color: '#1A5A5A',
+                    }}
+                  >
+                    AI Automation
+                  </span>
+                  <p className="font-mono text-xs" style={{ color: '#ADADAD', fontWeight: 400 }}>
+                    Nyah S. &middot; Feb 3, 2026 &middot; 6 min read
+                  </p>
+                </div>
 
                 <h2
                   id="featured-article-heading"
-                  className="font-serif group-hover:text-blog-accent transition-colors duration-300"
+                  className="font-serif group-hover:text-[#1A5A5A] transition-colors duration-300"
                   style={{
-                    fontSize: 'clamp(22px, 3vw, 28px)',
+                    fontSize: 'clamp(24px, 3vw, 32px)',
                     fontWeight: 500,
-                    lineHeight: 1.3,
+                    lineHeight: 1.25,
                     letterSpacing: '-0.01em',
                     color: '#1A1A1A',
                     marginBottom: '14px',
@@ -314,28 +320,25 @@ export default function InsightsPage() {
 
                 <p
                   style={{
-                    fontSize: '15px',
+                    fontSize: '16px',
                     lineHeight: 1.75,
-                    color: '#4A4A4A',
+                    color: '#5A5A5A',
                     fontWeight: 300,
-                    marginBottom: '20px',
+                    maxWidth: '640px',
+                    marginBottom: '24px',
                   }}
                 >
                   Small businesses miss 62% of calls. Here's how AI-powered auto-reply automation helps retain customers and grow revenue by responding in seconds.
                 </p>
 
-                <p className="font-geist-mono text-xs mb-6" style={{ color: '#999999', fontWeight: 400 }}>
-                  Nyah S. &middot; Feb 3, 2026 &middot; 6 min read
-                </p>
-
                 <span
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 group-hover:bg-[#1A5A5A] group-hover:text-white"
                   style={{
-                    border: '1px solid #1A5A5A',
+                    border: '1.5px solid #1A5A5A',
                     color: '#1A5A5A',
                   }}
                 >
-                  Read more
+                  Read article
                   <svg
                     className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                     viewBox="0 0 24 24"
@@ -352,11 +355,17 @@ export default function InsightsPage() {
                 </span>
               </div>
             </Link>
-
-            {/* Divider */}
-            <div className="mt-12 md:mt-16" style={{ borderBottom: '1px solid #E0E0E0' }} />
           </div>
         </section>
+
+        {/* ============================================
+           MORE ARTICLES COMING
+           ============================================ */}
+        <div className="text-center pt-2 pb-4">
+          <p className="font-mono text-[11px] tracking-[0.15em] uppercase" style={{ color: '#B5B5B0' }}>
+            More articles coming soon
+          </p>
+        </div>
 
         {/* ============================================
            ARTICLE GRID (future-ready)
@@ -365,7 +374,7 @@ export default function InsightsPage() {
            ============================================ */}
         {/*
         <section className="pb-12 md:pb-16" aria-labelledby="more-articles-heading">
-          <div className="mx-auto px-6" style={{ maxWidth: '900px' }}>
+          <div className="mx-auto px-6 sm:px-8" style={{ maxWidth: '1080px' }}>
             <h2
               id="more-articles-heading"
               className="font-serif mb-8"
@@ -378,19 +387,7 @@ export default function InsightsPage() {
               More articles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Article cards go here. Each card:
-                <Link href="/insights/[slug]" className="group block">
-                  <div className="bg-blog-code rounded-xl overflow-hidden mb-4 aspect-[16/10]">
-                    <!-- Card image or ASCII art -->
-                  </div>
-                  <h3 className="font-serif text-lg font-medium text-[#1A1A1A] group-hover:text-blog-accent transition-colors mb-2">
-                    Article Title
-                  </h3>
-                  <p className="font-geist-mono text-xs" style={{ color: '#999999' }}>
-                    Author · Date
-                  </p>
-                </Link>
-              *\/}
+              {/* Article cards go here *\/}
             </div>
           </div>
         </section>
@@ -399,8 +396,8 @@ export default function InsightsPage() {
         {/* ============================================
            NEWSLETTER CTA
            ============================================ */}
-        <section className="pb-16 md:pb-20">
-          <div className="mx-auto px-6" style={{ maxWidth: '900px' }}>
+        <section className="pb-10 md:pb-14">
+          <div className="mx-auto px-6 sm:px-8" style={{ maxWidth: '1080px' }}>
             <NewsletterCTA />
           </div>
         </section>
