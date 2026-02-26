@@ -269,8 +269,11 @@ export default function AutoReplyArticlePage() {
 
           {/* Hero Image - ASCII art on dark background */}
           <div className="w-full bg-blog-code rounded-3xl overflow-hidden mb-8">
-            <div className="bg-blog-code p-12 lg:p-16 flex items-center justify-center min-h-96">
-              <pre className="font-mono text-xs lg:text-sm leading-tight text-green-400 text-shadow-lg whitespace-pre text-center overflow-x-auto">
+            <div className="bg-blog-code px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10 flex items-center justify-center min-h-[220px] sm:min-h-[280px] lg:min-h-[340px]">
+              <pre
+                className="font-mono text-[6px] sm:text-[7px] md:text-[9px] lg:text-[10px] leading-tight text-green-400 whitespace-pre text-center overflow-x-auto select-none"
+                style={{ textShadow: '0 0 20px rgba(74, 222, 128, 0.3)' }}
+              >
                 {`╔══════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                      ║
 ║                    ┌─────────────────────────────────────────┐                       ║
