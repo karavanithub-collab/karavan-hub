@@ -336,8 +336,8 @@ export default function AutoReplyArticlePage() {
 
               <p style={paragraphStyle}>
                 This isn't a productivity problem. It's structural. When you're
-                mid-haircut, under a sink, or managing a lunch rush, answering the
-                phone isn't just inconvenient—it's often impossible.
+                mid-appointment or elbow-deep in a job, answering the phone
+                is impossible.
               </p>
 
               <p style={paragraphStyle}>
@@ -353,24 +353,24 @@ export default function AutoReplyArticlePage() {
               </h2>
 
               <p style={paragraphStyle}>
-                A popular vision of business automation is the "digital concierge" use
-                case, in which business owners offload simple tasks to save time. Yet,
-                when we classified millions of customer interactions, we found that 57%
-                of all missed call activity focuses on cognitive work—customers making
-                decisions about where to spend money.
+                Most people think of automation as outsourcing busywork.
+                Scheduling, reminders, that kind of thing. But when we looked
+                at millions of customer interactions, 57% of missed calls were
+                actually about decisions. People figuring out where to spend
+                their money.
               </p>
 
               <p style={paragraphStyle}>
-                These are moments that scale human capability. A potential client calls
-                to ask about availability. A customer wants to confirm pricing before
-                driving across town. A new lead is comparing three businesses and will
-                hire whoever responds first.
+                Someone calls to check your availability. Another wants to
+                confirm pricing before driving over. These aren't
+                time-wasters. These are people ready to buy, and they'll go
+                with whoever answers first.
               </p>
 
               <p style={paragraphStyle}>
-                The "thinking partner" use case supported by our data shows that
-                customers want to expand their ability to make decisions quickly. People
-                aren't calling to waste time—they're calling to do business.
+                People don't call businesses for fun. They call because they
+                want to spend money. The faster you respond, the more likely
+                they spend it with you.
               </p>
 
               {/* Data Chart */}
@@ -425,10 +425,10 @@ export default function AutoReplyArticlePage() {
               </p>
 
               <p style={paragraphStyle}>
-                The reason is documented in consumer preference research: up to 80% of
-                callers now prefer texting over voicemail. This shift in communication
-                preferences creates an opportunity—but only if businesses adapt their
-                response systems accordingly.
+                The reason is simple: up to 80% of callers now prefer texting
+                over voicemail. People want a quick text back, not a callback
+                tomorrow. If your response system is still built around
+                voicemail, you're losing them.
               </p>
 
               <h2 className="font-serif" style={h2Style}>
@@ -456,9 +456,10 @@ export default function AutoReplyArticlePage() {
               </h3>
 
               <p style={paragraphStyle}>
-                Plumbers, electricians, and contractors work in environments where phone
-                access is often impossible. Research from Invoca shows home service
-                companies miss 62% of inbound calls.
+                If you're a plumber or electrician, your hands are probably
+                not free when the phone rings. Invoca's research puts the
+                number at 62% of inbound calls missed across home service
+                companies. That's a lot of lost work.
               </p>
 
               <div className="rounded-lg p-4" style={{ backgroundColor: '#1A1A1A', margin: '24px 0' }}>
@@ -472,9 +473,9 @@ export default function AutoReplyArticlePage() {
               </h3>
 
               <p style={paragraphStyle}>
-                Restaurant calls are predominantly the same five questions: hours,
-                reservations, location, menu, and dietary options. The auto-reply should
-                preemptively answer these.
+                Most restaurant calls are the same four questions on repeat:
+                hours, reservations, menu, dietary restrictions. An auto-reply
+                can answer all of them before your staff picks up the phone.
               </p>
 
               <div className="rounded-lg p-4" style={{ backgroundColor: '#1A1A1A', margin: '24px 0' }}>
@@ -490,18 +491,19 @@ Questions? Reply here and we'll text back."`}
               </div>
 
               <h2 className="font-serif" style={h2Style}>
-                The bottom line
+                What ten minutes of setup gets you
               </h2>
 
               <p style={paragraphStyle}>
-                The research is consistent: immediate acknowledgment—even automated—significantly
-                reduces customer churn to competitors. Setup takes approximately 10
-                minutes. The annual impact on retained revenue can exceed $6,000.
+                The research all points the same way: when you respond fast,
+                even with an automated text, fewer customers leave for a
+                competitor. Setup takes about 10 minutes. The annual impact on
+                retained revenue? Over $6,000.
               </p>
 
               <p style={paragraphStyle}>
-                People aren't using auto-reply to avoid customers. They're using it to
-                serve customers better.
+                Nobody uses auto-reply to avoid their customers. They use it
+                to keep them.
               </p>
 
               {/* Author Bio */}
@@ -525,7 +527,7 @@ Questions? Reply here and we'll text back."`}
                     After years coordinating care for patients across Ontario Health, I
                     learned one thing: the right systems make all the difference. Now,
                     from our home base in Niagara, I help small business owners across
-                    Canada and beyond build those systems—simple automations that give
+                    Canada and beyond build those systems. Simple automations that give
                     you back your time without losing the personal touch your customers
                     love.
                   </p>
