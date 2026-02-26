@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import NewsletterCTA from '@/components/sections/NewsletterCTA';
 
@@ -241,49 +242,17 @@ export default function InsightsPage() {
               href="/insights/auto-reply-automation"
               className="group block bg-white rounded-2xl overflow-hidden border border-[#E8E8E3] transition-all duration-300 hover:shadow-lg"
             >
-              {/* ASCII Hero Image — full width inside card */}
-              <div className="bg-[#1A1A1A]">
-                <div className="px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12 flex items-center justify-center min-h-[200px] sm:min-h-[240px] lg:min-h-[280px]">
-                  <pre
-                    className="font-mono text-[4px] sm:text-[5px] md:text-[6px] lg:text-[7px] leading-tight text-green-400 whitespace-pre text-center overflow-x-auto select-none"
-                    style={{ textShadow: '0 0 20px rgba(74, 222, 128, 0.3)' }}
-                    aria-hidden="true"
-                  >
-                    {`╔══════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                      ║
-║                    ┌─────────────────────────────────────────┐                       ║
-║                    │                                         │                       ║
-║                    │    ██╗███╗   ██╗ ██████╗ ██████╗ ███╗   ███╗██╗███╗   ██╗ ██████╗    │
-║                    │    ██║████╗  ██║██╔════╝██╔═══██╗████╗ ████║██║████╗  ██║██╔════╝    │
-║                    │    ██║██╔██╗ ██║██║     ██║   ██║██╔████╔██║██║██╔██╗ ██║██║  ███╗   │
-║                    │    ██║██║╚██╗██║██║     ██║   ██║██║╚██╔╝██║██║██║╚██╗██║██║   ██║   │
-║                    │    ██║██║ ╚████║╚██████╗╚██████╔╝██║ ╚═╝ ██║██║██║ ╚████║╚██████╔╝   │
-║                    │    ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝    │
-║                    │                                         │                       ║
-║                    │           📱 MISSED CALL                │                       ║
-║                    │           ━━━━━━━━━━━━━━━               │                       ║
-║                    │                                         │                       ║
-║                    │    [✗ LOST]  ───────▶  [✓ AUTO-REPLY]   │                       ║
-║                    │       │                      │          │                       ║
-║                    │       ▼                      ▼          │                       ║
-║                    │   -$12.15              Customer         │                       ║
-║                    │   Revenue              Retained         │                       ║
-║                    │                                         │                       ║
-║                    └─────────────────────────────────────────┘                       ║
-║                                                                                      ║
-║     ┌──────────────────────────────────────────────────────────────────────────┐     ║
-║     │  RESPONSE TIME IMPACT                                                    │     ║
-║     │  ════════════════════                                                    │     ║
-║     │                                                                          │     ║
-║     │  < 5 min   ████████████████████████████████████████████████████  21x     │     ║
-║     │  1 hour    ██████████                                            2.6x    │     ║
-║     │  24 hours  ████                                                  1x      │     ║
-║     │                                                                          │     ║
-║     └──────────────────────────────────────────────────────────────────────────┘     ║
-║                                                                                      ║
-╚══════════════════════════════════════════════════════════════════════════════════════╝`}
-                  </pre>
-                </div>
+              {/* Hero Image — full width inside card */}
+              <div>
+                <Image
+                  src="/images/insights/auto-reply-hero.png"
+                  alt="Teal telephone handset on orange background — representing missed business calls"
+                  width={1080}
+                  height={600}
+                  sizes="(max-width: 1080px) 100vw, 1080px"
+                  className="w-full h-auto object-cover"
+                  priority
+                />
               </div>
 
               {/* Article Info — padded content area below image */}
