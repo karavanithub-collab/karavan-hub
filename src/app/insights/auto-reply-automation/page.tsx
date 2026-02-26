@@ -374,26 +374,15 @@ export default function AutoReplyArticlePage() {
               </p>
 
               {/* Data Chart */}
-              <div className="rounded-2xl p-6 lg:p-8 overflow-x-auto" style={{ backgroundColor: '#1A1A1A', margin: '40px 0' }}>
-                <p className="font-geist-mono text-xs uppercase tracking-widest mb-6" style={{ color: '#999999' }}>
-                  Response Time vs. Conversion Likelihood
-                </p>
-                <pre className="font-geist-mono text-xs lg:text-sm leading-relaxed" style={{ color: '#E0E0E0' }}>
-                  {`  100 ─┬────────────────────────────────────────────────────────────
-      │
-   80 ─┤  ████████████████████████████████████████████████████
-      │  ████████████████████████████████████████████████████  21x
-   60 ─┤  ████████████████████████████████████████████████████  conversion
-      │  ████████████████████████████████████████████████████  likelihood
-   40 ─┤
-      │
-   20 ─┤  ████████████                                           2.6x
-      │
-    0 ─┤  █████                                                   1x
-      │
-      └──────────────────────────────────────────────────────────
-          < 5 min              1 hour                    24 hours`}
-                </pre>
+              <div className="rounded-2xl overflow-hidden" style={{ margin: '40px 0' }}>
+                <Image
+                  src="/images/insights/response-time-chart.png"
+                  alt="Response Time vs. Conversion Likelihood chart: responding within 5 minutes yields 21x conversion likelihood, 1 hour yields 2.6x, and 24 hours yields 1x"
+                  width={720}
+                  height={400}
+                  sizes="(max-width: 720px) 100vw, 720px"
+                  className="w-full h-auto"
+                />
               </div>
 
               <p style={paragraphStyle}>
