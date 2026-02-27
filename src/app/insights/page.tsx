@@ -200,7 +200,7 @@ export default function InsightsPage() {
           aria-labelledby="insights-heading"
         >
           <div className="mx-auto px-6 sm:px-8" style={{ maxWidth: '1080px' }}>
-            <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-2 md:gap-8">
+            <div>
               <h1
                 id="insights-heading"
                 className="insights-title font-serif"
@@ -215,16 +215,15 @@ export default function InsightsPage() {
                 Insights
               </h1>
               <p
-                className="insights-subtitle md:text-right md:pb-1"
+                className="insights-subtitle mt-3"
                 style={{
                   fontSize: '15px',
-                  lineHeight: 1.7,
-                  color: '#8A8A8A',
-                  fontWeight: 300,
-                  maxWidth: '340px',
+                  lineHeight: 1.5,
+                  color: '#6B6B6B',
+                  fontWeight: 400,
                 }}
               >
-                Practical knowledge from people who build the tech. Written for business owners, not developers.
+                Written for business owners, not developers.
               </p>
             </div>
           </div>
