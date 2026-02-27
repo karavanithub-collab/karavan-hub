@@ -300,11 +300,7 @@ export default function InsightsPage() {
                 </p>
 
                 <span
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 group-hover:bg-[#1A5A5A] group-hover:text-white"
-                  style={{
-                    border: '1.5px solid #1A5A5A',
-                    color: '#1A5A5A',
-                  }}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 text-[#1A5A5A] border-[1.5px] border-[#1A5A5A] group-hover:bg-[#1A5A5A] group-hover:text-white"
                 >
                   Read article
                   <svg
