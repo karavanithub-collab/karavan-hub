@@ -223,7 +223,7 @@ export default function InsightsPage() {
                   fontWeight: 400,
                 }}
               >
-                Written for business owners, not developers.
+                Real advice from real projects.
               </p>
             </div>
           </div>

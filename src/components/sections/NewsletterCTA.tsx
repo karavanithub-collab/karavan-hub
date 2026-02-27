@@ -113,20 +113,19 @@ export default function NewsletterCTA() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="px-6 lg:px-7 py-3 lg:py-3.5 font-semibold text-sm rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+          className="px-6 lg:px-7 py-3 lg:py-3.5 font-semibold text-sm rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-white"
           style={{
-            backgroundColor: '#FFFFFF',
-            color: '#1A1A1A',
+            backgroundColor: '#1A5A5A',
             opacity: isSubmitting ? 0.5 : 1,
           }}
           onMouseEnter={(e) => {
             if (!isSubmitting) {
-              e.currentTarget.style.backgroundColor = '#F0F0F0';
+              e.currentTarget.style.backgroundColor = '#0F3D3D';
             }
           }}
           onMouseLeave={(e) => {
             if (!isSubmitting) {
-              e.currentTarget.style.backgroundColor = '#FFFFFF';
+              e.currentTarget.style.backgroundColor = '#1A5A5A';
             }
           }}
         >
