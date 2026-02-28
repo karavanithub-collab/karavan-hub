@@ -386,9 +386,13 @@ export default function ITSolutionsPage() {
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
             <span>Less training time because the software matches how your team already thinks</span>
           </li>
-          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
             <span>Own your technology instead of renting someone else&apos;s limitations</span>
+          </li>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Scale when you need to, not when your vendor says you can</span>
           </li>
         </ul>
       ),
@@ -410,7 +414,7 @@ export default function ITSolutionsPage() {
       title: 'E-Commerce Development',
       content: (
         <p>
-          An online store that&apos;s easy for your customers to buy from and easy for you to manage. We handle the checkout, the product organization, and the behind-the-scenes tools so you can focus on selling.
+          An online store that&apos;s easy for your customers to buy from and easy for you to manage. We handle the checkout and the product catalog so you can focus on selling. The behind-the-scenes tools — inventory, shipping, analytics — come built in.
         </p>
       ),
     },
@@ -418,7 +422,7 @@ export default function ITSolutionsPage() {
       title: 'Web Applications',
       content: (
         <p>
-          Sometimes a website isn&apos;t enough. You need something that does real work. Customer portals, booking systems, internal tools. We build those too.
+          Sometimes a website isn&apos;t enough. You need something that does real work. Customer portals, booking systems, internal dashboards, inventory tools. We build those too.
         </p>
       ),
     },
@@ -486,7 +490,7 @@ export default function ITSolutionsPage() {
       title: 'Organizing It All',
       content: (
         <p>
-          A proper home for all that data. Organized, searchable, and ready to answer whatever questions come up next quarter.
+          A proper home for all that data. Organized and searchable. Ready to answer whatever questions come up next quarter.
         </p>
       ),
     },
@@ -518,9 +522,13 @@ export default function ITSolutionsPage() {
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
             <span>Free up the people currently stuck compiling reports</span>
           </li>
-          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
             <span>Walk into meetings with answers instead of excuses</span>
+          </li>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Spot problems before they cost you money</span>
           </li>
         </ul>
       ),
@@ -558,7 +566,7 @@ export default function ITSolutionsPage() {
       title: 'Making It Easier for Your Customers',
       content: (
         <p>
-          Self-service portals. Faster responses. Simpler processes. When it&apos;s easy to work with you, people come back.
+          Self-service portals and faster responses. When it&apos;s easy to work with you, people come back.
         </p>
       ),
     },
@@ -760,7 +768,7 @@ export default function ITSolutionsPage() {
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-[var(--primary)] text-white px-8 py-4 rounded-lg text-[15px] font-semibold leading-none uppercase tracking-[0.5px] no-underline transition-all duration-300 hover:bg-[var(--primary-dark)] hover:-translate-y-0.5"
               >
-                Schedule a Consultation
+                Book a Consultation
               </Link>
             </div>
           </div>
@@ -1041,7 +1049,7 @@ export default function ITSolutionsPage() {
             className="font-headline text-[18px] md:text-[22px] font-medium text-[var(--text-dark)] text-center leading-[1.3] tracking-[-0.3px] mb-7 md:mb-8"
             id="trust-headline"
           >
-            <strong className="font-bold text-[var(--primary)]">Senior engineers.</strong> Direct access. No runaround.
+            <strong className="font-bold text-[var(--primary)]">Senior engineers.</strong> Direct access. No runaround. No offshore handoffs.
           </h2>
 
           <div className="flex flex-wrap justify-center items-center gap-y-5">
