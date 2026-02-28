@@ -10,12 +10,29 @@ export const metadata: Metadata = {
     'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation. No workarounds required.',
   keywords:
     'IT solutions, custom software development, web design, data analytics, digital transformation, SMB technology, business software, cloud applications, mobile app development',
+  authors: [{ name: 'Karavan Hub' }],
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large' as const,
+    'max-snippet': -1,
+    'max-video-preview': -1,
+  },
+  alternates: {
+    canonical: 'https://karavanhub.com/it-solutions',
+    languages: {
+      'en-CA': 'https://karavanhub.com/it-solutions',
+      en: 'https://karavanhub.com/it-solutions',
+    },
+  },
   openGraph: {
     type: 'website',
     url: 'https://karavanhub.com/it-solutions',
     title: 'IT Solutions for Small & Medium Businesses | Karavan IT HUB',
     description:
-      'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation. No workarounds required.',
+      'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation.',
+    siteName: 'Karavan IT HUB',
+    locale: 'en_CA',
     images: [
       {
         url: 'https://karavanhub.com/images/og-it-solutions.jpg',
@@ -29,219 +46,289 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'IT Solutions for Small & Medium Businesses | Karavan IT HUB',
     description:
-      'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation. No workarounds required.',
+      'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation.',
     images: ['https://karavanhub.com/images/twitter-it-solutions.jpg'],
   },
-  alternates: {
-    canonical: 'https://karavanhub.com/it-solutions',
+  other: {
+    'geo.region': 'CA-ON',
+    'geo.placename': 'Niagara, Ontario',
+    'geo.position': '43.0896;-79.0849',
+    ICBM: '43.0896, -79.0849',
+    'theme-color': '#2563EB',
   },
 };
 
-// Schema.org JSON-LD
-const jsonLd = {
+// Consolidated JSON-LD Schema Graph
+const jsonLdGraph = {
   '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'IT Solutions',
-  provider: {
-    '@type': 'Organization',
-    name: 'Karavan IT HUB',
-    url: 'https://karavanhub.com',
-    logo: 'https://karavanhub.com/images/logo.png',
-    address: {
-      '@type': 'PostalAddress',
-      addressRegion: 'Ontario',
-      addressCountry: 'CA',
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'sales',
-      availableLanguage: 'English',
-    },
-  },
-  description:
-    'Custom IT solutions for small and medium businesses including software development, web design, data analytics, and digital transformation services.',
-  areaServed: [
-    { '@type': 'Country', name: 'Canada' },
-    { '@type': 'State', name: 'Ontario' },
-    { '@type': 'City', name: 'Niagara' },
-  ],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'IT Solutions Services',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Custom Software Development',
-          description:
-            'Cloud-native applications, full-stack development, system modernization, mobile apps, and API integration built around your workflows.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Web Design & Development',
-          description:
-            'Responsive websites, e-commerce platforms, web applications, CMS implementation, and performance optimization.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Data Analytics & Dashboards',
-          description:
-            'Business intelligence dashboards, data visualization, reporting automation, and predictive analytics.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Digital Transformation',
-          description:
-            'Process automation, cloud migration, legacy system modernization, and workflow optimization.',
-        },
-      },
-    ],
-  },
-};
-
-const faqJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
+  '@graph': [
+    // Organization entity (reusable @id across pages)
     {
-      '@type': 'Question',
-      name: 'What IT solutions does Karavan IT HUB offer for small businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Karavan IT HUB provides custom software development, web design and development, data analytics dashboards, and digital transformation services specifically designed for small and medium businesses in Canada.',
+      '@type': 'Organization',
+      '@id': 'https://karavanhub.com/#organization',
+      name: 'Karavan Hub',
+      alternateName: 'Karavan IT HUB',
+      url: 'https://karavanhub.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://karavanhub.com/logo.png',
       },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is custom software different from off-the-shelf solutions?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Custom software is built around your specific workflows and business processes, eliminating workarounds and unnecessary features. It grows with your business and connects with your existing tools.',
+      description:
+        'Canadian-owned AI and IT solutions company specializing in custom software development, web design, data analytics, and digital transformation for small and medium businesses.',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Suite 31',
+        addressLocality: 'Pelham',
+        addressRegion: 'Ontario',
+        addressCountry: 'CA',
       },
-    },
-    {
-      '@type': 'Question',
-      name: 'What makes a website effective for business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An effective business website is mobile-responsive, loads quickly, guides visitors toward action, and is easy for you to update. It builds trust and converts visitors into customers.',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        telephone: '+1-905-301-3936',
+        email: 'karavan.it.hub@gmail.com',
+        availableLanguage: ['English'],
       },
-    },
-    {
-      '@type': 'Question',
-      name: 'How can data analytics help my business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Data analytics turns scattered information into clear dashboards that show what is happening in your business. It helps you make decisions based on facts rather than gut feelings.",
+      areaServed: [
+        { '@type': 'Country', name: 'Canada' },
+        { '@type': 'Country', name: 'United States' },
+        { '@type': 'Country', name: 'Saudi Arabia' },
+      ],
+      knowsAbout: [
+        'Custom Software Development',
+        'Web Design',
+        'Web Development',
+        'Data Analytics',
+        'Business Intelligence',
+        'Digital Transformation',
+        'Cloud Migration',
+        'E-Commerce',
+        'Mobile App Development',
+        'API Integration',
+      ],
+      founder: {
+        '@type': 'Person',
+        name: 'Nyah S.',
+        jobTitle: 'Founder',
       },
+      sameAs: [
+        'https://www.linkedin.com/company/karavan-hub',
+        'https://www.instagram.com/karavanhub',
+        'https://www.tiktok.com/@karavanhub',
+      ],
     },
+    // WebPage entity (speakable + mentions + dates)
     {
-      '@type': 'Question',
-      name: 'How long does a custom software project typically take?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Timelines depend on scope. A focused project like a customer portal or internal tool can take 6 to 12 weeks. Larger systems with multiple integrations may take 3 to 6 months. We share a clear timeline before any work begins.',
+      '@type': 'WebPage',
+      '@id': 'https://karavanhub.com/it-solutions/#webpage',
+      name: 'IT Solutions for Small & Medium Businesses',
+      url: 'https://karavanhub.com/it-solutions',
+      datePublished: '2026-01-15',
+      dateModified: '2026-02-28',
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': 'https://karavanhub.com/#website',
+        name: 'Karavan Hub',
+        url: 'https://karavanhub.com',
       },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the first step to working with Karavan IT HUB?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The first step is a free consultation where we learn how your business operates and identify where technology can help. No pitch, no pressure. We listen first and recommend second.',
+      about: { '@id': 'https://karavanhub.com/it-solutions/#service' },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['#software-heading', '#webdesign-heading', '#analytics-heading', '#transform-heading'],
       },
+      mentions: [
+        { '@type': 'Thing', name: 'React', url: 'https://react.dev' },
+        { '@type': 'Thing', name: 'Next.js', url: 'https://nextjs.org' },
+        { '@type': 'Thing', name: 'Node.js', url: 'https://nodejs.org' },
+        { '@type': 'Thing', name: 'TypeScript', url: 'https://typescriptlang.org' },
+        { '@type': 'Thing', name: 'Amazon Web Services', url: 'https://aws.amazon.com' },
+        { '@type': 'Thing', name: 'WordPress', url: 'https://wordpress.org' },
+        { '@type': 'Thing', name: 'Shopify', url: 'https://shopify.com' },
+        { '@type': 'Thing', name: 'Tableau', url: 'https://tableau.com' },
+        { '@type': 'Thing', name: 'Docker', url: 'https://docker.com' },
+        { '@type': 'Thing', name: 'PostgreSQL', url: 'https://postgresql.org' },
+      ],
     },
+    // Service entity
     {
-      '@type': 'Question',
-      name: 'Does Karavan IT HUB work with businesses outside Ontario?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. While Karavan IT HUB is headquartered in Niagara, Ontario, we work with small and medium businesses across Canada. Most of our collaboration happens remotely with regular video check-ins.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does custom software development cost for a small business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Costs vary based on complexity and scope. A simple web application may start around $15,000 to $30,000 CAD, while larger enterprise systems can range higher. We provide detailed estimates after understanding your needs during the free consultation.',
-      },
-    },
-  ],
-};
-
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://karavanhub.com',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
+      '@type': 'Service',
+      '@id': 'https://karavanhub.com/it-solutions/#service',
       name: 'IT Solutions',
-      item: 'https://karavanhub.com/it-solutions',
+      description:
+        'Custom IT solutions for small and medium businesses including software development, web design, data analytics, and digital transformation services.',
+      provider: { '@id': 'https://karavanhub.com/#organization' },
+      areaServed: [
+        { '@type': 'Country', name: 'Canada' },
+        { '@type': 'State', name: 'Ontario' },
+        { '@type': 'City', name: 'Niagara' },
+      ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'IT Solutions Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Custom Software Development',
+              description:
+                'Cloud-native applications, full-stack development, system modernization, mobile apps, and API integration built around your workflows.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Web Design & Development',
+              description:
+                'Responsive websites, e-commerce platforms, web applications, CMS implementation, and performance optimization.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Data Analytics & Dashboards',
+              description:
+                'Business intelligence dashboards, data visualization, reporting automation, and predictive analytics.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Digital Transformation',
+              description:
+                'Process automation, cloud migration, legacy system modernization, and workflow optimization.',
+            },
+          },
+        ],
+      },
+    },
+    // FAQPage entity
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://karavanhub.com/it-solutions/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What IT solutions does Karavan IT HUB offer for small businesses?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Karavan IT HUB provides custom software development, web design and development, data analytics dashboards, and digital transformation services specifically designed for small and medium businesses in Canada.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How is custom software different from off-the-shelf solutions?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Custom software is built around your specific workflows and business processes, eliminating workarounds and unnecessary features. It grows with your business and connects with your existing tools.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What makes a website effective for business?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'An effective business website is mobile-responsive, loads quickly, guides visitors toward action, and is easy for you to update. It builds trust and converts visitors into customers.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How can data analytics help my business?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Data analytics turns scattered information into clear dashboards that show what is happening in your business. It helps you make decisions based on facts rather than gut feelings.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does a custom software project typically take?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Timelines depend on scope. A focused project like a customer portal or internal tool can take 6 to 12 weeks. Larger systems with multiple integrations may take 3 to 6 months. We share a clear timeline before any work begins.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the first step to working with Karavan IT HUB?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The first step is a free consultation where we learn how your business operates and identify where technology can help. No pitch, no pressure. We listen first and recommend second.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does Karavan IT HUB work with businesses outside Ontario?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. While Karavan IT HUB is headquartered in Niagara, Ontario, we work with small and medium businesses across Canada. Most of our collaboration happens remotely with regular video check-ins.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How much does custom software development cost for a small business?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Costs vary based on complexity and scope. A simple web application may start around $15,000 to $30,000 CAD, while larger enterprise systems can range higher. We provide detailed estimates after understanding your needs during the free consultation.',
+          },
+        },
+      ],
+    },
+    // BreadcrumbList entity
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://karavanhub.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'IT Solutions',
+          item: 'https://karavanhub.com/it-solutions',
+        },
+      ],
+    },
+    // HowTo entity
+    {
+      '@type': 'HowTo',
+      '@id': 'https://karavanhub.com/it-solutions/#howto',
+      name: 'How Karavan IT HUB Delivers Custom IT Solutions',
+      description:
+        'Our process for building custom IT solutions for small and medium businesses in Canada.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Discovery',
+          text: 'We learn how your business operates and identify where technology can remove friction.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Planning',
+          text: 'We create a prioritized roadmap, deciding what to tackle first and what to phase in later.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Build and Iterate',
+          text: 'Senior engineers build your solution with regular check-ins so you see progress throughout.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 4,
+          name: 'Launch and Support',
+          text: 'We handle deployment and provide ongoing support to make sure everything runs smoothly.',
+        },
+      ],
     },
   ],
-};
-
-const howToJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'How Karavan IT HUB Delivers Custom IT Solutions',
-  description:
-    'Our process for building custom IT solutions for small and medium businesses in Canada.',
-  step: [
-    {
-      '@type': 'HowToStep',
-      position: 1,
-      name: 'Discovery',
-      text: 'We learn how your business operates and identify where technology can remove friction.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 2,
-      name: 'Planning',
-      text: 'We create a prioritized roadmap, deciding what to tackle first and what to phase in later.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 3,
-      name: 'Build and Iterate',
-      text: 'Senior engineers build your solution with regular check-ins so you see progress throughout.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 4,
-      name: 'Launch and Support',
-      text: 'We handle deployment and provide ongoing support to make sure everything runs smoothly.',
-    },
-  ],
-};
-
-const speakableJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'IT Solutions for Small & Medium Businesses',
-  speakable: {
-    '@type': 'SpeakableSpecification',
-    cssSelector: ['#software-heading', '#webdesign-heading', '#analytics-heading', '#transform-heading'],
-  },
-  url: 'https://karavanhub.com/it-solutions',
 };
 
 export default function ITSolutionsPage() {
@@ -502,23 +589,7 @@ export default function ITSolutionsPage() {
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
 
       {/* ============================================
