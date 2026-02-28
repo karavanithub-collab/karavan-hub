@@ -127,7 +127,7 @@ const schemaGraph = {
       ],
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['#hero-heading', '#value-heading', '#services-heading']
+        cssSelector: ['#hero-heading', '#value-heading', '#services-heading', '#insights-heading']
       }
     },
     {
@@ -895,6 +895,89 @@ export default function HomePage() {
           FAQ SECTION
           ============================================ */}
       <HomeFAQ />
+
+      {/* ============================================
+          INSIGHTS / BLOG SECTION
+          ============================================ */}
+      <section className="insights-section bg-[var(--bg-light)] py-[60px] sm:py-[80px] lg:py-[100px]" aria-labelledby="insights-heading">
+        <div className="container-main">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 md:mb-14 gap-4">
+            <div>
+              <h2 id="insights-heading" className="font-headline text-[26px] sm:text-[32px] lg:text-[42px] font-medium text-[var(--text-dark)] mb-2 tracking-[-0.5px]">
+                Things we&apos;ve been thinking about.
+              </h2>
+              <p className="text-[17px] text-[var(--text-body)] leading-[1.7] max-w-[500px]">
+                Real problems. Honest answers. No fluff.
+              </p>
+            </div>
+            <a
+              href="/insights"
+              className="inline-flex items-center gap-2 text-[var(--primary)] text-[15px] font-semibold font-headline no-underline transition-all duration-200 hover:gap-3 shrink-0"
+            >
+              Browse all insights
+              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12l5-5-5-5" />
+              </svg>
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+            {/* Featured Article Card */}
+            <a href="/insights/auto-reply-automation" className="group bg-white rounded-[20px] overflow-hidden border border-[var(--border-light)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(37,99,235,0.08)] block">
+              <div className="aspect-[16/9] overflow-hidden bg-[#f0f4f8]">
+                <img
+                  src="/images/insights/auto-reply-hero.png"
+                  alt="AI auto-reply automation for small businesses"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  width={720}
+                  height={405}
+                />
+              </div>
+              <div className="p-6 md:p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-xs font-semibold uppercase tracking-[1.5px] text-[var(--primary)] bg-[var(--primary-light)] px-3 py-1 rounded-full">
+                    AI Automation
+                  </span>
+                  <span className="text-xs text-[var(--text-muted)] font-mono">6 min read</span>
+                </div>
+                <h3 className="font-headline text-[20px] md:text-[22px] font-semibold text-[var(--text-dark)] mb-3 leading-[1.3] group-hover:text-[var(--primary)] transition-colors duration-200">
+                  What If You Never Had to Answer &ldquo;What Are Your Hours?&rdquo; Again?
+                </h3>
+                <p className="text-[15px] text-[var(--text-body)] leading-[1.7] mb-4 line-clamp-2">
+                  Small businesses miss 62% of calls. Here&apos;s how auto-reply automation turns missed calls into booked appointments without lifting a finger.
+                </p>
+                <div className="text-[13px] text-[var(--text-muted)] font-mono">
+                  Nyah S. &middot; Feb 3, 2026
+                </div>
+              </div>
+            </a>
+
+            {/* "More coming" placeholder card */}
+            <div className="flex items-center justify-center rounded-[20px] border-2 border-dashed border-[var(--border-light)] bg-white/50 p-8 md:p-12 text-center min-h-[300px]">
+              <div>
+                <div className="w-12 h-12 mx-auto mb-5 rounded-full bg-[var(--primary-light)] flex items-center justify-center">
+                  <svg width="24" height="24" fill="none" stroke="var(--primary)" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path d="M12 6v12m-6-6h12" strokeLinecap="round" />
+                  </svg>
+                </div>
+                <p className="font-headline text-[18px] font-medium text-[var(--text-dark)] mb-2">
+                  More articles on the way.
+                </p>
+                <p className="text-[15px] text-[var(--text-muted)] leading-[1.6] max-w-[280px] mx-auto mb-5">
+                  AI, web development, honest takes on tech for small business owners.
+                </p>
+                <a href="/insights" className="inline-flex items-center gap-2 text-[var(--primary)] text-[14px] font-semibold no-underline hover:gap-3 transition-all duration-200">
+                  Visit Insights
+                  <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12l5-5-5-5" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ============================================
           CTA/CONTACT SECTION
