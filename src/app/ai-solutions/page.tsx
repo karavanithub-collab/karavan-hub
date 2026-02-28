@@ -312,13 +312,13 @@ export default function AISolutionsPage() {
           <ul className="accordion-list space-y-3">
             <li>
               <strong>Customer Service Agents:</strong> Handle inquiries, resolve issues, escalate when
-              needed
+              needed, track satisfaction
             </li>
             <li>
-              <strong>Research Agents:</strong> Gather information, analyze data, generate reports
+              <strong>Research Agents:</strong> Gather information, analyze data, generate reports, flag anomalies
             </li>
             <li>
-              <strong>Workflow Agents:</strong> Orchestrate tasks across systems, trigger actions
+              <strong>Workflow Agents:</strong> Coordinate tasks across systems, trigger actions
             </li>
             <li>
               <strong>Data Processing Agents:</strong> Extract, transform, validate, route information
@@ -332,18 +332,18 @@ export default function AISolutionsPage() {
       content: (
         <div>
           <p className="text-sm text-[#4a4a68] leading-relaxed mb-3">
-            Most chatbots are terrible. Yours won&apos;t be. We train them on your actual data, wire
-            them into your systems, and they give real answers. Not &apos;let me transfer you to an agent.&apos;
+            Most chatbots are terrible. Yours won&apos;t be. We train them on your actual data and wire
+            them into your systems. They give real answers. Not &apos;let me transfer you to an agent.&apos;
           </p>
           <ul className="accordion-list space-y-3">
             <li>
-              <strong>Customer Support:</strong> Answer questions, troubleshoot issues, process requests
+              <strong>Customer Support:</strong> Answer questions, troubleshoot issues, process requests, collect feedback
             </li>
             <li>
-              <strong>Internal Helpdesk:</strong> IT support, HR inquiries, policy questions
+              <strong>Internal Helpdesk:</strong> IT support, HR inquiries, policy questions, onboarding
             </li>
             <li>
-              <strong>Sales Qualification:</strong> Engage leads, qualify prospects, schedule meetings
+              <strong>Sales Qualification:</strong> Engage leads, qualify prospects, schedule meetings, track follow-ups
             </li>
             <li>
               <strong>Onboarding:</strong> Guide new customers or employees through processes
@@ -362,7 +362,7 @@ export default function AISolutionsPage() {
           </p>
           <ul className="accordion-list space-y-3">
             <li>
-              <strong>Knowledge Bases:</strong> Internal documentation, policies, procedures
+              <strong>Knowledge Bases:</strong> Internal documentation, policies, procedures, SOPs
             </li>
             <li>
               <strong>Compliance Q&A:</strong> Regulatory requirements, audit preparation
@@ -383,7 +383,7 @@ export default function AISolutionsPage() {
         <div>
           <p className="text-sm text-[#4a4a68] leading-relaxed mb-3">
             Off-the-shelf AI doesn&apos;t know your industry&apos;s language. We take a base model and teach it
-            how your business actually talks. Your terminology, your processes, your edge cases.
+            how your business actually talks. Your terminology and your processes. The edge cases nobody else accounts for.
           </p>
           <ul className="accordion-list space-y-3">
             <li>
@@ -396,7 +396,7 @@ export default function AISolutionsPage() {
               <strong>Output Formatting:</strong> Match your required formats and structures
             </li>
             <li>
-              <strong>Performance Optimization:</strong> Balance speed, cost, and accuracy
+              <strong>Performance Optimization:</strong> Balance speed and cost against accuracy
             </li>
           </ul>
         </div>
@@ -418,10 +418,10 @@ export default function AISolutionsPage() {
               <strong>Data Extraction:</strong> Pull structured data from unstructured sources
             </li>
             <li>
-              <strong>Workflow Routing:</strong> Tickets, approvals, notifications
+              <strong>Workflow Routing:</strong> Tickets, approvals, routing, notifications
             </li>
             <li>
-              <strong>Web Scraping:</strong> Data collection, monitoring, competitive intelligence
+              <strong>Web Scraping:</strong> Data collection, monitoring, competitive intelligence, price tracking
             </li>
           </ul>
         </div>
@@ -627,9 +627,8 @@ export default function AISolutionsPage() {
       title: 'Implementation Roadmaps',
       content: (
         <p>
-          Not everything needs to happen at once. We map out what to build first, what to save for
-          later, and what to skip entirely. You get a plan that respects your budget and your
-          team&apos;s bandwidth.
+          Not everything needs to happen at once. We map out what to build first and what to skip
+          entirely. The rest gets sequenced around your budget and your team&apos;s bandwidth.
         </p>
       ),
     },
@@ -638,7 +637,7 @@ export default function AISolutionsPage() {
       content: (
         <p>
           We&apos;d rather have the uncomfortable conversation now than a costly one later. We dig into
-          technical risks, compliance gaps, and the stuff nobody wants to talk about. Before
+          technical risks and compliance gaps. Especially the stuff nobody wants to talk about before
           you&apos;re mid-build and out of options.
         </p>
       ),
@@ -976,7 +975,7 @@ export default function AISolutionsPage() {
                 className="inline-flex items-center gap-2.5 bg-[var(--primary)] text-white px-8 py-4 rounded-lg text-[15px] font-semibold leading-none uppercase tracking-[0.5px] no-underline transition-all duration-300 hover:bg-[var(--primary-dark)] hover:-translate-y-0.5"
                 style={{ boxShadow: '0 4px 20px rgba(37, 99, 235, 0.3)' }}
               >
-                Schedule a Consultation
+                Book a Consultation
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
