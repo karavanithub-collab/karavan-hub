@@ -113,8 +113,8 @@ export default function ContactForm() {
       setTimeout(() => {
         setIsSuccess(false);
       }, 5000);
-    } catch (error) {
-      console.error('Form submission error:', error);
+    } catch {
+      // Form submission failed — error handling managed by UI state
     } finally {
       setIsSubmitting(false);
     }

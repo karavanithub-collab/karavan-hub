@@ -691,7 +691,7 @@ export default function AISolutionsPage() {
            SECTION 1: HERO
            ============================================ */}
       <section
-        className="bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] relative overflow-hidden min-h-[100vh] flex items-center pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
+        className="bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] relative overflow-hidden min-h-[80vh] lg:min-h-[100vh] flex items-center pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
         aria-labelledby="hero-heading"
       >
         {/* Background Orbs */}

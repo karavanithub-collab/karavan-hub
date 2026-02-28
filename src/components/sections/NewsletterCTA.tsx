@@ -89,12 +89,15 @@ export default function NewsletterCTA() {
       )}
 
       <form className="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto mb-4" onSubmit={handleSubmit}>
+        <label htmlFor="newsletter-email" className="sr-only">Email address</label>
         <input
+          id="newsletter-email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
           required
+          aria-required="true"
           className="flex-1 px-4 lg:px-5 py-3 lg:py-3.5 font-light text-sm rounded-lg outline-none transition-all whitespace-nowrap"
           style={{
             backgroundColor: 'rgba(255, 255, 255, 0.08)',

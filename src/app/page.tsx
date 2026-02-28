@@ -34,187 +34,236 @@ export const metadata: Metadata = {
   }
 };
 
-const schemaOrganization = {
+const schemaGraph = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Karavan IT HUB',
-  description: 'AI and IT solutions company specializing in custom software development, AI automation, and digital transformation.',
-  url: 'https://karavanhub.com',
-  logo: 'https://karavanhub.com/images/logo.png',
-  areaServed: 'Canada',
-  knowsAbout: ['AI Automation', 'Custom Software Development', 'AI Strategy Consulting', 'Digital Transformation', 'Web Design', 'Data Analytics'],
-  sameAs: [
-    'https://www.linkedin.com/company/karavanithub',
-    'https://www.instagram.com/karavanithub',
-    'https://www.tiktok.com/@karavanithub'
-  ],
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'sales',
-    availableLanguage: 'English'
-  }
-};
-
-const schemaLocalBusiness = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Karavan IT HUB',
-  description: 'Canadian-owned AI and IT solutions company providing custom software development, AI automation, web design, and digital transformation services.',
-  url: 'https://karavanhub.com',
-  image: 'https://karavanhub.com/images/og-homepage.jpg',
-  priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'CA'
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '17:00'
-  }
-};
-
-const schemaServices = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  serviceType: 'IT and AI Solutions',
-  provider: {
-    '@type': 'Organization',
-    name: 'Karavan IT HUB'
-  },
-  areaServed: 'Canada',
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Business Technology Services',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'AI Automation',
-          description: 'Automate repetitive tasks and workflows with custom AI solutions that integrate with your existing systems.'
-        }
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://karavanhub.com/#organization',
+      name: 'Karavan IT HUB',
+      description: 'AI and IT solutions company specializing in custom software development, AI automation, and digital transformation.',
+      url: 'https://karavanhub.com',
+      logo: {
+        '@type': 'ImageObject',
+        '@id': 'https://karavanhub.com/#logo',
+        url: 'https://karavanhub.com/images/logo.png',
+        contentUrl: 'https://karavanhub.com/images/logo.png',
+        caption: 'Karavan IT HUB'
       },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Custom AI Applications',
-          description: 'Purpose-built AI applications including intelligent document processing, predictive analytics, and natural language interfaces.'
-        }
+      areaServed: 'Canada',
+      knowsAbout: ['AI Automation', 'Custom Software Development', 'AI Strategy Consulting', 'Digital Transformation', 'Web Design', 'Data Analytics'],
+      sameAs: [
+        'https://www.linkedin.com/company/karavanithub',
+        'https://www.instagram.com/karavanithub',
+        'https://www.tiktok.com/@karavanithub'
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'sales',
+        telephone: '+1-905-301-3936',
+        email: 'karavan.it.hub@gmail.com',
+        availableLanguage: 'English'
+      }
+    },
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://karavanhub.com/#localbusiness',
+      name: 'Karavan IT HUB',
+      description: 'Canadian-owned AI and IT solutions company providing custom software development, AI automation, web design, and digital transformation services.',
+      url: 'https://karavanhub.com',
+      image: 'https://karavanhub.com/images/og-homepage.jpg',
+      priceRange: '$$',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Suite 31',
+        addressLocality: 'Pelham',
+        addressRegion: 'ON',
+        addressCountry: 'CA'
       },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'AI Strategy Consulting',
-          description: 'Strategic AI roadmapping, use case identification, and implementation planning for sustainable AI adoption.'
-        }
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 43.0896,
+        longitude: -79.0849
       },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Web Design & Development',
-          description: 'Mobile-responsive, SEO-optimized websites built for conversions and business growth.'
+      openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '17:00'
+      }
+    },
+    {
+      '@type': 'WebPage',
+      '@id': 'https://karavanhub.com/#webpage',
+      url: 'https://karavanhub.com',
+      name: 'Karavan IT HUB \u2014 AI & IT Solutions | Custom Software Development',
+      isPartOf: { '@id': 'https://karavanhub.com/#website' },
+      about: { '@id': 'https://karavanhub.com/#organization' },
+      datePublished: '2025-01-15',
+      dateModified: '2025-02-27',
+      description: 'Technology that works for your business. Canadian-owned AI and IT solutions in Niagara, Ontario.',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.hero h1', '.hero p']
+      }
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://karavanhub.com/#website',
+      url: 'https://karavanhub.com',
+      name: 'Karavan IT HUB',
+      publisher: { '@id': 'https://karavanhub.com/#organization' }
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://karavanhub.com/#services',
+      serviceType: 'IT and AI Solutions',
+      provider: { '@id': 'https://karavanhub.com/#organization' },
+      areaServed: 'Canada',
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Business Technology Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'AI Automation',
+              description: 'Automate repetitive tasks and workflows with custom AI solutions that integrate with your existing systems.'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Custom AI Applications',
+              description: 'Purpose-built AI applications including intelligent document processing, predictive analytics, and natural language interfaces.'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'AI Strategy Consulting',
+              description: 'Strategic AI roadmapping, use case identification, and implementation planning for sustainable AI adoption.'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Web Design & Development',
+              description: 'Mobile-responsive, SEO-optimized websites built for conversions and business growth.'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Custom Software Development',
+              description: 'Tailored software solutions designed around your specific business workflows and requirements.'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Data Analytics',
+              description: 'Transform your data into actionable insights with custom dashboards, reports, and visualizations.'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Digital Transformation',
+              description: 'Modernize your business operations with technology that eliminates inefficiencies and enables growth.'
+            }
+          }
+        ]
+      }
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://karavanhub.com/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Is AI actually right for my business?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'It depends on your specific situation. AI delivers real value when you have repetitive tasks eating up employee time, data that needs organizing or analyzing, or customer interactions that could be faster. During a free assessment, we identify whether AI, traditional IT solutions, or a combination makes the most sense for your business.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What results can I realistically expect from AI?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Results vary based on your starting point and goals. Clients typically see measurable improvements in time savings on manual tasks, faster response times to customers, and better insights from existing data. We build a proof of concept first so you can validate results before committing to a larger investment.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'How do you keep our data safe when implementing AI?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Data security is built into every step of our process. We use enterprise-grade encryption, work within your existing security policies, and never share your data with third parties. For sensitive industries, we can deploy AI solutions that run entirely within your own infrastructure.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'How much does a website cost?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Website costs depend on complexity, features, and your specific business needs. A professional small business website typically ranges from a few thousand dollars to significantly more for e-commerce or custom functionality. We provide transparent quotes after understanding your goals.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does it take to build a website?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Most business websites take 4-8 weeks from kickoff to launch. Simpler sites can be faster; complex e-commerce or custom applications take longer. The biggest variable is usually content and feedback timing.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Will my website work on mobile and show up on Google?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Every website we build is mobile-responsive and optimized for search engines. Mobile-first design and technical SEO are standard, not add-ons. We handle fast loading speeds, proper structure, meta tags, and schema markup.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What does digital transformation actually mean for a small business?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Digital transformation means using technology to solve real business problems, not chasing trends. For small businesses, it often starts with eliminating paper processes, connecting disconnected systems, or giving your team better tools to serve customers.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you build custom software or help us understand our data better?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes to both. We build custom software when off-the-shelf tools don\'t fit your workflow. For data analytics, we help you turn the information you\'re already collecting into insights you can act on: dashboards, reports, and visualizations that answer your real business questions.'
+          }
         }
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Custom Software Development',
-          description: 'Tailored software solutions designed around your specific business workflows and requirements.'
+      ]
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://karavanhub.com/#breadcrumb',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://karavanhub.com'
         }
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Data Analytics',
-          description: 'Transform your data into actionable insights with custom dashboards, reports, and visualizations.'
-        }
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Digital Transformation',
-          description: 'Modernize your business operations with technology that eliminates inefficiencies and enables growth.'
-        }
-      }
-    ]
-  }
-};
-
-const schemaFAQ = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Is AI actually right for my business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'It depends on your specific situation. AI delivers real value when you have repetitive tasks eating up employee time, data that needs organizing or analyzing, or customer interactions that could be faster. During a free assessment, we identify whether AI, traditional IT solutions, or a combination makes the most sense for your business.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'What results can I realistically expect from AI?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Results vary based on your starting point and goals. Clients typically see measurable improvements in time savings on manual tasks, faster response times to customers, and better insights from existing data. We build a proof of concept first so you can validate results before committing to a larger investment.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'How do you keep our data safe when implementing AI?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Data security is built into every step of our process. We use enterprise-grade encryption, work within your existing security policies, and never share your data with third parties. For sensitive industries, we can deploy AI solutions that run entirely within your own infrastructure.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does a website cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Website costs depend on complexity, features, and your specific business needs. A professional small business website typically ranges from a few thousand dollars to significantly more for e-commerce or custom functionality. We provide transparent quotes after understanding your goals.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most business websites take 4-8 weeks from kickoff to launch. Simpler sites can be faster; complex e-commerce or custom applications take longer. The biggest variable is usually content and feedback timing.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my website work on mobile and show up on Google?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Every website we build is mobile-responsive and optimized for search engines. Mobile-first design and technical SEO are standard, not add-ons. We handle fast loading speeds, proper structure, meta tags, and schema markup.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'What does digital transformation actually mean for a small business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Digital transformation means using technology to solve real business problems, not chasing trends. For small businesses, it often starts with eliminating paper processes, connecting disconnected systems, or giving your team better tools to serve customers.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you build custom software or help us understand our data better?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes to both. We build custom software when off-the-shelf tools don\'t fit your workflow. For data analytics, we help you turn the information you\'re already collecting into insights you can act on: dashboards, reports, and visualizations that answer your real business questions.'
-      }
+      ]
     }
   ]
 };
@@ -222,22 +271,10 @@ const schemaFAQ = {
 export default function HomePage() {
   return (
     <>
-      {/* Schema.org Structured Data */}
+      {/* Schema.org Structured Data — Consolidated @graph */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrganization) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaLocalBusiness) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaServices) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
 
       {/* ============================================
