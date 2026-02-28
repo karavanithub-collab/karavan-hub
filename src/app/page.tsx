@@ -732,7 +732,7 @@ export default function HomePage() {
                 We&rsquo;ve been at this for years. Here&rsquo;s what that looks like.
               </h2>
               <p className="text-[17px] text-white/75 mb-5 leading-[1.75]">
-                Last year we automated a vendor reconciliation process for a restaurant chain. What used to take their team 40 hours a month now takes four. That&apos;s the kind of problem we solve.
+                One client was losing thousands a month to duplicate invoices their finance team couldn&apos;t catch fast enough. We built a payment system with automated duplicate detection and AI anomaly flagging. Processing got 85% faster. Duplicate payments dropped to zero.
               </p>
               <a
                 href="/case-studies"
