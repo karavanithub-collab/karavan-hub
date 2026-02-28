@@ -94,6 +94,17 @@ body {
     animation: float 6s ease-in-out infinite;
   }
 
+  /* Orb Float Animation — smooth 12s drift for hero background orbs */
+  @keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(15px, -20px) scale(1.05); }
+    66% { transform: translate(-10px, 15px) scale(0.95); }
+  }
+
+  .animate-orbFloat {
+    animation: orbFloat 12s ease-in-out infinite;
+  }
+
   /* Cyberpunk Pulse Animation */
   @keyframes cyberpunkPulse {
     0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }

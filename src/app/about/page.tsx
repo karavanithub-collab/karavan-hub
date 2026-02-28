@@ -448,7 +448,7 @@ export default function AboutPage() {
          HERO SECTION - Brand Blue Gradient
          ============================================ */}
       <section
-        className="relative min-h-[90vh] overflow-hidden flex items-center"
+        className="relative min-h-[80vh] lg:min-h-[90vh] overflow-hidden flex items-center pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
         style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)' }}
         aria-labelledby="hero-title"
         role="banner"

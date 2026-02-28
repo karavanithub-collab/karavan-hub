@@ -528,25 +528,24 @@ export default function ITSolutionsPage() {
         className="relative min-h-[80vh] lg:min-h-[100vh] bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
         aria-label="IT Solutions Overview"
       >
-        {/* Animated gradient orbs — GPU-promoted to avoid scroll jank */}
-        <div
-          className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] rounded-full bg-gradient-radial from-[#3b82f6] to-transparent blur-[80px] opacity-40 animate-pulse"
-          style={{ willChange: 'transform, opacity', transform: 'translateZ(0)' }}
-        ></div>
-        <div
-          className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full bg-gradient-radial from-[#22d3ee] to-transparent blur-[80px] opacity-40 animate-pulse"
-          style={{ animationDelay: '-4s', willChange: 'transform, opacity', transform: 'translateZ(0)' }}
-        ></div>
-        <div
-          className="absolute top-[40%] left-[30%] w-[350px] h-[350px] rounded-full bg-gradient-radial from-[#8b5cf6] to-transparent blur-[80px] opacity-40 animate-pulse"
-          style={{ animationDelay: '-8s', willChange: 'transform, opacity', transform: 'translateZ(0)' }}
-        ></div>
+        {/* Animated gradient orbs — smooth 12s drift, GPU-promoted */}
+        <div className="absolute top-[-200px] right-[-100px] w-[600px] h-[600px] rounded-full opacity-40" aria-hidden="true" style={{ background: 'radial-gradient(circle, #3b82f6 0%, transparent 70%)', filter: 'blur(80px)', animation: 'orbFloat 12s ease-in-out infinite', willChange: 'transform', transform: 'translateZ(0)' }}></div>
+        <div className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full opacity-40" aria-hidden="true" style={{ background: 'radial-gradient(circle, #22d3ee 0%, transparent 70%)', filter: 'blur(80px)', animation: 'orbFloat 12s ease-in-out infinite', animationDelay: '-4s', willChange: 'transform', transform: 'translateZ(0)' }}></div>
+        <div className="absolute top-[40%] left-[30%] w-[350px] h-[350px] rounded-full opacity-40" aria-hidden="true" style={{ background: 'radial-gradient(circle, #8b5cf6 0%, transparent 70%)', filter: 'blur(80px)', animation: 'orbFloat 12s ease-in-out infinite', animationDelay: '-8s', willChange: 'transform', transform: 'translateZ(0)' }}></div>
 
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
 
+        {/* Floating particles — visible on all viewports */}
+        <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.6)] rounded-full animate-float" aria-hidden="true" style={{ top: '15%', left: '10%', boxShadow: '0 0 15px rgba(147,197,253,0.4)', willChange: 'transform', transform: 'translateZ(0)' }}></div>
+        <div className="absolute w-1.5 h-1.5 bg-[rgba(139,92,246,0.7)] rounded-full animate-float" aria-hidden="true" style={{ top: '30%', right: '15%', animationDelay: '-2s', boxShadow: '0 0 15px rgba(139,92,246,0.4)', willChange: 'transform', transform: 'translateZ(0)' }}></div>
+        <div className="absolute w-1 h-1 bg-[rgba(34,211,238,0.8)] rounded-full animate-float" aria-hidden="true" style={{ bottom: '25%', left: '20%', animationDelay: '-4s', boxShadow: '0 0 15px rgba(34,211,238,0.4)', willChange: 'transform', transform: 'translateZ(0)' }}></div>
+        <div className="absolute w-1 h-1 bg-[rgba(147,197,253,0.5)] rounded-full animate-float" aria-hidden="true" style={{ top: '50%', right: '25%', animationDelay: '-1s', boxShadow: '0 0 15px rgba(147,197,253,0.4)', willChange: 'transform', transform: 'translateZ(0)' }}></div>
+        <div className="absolute w-1.5 h-1.5 bg-[rgba(139,92,246,0.6)] rounded-full animate-float" aria-hidden="true" style={{ bottom: '35%', right: '10%', animationDelay: '-3s', boxShadow: '0 0 15px rgba(139,92,246,0.4)', willChange: 'transform', transform: 'translateZ(0)' }}></div>
+        <div className="absolute w-1 h-1 bg-[rgba(34,211,238,0.7)] rounded-full animate-float" aria-hidden="true" style={{ bottom: '20%', left: '35%', animationDelay: '-5s', boxShadow: '0 0 15px rgba(34,211,238,0.4)', willChange: 'transform', transform: 'translateZ(0)' }}></div>
+
         {/* Grain texture */}
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }}></div>
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")" }}></div>
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
