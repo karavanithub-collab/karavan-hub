@@ -116,7 +116,7 @@ const jsonLdGraph = {
       name: 'AI Solutions for Business',
       url: 'https://karavanhub.com/ai-solutions',
       datePublished: '2026-01-15',
-      dateModified: '2026-02-16',
+      dateModified: '2026-02-28',
       isPartOf: {
         '@type': 'WebSite',
         '@id': 'https://karavanhub.com/#website',
