@@ -192,7 +192,7 @@ const schemaGraph = {
           name: 'Is AI actually right for my business?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'It depends on your specific situation. AI delivers real value when you have repetitive tasks eating up employee time, data that needs organizing or analyzing, or customer interactions that could be faster. During a free assessment, we identify whether AI, traditional IT solutions, or a combination makes the most sense for your business.'
+            text: 'It depends on your specific situation. AI delivers real value when you have repetitive tasks eating up your team\'s time, or data that nobody has the bandwidth to make sense of. During our free assessment, we figure out whether AI, traditional IT, or some mix of both makes the most sense.'
           }
         },
         {
@@ -200,7 +200,7 @@ const schemaGraph = {
           name: 'What results can I realistically expect from AI?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Results vary based on your starting point and goals. Clients typically see measurable improvements in time savings on manual tasks, faster response times to customers, and better insights from existing data. We build a proof of concept first so you can validate results before committing to a larger investment.'
+            text: 'Results vary based on your starting point and goals. Anyone who promises specific numbers before understanding your business isn\'t being honest. Our clients typically see less time wasted on manual tasks and better use of data they were already sitting on. We build a proof of concept first so you can see results before committing.'
           }
         },
         {
@@ -208,7 +208,7 @@ const schemaGraph = {
           name: 'How do you keep our data safe when implementing AI?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Data security is built into every step of our process. We use enterprise-grade encryption, work within your existing security policies, and never share your data with third parties. For sensitive industries, we can deploy AI solutions that run entirely within your own infrastructure.'
+            text: 'Data security is built into every step. We use enterprise-grade encryption and work within your existing security policies. Your data never gets shared with anyone. For sensitive industries, we can deploy AI that runs entirely on your own infrastructure.'
           }
         },
         {
@@ -216,7 +216,7 @@ const schemaGraph = {
           name: 'How much does a website cost?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Website costs depend on complexity, features, and your specific business needs. A professional small business website typically ranges from a few thousand dollars to significantly more for e-commerce or custom functionality. We provide transparent quotes after understanding your goals.'
+            text: 'Costs depend on what you need and how complex it gets. A professional small business website typically ranges from a few thousand dollars to quite a bit more for e-commerce or custom functionality. We give you a transparent quote after understanding your goals.'
           }
         },
         {
@@ -224,7 +224,7 @@ const schemaGraph = {
           name: 'How long does it take to build a website?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Most business websites take 4-8 weeks from kickoff to launch. Simpler sites can be faster; complex e-commerce or custom applications take longer. The biggest variable is usually content and feedback timing.'
+            text: 'Most business websites take 4-8 weeks from kickoff to launch. Simpler sites can go faster. Complex e-commerce or custom applications take longer. The biggest variable is usually content and feedback.'
           }
         },
         {
@@ -232,7 +232,7 @@ const schemaGraph = {
           name: 'Will my website work on mobile and show up on Google?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. Every website we build is mobile-responsive and optimized for search engines. Mobile-first design and technical SEO are standard, not add-ons. We handle fast loading speeds, proper structure, meta tags, and schema markup.'
+            text: 'Yes. Every website we build is mobile-responsive and optimized for search engines. Mobile-first design and technical SEO are standard, not extras. We handle loading speed, proper structure, meta tags, schema markup.'
           }
         },
         {
@@ -240,7 +240,7 @@ const schemaGraph = {
           name: 'What does digital transformation actually mean for a small business?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Digital transformation means using technology to solve real business problems, not chasing trends. For small businesses, it often starts with eliminating paper processes, connecting disconnected systems, or giving your team better tools to serve customers.'
+            text: 'It means using technology to solve real business problems. Not chasing trends. For small businesses, it usually starts with killing the paper and connecting systems that should\'ve been talking to each other years ago.'
           }
         },
         {
@@ -248,7 +248,7 @@ const schemaGraph = {
           name: 'Can you build custom software or help us understand our data better?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes to both. We build custom software when off-the-shelf tools don\'t fit your workflow. For data analytics, we help you turn the information you\'re already collecting into insights you can act on: dashboards, reports, and visualizations that answer your real business questions.'
+            text: 'Yes to both. We build custom software when off-the-shelf tools don\'t fit your workflow. For data analytics, we turn the information you\'re already collecting into something you can actually act on. Dashboards and reports that answer the questions your business is really asking.'
           }
         }
       ]
@@ -496,7 +496,7 @@ export default function HomePage() {
             Everyone&rsquo;s talking about AI. But no one&rsquo;s explaining how to actually use it.
           </h2>
           <p className="font-body text-[19px] text-[var(--text-body)] leading-[1.8] mb-10 max-w-[800px] mx-auto">
-            You&#8217;ve seen the headlines. You&#8217;ve sat through the demos. Maybe you&#8217;ve even tried a few tools. And yet nothing&#8217;s really changed in how your business runs. That&#8217;s not your fault. You need a partner who can cut through the noise, speak plain English, and tell you honestly what will actually work for your business and what won&#8217;t.
+            You&#8217;ve seen the headlines. You&#8217;ve sat through the demos. Maybe you&#8217;ve even tried a few tools. And yet nothing&#8217;s really changed in how your business runs. That&#8217;s not your fault. You need someone who&#8217;ll cut through the noise and tell you honestly what will actually work for your business. And what won&#8217;t.
           </p>
           <a
             href="#contact"
@@ -572,7 +572,7 @@ export default function HomePage() {
                 <span className="block text-sm font-medium text-[var(--text-muted)] mt-1">Automation & Intelligence</span>
               </h3>
               <p className="text-[16px] text-[var(--text-body)] mb-6 leading-[1.7]">
-                Transform how your business operates with intelligent automation that learns, adapts, and delivers measurable ROI from day one.
+                Most businesses we meet have at least one person buried in work that shouldn&apos;t need a human at all. Data entry. Scheduling. Report generation. We build the AI that takes those tasks off their plate, so they can get back to the work they were actually hired to do.
               </p>
               <ul className="space-y-0 mb-6">
                 <li className="py-2.5 text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0">
@@ -645,7 +645,7 @@ export default function HomePage() {
                 <span className="block text-sm font-medium text-[var(--text-muted)] mt-1">Development & Design</span>
               </h3>
               <p className="text-[16px] text-[var(--text-body)] mb-6 leading-[1.7]">
-                From concept to launch, we build digital infrastructure that powers growth. Reliable, scalable, and designed for tomorrow.
+                Websites, custom software, dashboards. The stuff your business depends on every morning when the team logs in. We build it clean, and we build it to last. So you&apos;re not scrambling to fix something critical six months from now.
               </p>
               <ul className="space-y-0 mb-6">
                 <li className="py-2.5 text-[15px] text-[var(--text-body)] border-b border-[var(--border-light)] last:border-b-0">

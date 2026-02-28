@@ -16,73 +16,73 @@ const faqItems: FAQItem[] = [
   {
     id: 'faq-1',
     question: 'Is AI actually right for my business?',
-    answer: 'It depends on your specific situation—and we\'ll tell you honestly either way. AI delivers real value when you have repetitive tasks eating up employee time, data that needs organizing or analyzing, or customer interactions that could be faster. It\'s not the right fit if you\'re looking for a quick fix without clear goals. During our free assessment, we\'ll identify whether AI, traditional IT solutions, or a combination makes the most sense for your business.',
+    answer: 'It depends on your specific situation. And we\'ll tell you honestly either way. AI delivers real value when you have repetitive tasks eating up your team\'s time, or data that nobody has the bandwidth to make sense of. It\'s not the right fit if you\'re looking for a quick fix without clear goals. During our free assessment, we figure out whether AI, traditional IT, or some mix of both makes the most sense.',
     schema: {
       name: 'Is AI actually right for my business?',
-      text: 'It depends on your specific situation. AI delivers real value when you have repetitive tasks eating up employee time, data that needs organizing or analyzing, or customer interactions that could be faster. During a free assessment, we identify whether AI, traditional IT solutions, or a combination makes the most sense for your business.'
+      text: 'It depends on your specific situation. AI delivers real value when you have repetitive tasks eating up your team\'s time, or data that nobody has the bandwidth to make sense of. During our free assessment, we figure out whether AI, traditional IT, or some mix of both makes the most sense.'
     }
   },
   {
     id: 'faq-2',
     question: 'What results can I realistically expect from AI?',
-    answer: 'Results vary based on your starting point and goals—anyone promising specific numbers before understanding your business isn\'t being honest. That said, our clients typically see measurable improvements in three areas: time savings on manual tasks, faster response times to customers, and better insights from their existing data. We build a proof of concept first so you can validate results before committing to a larger investment.',
+    answer: 'Results vary based on your starting point and goals. Anyone who promises specific numbers before understanding your business isn\'t being honest. That said, our clients typically see less time wasted on manual tasks and better use of data they were already sitting on. We build a proof of concept first so you can see the results before committing to anything bigger.',
     schema: {
       name: 'What results can I realistically expect from AI?',
-      text: 'Results vary based on your starting point and goals. Clients typically see measurable improvements in time savings on manual tasks, faster response times to customers, and better insights from existing data. We build a proof of concept first so you can validate results before committing to a larger investment.'
+      text: 'Results vary based on your starting point and goals. Anyone who promises specific numbers before understanding your business isn\'t being honest. Our clients typically see less time wasted on manual tasks and better use of data they were already sitting on. We build a proof of concept first so you can see results before committing.'
     }
   },
   {
     id: 'faq-3',
     question: 'How do you keep our data safe when implementing AI?',
-    answer: 'Data security is built into every step of our process. We use enterprise-grade encryption, work within your existing security policies, and never share your data with third parties. For sensitive industries, we can deploy AI solutions that run entirely within your own infrastructure—your data never leaves your control. We\'ll walk you through exactly how your information is handled before any project begins.',
+    answer: 'Data security is built into every step. We use enterprise-grade encryption and work within your existing security policies. Your data never gets shared with anyone. For sensitive industries, we can deploy AI that runs entirely on your own infrastructure, so nothing ever leaves your hands. We walk you through how your information is handled before any project starts.',
     schema: {
       name: 'How do you keep our data safe when implementing AI?',
-      text: 'Data security is built into every step of our process. We use enterprise-grade encryption, work within your existing security policies, and never share your data with third parties. For sensitive industries, we can deploy AI solutions that run entirely within your own infrastructure.'
+      text: 'Data security is built into every step. We use enterprise-grade encryption and work within your existing security policies. Your data never gets shared with anyone. For sensitive industries, we can deploy AI that runs entirely on your own infrastructure.'
     }
   },
   {
     id: 'faq-4',
     question: 'How much does a website cost?',
-    answer: 'Website costs depend on complexity, features, and your specific business needs. A professional small business website typically ranges from a few thousand dollars to significantly more for e-commerce or custom functionality. The real question is ROI—a website that converts visitors into customers pays for itself. We provide transparent quotes after understanding your goals, and we\'ll never recommend features you don\'t actually need.',
+    answer: 'Costs depend on what you need and how complex it gets. A professional small business website typically ranges from a few thousand dollars to quite a bit more for e-commerce or custom functionality. But the real question is return. A website that turns visitors into paying customers pays for itself. We give you a transparent quote after understanding your goals. And we won\'t recommend features you don\'t need.',
     schema: {
       name: 'How much does a website cost?',
-      text: 'Website costs depend on complexity, features, and your specific business needs. A professional small business website typically ranges from a few thousand dollars to significantly more for e-commerce or custom functionality. We provide transparent quotes after understanding your goals.'
+      text: 'Costs depend on what you need and how complex it gets. A professional small business website typically ranges from a few thousand dollars to quite a bit more for e-commerce or custom functionality. We give you a transparent quote after understanding your goals.'
     }
   },
   {
     id: 'faq-5',
     question: 'How long does it take to build a website?',
-    answer: 'Most business websites take 4-8 weeks from kickoff to launch. Simpler sites can be faster; complex e-commerce or custom applications take longer. The biggest variable is usually content and feedback—projects move quickly when you\'re responsive, and slow down when approvals get delayed. We\'ll give you a realistic timeline upfront and keep you updated throughout the process.',
+    answer: 'Most business websites take 4-8 weeks from kickoff to launch. Simpler sites can go faster. Complex e-commerce or custom applications take longer. The biggest variable is usually content and feedback. Projects move fast when you\'re responsive, and slow down when approvals stall. We give you a realistic timeline upfront and keep you in the loop the whole way.',
     schema: {
       name: 'How long does it take to build a website?',
-      text: 'Most business websites take 4-8 weeks from kickoff to launch. Simpler sites can be faster; complex e-commerce or custom applications take longer. The biggest variable is usually content and feedback timing.'
+      text: 'Most business websites take 4-8 weeks from kickoff to launch. Simpler sites can go faster. Complex e-commerce or custom applications take longer. The biggest variable is usually content and feedback.'
     }
   },
   {
     id: 'faq-6',
     question: 'Will my website work on mobile and show up on Google?',
-    answer: 'Yes—every website we build is mobile-responsive and optimized for search engines. Mobile-first design and technical SEO are standard, not add-ons. We handle the fundamentals that help Google find and index your site: fast loading speeds, proper structure, meta tags, and schema markup. For businesses that want to compete for specific keywords, we offer ongoing SEO services beyond the initial build.',
+    answer: 'Yes. Every website we build is mobile-responsive and optimized for search engines. Mobile-first design and technical SEO are standard, not extras. We handle the fundamentals that help Google find and rank your site: loading speed, proper structure, meta tags, schema markup. For businesses that want to compete for specific keywords, we offer ongoing SEO beyond the initial build.',
     schema: {
       name: 'Will my website work on mobile and show up on Google?',
-      text: 'Yes—every website we build is mobile-responsive and optimized for search engines. Mobile-first design and technical SEO are standard, not add-ons. We handle fast loading speeds, proper structure, meta tags, and schema markup.'
+      text: 'Yes. Every website we build is mobile-responsive and optimized for search engines. Mobile-first design and technical SEO are standard, not extras. We handle loading speed, proper structure, meta tags, schema markup.'
     }
   },
   {
     id: 'faq-7',
     question: 'What does digital transformation actually mean for a small business?',
-    answer: 'Digital transformation means using technology to solve real business problems—not chasing trends. For small businesses, it often starts with eliminating paper processes, connecting disconnected systems, or giving your team better tools to serve customers. We focus on changes that save time, reduce errors, and let you scale without adding headcount. No buzzwords, just practical improvements that make your operations run smoother.',
+    answer: 'It means using technology to solve real business problems. Not chasing trends. For small businesses, it usually starts with killing the paper and connecting systems that should\'ve been talking to each other years ago. We focus on changes that save time and cut down on mistakes. No buzzwords. Just practical stuff that makes your day-to-day run smoother.',
     schema: {
       name: 'What does digital transformation actually mean for a small business?',
-      text: 'Digital transformation means using technology to solve real business problems—not chasing trends. For small businesses, it often starts with eliminating paper processes, connecting disconnected systems, or giving your team better tools to serve customers.'
+      text: 'It means using technology to solve real business problems. Not chasing trends. For small businesses, it usually starts with killing the paper and connecting systems that should\'ve been talking to each other years ago.'
     }
   },
   {
     id: 'faq-8',
     question: 'Can you build custom software or help us understand our data better?',
-    answer: 'Yes to both. We build custom software when off-the-shelf tools don\'t fit your workflow—applications tailored to how your business actually operates. For data analytics, we help you turn the information you\'re already collecting into insights you can act on: dashboards, reports, and visualizations that answer your real business questions. Both start with understanding what decisions you\'re trying to make, then building the tools to support them.',
+    answer: 'Yes to both. We build custom software when off-the-shelf tools don\'t fit your workflow. Applications built around how your business actually operates, not the other way around. For data analytics, we turn the information you\'re already collecting into something you can actually act on. Dashboards and reports that answer the questions your business is really asking. Both start with understanding what decisions you need to make. Then we build the tools to support them.',
     schema: {
       name: 'Can you build custom software or help us understand our data better?',
-      text: 'Yes to both. We build custom software when off-the-shelf tools don\'t fit your workflow. For data analytics, we help you turn the information you\'re already collecting into insights you can act on: dashboards, reports, and visualizations that answer your real business questions.'
+      text: 'Yes to both. We build custom software when off-the-shelf tools don\'t fit your workflow. For data analytics, we turn the information you\'re already collecting into something you can actually act on. Dashboards and reports that answer the questions your business is really asking.'
     }
   }
 ];
