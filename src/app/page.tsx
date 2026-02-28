@@ -3,14 +3,14 @@ import { HomeFAQ } from '@/components/sections/HomeFAQ';
 
 export const metadata: Metadata = {
   title: 'Karavan IT HUB — AI & IT Solutions | Custom Software Development',
-  description: 'Technology that works for your business. Canadian-owned AI and IT solutions in Niagara, Ontario. Custom software, AI automation, web development, and digital transformation for SMBs.',
+  description: 'We build the technology. You get your time back. Canadian-owned AI and IT solutions in Niagara, Ontario. Custom software, AI automation, web development for SMBs.',
   keywords: 'AI solutions, IT solutions, custom software development, AI automation, digital transformation, Canadian tech company',
   authors: [{ name: 'Karavan IT HUB' }],
   openGraph: {
     type: 'website',
     url: 'https://karavanhub.com',
     title: 'Karavan IT HUB — AI & IT Solutions',
-    description: 'Technology that works for your business. Custom AI solutions and enterprise software.',
+    description: 'We build the technology. You get your time back. Custom AI solutions and software for SMBs.',
     images: [
       {
         url: 'https://karavanhub.com/images/og-homepage.jpg',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Karavan IT HUB — AI & IT Solutions',
-    description: 'Technology that works for your business. Custom AI solutions and enterprise software.',
+    description: 'We build the technology. You get your time back. Custom AI solutions and software for SMBs.',
     images: ['https://karavanhub.com/images/twitter-homepage.jpg']
   },
   other: {
@@ -101,7 +101,7 @@ const schemaGraph = {
       about: { '@id': 'https://karavanhub.com/#organization' },
       datePublished: '2025-01-15',
       dateModified: '2025-02-27',
-      description: 'Technology that works for your business. Canadian-owned AI and IT solutions in Niagara, Ontario.',
+      description: 'We build the technology. You get your time back. Canadian-owned AI and IT solutions in Niagara, Ontario.',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['.hero h1', '.hero p']
@@ -308,9 +308,9 @@ export default function HomePage() {
               className="hero-title font-headline font-bold text-white leading-[1.05] mb-7 tracking-[-1.5px]"
               style={{ fontSize: 'clamp(48px, 7vw, 80px)' }}
             >
-              Technology that works
+              We build the technology.
               <span className="accent block font-bold bg-gradient-to-r from-white to-[#22d3ee] bg-clip-text text-transparent">
-                for your business.
+                You get your time back.
               </span>
             </h1>
 
@@ -329,10 +329,10 @@ export default function HomePage() {
                 </svg>
               </a>
               <a
-                href="#services"
+                href="/case-studies"
                 className="hero-cta hero-cta-secondary inline-flex items-center justify-center gap-2.5 bg-transparent text-white px-7 sm:px-9 py-[16px] sm:py-[18px] border border-white/30 rounded-lg text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/50 whitespace-nowrap"
               >
-                See Our Work
+                See Our Results
               </a>
             </div>
           </div>
@@ -495,8 +495,11 @@ export default function HomePage() {
           <h2 className="font-headline text-[26px] sm:text-[32px] lg:text-[48px] font-semibold text-[var(--text-dark)] mb-8 leading-[1.15] tracking-[-1px]">
             Everyone&rsquo;s talking about AI. But no one&rsquo;s explaining how to actually use it.
           </h2>
+          <p className="font-body text-[19px] text-[var(--text-body)] leading-[1.8] mb-5 max-w-[800px] mx-auto">
+            You&#8217;ve seen the headlines. You&#8217;ve sat through the demos. Maybe you&#8217;ve even tried a few tools. And yet nothing&#8217;s really changed in how your business runs. That&#8217;s not your fault.
+          </p>
           <p className="font-body text-[19px] text-[var(--text-body)] leading-[1.8] mb-10 max-w-[800px] mx-auto">
-            You&#8217;ve seen the headlines. You&#8217;ve sat through the demos. Maybe you&#8217;ve even tried a few tools. And yet nothing&#8217;s really changed in how your business runs. That&#8217;s not your fault. You need someone who&#8217;ll cut through the noise and tell you honestly what will actually work for your business. And what won&#8217;t.
+            Whether you need AI that actually does something useful, or just a website that doesn&#8217;t embarrass you, the problem is the same. You need someone who&#8217;ll be straight with you about what will work. And what won&#8217;t.
           </p>
           <a
             href="#contact"
@@ -672,6 +675,22 @@ export default function HomePage() {
               </a>
             </div>
           </div>
+
+          {/* "Not sure?" bridge — serves undecided visitors */}
+          <div className="text-center mt-10 md:mt-12">
+            <p className="text-[16px] text-[var(--text-body)] mb-4">
+              Not sure which one you need? That&apos;s literally what the free assessment is for.
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2.5 text-[var(--primary)] text-[15px] font-semibold font-headline no-underline transition-all duration-200 hover:gap-3"
+            >
+              Let&apos;s figure it out together
+              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12l5-5-5-5" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -689,7 +708,7 @@ export default function HomePage() {
                 We&rsquo;ve been at this for years. Here&rsquo;s what that looks like.
               </h2>
               <p className="text-[17px] text-white/75 mb-5 leading-[1.75]">
-                We've spent over a decade helping businesses turn fragmented processes into reliable systems they can scale on.
+                Last year we automated a vendor reconciliation process for a restaurant chain. What used to take their team 40 hours a month now takes four. That&apos;s the kind of problem we solve.
               </p>
               <a
                 href="/case-studies"
@@ -757,7 +776,7 @@ export default function HomePage() {
                 92%
               </div>
               <div className="text-[13px] font-medium text-white/75">
-                Efficiency Gain
+                Efficiency Gain · Document Processing
               </div>
             </div>
 
@@ -785,7 +804,7 @@ export default function HomePage() {
                 85%
               </div>
               <div className="text-[13px] font-medium text-white/75">
-                Faster Processing
+                Faster Processing · Data Pipeline
               </div>
             </div>
 
@@ -813,7 +832,7 @@ export default function HomePage() {
                 200+
               </div>
               <div className="text-[13px] font-medium text-white/75">
-                Hours Saved Monthly
+                Hours Saved Monthly · Per Client
               </div>
             </div>
 
@@ -841,7 +860,7 @@ export default function HomePage() {
                 3x
               </div>
               <div className="text-[13px] font-medium text-white/75">
-                Average ROI
+                Average ROI · First Year
               </div>
             </div>
           </div>
@@ -871,7 +890,7 @@ export default function HomePage() {
           {/* Right: Title + Form */}
           <div className="flex flex-col justify-center order-1 lg:order-2">
             <h2 className="font-headline text-[26px] sm:text-[32px] md:text-[42px] font-medium text-[var(--text-dark)] mb-4 leading-[1.2] tracking-[-0.5px]">
-              What problem should AI solve for you?
+              What&apos;s your biggest technology headache?
             </h2>
             <p className="text-[17px] text-[var(--text-body)] leading-[1.75] mb-8">
               We start with the business problem, not the technology. Tell us what you&apos;re trying to accomplish.
