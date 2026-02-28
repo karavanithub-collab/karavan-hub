@@ -4,13 +4,28 @@ import { HomeFAQ } from '@/components/sections/HomeFAQ';
 export const metadata: Metadata = {
   title: 'Karavan IT HUB — AI & IT Solutions | Custom Software Development',
   description: 'We build the technology. You get your time back. Canadian-owned AI and IT solutions in Niagara, Ontario. Custom software, AI automation, web development for SMBs.',
-  keywords: 'AI solutions, IT solutions, custom software development, AI automation, digital transformation, Canadian tech company',
+  keywords: 'AI solutions, IT solutions, custom software development, AI automation, digital transformation, Canadian tech company, Niagara Ontario',
   authors: [{ name: 'Karavan IT HUB' }],
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large' as const,
+    'max-snippet': -1,
+    'max-video-preview': -1,
+  },
+  alternates: {
+    canonical: 'https://karavanhub.com',
+    languages: {
+      'en-CA': 'https://karavanhub.com',
+      en: 'https://karavanhub.com',
+    },
+  },
   openGraph: {
     type: 'website',
     url: 'https://karavanhub.com',
     title: 'Karavan IT HUB — AI & IT Solutions',
     description: 'We build the technology. You get your time back. Custom AI solutions and software for SMBs.',
+    locale: 'en_CA',
     images: [
       {
         url: 'https://karavanhub.com/images/og-homepage.jpg',
@@ -28,9 +43,11 @@ export const metadata: Metadata = {
     images: ['https://karavanhub.com/images/twitter-homepage.jpg']
   },
   other: {
-    'geo.region': 'CA',
-    'geo.placename': 'Canada',
-    'theme-color': '#2563EB'
+    'geo.region': 'CA-ON',
+    'geo.placename': 'Niagara, Ontario',
+    'geo.position': '43.0896;-79.0849',
+    'ICBM': '43.0896, -79.0849',
+    'theme-color': '#2563EB',
   }
 };
 
@@ -100,11 +117,17 @@ const schemaGraph = {
       isPartOf: { '@id': 'https://karavanhub.com/#website' },
       about: { '@id': 'https://karavanhub.com/#organization' },
       datePublished: '2025-01-15',
-      dateModified: '2025-02-27',
+      dateModified: '2026-02-28',
       description: 'We build the technology. You get your time back. Canadian-owned AI and IT solutions in Niagara, Ontario.',
+      mentions: [
+        { '@type': 'Thing', name: 'Artificial Intelligence' },
+        { '@type': 'Thing', name: 'Custom Software Development' },
+        { '@type': 'Thing', name: 'Web Development' },
+        { '@type': 'Thing', name: 'Digital Transformation' },
+      ],
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.hero h1', '.hero p']
+        cssSelector: ['#hero-heading', '#value-heading', '#services-heading']
       }
     },
     {
@@ -280,7 +303,7 @@ export default function HomePage() {
       {/* ============================================
           HERO SECTION
           ============================================ */}
-      <section className="hero relative min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)' }}>
+      <section className="hero relative min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden" aria-labelledby="hero-heading" style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)' }}>
         {/* Animated gradient orbs — smooth 12s drift */}
         <div className="hero-orb-1 absolute top-[-200px] right-[-100px] w-[600px] h-[600px] rounded-full opacity-40" aria-hidden="true" style={{ background: 'radial-gradient(circle, #3b82f6 0%, transparent 70%)', filter: 'blur(80px)', animation: 'orbFloat 12s ease-in-out infinite', willChange: 'transform', transform: 'translateZ(0)' }}></div>
         <div className="hero-orb-2 absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] rounded-full opacity-40" aria-hidden="true" style={{ background: 'radial-gradient(circle, #22d3ee 0%, transparent 70%)', filter: 'blur(80px)', animation: 'orbFloat 12s ease-in-out infinite', animationDelay: '-4s', willChange: 'transform', transform: 'translateZ(0)' }}></div>
@@ -305,6 +328,7 @@ export default function HomePage() {
           {/* Left Column - Text */}
           <div className="hero-text max-w-full lg:max-w-[560px]">
             <h1
+              id="hero-heading"
               className="hero-title font-headline font-bold text-white leading-[1.05] mb-7 tracking-[-1.5px]"
               style={{ fontSize: 'clamp(48px, 7vw, 80px)' }}
             >
@@ -490,9 +514,9 @@ export default function HomePage() {
       {/* ============================================
           VALUE PROPOSITION SECTION
           ============================================ */}
-      <section className="value-section bg-white py-[60px] sm:py-[80px] lg:py-[120px]">
+      <section className="value-section bg-white py-[60px] sm:py-[80px] lg:py-[120px]" aria-labelledby="value-heading">
         <div className="container-main max-w-[900px] text-center">
-          <h2 className="font-headline text-[26px] sm:text-[32px] lg:text-[48px] font-semibold text-[var(--text-dark)] mb-8 leading-[1.15] tracking-[-1px]">
+          <h2 id="value-heading" className="font-headline text-[26px] sm:text-[32px] lg:text-[48px] font-semibold text-[var(--text-dark)] mb-8 leading-[1.15] tracking-[-1px]">
             Everyone&rsquo;s talking about AI. But no one&rsquo;s explaining how to actually use it.
           </h2>
           <p className="font-body text-[19px] text-[var(--text-body)] leading-[1.8] mb-5 max-w-[800px] mx-auto">
@@ -516,10 +540,10 @@ export default function HomePage() {
       {/* ============================================
           SERVICES SECTION
           ============================================ */}
-      <section className="services-section bg-gradient-to-b from-[#f0f7ff] to-white py-[60px] sm:py-[80px] lg:py-[120px]" id="services">
+      <section className="services-section bg-gradient-to-b from-[#f0f7ff] to-white py-[60px] sm:py-[80px] lg:py-[120px]" id="services" aria-labelledby="services-heading">
         <div className="container-main">
           <div className="services-header text-center mb-16">
-            <h2 className="font-headline text-[26px] sm:text-[32px] lg:text-[42px] font-medium text-[var(--text-dark)] mb-4 tracking-[-0.5px]">
+            <h2 id="services-heading" className="font-headline text-[26px] sm:text-[32px] lg:text-[42px] font-medium text-[var(--text-dark)] mb-4 tracking-[-0.5px]">
               Here&#8217;s how we help.
             </h2>
             <p className="text-[17px] text-[var(--text-body)] max-w-[600px] mx-auto leading-[1.7]">
@@ -697,14 +721,14 @@ export default function HomePage() {
       {/* ============================================
           TRUST & RESULTS SECTION
           ============================================ */}
-      <section className="trust-results-section bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] py-[60px] sm:py-[80px] md:py-[120px] relative overflow-hidden">
+      <section className="trust-results-section bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] py-[60px] sm:py-[80px] md:py-[120px] relative overflow-hidden" aria-labelledby="trust-heading">
         <div className="absolute inset-0 bg-grid-pattern opacity-50"></div>
 
         <div className="container-main relative z-10">
           {/* Top Row: Copy + Company Stats */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-16 items-center">
             <div className="trust-content">
-              <h2 className="font-headline text-[26px] sm:text-[32px] md:text-[42px] font-medium text-white mb-6 leading-[1.2] tracking-[-0.5px]">
+              <h2 id="trust-heading" className="font-headline text-[26px] sm:text-[32px] md:text-[42px] font-medium text-white mb-6 leading-[1.2] tracking-[-0.5px]">
                 We&rsquo;ve been at this for years. Here&rsquo;s what that looks like.
               </h2>
               <p className="text-[17px] text-white/75 mb-5 leading-[1.75]">
@@ -875,10 +899,10 @@ export default function HomePage() {
       {/* ============================================
           CTA/CONTACT SECTION
           ============================================ */}
-      <section className="cta-section bg-gradient-to-b from-[var(--bg-light)] to-white py-[60px] md:py-[80px] lg:py-[120px]" id="contact">
+      <section className="cta-section bg-gradient-to-b from-[var(--bg-light)] to-white py-[60px] md:py-[80px] lg:py-[120px]" id="contact" aria-labelledby="cta-heading">
         <div className="container-main grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-          {/* Left: Motion Blur Image */}
-          <div className="relative rounded-[20px] overflow-hidden min-h-[300px] lg:min-h-0 order-2 lg:order-1 shadow-[0_24px_64px_rgba(0,0,0,0.12)]">
+          {/* Left: Motion Blur Image — appears first on both mobile and desktop */}
+          <div className="relative rounded-[20px] overflow-hidden min-h-[300px] lg:min-h-0 shadow-[0_24px_64px_rgba(0,0,0,0.12)]">
             <img
               src="/images/cta-motion.jpg"
               alt="Person working with technology"
@@ -888,8 +912,8 @@ export default function HomePage() {
           </div>
 
           {/* Right: Title + Form */}
-          <div className="flex flex-col justify-center order-1 lg:order-2">
-            <h2 className="font-headline text-[26px] sm:text-[32px] md:text-[42px] font-medium text-[var(--text-dark)] mb-4 leading-[1.2] tracking-[-0.5px]">
+          <div className="flex flex-col justify-center">
+            <h2 id="cta-heading" className="font-headline text-[26px] sm:text-[32px] md:text-[42px] font-medium text-[var(--text-dark)] mb-4 leading-[1.2] tracking-[-0.5px]">
               What&apos;s your biggest technology headache?
             </h2>
             <p className="text-[17px] text-[var(--text-body)] leading-[1.75] mb-8">
