@@ -5,15 +5,15 @@ import { usePathname } from 'next/navigation'
 
 const footerLinks = {
   it: [
-    { label: 'Software Development', href: '/it-solutions/software-development' },
-    { label: 'Web Design & Development', href: '/it-solutions/web-design' },
-    { label: 'Data Analytics', href: '/it-solutions/data-analytics' },
-    { label: 'Digital Transformation', href: '/it-solutions/digital-transformation' },
+    { label: 'Software Solutions', href: '/it-solutions#software-solutions' },
+    { label: 'Web Design & Development', href: '/it-solutions#web-design' },
+    { label: 'Data Analytics', href: '/it-solutions#data-analytics' },
+    { label: 'Digital Transformation', href: '/it-solutions#digital-transformation' },
   ],
   ai: [
-    { label: 'AI Automation', href: '/ai-solutions/automation' },
-    { label: 'Custom AI Apps', href: '/ai-solutions/custom-apps' },
-    { label: 'AI Consulting', href: '/ai-solutions/consulting' },
+    { label: 'AI Automation', href: '/ai-solutions#automation' },
+    { label: 'Custom AI Apps', href: '/ai-solutions#custom-apps' },
+    { label: 'AI Consulting', href: '/ai-solutions#consulting' },
   ],
   company: [
     { label: 'About Us', href: '/about' },

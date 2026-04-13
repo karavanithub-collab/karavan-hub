@@ -10,9 +10,9 @@ type DropdownMenus = {
 
 const navDropdowns = {
   ai: [
-    { label: 'AI Automation', href: '/ai-solutions/automation' },
-    { label: 'Custom AI Apps', href: '/ai-solutions/custom-apps' },
-    { label: 'AI Consulting', href: '/ai-solutions/consulting' },
+    { label: 'AI Automation', href: '/ai-solutions#automation' },
+    { label: 'Custom AI Apps', href: '/ai-solutions#custom-apps' },
+    { label: 'AI Consulting', href: '/ai-solutions#consulting' },
   ],
   it: [
     { label: 'Software Development', href: '/it-solutions#software-solutions' },

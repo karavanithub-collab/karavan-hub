@@ -933,7 +933,7 @@ export default function AISolutionsPage() {
            ============================================ */}
       <section
         className="py-[40px] md:py-[56px] lg:py-[80px] bg-white border-t border-gray-200"
-        id="solutions"
+        id="automation"
         aria-labelledby="automation-heading"
       >
         <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
@@ -991,7 +991,7 @@ export default function AISolutionsPage() {
            ============================================ */}
       <section
         className="py-[40px] md:py-[56px] lg:py-[80px] bg-white border-t border-gray-200"
-        id="ai-software"
+        id="custom-apps"
         aria-labelledby="aisoftware-heading"
       >
         <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
@@ -1048,7 +1048,7 @@ export default function AISolutionsPage() {
            ============================================ */}
       <section
         className="py-[40px] md:py-[56px] lg:py-[80px] bg-white border-t border-gray-200"
-        id="ai-strategy"
+        id="consulting"
         aria-labelledby="strategy-heading"
       >
         <div className="max-w-[1240px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
