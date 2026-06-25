@@ -339,41 +339,81 @@ export default function ITSolutionsPage() {
     {
       title: 'Cloud-Native Applications',
       content: (
-        <p>
-          No more paying for servers that sit idle. Your app scales up during busy periods and scales back down when things are quiet. You only pay for what you use.
-        </p>
+        <>
+          <p>
+            Traditional software runs on a server — a fixed cost whether you&apos;re busy or slow. Cloud-native applications are built differently. They live in the cloud and scale automatically: more capacity when demand spikes, less when things settle. You pay for what you use, not what you might someday need.
+          </p>
+          <p className="mt-3">
+            For an Ontario small business, this matters in concrete ways. A platform that gets slammed during the holidays shouldn&apos;t cost the same to run in February. A booking system that sits quiet overnight shouldn&apos;t consume resources around the clock. We build your application to scale intelligently, which keeps infrastructure costs predictable and eliminates the single point of failure that comes with physical hardware.
+          </p>
+          <p className="mt-3">
+            Cloud-native also means your team can access what they need from anywhere — office, home, a job site. No VPN to configure. No on-premise server to maintain. When something needs updating, it happens without interrupting your workday.
+          </p>
+        </>
       ),
     },
     {
       title: 'Full-Stack Development',
       content: (
-        <p>
-          One team handles everything, from the screens your customers see to the database underneath. No finger-pointing. No handoffs between vendors. Just people who understand the whole picture.
-        </p>
+        <>
+          <p>
+            When you hire separate agencies for your front end and your back end, you create a gap. Each team knows their half. When something breaks, everyone points at the other side. We&apos;ve seen projects stall for weeks while vendors argued over whose bug it was.
+          </p>
+          <p className="mt-3">
+            We handle the full stack. That means the interface your customers see, the application logic that processes everything, and the database underneath. One team. One set of people who understand how all three layers connect. When you ask us to add a feature, we&apos;re thinking about the database query, the API call, and how it renders in the browser simultaneously — not in three separate meetings.
+          </p>
+          <p className="mt-3">
+            This is especially important for integrations. When your order system needs to pull inventory from one place, push confirmations somewhere else, and send a customer notification, the person building that needs to understand every step in the chain. We do — which is how you end up with a system that works the way it was described, not one that works in demo and breaks in production.
+          </p>
+        </>
       ),
     },
     {
       title: 'System Modernization',
       content: (
-        <p>
-          That old system everyone&apos;s nervous about touching? We help you move off it carefully, one piece at a time, without breaking what&apos;s already working.
-        </p>
+        <>
+          <p>
+            Legacy systems are a specific kind of problem. They work — which is exactly why nobody wants to touch them. The person who built it left years ago. Documentation is thin. The business depends on it running. So it keeps running, and everyone works around it.
+          </p>
+          <p className="mt-3">
+            The cost of leaving it alone compounds quietly. New integrations aren&apos;t possible. Staff spend time on manual workarounds. Security patches fall behind. Every year it runs, the gap between what the system can do and what the business needs grows wider. Eventually, a modernization that could have been gradual becomes an emergency.
+          </p>
+          <p className="mt-3">
+            We don&apos;t rip and replace. That approach has caused too many disasters. Instead, we identify the riskiest pieces and replace them one at a time, keeping everything running throughout. We build the new component, run it alongside the old one, verify it works, then cut over. You never face a day where operations stop because a migration didn&apos;t go cleanly.
+          </p>
+        </>
       ),
     },
     {
       title: 'Mobile Apps',
       content: (
-        <p>
-          We build iOS and Android apps that feel like they belong on your phone. Clean, fast, and designed around how people actually use them.
-        </p>
+        <>
+          <p>
+            A mobile app can be the difference between a business that feels current and one that asks customers to use a browser on their phone and pinch to zoom. But a bad app is worse than no app — a slow, crashing experience tells your customers something about how you operate.
+          </p>
+          <p className="mt-3">
+            We build native-feeling apps for iOS and Android designed around real behavior. How do people hold their phone when using your app? What are they trying to accomplish in 30 seconds? What happens when they lose connection mid-task? These questions get answered in design before we write a line of code. We test on actual devices, not just simulators.
+          </p>
+          <p className="mt-3">
+            For Canadian service businesses — trades, delivery, field service, healthcare — mobile apps solve specific operational problems. Technicians updating job status on-site. Drivers capturing signatures and logging deliveries. Clients booking, paying, and rescheduling from their phone without calling anyone. We build tools around those workflows, not generic app templates.
+          </p>
+        </>
       ),
     },
     {
       title: 'Connecting Your Tools',
       content: (
-        <p>
-          If your team is copying data between systems by hand, something is broken. We connect your tools so information moves on its own.
-        </p>
+        <>
+          <p>
+            Every time someone copies data from one system to another by hand, three things happen: they spend time on work a machine could do, they introduce errors, and you become dependent on a manual process that breaks the moment that person is unavailable.
+          </p>
+          <p className="mt-3">
+            We map how your systems currently share information, find the gaps, and build the connections that eliminate the manual steps. Your CRM updates when a sale closes. Your accounting software records the invoice. Your inventory adjusts when an order ships. These things happen automatically, in real time, without anyone triggering them.
+          </p>
+          <p className="mt-3">
+            We work with the APIs of the tools you already use — Salesforce, HubSpot, QuickBooks, Shopify, or a custom internal system. If an API doesn&apos;t exist, we build the middleware that bridges the gap. The goal is a business that runs on reliable, consistent data — not on hope that nobody forgot to update the spreadsheet.
+          </p>
+        </>
       ),
     },
     {
@@ -382,19 +422,27 @@ export default function ITSolutionsPage() {
         <ul className="list-none p-0 pb-5 m-0">
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Stop paying for features you don&apos;t use, and missing ones you need</span>
+            <span>Stop paying for features you don&apos;t use, and missing the ones you need</span>
           </li>
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Less training time because the software matches how your team already thinks</span>
+            <span>Less training time because the software matches how your team already works</span>
           </li>
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
             <span>Own your technology instead of renting someone else&apos;s limitations</span>
           </li>
-          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
             <span>Scale when you need to, not when your vendor says you can</span>
+          </li>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Eliminate hours of weekly manual data entry and the errors that come with it</span>
+          </li>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Build a platform your business can grow into rather than outgrow</span>
           </li>
         </ul>
       ),
@@ -407,41 +455,81 @@ export default function ITSolutionsPage() {
     {
       title: 'Responsive Website Design',
       content: (
-        <p>
-          Your site should look and feel right on a laptop, a tablet, and a phone. No pinching. No awkward scrolling. We test on real devices, not just browser windows.
-        </p>
+        <>
+          <p>
+            More than 60% of web traffic in Canada now comes from a mobile device. That means most people finding your business are seeing it on a phone first. If your site wasn&apos;t built with that in mind — if text is too small, buttons are too close, or sections require sideways scrolling — you&apos;re losing more than half your visitors before they read a word about you.
+          </p>
+          <p className="mt-3">
+            Responsive design isn&apos;t just making things &quot;fit&quot; on smaller screens. It&apos;s rethinking how content is prioritized on each device. On a phone, someone needs your number or address fast. On a laptop, they want to browse services or read case studies. We design for both experiences distinctly, not as a desktop-first afterthought.
+          </p>
+          <p className="mt-3">
+            We test on actual devices — iPhones and Android phones of different screen sizes and generations — not just by dragging a browser window. iOS Safari handles certain CSS differently than Chrome on Android. Real testing means your site looks intentional on every device your customers actually use.
+          </p>
+        </>
       ),
     },
     {
       title: 'E-Commerce Development',
       content: (
-        <p>
-          An online store that&apos;s easy for your customers to buy from and easy for you to manage. We handle the checkout and the product catalog so you can focus on selling. The behind-the-scenes tools — inventory, shipping, analytics — come built in.
-        </p>
+        <>
+          <p>
+            Customers buying online in Canada expect a fast, frictionless experience — product pages that load quickly, a checkout that doesn&apos;t demand account creation, and a process that feels trustworthy. Fall short on any of these and they&apos;ll find somewhere else. The bar is high because the big retailers set it.
+          </p>
+          <p className="mt-3">
+            We build e-commerce platforms on Shopify for businesses that need a proven, scalable infrastructure, and on custom stacks for businesses with more complex requirements — custom pricing rules, subscription models, B2B ordering portals, or tight integration with existing inventory or accounting systems. The platform fits the way you sell, not the other way around.
+          </p>
+          <p className="mt-3">
+            On the back end, you manage your own catalog, inventory, shipping rules, discount campaigns, and revenue reports — without calling a developer for every change. We train you on your own store before handoff and document the common tasks so you&apos;re not dependent on us for day-to-day operations.
+          </p>
+        </>
       ),
     },
     {
       title: 'Web Applications',
       content: (
-        <p>
-          Sometimes a website isn&apos;t enough. You need something that does real work. Customer portals, booking systems, internal dashboards, inventory tools. We build those too.
-        </p>
+        <>
+          <p>
+            There&apos;s a category of software that lives between a marketing website and a full enterprise system. Customer portals where clients track orders or download invoices. Booking systems where patients, clients, or tenants schedule themselves. Estimator tools that walk a prospect through options and produce a quote. Internal dashboards that show the team what&apos;s happening across the business.
+          </p>
+          <p className="mt-3">
+            These are web applications — they look like websites but they do real work. For many Ontario SMBs, a well-built web application replaces a process that used to require phone calls, emails, and manual tracking.
+          </p>
+          <p className="mt-3">
+            A trades business with a customer portal cuts &ldquo;where&apos;s my job?&rdquo; calls significantly. A clinic with online booking fills schedule gaps faster. A property manager with a maintenance request system stops chasing tenants by phone. We scope and build these tools around the specific problem you need to solve — not a template we already have on a shelf.
+          </p>
+        </>
       ),
     },
     {
       title: 'CMS Implementation',
       content: (
-        <p>
-          You should be able to update your own content without calling us or worrying you&apos;ll break something. We set you up with a system your team can manage on their own.
-        </p>
+        <>
+          <p>
+            One of the most common complaints we hear from business owners who&apos;ve had websites built is that they can&apos;t change anything without calling their developer. They want to update a service description, add a team member, post a news update. Every change requires a work order and a wait. So nothing gets updated, and the site quietly goes stale.
+          </p>
+          <p className="mt-3">
+            We build every website with a content management system that puts you in control. Whether that&apos;s WordPress, a headless CMS like Sanity, or a Shopify admin panel, the goal is the same: your team makes the changes they need without writing code. Service descriptions, pricing updates, new staff photos, blog posts — all on your own schedule.
+          </p>
+          <p className="mt-3">
+            We also build sensible guardrails. Editing the text in a section doesn&apos;t break the layout. The parts that should be protected are protected. We train your team before handoff and document the common tasks, so there&apos;s always a reference when someone needs it six months later.
+          </p>
+        </>
       ),
     },
     {
       title: 'Speed and Performance',
       content: (
-        <p>
-          A three-second load time costs you roughly half your visitors. We make sure your site is fast, and we keep it that way.
-        </p>
+        <>
+          <p>
+            Page speed has a direct line to business outcomes. A site loading in one second converts three times better than one that takes five. In Canada, where mobile connectivity varies between urban and rural areas, a bloated website effectively shuts out a portion of your potential customers before they see anything.
+          </p>
+          <p className="mt-3">
+            Speed comes from decisions made throughout the build — how images are compressed and served, whether fonts load efficiently, whether JavaScript is deferred properly, how caching is configured, and whether the hosting infrastructure suits the traffic. We don&apos;t bolt performance on at the end. It&apos;s built into how we work from the start.
+          </p>
+          <p className="mt-3">
+            We measure using Core Web Vitals — the same metrics Google uses when evaluating pages for search ranking. Largest Contentful Paint, Cumulative Layout Shift, Interaction to Next Paint. A fast site doesn&apos;t just serve visitors better; it ranks higher, which means more of the right people finding you without spending more on ads.
+          </p>
+        </>
       ),
     },
     {
@@ -450,7 +538,7 @@ export default function ITSolutionsPage() {
         <ul className="list-none p-0 pb-5 m-0">
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Convert more of the traffic you&apos;re already paying for</span>
+            <span>Convert more of the traffic you&apos;re already paying to attract</span>
           </li>
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
@@ -458,11 +546,19 @@ export default function ITSolutionsPage() {
           </li>
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Update content yourself without waiting (or paying) for developer time</span>
+            <span>Update your own content without waiting (or paying) for developer time</span>
+          </li>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Look credible before the first sales conversation even happens</span>
+          </li>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Reduce inbound calls with self-service booking and account tools built into the site</span>
           </li>
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Look credible before the first sales conversation even happens</span>
+            <span>Give customers a way to book, pay, or get answers without picking up the phone</span>
           </li>
         </ul>
       ),
@@ -475,41 +571,81 @@ export default function ITSolutionsPage() {
     {
       title: 'Dashboards That Make Sense',
       content: (
-        <p>
-          The numbers that matter to your business, updated live and visible to the people who need them. No more frantic Monday morning data pulls.
-        </p>
+        <>
+          <p>
+            The problem with most dashboards is they show everything — 40 metrics across 6 tabs — which means they effectively show nothing useful. Decision-makers end up hunting for the two numbers that actually matter. We build dashboards around decisions, not data for its own sake.
+          </p>
+          <p className="mt-3">
+            For a service business owner in Ontario, that might mean: which jobs are open, which are overdue, what revenue has been collected this month versus last, and which clients haven&apos;t been invoiced. Four numbers on one screen, updated automatically. That&apos;s more useful than a 20-tab spreadsheet someone has to compile by hand every Monday morning.
+          </p>
+          <p className="mt-3">
+            We build dashboards in Power BI, Tableau, or custom web-based tools depending on your setup. We connect directly to your data sources — CRM, accounting software, operations system — so the numbers refresh automatically. No manual exports. No stale data. The right information in front of the right people when they need it.
+          </p>
+        </>
       ),
     },
     {
       title: 'Connecting Your Data',
       content: (
-        <p>
-          Your CRM says one thing. Your accounting software says another. We connect everything so you have one set of numbers you can trust, not twelve conflicting spreadsheets.
-        </p>
+        <>
+          <p>
+            Data fragmentation is one of the most expensive silent problems in small business. The sales team uses one CRM. Finance runs on QuickBooks. Operations tracks jobs in a spreadsheet. Customer support uses a separate ticketing tool. None of these talk to each other. So when someone asks a simple question — how much did we generate from this client last quarter? — the answer requires touching four systems and hoping the numbers reconcile.
+          </p>
+          <p className="mt-3">
+            We build data pipelines that pull from all your sources and feed into one central place — a data warehouse, a BI tool, or a database that serves your dashboards. Everyone works from the same numbers. Those numbers are current. The guesswork stops.
+          </p>
+          <p className="mt-3">
+            This also eliminates manual data entry between systems. When a sale closes in your CRM, it shouldn&apos;t require someone to also log it in accounting and update the spreadsheet. The data flows automatically, and we validate it before you depend on it. One version of the truth, not six versions that disagree.
+          </p>
+        </>
       ),
     },
     {
       title: 'Organizing It All',
       content: (
-        <p>
-          A proper home for all that data. Organized and searchable. Ready to answer whatever questions come up next quarter.
-        </p>
+        <>
+          <p>
+            Raw data from business systems is almost always messy. Customers entered under different names in different systems. Products with inconsistent SKUs. Dates formatted three ways. Duplicates from form submissions. Before any of that data is useful for decisions, it needs to be cleaned, standardized, and organized.
+          </p>
+          <p className="mt-3">
+            We build data models that reflect how your business actually works — not a generic template, but a structure designed around your specific entities, relationships, and the questions you need to answer. When you want to ask something you haven&apos;t thought of yet, the data is organized to support it.
+          </p>
+          <p className="mt-3">
+            We also help with governance: who can access what, how long data is retained, how historical records are preserved. For Ontario businesses subject to PIPEDA or sector-specific privacy regulations, proper data organization isn&apos;t just operationally useful — it&apos;s a compliance requirement. We build for that from the start.
+          </p>
+        </>
       ),
     },
     {
       title: 'Reports That Write Themselves',
       content: (
-        <p>
-          Weekly reports. Monthly board decks. The ones that used to eat three days of someone&apos;s week. We automate them so your team can do work that matters.
-        </p>
+        <>
+          <p>
+            Reporting is one of the most expensive manual processes in a small business — not because reports are inherently valuable, but because producing them takes time that could go toward acting on them. Pulling from multiple systems, formatting, checking, packaging — that can eat a day or more every week or month.
+          </p>
+          <p className="mt-3">
+            We automate the data collection and formatting layer completely. Your weekly sales summary, monthly P&amp;L snapshot, operational KPI deck — generated automatically and delivered on schedule. Accurate data, consistent format, no one touching it.
+          </p>
+          <p className="mt-3">
+            The businesses we work with typically save six to fifteen hours per reporting cycle per month. That time goes back to the people who were spending it — usually your operations lead, finance manager, or yourself. Those hours are better spent acting on what the data says than producing it.
+          </p>
+        </>
       ),
     },
     {
       title: "Seeing What's Coming",
       content: (
-        <p>
-          We build models that help you spot patterns before they become problems. Which customers might leave. Where demand is heading. Where the next opportunity is. That kind of thing.
-        </p>
+        <>
+          <p>
+            Historical reporting tells you what happened. Predictive analytics tells you what&apos;s likely to happen next — which is where the real business value sits.
+          </p>
+          <p className="mt-3">
+            For an Ontario SMB, this might mean identifying customers who haven&apos;t purchased in 90 days and automatically flagging them for a check-in, before they quietly leave. Or forecasting next month&apos;s service demand based on seasonal patterns and current pipeline, so you can staff appropriately instead of scrambling. Or spotting which product lines are trending up so you can position ahead of the curve.
+          </p>
+          <p className="mt-3">
+            We keep predictive tools practical. We&apos;re not building models that require a data science team to interpret. The output is a specific, actionable insight — here are the 12 clients most likely to churn in the next 60 days — so your team can act on it. The analysis runs automatically. The decision is still yours.
+          </p>
+        </>
       ),
     },
     {
@@ -518,19 +654,27 @@ export default function ITSolutionsPage() {
         <ul className="list-none p-0 pb-5 m-0">
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Make decisions in hours that used to take weeks of analysis</span>
+            <span>Make decisions in hours that used to take a week of pulling and reconciling data</span>
           </li>
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Free up the people currently stuck compiling reports</span>
+            <span>Free up the people currently stuck compiling reports every week</span>
           </li>
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Walk into meetings with answers instead of excuses</span>
+            <span>Walk into meetings with answers, not excuses about data availability</span>
+          </li>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Spot revenue leaks and churn risks before they cost you money</span>
+          </li>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Replace gut-feel decisions with facts your whole team can see and trust</span>
           </li>
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Spot problems before they cost you money</span>
+            <span>Build a data foundation that gets more valuable as your business grows</span>
           </li>
         </ul>
       ),
@@ -543,33 +687,65 @@ export default function ITSolutionsPage() {
     {
       title: 'A Plan That Makes Sense',
       content: (
-        <p>
-          We help you figure out what to tackle first, what to phase in later, and honestly, what to skip. No trying to change everything at once.
-        </p>
+        <>
+          <p>
+            The most common mistake businesses make when approaching digital transformation is trying to change too much at once. A new CRM, a new ERP, a customer portal, and a reporting overhaul — all running in parallel. Eighteen months later, everything is half-done, the team is exhausted, and nobody remembers what the original problem was.
+          </p>
+          <p className="mt-3">
+            We start with a discovery process: mapping how your business currently operates, identifying where the friction is worst, and putting a rough number on what each bottleneck costs in time and money per month. That gives us a prioritization framework based on actual impact, not on what&apos;s most interesting to build.
+          </p>
+          <p className="mt-3">
+            From there we build a phased roadmap. Phase one is the highest-value, lowest-risk change — something that demonstrates what&apos;s possible and wins your team over quickly. No transformation succeeds without internal buy-in, and nothing builds buy-in faster than a specific tool that makes someone&apos;s day meaningfully better. We find that thing first.
+          </p>
+        </>
       ),
     },
     {
       title: 'Automating the Tedious Stuff',
       content: (
-        <p>
-          Your team didn&apos;t sign up to copy data between systems or chase down approvals all day. We automate those tasks so they can focus on work that matters to them.
-        </p>
+        <>
+          <p>
+            Every business has tasks that are entirely mechanical — copying an order into a fulfillment system, sending a follow-up email after a meeting, routing a new client request to the right person, generating a weekly status update. These don&apos;t require judgment. They require consistency. And consistency is what software is best at.
+          </p>
+          <p className="mt-3">
+            Process automation gets those tasks off human plates permanently. We map the specific workflow — every step, every condition, every system touched — and build the automation that replicates it exactly. An invoice arrives and gets categorized, matched to a purchase order, and queued for approval, all without anyone touching it. A new client submits a form and their record appears in three systems, a welcome email goes out, and a task is assigned to their account manager.
+          </p>
+          <p className="mt-3">
+            For Ontario SMBs, the impact is usually immediate. A bookkeeper who spent two days a month reconciling data gets those days back. An operations coordinator who was manually routing requests now only handles exceptions. Work that requires real judgment gets more attention, and the mechanical work just happens.
+          </p>
+        </>
       ),
     },
     {
       title: 'Moving to the Cloud',
       content: (
-        <p>
-          Less hardware to maintain. Lower costs. Your team can work from anywhere. We handle the migration so the switch feels easy, not scary.
-        </p>
+        <>
+          <p>
+            For businesses still running core operations on local servers or systems that only work from the office, cloud migration removes the biggest single operational vulnerability they have. A server failure, a power outage, or a fire shouldn&apos;t stop your business. In the cloud, it doesn&apos;t.
+          </p>
+          <p className="mt-3">
+            Cloud migration also changes the economics of IT. Instead of a capital expense for hardware that depreciates and eventually fails, you have a predictable monthly cost. Instead of a single point of failure, you have redundancy built in. Instead of capacity sized for your peak load and paid for year-round, you have capacity that scales with what you actually need.
+          </p>
+          <p className="mt-3">
+            We approach migrations carefully. We document what&apos;s running on your current systems, map the dependencies, and build the cloud environment in parallel before switching anything over. We don&apos;t touch your existing setup until the new environment is tested and stable. We work with AWS, Azure, and Google Cloud depending on what fits your stack. Our goal is a transition that nobody notices — because everything just keeps working, only better.
+          </p>
+        </>
       ),
     },
     {
       title: 'Making It Easier for Your Customers',
       content: (
-        <p>
-          Self-service portals and faster responses. When it&apos;s easy to work with you, people come back.
-        </p>
+        <>
+          <p>
+            Customers will choose the business that makes their life easier over one that makes them wait, call, or explain themselves repeatedly. Self-service isn&apos;t just a nice-to-have — it directly affects whether people come back and whether they refer others.
+          </p>
+          <p className="mt-3">
+            A property management company that lets tenants submit maintenance requests online, track progress, and receive text updates replaces a process that required phone calls, voicemail, and manual follow-up. The tenant is happier. The property manager handles fewer calls. The documentation is automatic.
+          </p>
+          <p className="mt-3">
+            A professional services firm that gives clients a portal to review documents, approve quotes, and pay invoices reduces the back-and-forth email chains that slow down every engagement. A retailer with self-service order tracking and returns eliminates the category of tickets that fills most support inboxes. We scope and build these customer-facing tools around the interactions that currently take the most time from your team — and we measure the improvement in the first 90 days so you can see exactly what changed.
+          </p>
+        </>
       ),
     },
     {
@@ -578,15 +754,23 @@ export default function ITSolutionsPage() {
         <ul className="list-none p-0 pb-5 m-0">
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Get back the hours your team loses to manual workarounds every week</span>
+            <span>Get back the hours your team loses to manual workarounds every single week</span>
           </li>
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Fewer mistakes from people doing the same repetitive task over and over</span>
+            <span>Fewer errors from people doing the same repetitive task over and over</span>
+          </li>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Handle more volume without needing to hire at the same pace</span>
+          </li>
+          <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-2.5 last:mb-0">
+            <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
+            <span>Reduce customer service volume by making answers available self-serve</span>
           </li>
           <li className="flex items-start gap-2.5 text-[15px] text-[var(--text-body)] leading-[1.6] mb-0">
             <Check className="flex-shrink-0 w-[18px] h-[18px] text-[#22c55e] mt-0.5" size={18} />
-            <span>Handle more work without needing to hire at the same rate</span>
+            <span>Build systems that protect your operations from single points of failure</span>
           </li>
         </ul>
       ),
@@ -755,8 +939,11 @@ export default function ITSolutionsPage() {
               Software Solutions
             </h2>
 
-            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-0 leading-[1.6]">
+            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-4 leading-[1.6]">
               Your business is unique. Your software should be too.
+            </p>
+            <p className="text-[15px] text-[var(--text-body)] leading-[1.75]">
+              Most small businesses reach a point where the tools they started with stop working for them. Spreadsheets that once held everything now take an hour to update. Accounting software that doesn&apos;t talk to the inventory system. A CRM built for a different kind of business. Custom software is how you stop bending your workflow to fit someone else&apos;s product — and start using technology built around how you actually operate. This is for the business that has outgrown its tools, or never found the right ones to begin with.
             </p>
 
             <hr className="border-t border-gray-200 mt-6 mb-0" />
@@ -809,8 +996,11 @@ export default function ITSolutionsPage() {
               Web Design & Development
             </h2>
 
-            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-0 leading-[1.6]">
+            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-4 leading-[1.6]">
               A website that works as hard as you do.
+            </p>
+            <p className="text-[15px] text-[var(--text-body)] leading-[1.75]">
+              Your website is often the first serious impression a potential customer gets. They found you somewhere — a Google search, a referral, a social post — and now they&apos;re looking. In the next few seconds they decide whether you look like a business worth contacting. A slow, dated, or confusing site doesn&apos;t just fail to convert — it costs you the customers you already paid to attract. Good web design for a Canadian small business isn&apos;t about winning awards. It&apos;s about making the right things easy: finding what you offer, understanding why you&apos;re different, and getting in touch.
             </p>
 
             <hr className="border-t border-gray-200 mt-6 mb-0" />
@@ -863,8 +1053,11 @@ export default function ITSolutionsPage() {
               Data Analytics & Dashboards
             </h2>
 
-            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-0 leading-[1.6]">
+            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-4 leading-[1.6]">
               Your data is telling you something. Let&apos;s help you hear it.
+            </p>
+            <p className="text-[15px] text-[var(--text-body)] leading-[1.75]">
+              Most small businesses are sitting on more data than they realize — sales records, customer history, service logs, invoices. The problem isn&apos;t the data; it&apos;s that it lives in four different systems, nobody has time to pull it all together, and when they do the numbers don&apos;t match. Decisions end up made on gut feel or whichever figure someone pulled before the meeting. We connect your data, clean it up, and give you dashboards that show what&apos;s actually happening in your business — updated automatically, without anyone compiling a report.
             </p>
 
             <hr className="border-t border-gray-200 mt-6 mb-0" />
@@ -917,8 +1110,11 @@ export default function ITSolutionsPage() {
               Digital Transformation
             </h2>
 
-            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-0 leading-[1.6]">
+            <p className="text-[17px] text-[var(--text-dark)] font-bold mb-4 leading-[1.6]">
               Technology that gets out of your way.
+            </p>
+            <p className="text-[15px] text-[var(--text-body)] leading-[1.75]">
+              Digital transformation is a phrase that&apos;s been emptied of meaning by overuse. For an Ontario SMB, it means something specific: replacing the manual, paper-based, or disconnected processes that slow you down with technology that handles them automatically. Not rebuilding everything at once. Identifying where your team loses the most time, where errors are most costly, and where the right system removes friction for your customers — then fixing those things, one at a time. This is for the business that knows it could run more efficiently, but hasn&apos;t had the right guide to get there.
             </p>
 
             <hr className="border-t border-gray-200 mt-6 mb-0" />
