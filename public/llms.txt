@@ -1,0 +1,12 @@
+# Karavan IT HUB
+> AI automation and IT solutions for SMBs across North America.
+> Based in Ontario, Canada. Founded 2024.
+
+## Services
+- AI Automation & Workflow Systems
+- Custom AI Software & Chatbots
+- Web Development & Digital Transformation
+- RAG Systems for Small Business
+
+## Contact
+https://karavanhub.com/contact
