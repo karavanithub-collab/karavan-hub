@@ -690,15 +690,10 @@ export default function CaseStudiesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
 
-      <Breadcrumb items={[
-        { label: 'Home', href: '/' },
-        { label: 'Case Studies' },
-      ]} />
-
       <main id="main-content" role="main">
         {/* HERO SECTION */}
         <section
-          className="relative pt-6 sm:pt-8 md:pt-10 pb-20 sm:pb-24 md:pb-32 text-center overflow-hidden"
+          className="relative py-20 sm:py-24 md:py-32 text-center overflow-hidden"
           aria-labelledby="hero-heading"
           style={{
             background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)',
@@ -737,6 +732,11 @@ export default function CaseStudiesPage() {
             </a>
           </div>
         </section>
+
+        <Breadcrumb items={[
+          { label: 'Home', href: '/' },
+          { label: 'Case Studies' },
+        ]} />
 
         {/* CASE STUDIES */}
         <section id="case-studies" aria-label="Case Studies">

@@ -252,15 +252,9 @@ export default function AIAgentsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <Breadcrumb items={[
-        { label: 'Home', href: '/' },
-        { label: 'AI Solutions', href: '/ai-solutions' },
-        { label: 'AI Agents' },
-      ]} />
-
       {/* ── HERO ── */}
       <section
-        className="relative min-h-[80vh] lg:min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden pt-6 md:pt-8 pb-[60px] md:pb-[80px]"
+        className="relative min-h-[80vh] lg:min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
         aria-label="AI Agents for Small Business Ontario"
       >
         {/* Gradient orbs */}
@@ -299,6 +293,12 @@ export default function AIAgentsPage() {
           </div>
         </div>
       </section>
+
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'AI Solutions', href: '/ai-solutions' },
+        { label: 'AI Agents' },
+      ]} />
 
       {/* ── WHAT IS AN AI AGENT ── */}
       <section className="py-[60px] md:py-[80px] lg:py-[100px] bg-white" aria-labelledby="what-heading">

@@ -787,16 +787,11 @@ export default function ITSolutionsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
 
-      <Breadcrumb items={[
-        { label: 'Home', href: '/' },
-        { label: 'IT Solutions' },
-      ]} />
-
       {/* ============================================
            HERO SECTION
            ============================================ */}
       <section
-        className="relative min-h-[80vh] lg:min-h-[100vh] bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden pt-6 md:pt-8 pb-[60px] md:pb-[80px]"
+        className="relative min-h-[80vh] lg:min-h-[100vh] bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
         aria-label="IT Solutions Overview"
       >
         {/* Animated gradient orbs — smooth 12s drift, GPU-promoted */}
@@ -911,6 +906,11 @@ export default function ITSolutionsPage() {
           <div className="w-px h-[60px] bg-gradient-to-b from-white/40 to-transparent animate-pulse"></div>
         </div>
       </section>
+
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'IT Solutions' },
+      ]} />
 
       {/* ============================================
            SOFTWARE SOLUTIONS SECTION

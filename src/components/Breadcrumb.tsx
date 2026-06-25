@@ -12,7 +12,7 @@ interface BreadcrumbProps {
 export default function Breadcrumb({ items }: BreadcrumbProps) {
   return (
     <nav
-      className="pt-[90px] md:pt-[100px] pb-3 bg-white border-b border-gray-200"
+      className="py-3 bg-white border-b border-gray-200"
       aria-label="Breadcrumb"
     >
       <div className="max-w-[1100px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10">

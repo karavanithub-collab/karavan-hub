@@ -285,15 +285,9 @@ export default function CustomChatbotsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <Breadcrumb items={[
-        { label: 'Home', href: '/' },
-        { label: 'AI Solutions', href: '/ai-solutions' },
-        { label: 'Custom Chatbots' },
-      ]} />
-
       {/* ── HERO ── */}
       <section
-        className="relative min-h-[80vh] lg:min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden pt-6 md:pt-8 pb-[60px] md:pb-[80px]"
+        className="relative min-h-[80vh] lg:min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
         aria-label="Custom AI Chatbot Ontario Small Business"
       >
         <div className="absolute top-[-150px] right-[-100px] w-[500px] h-[500px] rounded-full opacity-30" aria-hidden="true" style={{ background: 'radial-gradient(circle, #a78bfa 0%, transparent 70%)', filter: 'blur(80px)' }} />
@@ -331,6 +325,12 @@ export default function CustomChatbotsPage() {
           </div>
         </div>
       </section>
+
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'AI Solutions', href: '/ai-solutions' },
+        { label: 'Custom Chatbots' },
+      ]} />
 
       {/* ── CUSTOM VS GENERIC ── */}
       <section className="py-[60px] md:py-[80px] lg:py-[100px] bg-white" aria-labelledby="compare-heading">

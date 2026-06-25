@@ -689,16 +689,11 @@ export default function AISolutionsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
 
-      <Breadcrumb items={[
-        { label: 'Home', href: '/' },
-        { label: 'AI Solutions' },
-      ]} />
-
       {/* ============================================
            SECTION 1: HERO
            ============================================ */}
       <section
-        className="bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] relative overflow-hidden min-h-[80vh] lg:min-h-[100vh] flex items-center pt-6 md:pt-8 pb-[60px] md:pb-[80px]"
+        className="bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] relative overflow-hidden min-h-[80vh] lg:min-h-[100vh] flex items-center pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
         aria-labelledby="hero-heading"
       >
         {/* Background Orbs — smooth 12s drift */}
@@ -840,6 +835,11 @@ export default function AISolutionsPage() {
           <div className="w-px h-[60px] bg-gradient-to-b from-white/40 to-transparent animate-pulse"></div>
         </div>
       </section>
+
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'AI Solutions' },
+      ]} />
 
       {/* ============================================
            SECTION 2: WORKFLOWS / INTRO

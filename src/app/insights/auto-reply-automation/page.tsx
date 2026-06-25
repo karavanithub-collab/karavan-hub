@@ -302,14 +302,8 @@ export default function AutoReplyArticlePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_LD) }}
       />
 
-      <Breadcrumb items={[
-        { label: 'Home', href: '/' },
-        { label: 'Insights', href: '/insights' },
-        { label: 'AI Auto-Reply Automation' },
-      ]} />
-
       <div className="min-h-screen bg-[#F5F5F0]">
-        <div className="mx-auto max-w-[900px] px-5 sm:px-6 md:px-8 pt-8 md:pt-10 pb-10 lg:pb-12">
+        <div className="mx-auto max-w-[900px] px-5 sm:px-6 md:px-8 pt-[120px] md:pt-[140px]">
 
           {/* Back to Insights */}
           <Link
@@ -376,6 +370,15 @@ export default function AutoReplyArticlePage() {
             </div>
           </div>
 
+        </div>
+
+        <Breadcrumb items={[
+          { label: 'Home', href: '/' },
+          { label: 'Insights', href: '/insights' },
+          { label: 'AI Auto-Reply Automation' },
+        ]} />
+
+        <div className="mx-auto max-w-[900px] px-5 sm:px-6 md:px-8 pb-10 lg:pb-12">
           {/* Article Content */}
           <article className="mx-auto max-w-[720px]" aria-labelledby="article-title">
             {/* Title */}

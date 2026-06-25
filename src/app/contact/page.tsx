@@ -264,11 +264,6 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <Breadcrumb items={[
-        { label: 'Home', href: '/' },
-        { label: 'Contact' },
-      ]} />
-
       {/* Visually hidden summary for AEO */}
       <div className="sr-only" role="doc-abstract">
         <h2>Contact Karavan Hub</h2>
@@ -291,7 +286,7 @@ export default function ContactPage() {
          HERO SECTION WITH FORM
          ============================================ */}
       <section
-        className="relative overflow-hidden flex items-center min-h-[auto] lg:min-h-screen pt-6 md:pt-8 pb-16 md:pb-20"
+        className="relative overflow-hidden flex items-center min-h-[auto] lg:min-h-screen pt-[100px] md:pt-[110px] pb-16 md:pb-20"
         style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)' }}
         aria-labelledby="contact-heading"
       >
@@ -468,6 +463,11 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </section>
+
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'Contact' },
+      ]} />
 
       {/* ============================================
          ALTERNATIVE CONTACT OPTIONS
