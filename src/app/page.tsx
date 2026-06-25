@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import { HomeFAQ } from '@/components/sections/HomeFAQ';
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: 'Karavan IT HUB — AI & IT Solutions | Custom Software Development',
-  description: 'We build the technology. You get your time back. Canadian-owned AI and IT solutions in Niagara, Ontario. Custom software, AI automation, web development for SMBs.',
+  description: 'AI automation and IT solutions for small businesses across Ontario and North America. We build chatbots, RAG systems, and custom web solutions.',
   keywords: 'AI solutions, IT solutions, custom software development, AI automation, digital transformation, Canadian tech company, Niagara Ontario',
   authors: [{ name: 'Karavan IT HUB' }],
   robots: {
@@ -67,7 +69,14 @@ const schemaGraph = {
         contentUrl: 'https://karavanhub.com/images/logo.png',
         caption: 'Karavan IT HUB'
       },
-      areaServed: 'Canada',
+      foundingDate: '2024',
+      areaServed: 'North America',
+      founder: {
+        '@type': 'Person',
+        name: 'Nyah S.',
+        jobTitle: 'Founder & Principal Consultant',
+        url: 'https://karavanhub.com/about',
+      },
       knowsAbout: ['AI Automation', 'Custom Software Development', 'AI Strategy Consulting', 'Digital Transformation', 'Web Design', 'Data Analytics'],
       sameAs: [
         'https://www.linkedin.com/company/karavanithub',

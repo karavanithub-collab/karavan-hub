@@ -3,11 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NewsletterCTA from '@/components/sections/NewsletterCTA';
 
+export const revalidate = 3600;
+
 // SEO Metadata
 export const metadata: Metadata = {
   title: 'Insights | Karavan Hub — Practical Tech Knowledge for Business Owners',
   description:
-    'Practical articles on AI automation, software, and digital strategy for small and medium businesses. Written by real consultants who build the tech. From Karavan Hub, Niagara, Ontario.',
+    'Practical guides on AI automation, web development, and digital growth for Canadian small businesses.',
   keywords:
     'AI automation insights, business technology articles, small business automation, IT consulting blog, AI strategy articles, Niagara tech insights, Ontario business technology, Karavan Hub blog, automation for small business',
   robots: {

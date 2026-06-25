@@ -2,11 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import ContactForm from '@/components/sections/ContactForm'
 
+export const revalidate = 3600;
+
 // SEO Metadata
 export const metadata: Metadata = {
   title: 'Contact Us | Karavan Hub — Free IT Consultation in Niagara, Ontario',
   description:
-    'Contact Karavan Hub for a free IT consultation. Custom software, AI automation, web design, and digital transformation for small and medium businesses. Niagara, Ontario. Response within 24 hours.',
+    'Get in touch with Karavan IT HUB. Free 30-minute strategy call for Ontario and North American small businesses.',
   keywords:
     'contact Karavan Hub, IT consulting Niagara, free IT consultation, software development Ontario, AI consulting Canada, web design Niagara, digital transformation contact, tech support Pelham, Karavan Hub phone, Karavan Hub email',
   robots: {

@@ -4,10 +4,12 @@ import Link from 'next/link';
 import { Check } from 'lucide-react';
 import AccordionWrapper from '@/components/ai-solutions/AccordionWrapper';
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: 'AI Solutions | Karavan Hub - AI Automation & Consulting in Niagara',
   description:
-    'Make AI work for your business. Vertical AI automation, custom AI software solutions, and strategic AI consulting. 85% faster processing, 92% fewer errors.',
+    'AI automation, custom chatbots, and RAG systems for Canadian SMBs. We handle the tech so you focus on your business.',
   keywords:
     'AI solutions, artificial intelligence, business automation, vertical AI, AI integration, machine learning, AI consulting, AI strategy, process automation',
   robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',

@@ -1,11 +1,13 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 
+export const revalidate = 3600;
+
 // SEO Metadata
 export const metadata: Metadata = {
   title: 'About Us | Karavan Hub — Technology That Feels Human',
   description:
-    'Meet Karavan Hub: a Niagara, Ontario IT consulting company founded by a former Registered Nurse. We build custom software, AI automation, and web solutions for small and medium businesses across Canada.',
+    'Meet the team behind Karavan IT HUB — AI and IT specialists serving SMBs across Canada since 2024.',
   keywords:
     'Karavan Hub, about us, IT consulting Niagara, technology consulting Canada, healthcare IT background, human-centered technology, Canadian tech company, Niagara technology services, Ontario IT consulting, Pelham Ontario, St. Catharines IT, small business technology, AI consulting Canada',
   robots: {

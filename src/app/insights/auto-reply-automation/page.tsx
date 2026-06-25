@@ -3,10 +3,12 @@ import Image from 'next/image';
 import NewsletterCTA from '@/components/sections/NewsletterCTA';
 import Link from 'next/link';
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: 'What If You Never Had to Answer "What Are Your Hours?" Again? | Karavan Hub',
   description:
-    'Small businesses miss 62% of calls. Learn how AI-powered auto-reply automation helps retain customers and increase revenue by responding instantly. From Karavan Hub, Niagara\'s AI automation consultants.',
+    'Learn how AI-powered auto-reply systems save small businesses hours every week. A practical guide from Karavan IT HUB.',
   keywords:
     'AI automation Niagara, missed call text back, auto reply automation, small business automation, Niagara IT services, AI consulting Ontario, business automation Canada, automated text response',
   authors: [{ name: 'Nyah S.', url: 'https://karavanhub.com' }],
@@ -139,9 +141,9 @@ const SCHEMA_LD = {
       ],
     },
 
-    /* ── Article ── */
+    /* ── BlogPosting ── */
     {
-      '@type': 'Article',
+      '@type': 'BlogPosting',
       '@id': 'https://karavanhub.com/insights/auto-reply-automation/#article',
       headline: 'What If You Never Had to Answer "What Are Your Hours?" Again?',
       description:

@@ -34,6 +34,11 @@ const nextConfig = {
         destination: '/insights/:slug',
         permanent: true,
       },
+      {
+        source: '/company',
+        destination: '/about',
+        permanent: true,
+      },
     ];
   },
   async headers() {

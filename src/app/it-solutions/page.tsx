@@ -4,10 +4,12 @@ import Image from 'next/image';
 import { Check } from 'lucide-react';
 import AccordionWrapper from '@/components/it-solutions/AccordionWrapper';
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: 'IT Solutions for Small & Medium Businesses | Karavan IT HUB',
   description:
-    'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation. No workarounds required.',
+    'Web development, software, and digital transformation services for small businesses in Ontario and North America.',
   keywords:
     'IT solutions, custom software development, web design, data analytics, digital transformation, SMB technology, business software, cloud applications, mobile app development',
   authors: [{ name: 'Karavan Hub' }],

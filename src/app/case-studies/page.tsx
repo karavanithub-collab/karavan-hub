@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
+export const revalidate = 3600;
+
 const ChevronRight = ({ size = 24 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
 );
@@ -8,7 +10,7 @@ const ChevronRight = ({ size = 24 }: { size?: number }) => (
 export const metadata: Metadata = {
   title: 'Case Studies | Karavan Hub - Real Results for Real Businesses',
   description:
-    'How Karavan Hub helped businesses fix broken payment systems, rebuild booking platforms, and automate what used to take days. 7 projects, real numbers, no fluff.',
+    'Real results from real clients. See how Karavan IT HUB has delivered AI automation and web solutions for businesses across North America.',
   keywords:
     'case studies, IT solutions, custom software, cloud migration, AI automation, business results, Karavan Hub, Niagara',
   robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
