@@ -329,7 +329,7 @@ export default function AutoReplyArticlePage() {
           <div className="w-full rounded-2xl md:rounded-3xl overflow-hidden mb-6 md:mb-8">
             <Image
               src="/images/insights/auto-reply-hero.png"
-              alt="Teal telephone handset on orange background representing missed business calls"
+              alt="Missed call text-back automation — AI solution that replies to customers instantly so Ontario SMBs never lose a lead"
               width={1000}
               height={560}
               sizes="(max-width: 900px) 100vw, 900px"

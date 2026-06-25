@@ -918,7 +918,7 @@ export default function AISolutionsPage() {
             <div className="mt-4 lg:mt-0 lg:sticky lg:top-24">
               <Image
                 src="/images/ai-workflows.jpg"
-                alt="Abstract blue geometric shapes representing AI workflow automation and unified business processes"
+                alt="AI workflow automation connecting business tools and data — Karavan IT HUB AI solutions for Ontario SMBs"
                 width={800}
                 height={700}
                 className="w-full h-auto max-h-[300px] lg:max-h-none object-cover rounded-2xl"
@@ -944,7 +944,7 @@ export default function AISolutionsPage() {
             <div className="rounded-2xl overflow-hidden aspect-[3/2] lg:aspect-auto">
               <Image
                 src="/images/software-dev.jpg"
-                alt="AI automation and integration services for business workflows"
+                alt="AI automation and third-party integration setup for Ontario small businesses — chatbots, RAG pipelines, and API connections"
                 width={752}
                 height={500}
                 priority
@@ -1002,7 +1002,7 @@ export default function AISolutionsPage() {
             <div className="rounded-2xl overflow-hidden aspect-[3/2] lg:aspect-auto">
               <Image
                 src="/images/web-design.jpg"
-                alt="AI software solutions including custom applications and integrations"
+                alt="Custom AI software development for Canadian SMBs — LLM-powered apps, intelligent APIs, and RAG systems built by Karavan IT HUB"
                 width={752}
                 height={500}
                 className="w-full h-auto object-cover rounded-2xl"
@@ -1059,7 +1059,7 @@ export default function AISolutionsPage() {
             <div className="rounded-2xl overflow-hidden aspect-[3/2] lg:aspect-auto">
               <Image
                 src="/images/data-analytics.jpg"
-                alt="AI strategy consulting and implementation roadmap services"
+                alt="AI strategy consulting for Ontario businesses — Karavan IT HUB creates roadmaps to help SMBs adopt AI profitably"
                 width={752}
                 height={500}
                 className="w-full h-auto object-cover rounded-2xl"

@@ -736,7 +736,7 @@ export default function ITSolutionsPage() {
             <div className="rounded-2xl overflow-hidden">
               <Image
                 src="/images/software-dev.jpg"
-                alt="Custom software development for small business applications"
+                alt="Custom software development for Ontario small businesses — bespoke apps, APIs, and backend integrations by Karavan IT HUB"
                 width={800}
                 height={700}
                 priority
@@ -791,7 +791,7 @@ export default function ITSolutionsPage() {
             <div className="rounded-2xl overflow-hidden">
               <Image
                 src="/images/web-design.jpg"
-                alt="Responsive web design and development for small businesses"
+                alt="Responsive website design and development for Ontario SMBs — Next.js and React web solutions by Karavan IT HUB"
                 width={800}
                 height={700}
                 className="w-full h-auto object-cover rounded-2xl"
@@ -845,7 +845,7 @@ export default function ITSolutionsPage() {
             <div className="rounded-2xl overflow-hidden">
               <Image
                 src="/images/data-analytics.jpg"
-                alt="Business intelligence dashboard with real-time data analytics"
+                alt="Business intelligence dashboard and data analytics reporting for Canadian small businesses — Power BI and custom visualizations"
                 width={800}
                 height={700}
                 className="w-full h-auto object-cover rounded-2xl"
@@ -899,7 +899,7 @@ export default function ITSolutionsPage() {
             <div className="rounded-2xl overflow-hidden">
               <Image
                 src="/images/digital-transformation.jpg"
-                alt="Digital transformation and cloud migration for Canadian businesses"
+                alt="Digital transformation and cloud migration for Ontario businesses — Karavan IT HUB modernizes legacy systems for SMBs"
                 width={800}
                 height={700}
                 className="w-full h-auto object-cover rounded-2xl"

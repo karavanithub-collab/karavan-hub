@@ -247,7 +247,7 @@ export default function InsightsPage() {
               <div>
                 <Image
                   src="/images/insights/auto-reply-hero.png"
-                  alt="Teal telephone handset on orange background — representing missed business calls"
+                  alt="AI auto-reply automation article — how Ontario small businesses stop losing leads from missed calls"
                   width={1080}
                   height={600}
                   sizes="(max-width: 1080px) 100vw, 1080px"

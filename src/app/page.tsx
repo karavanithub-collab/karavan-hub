@@ -936,7 +936,7 @@ export default function HomePage() {
               <div className="aspect-[16/9] overflow-hidden bg-[#f0f4f8]">
                 <img
                   src="/images/insights/auto-reply-hero.png"
-                  alt="AI auto-reply automation for small businesses"
+                  alt="AI-powered missed call text-back automation helping Ontario small businesses capture leads 24/7"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                   width={720}
@@ -997,7 +997,7 @@ export default function HomePage() {
           <div className="relative rounded-[20px] overflow-hidden min-h-[300px] lg:min-h-0 shadow-[0_24px_64px_rgba(0,0,0,0.12)]">
             <img
               src="/images/cta-motion.jpg"
-              alt="Person working with technology"
+              alt="Karavan IT HUB consultant helping an Ontario small business owner solve technology challenges"
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
