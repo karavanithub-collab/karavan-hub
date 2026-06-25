@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export const revalidate = 3600;
 
@@ -431,6 +432,11 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'About' },
+      ]} />
+
       {/* Visually hidden summary for AEO — crawlable by search engines and AI */}
       <div className="sr-only" role="doc-abstract">
         <h2>About Karavan Hub</h2>
@@ -450,7 +456,7 @@ export default function AboutPage() {
          HERO SECTION - Brand Blue Gradient
          ============================================ */}
       <section
-        className="relative min-h-[80vh] lg:min-h-[90vh] overflow-hidden flex items-center pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
+        className="relative min-h-[80vh] lg:min-h-[90vh] overflow-hidden flex items-center pt-6 md:pt-8 pb-[60px] md:pb-[80px]"
         style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%)' }}
         aria-labelledby="hero-title"
         role="banner"

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import NewsletterCTA from '@/components/sections/NewsletterCTA';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const revalidate = 3600;
 
@@ -192,13 +193,18 @@ export default function InsightsPage() {
         </dl>
       </div>
 
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'Insights' },
+      ]} />
+
       <div className="min-h-screen" style={{ backgroundColor: '#F5F5F0' }}>
 
         {/* ============================================
            PAGE HEADER
            ============================================ */}
         <section
-          className="pt-[130px] md:pt-[150px] pb-8 md:pb-10 border-b border-[#D4D4D0]"
+          className="pt-8 md:pt-10 pb-8 md:pb-10 border-b border-[#D4D4D0]"
           aria-labelledby="insights-heading"
         >
           <div className="mx-auto px-6 sm:px-8" style={{ maxWidth: '1080px' }}>

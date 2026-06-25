@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import NewsletterCTA from '@/components/sections/NewsletterCTA';
 import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const revalidate = 3600;
 
@@ -301,8 +302,14 @@ export default function AutoReplyArticlePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_LD) }}
       />
 
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'Insights', href: '/insights' },
+        { label: 'AI Auto-Reply Automation' },
+      ]} />
+
       <div className="min-h-screen bg-[#F5F5F0]">
-        <div className="mx-auto max-w-[900px] px-5 sm:px-6 md:px-8 pt-[120px] md:pt-[140px] pb-10 lg:pb-12">
+        <div className="mx-auto max-w-[900px] px-5 sm:px-6 md:px-8 pt-8 md:pt-10 pb-10 lg:pb-12">
 
           {/* Back to Insights */}
           <Link

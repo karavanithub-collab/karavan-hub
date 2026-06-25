@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Check } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const revalidate = 3600;
 
@@ -284,23 +285,21 @@ export default function CustomChatbotsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'AI Solutions', href: '/ai-solutions' },
+        { label: 'Custom Chatbots' },
+      ]} />
+
       {/* ── HERO ── */}
       <section
-        className="relative min-h-[80vh] lg:min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden pt-[90px] md:pt-[100px] pb-[60px] md:pb-[80px]"
+        className="relative min-h-[80vh] lg:min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#2563eb] flex items-center overflow-hidden pt-6 md:pt-8 pb-[60px] md:pb-[80px]"
         aria-label="Custom AI Chatbot Ontario Small Business"
       >
         <div className="absolute top-[-150px] right-[-100px] w-[500px] h-[500px] rounded-full opacity-30" aria-hidden="true" style={{ background: 'radial-gradient(circle, #a78bfa 0%, transparent 70%)', filter: 'blur(80px)' }} />
         <div className="absolute bottom-[-100px] left-[-80px] w-[400px] h-[400px] rounded-full opacity-30" aria-hidden="true" style={{ background: 'radial-gradient(circle, #34d399 0%, transparent 70%)', filter: 'blur(80px)' }} />
 
         <div className="relative z-10 max-w-[1100px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 w-full">
-          <nav className="mb-8 flex items-center gap-2 text-[13px] text-white/40" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white/70 transition-colors">Home</Link>
-            <span>/</span>
-            <Link href="/ai-solutions" className="hover:text-white/70 transition-colors">AI Solutions</Link>
-            <span>/</span>
-            <span className="text-white/60">Custom Chatbots</span>
-          </nav>
-
           <div className="max-w-[700px]">
             <h1
               className="font-headline font-bold text-white leading-[1.05] tracking-[-1.5px] mb-6"
