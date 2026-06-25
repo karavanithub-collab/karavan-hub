@@ -52,5 +52,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    {
+      url: 'https://karavanhub.com/ai-agents',
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'https://karavanhub.com/rag-systems',
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'https://karavanhub.com/custom-chatbots',
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
   ];
 }
