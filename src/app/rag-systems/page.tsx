@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   keywords:
     'RAG systems for small business Canada, retrieval-augmented generation Canada, AI knowledge base small business, RAG implementation Ontario, document AI Canada, business knowledge base AI',
   alternates: {
-    canonical: 'https://karavanhub.com/rag-systems',
+    canonical: 'https://www.karavanhub.com/rag-systems',
     languages: {
-      'en-CA': 'https://karavanhub.com/rag-systems',
-      en: 'https://karavanhub.com/rag-systems',
+      'en-CA': 'https://www.karavanhub.com/rag-systems',
+      en: 'https://www.karavanhub.com/rag-systems',
     },
   },
   openGraph: {
@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     title: 'RAG Systems for Small Business Canada | Karavan IT HUB',
     description:
       'Connect AI to your actual documents and knowledge. Accurate, source-grounded answers for staff and customers — no hallucinations.',
-    url: 'https://karavanhub.com/rag-systems',
+    url: 'https://www.karavanhub.com/rag-systems',
     siteName: 'Karavan IT HUB',
     locale: 'en_CA',
     images: [
       {
-        url: 'https://karavanhub.com/images/og-ai-solutions.jpg',
+        url: 'https://www.karavanhub.com/images/og-ai-solutions.jpg',
         width: 1200,
         height: 630,
         alt: 'RAG Systems for Small Business Canada — Karavan IT HUB',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'RAG Systems for Small Business Canada | Karavan IT HUB',
     description:
       'Connect AI to your actual business documents and knowledge. Built by Karavan IT HUB for Canadian SMBs.',
-    images: ['https://karavanhub.com/images/twitter-ai-solutions.jpg'],
+    images: ['https://www.karavanhub.com/images/twitter-ai-solutions.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
@@ -55,11 +55,11 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': 'https://karavanhub.com/#organization',
+      '@id': 'https://www.karavanhub.com/#organization',
       name: 'Karavan Hub',
       alternateName: 'Karavan IT HUB',
-      url: 'https://karavanhub.com',
-      logo: { '@type': 'ImageObject', url: 'https://karavanhub.com/logo.png' },
+      url: 'https://www.karavanhub.com',
+      logo: { '@type': 'ImageObject', url: 'https://www.karavanhub.com/logo.png' },
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Suite 31',
@@ -81,27 +81,27 @@ const jsonLd = {
     },
     {
       '@type': 'WebPage',
-      '@id': 'https://karavanhub.com/rag-systems/#webpage',
+      '@id': 'https://www.karavanhub.com/rag-systems/#webpage',
       name: 'RAG Systems for Small Business Canada',
-      url: 'https://karavanhub.com/rag-systems',
+      url: 'https://www.karavanhub.com/rag-systems',
       datePublished: '2026-06-25',
       dateModified: '2026-06-25',
       isPartOf: {
         '@type': 'WebSite',
-        '@id': 'https://karavanhub.com/#website',
+        '@id': 'https://www.karavanhub.com/#website',
         name: 'Karavan IT HUB',
-        url: 'https://karavanhub.com',
+        url: 'https://www.karavanhub.com',
       },
-      about: { '@id': 'https://karavanhub.com/rag-systems/#service' },
+      about: { '@id': 'https://www.karavanhub.com/rag-systems/#service' },
       inLanguage: 'en-CA',
     },
     {
       '@type': 'Service',
-      '@id': 'https://karavanhub.com/rag-systems/#service',
+      '@id': 'https://www.karavanhub.com/rag-systems/#service',
       name: 'RAG Systems for Small Business',
       description:
         'Retrieval-Augmented Generation systems that connect AI to your actual business documents, policies, and knowledge — delivering accurate, source-grounded answers to staff and customers.',
-      provider: { '@id': 'https://karavanhub.com/#organization' },
+      provider: { '@id': 'https://www.karavanhub.com/#organization' },
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'State', name: 'Ontario' },
@@ -140,16 +140,16 @@ const jsonLd = {
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://karavanhub.com/rag-systems/#breadcrumb',
+      '@id': 'https://www.karavanhub.com/rag-systems/#breadcrumb',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://karavanhub.com' },
-        { '@type': 'ListItem', position: 2, name: 'AI Solutions', item: 'https://karavanhub.com/ai-solutions' },
-        { '@type': 'ListItem', position: 3, name: 'RAG Systems', item: 'https://karavanhub.com/rag-systems' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.karavanhub.com' },
+        { '@type': 'ListItem', position: 2, name: 'AI Solutions', item: 'https://www.karavanhub.com/ai-solutions' },
+        { '@type': 'ListItem', position: 3, name: 'RAG Systems', item: 'https://www.karavanhub.com/rag-systems' },
       ],
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://karavanhub.com/rag-systems/#faq',
+      '@id': 'https://www.karavanhub.com/rag-systems/#faq',
       mainEntity: [
         {
           '@type': 'Question',

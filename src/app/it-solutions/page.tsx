@@ -22,15 +22,15 @@ export const metadata: Metadata = {
     'max-video-preview': -1,
   },
   alternates: {
-    canonical: 'https://karavanhub.com/it-solutions',
+    canonical: 'https://www.karavanhub.com/it-solutions',
     languages: {
-      'en-CA': 'https://karavanhub.com/it-solutions',
-      en: 'https://karavanhub.com/it-solutions',
+      'en-CA': 'https://www.karavanhub.com/it-solutions',
+      en: 'https://www.karavanhub.com/it-solutions',
     },
   },
   openGraph: {
     type: 'website',
-    url: 'https://karavanhub.com/it-solutions',
+    url: 'https://www.karavanhub.com/it-solutions',
     title: 'IT Solutions for Small & Medium Businesses | Karavan IT HUB',
     description:
       'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation.',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     locale: 'en_CA',
     images: [
       {
-        url: 'https://karavanhub.com/images/og-it-solutions.jpg',
+        url: 'https://www.karavanhub.com/images/og-it-solutions.jpg',
         width: 1200,
         height: 630,
         alt: 'Karavan IT HUB IT Solutions',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'IT Solutions for Small & Medium Businesses | Karavan IT HUB',
     description:
       'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation.',
-    images: ['https://karavanhub.com/images/twitter-it-solutions.jpg'],
+    images: ['https://www.karavanhub.com/images/twitter-it-solutions.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
@@ -68,13 +68,13 @@ const jsonLdGraph = {
     // Organization entity (reusable @id across pages)
     {
       '@type': 'Organization',
-      '@id': 'https://karavanhub.com/#organization',
+      '@id': 'https://www.karavanhub.com/#organization',
       name: 'Karavan Hub',
       alternateName: 'Karavan IT HUB',
-      url: 'https://karavanhub.com',
+      url: 'https://www.karavanhub.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://karavanhub.com/logo.png',
+        url: 'https://www.karavanhub.com/logo.png',
       },
       description:
         'Canadian-owned AI and IT solutions company specializing in custom software development, web design, data analytics, and digital transformation for small and medium businesses.',
@@ -123,18 +123,18 @@ const jsonLdGraph = {
     // WebPage entity (speakable + mentions + dates)
     {
       '@type': 'WebPage',
-      '@id': 'https://karavanhub.com/it-solutions/#webpage',
+      '@id': 'https://www.karavanhub.com/it-solutions/#webpage',
       name: 'IT Solutions for Small & Medium Businesses',
-      url: 'https://karavanhub.com/it-solutions',
+      url: 'https://www.karavanhub.com/it-solutions',
       datePublished: '2026-01-15',
       dateModified: '2026-02-28',
       isPartOf: {
         '@type': 'WebSite',
-        '@id': 'https://karavanhub.com/#website',
+        '@id': 'https://www.karavanhub.com/#website',
         name: 'Karavan Hub',
-        url: 'https://karavanhub.com',
+        url: 'https://www.karavanhub.com',
       },
-      about: { '@id': 'https://karavanhub.com/it-solutions/#service' },
+      about: { '@id': 'https://www.karavanhub.com/it-solutions/#service' },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['#software-heading', '#webdesign-heading', '#analytics-heading', '#transform-heading'],
@@ -155,11 +155,11 @@ const jsonLdGraph = {
     // Service entity
     {
       '@type': 'Service',
-      '@id': 'https://karavanhub.com/it-solutions/#service',
+      '@id': 'https://www.karavanhub.com/it-solutions/#service',
       name: 'IT Solutions',
       description:
         'Custom IT solutions for small and medium businesses including software development, web design, data analytics, and digital transformation services.',
-      provider: { '@id': 'https://karavanhub.com/#organization' },
+      provider: { '@id': 'https://www.karavanhub.com/#organization' },
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'State', name: 'Ontario' },
@@ -211,7 +211,7 @@ const jsonLdGraph = {
     // FAQPage entity
     {
       '@type': 'FAQPage',
-      '@id': 'https://karavanhub.com/it-solutions/#faq',
+      '@id': 'https://www.karavanhub.com/it-solutions/#faq',
       mainEntity: [
         {
           '@type': 'Question',
@@ -287,20 +287,20 @@ const jsonLdGraph = {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://karavanhub.com',
+          item: 'https://www.karavanhub.com',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'IT Solutions',
-          item: 'https://karavanhub.com/it-solutions',
+          item: 'https://www.karavanhub.com/it-solutions',
         },
       ],
     },
     // HowTo entity
     {
       '@type': 'HowTo',
-      '@id': 'https://karavanhub.com/it-solutions/#howto',
+      '@id': 'https://www.karavanhub.com/it-solutions/#howto',
       name: 'How Karavan IT HUB Delivers Custom IT Solutions',
       description:
         'Our process for building custom IT solutions for small and medium businesses in Canada.',

@@ -25,21 +25,21 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://karavanhub.com/insights',
+    canonical: 'https://www.karavanhub.com/insights',
     languages: {
-      'en-CA': 'https://karavanhub.com/insights',
-      en: 'https://karavanhub.com/insights',
+      'en-CA': 'https://www.karavanhub.com/insights',
+      en: 'https://www.karavanhub.com/insights',
     },
   },
   openGraph: {
     type: 'website',
-    url: 'https://karavanhub.com/insights',
+    url: 'https://www.karavanhub.com/insights',
     title: 'Insights — Practical Tech Knowledge for Business Owners',
     description:
       'Practical articles on AI automation, software, and digital strategy for SMBs. Written by real consultants.',
     images: [
       {
-        url: 'https://karavanhub.com/images/og-insights.jpg',
+        url: 'https://www.karavanhub.com/images/og-insights.jpg',
         width: 1200,
         height: 630,
         alt: 'Karavan Hub Insights - Practical Tech Knowledge',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: 'Insights — Practical Tech Knowledge | Karavan Hub',
     description:
       'AI automation, software, and digital strategy articles for business owners. Niagara, Ontario.',
-    images: ['https://karavanhub.com/images/twitter-insights.jpg'],
+    images: ['https://www.karavanhub.com/images/twitter-insights.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
@@ -69,12 +69,12 @@ const schema = {
   '@graph': [
     {
       '@type': ['Organization', 'ProfessionalService'],
-      '@id': 'https://karavanhub.com/#organization',
+      '@id': 'https://www.karavanhub.com/#organization',
       name: 'Karavan Hub',
-      url: 'https://karavanhub.com',
+      url: 'https://www.karavanhub.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://karavanhub.com/images/logo.png',
+        url: 'https://www.karavanhub.com/images/logo.png',
         width: 512,
         height: 512,
       },
@@ -105,14 +105,14 @@ const schema = {
     },
     {
       '@type': 'CollectionPage',
-      '@id': 'https://karavanhub.com/insights/#webpage',
-      url: 'https://karavanhub.com/insights',
+      '@id': 'https://www.karavanhub.com/insights/#webpage',
+      url: 'https://www.karavanhub.com/insights',
       name: 'Insights — Practical Tech Knowledge for Business Owners',
       description:
         'Practical articles on AI automation, software, and digital strategy for small and medium businesses.',
-      isPartOf: { '@id': 'https://karavanhub.com/#website' },
-      about: { '@id': 'https://karavanhub.com/#organization' },
-      breadcrumb: { '@id': 'https://karavanhub.com/insights/#breadcrumb' },
+      isPartOf: { '@id': 'https://www.karavanhub.com/#website' },
+      about: { '@id': 'https://www.karavanhub.com/#organization' },
+      breadcrumb: { '@id': 'https://www.karavanhub.com/insights/#breadcrumb' },
       inLanguage: 'en-CA',
       datePublished: '2026-02-03',
       dateModified: '2026-02-23',
@@ -121,8 +121,8 @@ const schema = {
         cssSelector: ['.insights-title', '.insights-subtitle'],
       },
       significantLink: [
-        'https://karavanhub.com/insights/auto-reply-automation',
-        'https://karavanhub.com/contact',
+        'https://www.karavanhub.com/insights/auto-reply-automation',
+        'https://www.karavanhub.com/contact',
       ],
       mentions: [
         { '@type': 'Thing', name: 'AI Automation' },
@@ -132,40 +132,40 @@ const schema = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://karavanhub.com/#website',
-      url: 'https://karavanhub.com',
+      '@id': 'https://www.karavanhub.com/#website',
+      url: 'https://www.karavanhub.com',
       name: 'Karavan Hub',
-      publisher: { '@id': 'https://karavanhub.com/#organization' },
+      publisher: { '@id': 'https://www.karavanhub.com/#organization' },
       inLanguage: 'en-CA',
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://karavanhub.com/insights/#breadcrumb',
+      '@id': 'https://www.karavanhub.com/insights/#breadcrumb',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://karavanhub.com',
+          item: 'https://www.karavanhub.com',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Insights',
-          item: 'https://karavanhub.com/insights',
+          item: 'https://www.karavanhub.com/insights',
         },
       ],
     },
     {
       '@type': 'ItemList',
-      '@id': 'https://karavanhub.com/insights/#itemlist',
+      '@id': 'https://www.karavanhub.com/insights/#itemlist',
       name: 'Karavan Hub Insights',
       numberOfItems: 1,
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
-          url: 'https://karavanhub.com/insights/auto-reply-automation',
+          url: 'https://www.karavanhub.com/insights/auto-reply-automation',
           name: 'What If You Never Had to Answer "What Are Your Hours?" Again?',
         },
       ],

@@ -16,21 +16,21 @@ export const metadata: Metadata = {
     'max-video-preview': -1,
   },
   alternates: {
-    canonical: 'https://karavanhub.com',
+    canonical: 'https://www.karavanhub.com',
     languages: {
-      'en-CA': 'https://karavanhub.com',
-      en: 'https://karavanhub.com',
+      'en-CA': 'https://www.karavanhub.com',
+      en: 'https://www.karavanhub.com',
     },
   },
   openGraph: {
     type: 'website',
-    url: 'https://karavanhub.com',
+    url: 'https://www.karavanhub.com',
     title: 'Karavan IT HUB — AI & IT Solutions',
     description: 'We build the technology. You get your time back. Custom AI solutions and software for SMBs.',
     locale: 'en_CA',
     images: [
       {
-        url: 'https://karavanhub.com/images/og-homepage.jpg',
+        url: 'https://www.karavanhub.com/images/og-homepage.jpg',
         width: 1200,
         height: 630,
         alt: 'Karavan IT HUB'
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Karavan IT HUB — AI & IT Solutions',
     description: 'We build the technology. You get your time back. Custom AI solutions and software for SMBs.',
-    images: ['https://karavanhub.com/images/twitter-homepage.jpg']
+    images: ['https://www.karavanhub.com/images/twitter-homepage.jpg']
   },
   other: {
     'geo.region': 'CA-ON',
@@ -58,15 +58,15 @@ const schemaGraph = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': 'https://karavanhub.com/#organization',
+      '@id': 'https://www.karavanhub.com/#organization',
       name: 'Karavan IT HUB',
       description: 'AI and IT solutions company specializing in custom software development, AI automation, and digital transformation.',
-      url: 'https://karavanhub.com',
+      url: 'https://www.karavanhub.com',
       logo: {
         '@type': 'ImageObject',
-        '@id': 'https://karavanhub.com/#logo',
-        url: 'https://karavanhub.com/images/logo.png',
-        contentUrl: 'https://karavanhub.com/images/logo.png',
+        '@id': 'https://www.karavanhub.com/#logo',
+        url: 'https://www.karavanhub.com/images/logo.png',
+        contentUrl: 'https://www.karavanhub.com/images/logo.png',
         caption: 'Karavan IT HUB'
       },
       foundingDate: '2024',
@@ -75,7 +75,7 @@ const schemaGraph = {
         '@type': 'Person',
         name: 'Nyah S.',
         jobTitle: 'Founder & Principal Consultant',
-        url: 'https://karavanhub.com/about',
+        url: 'https://www.karavanhub.com/about',
       },
       knowsAbout: ['AI Automation', 'Custom Software Development', 'AI Strategy Consulting', 'Digital Transformation', 'Web Design', 'Data Analytics'],
       sameAs: [
@@ -93,11 +93,11 @@ const schemaGraph = {
     },
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://karavanhub.com/#localbusiness',
+      '@id': 'https://www.karavanhub.com/#localbusiness',
       name: 'Karavan IT HUB',
       description: 'Canadian-owned AI and IT solutions company providing custom software development, AI automation, web design, and digital transformation services.',
-      url: 'https://karavanhub.com',
-      image: 'https://karavanhub.com/images/og-homepage.jpg',
+      url: 'https://www.karavanhub.com',
+      image: 'https://www.karavanhub.com/images/og-homepage.jpg',
       priceRange: '$$',
       address: {
         '@type': 'PostalAddress',
@@ -120,11 +120,11 @@ const schemaGraph = {
     },
     {
       '@type': 'WebPage',
-      '@id': 'https://karavanhub.com/#webpage',
-      url: 'https://karavanhub.com',
+      '@id': 'https://www.karavanhub.com/#webpage',
+      url: 'https://www.karavanhub.com',
       name: 'Karavan IT HUB \u2014 AI & IT Solutions | Custom Software Development',
-      isPartOf: { '@id': 'https://karavanhub.com/#website' },
-      about: { '@id': 'https://karavanhub.com/#organization' },
+      isPartOf: { '@id': 'https://www.karavanhub.com/#website' },
+      about: { '@id': 'https://www.karavanhub.com/#organization' },
       datePublished: '2025-01-15',
       dateModified: '2026-02-28',
       description: 'We build the technology. You get your time back. Canadian-owned AI and IT solutions in Niagara, Ontario.',
@@ -141,16 +141,16 @@ const schemaGraph = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://karavanhub.com/#website',
-      url: 'https://karavanhub.com',
+      '@id': 'https://www.karavanhub.com/#website',
+      url: 'https://www.karavanhub.com',
       name: 'Karavan IT HUB',
-      publisher: { '@id': 'https://karavanhub.com/#organization' }
+      publisher: { '@id': 'https://www.karavanhub.com/#organization' }
     },
     {
       '@type': 'Service',
-      '@id': 'https://karavanhub.com/#services',
+      '@id': 'https://www.karavanhub.com/#services',
       serviceType: 'IT and AI Solutions',
-      provider: { '@id': 'https://karavanhub.com/#organization' },
+      provider: { '@id': 'https://www.karavanhub.com/#organization' },
       areaServed: 'Canada',
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
@@ -217,7 +217,7 @@ const schemaGraph = {
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://karavanhub.com/#faq',
+      '@id': 'https://www.karavanhub.com/#faq',
       mainEntity: [
         {
           '@type': 'Question',
@@ -287,13 +287,13 @@ const schemaGraph = {
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://karavanhub.com/#breadcrumb',
+      '@id': 'https://www.karavanhub.com/#breadcrumb',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://karavanhub.com'
+          item: 'https://www.karavanhub.com'
         }
       ]
     }

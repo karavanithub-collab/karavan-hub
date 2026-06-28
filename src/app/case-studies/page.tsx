@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     'case studies, IT solutions, custom software, cloud migration, AI automation, business results, Karavan Hub, Niagara',
   robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   alternates: {
-    canonical: 'https://karavanhub.com/case-studies',
+    canonical: 'https://www.karavanhub.com/case-studies',
     languages: {
-      'en-CA': 'https://karavanhub.com/case-studies',
-      en: 'https://karavanhub.com/case-studies',
+      'en-CA': 'https://www.karavanhub.com/case-studies',
+      en: 'https://www.karavanhub.com/case-studies',
     },
   },
   openGraph: {
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
     description:
       'How we helped businesses fix broken systems and build what they actually needed. 7 projects with real numbers.',
     type: 'website',
-    url: 'https://karavanhub.com/case-studies',
+    url: 'https://www.karavanhub.com/case-studies',
     images: [
       {
-        url: 'https://karavanhub.com/images/case-studies-og.jpg',
+        url: 'https://www.karavanhub.com/images/case-studies-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Karavan Hub Case Studies - Real Results for Real Businesses',
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     title: 'Case Studies | Karavan Hub',
     description:
       'How we helped businesses fix broken systems and build what they actually needed. 7 projects, real numbers.',
-    images: ['https://karavanhub.com/images/case-studies-twitter.jpg'],
+    images: ['https://www.karavanhub.com/images/case-studies-twitter.jpg'],
   },
-  authors: [{ name: 'Karavan Hub', url: 'https://karavanhub.com/about' }],
+  authors: [{ name: 'Karavan Hub', url: 'https://www.karavanhub.com/about' }],
   other: {
     'geo.region': 'CA-ON',
     'geo.placename': 'Niagara, Ontario',
@@ -422,13 +422,13 @@ const jsonLdGraph = {
     // Organization entity (GEO: anchor for entity linking)
     {
       '@type': 'Organization',
-      '@id': 'https://karavanhub.com/#organization',
+      '@id': 'https://www.karavanhub.com/#organization',
       name: 'Karavan Hub',
       alternateName: 'Karavan IT HUB',
-      url: 'https://karavanhub.com',
+      url: 'https://www.karavanhub.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://karavanhub.com/logo.png',
+        url: 'https://www.karavanhub.com/logo.png',
       },
       description:
         'Canadian-owned AI and IT solutions company specializing in vertical AI automation, custom software development, and strategic AI consulting for small and medium businesses.',
@@ -476,8 +476,8 @@ const jsonLdGraph = {
     // WebPage entity (GEO: page-level entity with speakable + mentions)
     {
       '@type': 'WebPage',
-      '@id': 'https://karavanhub.com/case-studies/#webpage',
-      url: 'https://karavanhub.com/case-studies',
+      '@id': 'https://www.karavanhub.com/case-studies/#webpage',
+      url: 'https://www.karavanhub.com/case-studies',
       name: 'Case Studies | Karavan Hub',
       description:
         'How Karavan Hub helped businesses fix broken payment systems, rebuild booking platforms, and automate what used to take days. 7 projects, real numbers.',
@@ -486,11 +486,11 @@ const jsonLdGraph = {
       inLanguage: 'en-CA',
       isPartOf: {
         '@type': 'WebSite',
-        '@id': 'https://karavanhub.com/#website',
+        '@id': 'https://www.karavanhub.com/#website',
         name: 'Karavan Hub',
-        url: 'https://karavanhub.com',
+        url: 'https://www.karavanhub.com',
       },
-      about: { '@id': 'https://karavanhub.com/case-studies/#service' },
+      about: { '@id': 'https://www.karavanhub.com/case-studies/#service' },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['#hero-heading', '#faq-heading', '#cta-heading'],
@@ -512,11 +512,11 @@ const jsonLdGraph = {
     // Service entity (SEO: service catalog for case study work)
     {
       '@type': 'Service',
-      '@id': 'https://karavanhub.com/case-studies/#service',
+      '@id': 'https://www.karavanhub.com/case-studies/#service',
       name: 'Custom Software & IT Solutions',
       description:
         'Custom software development, cloud migration, AI automation, mobile apps, data engineering, and web design for small and medium businesses.',
-      provider: { '@id': 'https://karavanhub.com/#organization' },
+      provider: { '@id': 'https://www.karavanhub.com/#organization' },
       serviceType: 'IT Consulting and Custom Software Development',
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
@@ -575,7 +575,7 @@ const jsonLdGraph = {
     // ItemList entity (SEO: enriched case study list)
     {
       '@type': 'ItemList',
-      '@id': 'https://karavanhub.com/case-studies/#itemlist',
+      '@id': 'https://www.karavanhub.com/case-studies/#itemlist',
       name: 'Karavan Hub Case Studies',
       description: 'IT and AI projects from Karavan Hub with measurable business outcomes',
       numberOfItems: 7,
@@ -589,7 +589,7 @@ const jsonLdGraph = {
           about: {
             '@type': 'Service',
             name: study.services[0],
-            provider: { '@id': 'https://karavanhub.com/#organization' },
+            provider: { '@id': 'https://www.karavanhub.com/#organization' },
           },
           genre: study.category,
         },
@@ -598,7 +598,7 @@ const jsonLdGraph = {
     // HowTo entity (SEO: project delivery process)
     {
       '@type': 'HowTo',
-      '@id': 'https://karavanhub.com/case-studies/#howto',
+      '@id': 'https://www.karavanhub.com/case-studies/#howto',
       name: 'How Karavan Hub delivers custom software projects',
       description: 'Our project delivery process from discovery to production support.',
       step: [
@@ -631,7 +631,7 @@ const jsonLdGraph = {
     // FAQPage entity (AEO: expanded with cost + integration + support questions)
     {
       '@type': 'FAQPage',
-      '@id': 'https://karavanhub.com/case-studies/#faq',
+      '@id': 'https://www.karavanhub.com/case-studies/#faq',
       mainEntity: faqs.map((faq) => ({
         '@type': 'Question',
         name: faq.question,
@@ -645,16 +645,16 @@ const jsonLdGraph = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://karavanhub.com' },
-        { '@type': 'ListItem', position: 2, name: 'Case Studies', item: 'https://karavanhub.com/case-studies' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.karavanhub.com' },
+        { '@type': 'ListItem', position: 2, name: 'Case Studies', item: 'https://www.karavanhub.com/case-studies' },
       ],
     },
     // ProfessionalService entity (GEO: local business signals)
     {
       '@type': 'ProfessionalService',
-      '@id': 'https://karavanhub.com/#localbusiness',
+      '@id': 'https://www.karavanhub.com/#localbusiness',
       name: 'Karavan Hub',
-      url: 'https://karavanhub.com',
+      url: 'https://www.karavanhub.com',
       telephone: '+1-905-301-3936',
       email: 'karavan.it.hub@gmail.com',
       address: {
@@ -677,7 +677,7 @@ const jsonLdGraph = {
         opens: '09:00',
         closes: '17:00',
       },
-      sameAs: { '@id': 'https://karavanhub.com/#organization' },
+      sameAs: { '@id': 'https://www.karavanhub.com/#organization' },
     },
   ],
 };

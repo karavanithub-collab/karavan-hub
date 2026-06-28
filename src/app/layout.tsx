@@ -33,7 +33,7 @@ const playfairDisplay = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://karavanhub.com'),
+  metadataBase: new URL('https://www.karavanhub.com'),
   title: {
     default: 'Karavan Hub - AI & IT Solutions in Niagara, Ontario',
     template: '%s | Karavan Hub',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_CA',
-    url: 'https://karavanhub.com',
+    url: 'https://www.karavanhub.com',
     siteName: 'Karavan Hub',
     title: 'Karavan Hub - AI & IT Solutions in Niagara, Ontario',
     description:
@@ -89,10 +89,10 @@ export const metadata: Metadata = {
     images: ['/images/twitter-card.jpg'],
   },
   alternates: {
-    canonical: 'https://karavanhub.com',
+    canonical: 'https://www.karavanhub.com',
     languages: {
-      'en-CA': 'https://karavanhub.com',
-      en: 'https://karavanhub.com',
+      'en-CA': 'https://www.karavanhub.com',
+      en: 'https://www.karavanhub.com',
     },
   },
   other: {

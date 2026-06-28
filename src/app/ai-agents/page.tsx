@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   keywords:
     'AI agents for small business Ontario, AI automation agents Canada, autonomous AI systems, AI workflow agents Ontario, intelligent automation Niagara, AI agents for SMB',
   alternates: {
-    canonical: 'https://karavanhub.com/ai-agents',
+    canonical: 'https://www.karavanhub.com/ai-agents',
     languages: {
-      'en-CA': 'https://karavanhub.com/ai-agents',
-      en: 'https://karavanhub.com/ai-agents',
+      'en-CA': 'https://www.karavanhub.com/ai-agents',
+      en: 'https://www.karavanhub.com/ai-agents',
     },
   },
   openGraph: {
@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     title: 'AI Agents for Small Business in Ontario | Karavan IT HUB',
     description:
       'Custom AI agents for Ontario SMBs. We build systems that handle intake, follow-up, and workflows so your team focuses on work that matters.',
-    url: 'https://karavanhub.com/ai-agents',
+    url: 'https://www.karavanhub.com/ai-agents',
     siteName: 'Karavan IT HUB',
     locale: 'en_CA',
     images: [
       {
-        url: 'https://karavanhub.com/images/og-ai-solutions.jpg',
+        url: 'https://www.karavanhub.com/images/og-ai-solutions.jpg',
         width: 1200,
         height: 630,
         alt: 'AI Agents for Small Business Ontario — Karavan IT HUB',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'AI Agents for Small Business Ontario | Karavan IT HUB',
     description:
       'Custom AI agents that handle intake, follow-up, and internal workflows for Ontario SMBs.',
-    images: ['https://karavanhub.com/images/twitter-ai-solutions.jpg'],
+    images: ['https://www.karavanhub.com/images/twitter-ai-solutions.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
@@ -55,11 +55,11 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': 'https://karavanhub.com/#organization',
+      '@id': 'https://www.karavanhub.com/#organization',
       name: 'Karavan Hub',
       alternateName: 'Karavan IT HUB',
-      url: 'https://karavanhub.com',
-      logo: { '@type': 'ImageObject', url: 'https://karavanhub.com/logo.png' },
+      url: 'https://www.karavanhub.com',
+      logo: { '@type': 'ImageObject', url: 'https://www.karavanhub.com/logo.png' },
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Suite 31',
@@ -81,27 +81,27 @@ const jsonLd = {
     },
     {
       '@type': 'WebPage',
-      '@id': 'https://karavanhub.com/ai-agents/#webpage',
+      '@id': 'https://www.karavanhub.com/ai-agents/#webpage',
       name: 'AI Agents for Small Business Ontario',
-      url: 'https://karavanhub.com/ai-agents',
+      url: 'https://www.karavanhub.com/ai-agents',
       datePublished: '2026-06-25',
       dateModified: '2026-06-25',
       isPartOf: {
         '@type': 'WebSite',
-        '@id': 'https://karavanhub.com/#website',
+        '@id': 'https://www.karavanhub.com/#website',
         name: 'Karavan IT HUB',
-        url: 'https://karavanhub.com',
+        url: 'https://www.karavanhub.com',
       },
-      about: { '@id': 'https://karavanhub.com/ai-agents/#service' },
+      about: { '@id': 'https://www.karavanhub.com/ai-agents/#service' },
       inLanguage: 'en-CA',
     },
     {
       '@type': 'Service',
-      '@id': 'https://karavanhub.com/ai-agents/#service',
+      '@id': 'https://www.karavanhub.com/ai-agents/#service',
       name: 'AI Agents for Small Business',
       description:
         'Custom AI agents that handle customer intake, lead qualification, appointment booking, follow-up sequences, and internal workflows for Ontario small and medium businesses.',
-      provider: { '@id': 'https://karavanhub.com/#organization' },
+      provider: { '@id': 'https://www.karavanhub.com/#organization' },
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'State', name: 'Ontario' },
@@ -140,16 +140,16 @@ const jsonLd = {
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://karavanhub.com/ai-agents/#breadcrumb',
+      '@id': 'https://www.karavanhub.com/ai-agents/#breadcrumb',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://karavanhub.com' },
-        { '@type': 'ListItem', position: 2, name: 'AI Solutions', item: 'https://karavanhub.com/ai-solutions' },
-        { '@type': 'ListItem', position: 3, name: 'AI Agents', item: 'https://karavanhub.com/ai-agents' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.karavanhub.com' },
+        { '@type': 'ListItem', position: 2, name: 'AI Solutions', item: 'https://www.karavanhub.com/ai-solutions' },
+        { '@type': 'ListItem', position: 3, name: 'AI Agents', item: 'https://www.karavanhub.com/ai-agents' },
       ],
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://karavanhub.com/ai-agents/#faq',
+      '@id': 'https://www.karavanhub.com/ai-agents/#faq',
       mainEntity: [
         {
           '@type': 'Question',

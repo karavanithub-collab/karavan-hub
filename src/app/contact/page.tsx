@@ -24,21 +24,21 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://karavanhub.com/contact',
+    canonical: 'https://www.karavanhub.com/contact',
     languages: {
-      'en-CA': 'https://karavanhub.com/contact',
-      en: 'https://karavanhub.com/contact',
+      'en-CA': 'https://www.karavanhub.com/contact',
+      en: 'https://www.karavanhub.com/contact',
     },
   },
   openGraph: {
     type: 'website',
-    url: 'https://karavanhub.com/contact',
+    url: 'https://www.karavanhub.com/contact',
     title: 'Contact Karavan Hub — Free IT Consultation',
     description:
       'Free 30-minute consultation. Real answers about your tech, your timeline, your budget. No follow-up spam. Response within 24 hours.',
     images: [
       {
-        url: 'https://karavanhub.com/images/og-contact.jpg',
+        url: 'https://www.karavanhub.com/images/og-contact.jpg',
         width: 1200,
         height: 630,
         alt: 'Contact Karavan Hub - Free IT Consultation - Niagara, Ontario, Canada',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Karavan Hub — Free IT Consultation',
     description: 'Free consultation, response within 24 hours. IT solutions for Canadian SMBs. Niagara, Ontario.',
-    images: ['https://karavanhub.com/images/twitter-contact.jpg'],
+    images: ['https://www.karavanhub.com/images/twitter-contact.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
@@ -74,12 +74,12 @@ const schema = {
   '@graph': [
     {
       '@type': ['Organization', 'ProfessionalService'],
-      '@id': 'https://karavanhub.com/#organization',
+      '@id': 'https://www.karavanhub.com/#organization',
       name: 'Karavan Hub',
-      url: 'https://karavanhub.com',
+      url: 'https://www.karavanhub.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://karavanhub.com/images/logo.png',
+        url: 'https://www.karavanhub.com/images/logo.png',
         width: 512,
         height: 512,
       },
@@ -159,15 +159,15 @@ const schema = {
     },
     {
       '@type': 'ContactPage',
-      '@id': 'https://karavanhub.com/contact/#webpage',
-      url: 'https://karavanhub.com/contact',
+      '@id': 'https://www.karavanhub.com/contact/#webpage',
+      url: 'https://www.karavanhub.com/contact',
       name: 'Contact Karavan Hub — Free IT Consultation',
       description:
         'Contact Karavan Hub for a free IT consultation. Custom software, AI automation, web design for Canadian SMBs. Response within 24 hours.',
-      isPartOf: { '@id': 'https://karavanhub.com/#website' },
-      about: { '@id': 'https://karavanhub.com/#organization' },
-      mainEntity: { '@id': 'https://karavanhub.com/#organization' },
-      breadcrumb: { '@id': 'https://karavanhub.com/contact/#breadcrumb' },
+      isPartOf: { '@id': 'https://www.karavanhub.com/#website' },
+      about: { '@id': 'https://www.karavanhub.com/#organization' },
+      mainEntity: { '@id': 'https://www.karavanhub.com/#organization' },
+      breadcrumb: { '@id': 'https://www.karavanhub.com/contact/#breadcrumb' },
       inLanguage: 'en-CA',
       datePublished: '2024-01-01',
       dateModified: '2026-02-23',
@@ -176,9 +176,9 @@ const schema = {
         cssSelector: ['.contact-title', '.contact-subtitle', '.response-text'],
       },
       significantLink: [
-        'https://karavanhub.com/about',
-        'https://karavanhub.com/ai-solutions',
-        'https://karavanhub.com/it-solutions',
+        'https://www.karavanhub.com/about',
+        'https://www.karavanhub.com/ai-solutions',
+        'https://www.karavanhub.com/it-solutions',
         'https://calendly.com/karavanhub/30min',
       ],
       mentions: [
@@ -191,33 +191,33 @@ const schema = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://karavanhub.com/#website',
-      url: 'https://karavanhub.com',
+      '@id': 'https://www.karavanhub.com/#website',
+      url: 'https://www.karavanhub.com',
       name: 'Karavan Hub',
-      publisher: { '@id': 'https://karavanhub.com/#organization' },
+      publisher: { '@id': 'https://www.karavanhub.com/#organization' },
       inLanguage: 'en-CA',
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://karavanhub.com/contact/#breadcrumb',
+      '@id': 'https://www.karavanhub.com/contact/#breadcrumb',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://karavanhub.com',
+          item: 'https://www.karavanhub.com',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Contact',
-          item: 'https://karavanhub.com/contact',
+          item: 'https://www.karavanhub.com/contact',
         },
       ],
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://karavanhub.com/contact/#faq',
+      '@id': 'https://www.karavanhub.com/contact/#faq',
       mainEntity: [
         {
           '@type': 'Question',

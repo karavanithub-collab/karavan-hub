@@ -23,21 +23,21 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://karavanhub.com/about',
+    canonical: 'https://www.karavanhub.com/about',
     languages: {
-      'en-CA': 'https://karavanhub.com/about',
-      en: 'https://karavanhub.com/about',
+      'en-CA': 'https://www.karavanhub.com/about',
+      en: 'https://www.karavanhub.com/about',
     },
   },
   openGraph: {
     type: 'website',
-    url: 'https://karavanhub.com/about',
+    url: 'https://www.karavanhub.com/about',
     title: 'About Karavan Hub — Technology That Feels Human',
     description:
       'Niagara-based IT consulting founded by a former Registered Nurse. Custom software, AI automation, and web solutions for Canadian SMBs.',
     images: [
       {
-        url: 'https://karavanhub.com/images/og-about.jpg',
+        url: 'https://www.karavanhub.com/images/og-about.jpg',
         width: 1200,
         height: 630,
         alt: 'Karavan Hub - About Us - Technology That Feels Human - Niagara, Ontario, Canada',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Karavan Hub — Technology That Feels Human',
     description: 'Niagara IT consulting founded by a former RN. Custom software, AI, and web solutions for Canadian SMBs.',
-    images: ['https://karavanhub.com/images/twitter-about.jpg'],
+    images: ['https://www.karavanhub.com/images/twitter-about.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
@@ -70,37 +70,37 @@ const schema = {
   '@graph': [
     {
       '@type': 'WebSite',
-      '@id': 'https://karavanhub.com/#website',
-      url: 'https://karavanhub.com',
+      '@id': 'https://www.karavanhub.com/#website',
+      url: 'https://www.karavanhub.com',
       name: 'Karavan Hub',
       description: 'Technology consulting that feels human. Niagara-based IT solutions for Canadian businesses.',
-      publisher: { '@id': 'https://karavanhub.com/#organization' },
+      publisher: { '@id': 'https://www.karavanhub.com/#organization' },
       inLanguage: 'en-CA',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://karavanhub.com/search?q={search_term_string}',
+          urlTemplate: 'https://www.karavanhub.com/search?q={search_term_string}',
         },
         'query-input': 'required name=search_term_string',
       },
     },
     {
       '@type': ['Organization', 'ProfessionalService'],
-      '@id': 'https://karavanhub.com/#organization',
+      '@id': 'https://www.karavanhub.com/#organization',
       name: 'Karavan Hub',
       alternateName: ['Karavan Hub IT', 'Karavan Technology'],
-      url: 'https://karavanhub.com',
+      url: 'https://www.karavanhub.com',
       logo: {
         '@type': 'ImageObject',
-        '@id': 'https://karavanhub.com/#logo',
-        url: 'https://karavanhub.com/images/logo.png',
-        contentUrl: 'https://karavanhub.com/images/logo.png',
+        '@id': 'https://www.karavanhub.com/#logo',
+        url: 'https://www.karavanhub.com/images/logo.png',
+        contentUrl: 'https://www.karavanhub.com/images/logo.png',
         width: 512,
         height: 512,
         caption: 'Karavan Hub Logo',
       },
-      image: 'https://karavanhub.com/images/og-about.jpg',
+      image: 'https://www.karavanhub.com/images/og-about.jpg',
       description:
         'Karavan Hub is a Niagara-based technology consulting company founded by a former Registered Nurse. We specialize in human-centered IT solutions including custom software, web design, data analytics, and AI integration for Canadian small and medium businesses.',
       slogan: 'Technology That Feels Human',
@@ -109,7 +109,7 @@ const schema = {
         '@type': 'Place',
         name: 'Niagara, Ontario, Canada',
       },
-      founder: { '@id': 'https://karavanhub.com/#founder' },
+      founder: { '@id': 'https://www.karavanhub.com/#founder' },
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Suite 31',
@@ -220,14 +220,14 @@ const schema = {
     },
     {
       '@type': 'Person',
-      '@id': 'https://karavanhub.com/#founder',
+      '@id': 'https://www.karavanhub.com/#founder',
       name: 'Nyah S.',
       givenName: 'Nyah',
       jobTitle: 'Founder & Principal Consultant',
       description:
         'Former Registered Nurse and Care Coordinator with Ontario Health who transitioned to technology consulting after witnessing firsthand how poorly designed systems fail the people who need them most.',
-      image: 'https://karavanhub.com/images/founder-nyah.jpg',
-      worksFor: { '@id': 'https://karavanhub.com/#organization' },
+      image: 'https://www.karavanhub.com/images/founder-nyah.jpg',
+      worksFor: { '@id': 'https://www.karavanhub.com/#organization' },
       alumniOf: [
         {
           '@type': 'Organization',
@@ -276,19 +276,19 @@ const schema = {
     },
     {
       '@type': 'AboutPage',
-      '@id': 'https://karavanhub.com/about/#webpage',
-      url: 'https://karavanhub.com/about',
+      '@id': 'https://www.karavanhub.com/about/#webpage',
+      url: 'https://www.karavanhub.com/about',
       name: 'About Karavan Hub — Our Story, Mission & Values',
       description:
         "Learn about Karavan Hub's founder story from healthcare operations to technology consulting, and our commitment to making technology feel human for Canadian businesses.",
-      isPartOf: { '@id': 'https://karavanhub.com/#website' },
-      about: { '@id': 'https://karavanhub.com/#organization' },
-      mainEntity: { '@id': 'https://karavanhub.com/#organization' },
+      isPartOf: { '@id': 'https://www.karavanhub.com/#website' },
+      about: { '@id': 'https://www.karavanhub.com/#organization' },
+      mainEntity: { '@id': 'https://www.karavanhub.com/#organization' },
       primaryImageOfPage: {
         '@type': 'ImageObject',
-        url: 'https://karavanhub.com/images/og-about.jpg',
+        url: 'https://www.karavanhub.com/images/og-about.jpg',
       },
-      breadcrumb: { '@id': 'https://karavanhub.com/about/#breadcrumb' },
+      breadcrumb: { '@id': 'https://www.karavanhub.com/about/#breadcrumb' },
       inLanguage: 'en-CA',
       datePublished: '2024-01-01',
       dateModified: '2026-02-17',
@@ -297,10 +297,10 @@ const schema = {
         cssSelector: ['.story-headline', '.highlight-quote', '.cta-title', '.conclusion-statement'],
       },
       significantLink: [
-        'https://karavanhub.com/contact',
-        'https://karavanhub.com/case-studies',
-        'https://karavanhub.com/ai-solutions',
-        'https://karavanhub.com/it-solutions',
+        'https://www.karavanhub.com/contact',
+        'https://www.karavanhub.com/case-studies',
+        'https://www.karavanhub.com/ai-solutions',
+        'https://www.karavanhub.com/it-solutions',
       ],
       mentions: [
         {
@@ -324,25 +324,25 @@ const schema = {
     },
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://karavanhub.com/about/#breadcrumb',
+      '@id': 'https://www.karavanhub.com/about/#breadcrumb',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://karavanhub.com',
+          item: 'https://www.karavanhub.com',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'About Us',
-          item: 'https://karavanhub.com/about',
+          item: 'https://www.karavanhub.com/about',
         },
       ],
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://karavanhub.com/about/#faq',
+      '@id': 'https://www.karavanhub.com/about/#faq',
       mainEntity: [
         {
           '@type': 'Question',
@@ -396,7 +396,7 @@ const schema = {
     },
     {
       '@type': 'HowTo',
-      '@id': 'https://karavanhub.com/about/#howwework',
+      '@id': 'https://www.karavanhub.com/about/#howwework',
       name: 'How Karavan Hub Works With Clients',
       description:
         'Our approach to technology consulting: building relationships, providing honest advice, and communicating in plain language.',

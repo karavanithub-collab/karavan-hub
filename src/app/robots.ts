@@ -25,6 +25,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://karavanhub.com/sitemap.xml',
+    sitemap: 'https://www.karavanhub.com/sitemap.xml',
   };
 }

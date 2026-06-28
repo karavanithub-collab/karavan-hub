@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     'AI solutions, artificial intelligence, business automation, vertical AI, AI integration, machine learning, AI consulting, AI strategy, process automation',
   robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   alternates: {
-    canonical: 'https://karavanhub.com/ai-solutions',
+    canonical: 'https://www.karavanhub.com/ai-solutions',
     languages: {
-      'en-CA': 'https://karavanhub.com/ai-solutions',
-      en: 'https://karavanhub.com/ai-solutions',
+      'en-CA': 'https://www.karavanhub.com/ai-solutions',
+      en: 'https://www.karavanhub.com/ai-solutions',
     },
   },
   openGraph: {
@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     title: 'AI Solutions for Business | Karavan IT HUB',
     description:
       'Make AI work for your business. Vertical AI automation, custom solutions, and strategic consulting.',
-    url: 'https://karavanhub.com/ai-solutions',
+    url: 'https://www.karavanhub.com/ai-solutions',
     siteName: 'Karavan IT HUB',
     locale: 'en_CA',
     images: [
       {
-        url: 'https://karavanhub.com/images/og-ai-solutions.jpg',
+        url: 'https://www.karavanhub.com/images/og-ai-solutions.jpg',
         width: 1200,
         height: 630,
         alt: 'Karavan Hub AI Solutions',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: 'AI Solutions for Business | Karavan IT HUB',
     description:
       'Make AI work for your business. Vertical AI automation, custom AI software, and strategic consulting.',
-    images: ['https://karavanhub.com/images/twitter-ai-solutions.jpg'],
+    images: ['https://www.karavanhub.com/images/twitter-ai-solutions.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
@@ -60,13 +60,13 @@ const jsonLdGraph = {
     // Organization entity (GEO: anchor for entity linking)
     {
       '@type': 'Organization',
-      '@id': 'https://karavanhub.com/#organization',
+      '@id': 'https://www.karavanhub.com/#organization',
       name: 'Karavan Hub',
       alternateName: 'Karavan IT HUB',
-      url: 'https://karavanhub.com',
+      url: 'https://www.karavanhub.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://karavanhub.com/logo.png',
+        url: 'https://www.karavanhub.com/logo.png',
       },
       description:
         'Canadian-owned AI and IT solutions company specializing in vertical AI automation, custom software development, and strategic AI consulting for small and medium businesses.',
@@ -115,18 +115,18 @@ const jsonLdGraph = {
     // WebPage entity (GEO: page-level entity with speakable + mentions)
     {
       '@type': 'WebPage',
-      '@id': 'https://karavanhub.com/ai-solutions/#webpage',
+      '@id': 'https://www.karavanhub.com/ai-solutions/#webpage',
       name: 'AI Solutions for Business',
-      url: 'https://karavanhub.com/ai-solutions',
+      url: 'https://www.karavanhub.com/ai-solutions',
       datePublished: '2026-01-15',
       dateModified: '2026-02-28',
       isPartOf: {
         '@type': 'WebSite',
-        '@id': 'https://karavanhub.com/#website',
+        '@id': 'https://www.karavanhub.com/#website',
         name: 'Karavan Hub',
-        url: 'https://karavanhub.com',
+        url: 'https://www.karavanhub.com',
       },
-      about: { '@id': 'https://karavanhub.com/ai-solutions/#service' },
+      about: { '@id': 'https://www.karavanhub.com/ai-solutions/#service' },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['#hero-heading', '#automation-heading', '#aisoftware-heading', '#strategy-heading'],
@@ -147,11 +147,11 @@ const jsonLdGraph = {
     // Service entity
     {
       '@type': 'Service',
-      '@id': 'https://karavanhub.com/ai-solutions/#service',
+      '@id': 'https://www.karavanhub.com/ai-solutions/#service',
       name: 'AI Solutions',
       description:
         'AI solutions for businesses including vertical AI automation, custom AI software development, and strategic AI consulting services.',
-      provider: { '@id': 'https://karavanhub.com/#organization' },
+      provider: { '@id': 'https://www.karavanhub.com/#organization' },
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'State', name: 'Ontario' },
@@ -194,7 +194,7 @@ const jsonLdGraph = {
     // FAQ entity (AEO: expanded with pricing + industry questions)
     {
       '@type': 'FAQPage',
-      '@id': 'https://karavanhub.com/ai-solutions/#faq',
+      '@id': 'https://www.karavanhub.com/ai-solutions/#faq',
       mainEntity: [
         {
           '@type': 'Question',
@@ -254,13 +254,13 @@ const jsonLdGraph = {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://karavanhub.com',
+          item: 'https://www.karavanhub.com',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'AI Solutions',
-          item: 'https://karavanhub.com/ai-solutions',
+          item: 'https://www.karavanhub.com/ai-solutions',
         },
       ],
     },

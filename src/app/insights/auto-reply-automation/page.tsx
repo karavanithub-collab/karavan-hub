@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'Learn how AI-powered auto-reply systems save small businesses hours every week. A practical guide from Karavan IT HUB.',
   keywords:
     'AI automation Niagara, missed call text back, auto reply automation, small business automation, Niagara IT services, AI consulting Ontario, business automation Canada, automated text response',
-  authors: [{ name: 'Nyah S.', url: 'https://karavanhub.com' }],
+  authors: [{ name: 'Nyah S.', url: 'https://www.karavanhub.com' }],
   robots: {
     index: true,
     follow: true,
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://karavanhub.com/insights/auto-reply-automation',
+    canonical: 'https://www.karavanhub.com/insights/auto-reply-automation',
     languages: {
-      'en-CA': 'https://karavanhub.com/insights/auto-reply-automation',
-      en: 'https://karavanhub.com/insights/auto-reply-automation',
+      'en-CA': 'https://www.karavanhub.com/insights/auto-reply-automation',
+      en: 'https://www.karavanhub.com/insights/auto-reply-automation',
     },
   },
   openGraph: {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: 'What If You Never Had to Answer "What Are Your Hours?" Again?',
     description:
       'Small businesses miss 62% of calls. Learn how AI-powered auto-reply automation helps retain customers and increase revenue.',
-    url: 'https://karavanhub.com/insights/auto-reply-automation',
+    url: 'https://www.karavanhub.com/insights/auto-reply-automation',
     siteName: 'Karavan Hub',
     locale: 'en_CA',
     authors: ['Nyah S.'],
@@ -66,12 +66,12 @@ const SCHEMA_LD = {
     /* ── Organization (shared entity) ── */
     {
       '@type': 'Organization',
-      '@id': 'https://karavanhub.com/#organization',
+      '@id': 'https://www.karavanhub.com/#organization',
       name: 'Karavan Hub',
-      url: 'https://karavanhub.com',
+      url: 'https://www.karavanhub.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://karavanhub.com/logo.png',
+        url: 'https://www.karavanhub.com/logo.png',
       },
       description:
         'AI and IT solutions company based in Niagara, Ontario. We build custom AI automation, software, and data systems for small and medium businesses across Canada, the US, and Saudi Arabia.',
@@ -103,7 +103,7 @@ const SCHEMA_LD = {
       ],
       founder: {
         '@type': 'Person',
-        '@id': 'https://karavanhub.com/#nyah',
+        '@id': 'https://www.karavanhub.com/#nyah',
         name: 'Nyah S.',
         jobTitle: 'AI Automation Consultant',
       },
@@ -115,13 +115,13 @@ const SCHEMA_LD = {
     /* ── WebPage ── */
     {
       '@type': 'WebPage',
-      '@id': 'https://karavanhub.com/insights/auto-reply-automation/#webpage',
-      url: 'https://karavanhub.com/insights/auto-reply-automation',
+      '@id': 'https://www.karavanhub.com/insights/auto-reply-automation/#webpage',
+      url: 'https://www.karavanhub.com/insights/auto-reply-automation',
       name: 'What If You Never Had to Answer "What Are Your Hours?" Again?',
       description:
         'Research-backed guide on how AI-powered auto-reply automation helps small businesses retain customers by responding to missed calls instantly.',
-      isPartOf: { '@id': 'https://karavanhub.com/#website' },
-      about: { '@id': 'https://karavanhub.com/#organization' },
+      isPartOf: { '@id': 'https://www.karavanhub.com/#website' },
+      about: { '@id': 'https://www.karavanhub.com/#organization' },
       datePublished: '2026-02-03',
       dateModified: '2026-02-26',
       inLanguage: 'en-CA',
@@ -145,14 +145,14 @@ const SCHEMA_LD = {
     /* ── BlogPosting ── */
     {
       '@type': 'BlogPosting',
-      '@id': 'https://karavanhub.com/insights/auto-reply-automation/#article',
+      '@id': 'https://www.karavanhub.com/insights/auto-reply-automation/#article',
       headline: 'What If You Never Had to Answer "What Are Your Hours?" Again?',
       description:
         'Research-backed guide on how AI-powered auto-reply automation helps small businesses retain customers by responding to missed calls instantly.',
-      image: 'https://karavanhub.com/images/insights/auto-reply-hero.png',
-      author: { '@id': 'https://karavanhub.com/#nyah' },
-      publisher: { '@id': 'https://karavanhub.com/#organization' },
-      mainEntityOfPage: { '@id': 'https://karavanhub.com/insights/auto-reply-automation/#webpage' },
+      image: 'https://www.karavanhub.com/images/insights/auto-reply-hero.png',
+      author: { '@id': 'https://www.karavanhub.com/#nyah' },
+      publisher: { '@id': 'https://www.karavanhub.com/#organization' },
+      mainEntityOfPage: { '@id': 'https://www.karavanhub.com/insights/auto-reply-automation/#webpage' },
       datePublished: '2026-02-03',
       dateModified: '2026-02-26',
       keywords: [
@@ -175,7 +175,7 @@ const SCHEMA_LD = {
     /* ── FAQPage (AEO: 6 questions) ── */
     {
       '@type': 'FAQPage',
-      '@id': 'https://karavanhub.com/insights/auto-reply-automation/#faq',
+      '@id': 'https://www.karavanhub.com/insights/auto-reply-automation/#faq',
       mainEntity: [
         {
           '@type': 'Question',
@@ -231,7 +231,7 @@ const SCHEMA_LD = {
     /* ── HowTo: Setting up auto-reply ── */
     {
       '@type': 'HowTo',
-      '@id': 'https://karavanhub.com/insights/auto-reply-automation/#howto',
+      '@id': 'https://www.karavanhub.com/insights/auto-reply-automation/#howto',
       name: 'How to Set Up Auto-Reply Automation for Your Business',
       description:
         'A simple guide to setting up missed call text back automation for small businesses. Takes about 10 minutes.',
@@ -273,9 +273,9 @@ const SCHEMA_LD = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://karavanhub.com' },
-        { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://karavanhub.com/insights' },
-        { '@type': 'ListItem', position: 3, name: 'Auto-Reply Automation', item: 'https://karavanhub.com/insights/auto-reply-automation' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.karavanhub.com' },
+        { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://www.karavanhub.com/insights' },
+        { '@type': 'ListItem', position: 3, name: 'Auto-Reply Automation', item: 'https://www.karavanhub.com/insights/auto-reply-automation' },
       ],
     },
   ],
