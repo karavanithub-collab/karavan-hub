@@ -7,7 +7,7 @@ export const revalidate = 3600;
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Contact Us | Karavan Hub — Free IT Consultation in Niagara, Ontario',
+  title: 'Free IT Consultation — Niagara, Ontario',
   description:
     'Get in touch with Karavan IT HUB. Free 30-minute strategy call for Ontario and North American small businesses.',
   keywords:

@@ -9,7 +9,7 @@ const ChevronRight = ({ size = 24 }: { size?: number }) => (
 );
 
 export const metadata: Metadata = {
-  title: 'Case Studies | Karavan Hub - Real Results for Real Businesses',
+  title: 'Case Studies — Real Client Results',
   description:
     'Real results from real clients. See how Karavan IT HUB has delivered AI automation and web solutions for businesses across North America.',
   keywords:

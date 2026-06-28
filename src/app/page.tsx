@@ -4,7 +4,7 @@ import { HomeFAQ } from '@/components/sections/HomeFAQ';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'Karavan IT HUB — AI & IT Solutions | Custom Software Development',
+  title: { absolute: 'Karavan Hub — AI & IT Solutions for Ontario Business' },
   description: 'AI automation and IT solutions for small businesses across Ontario and North America. We build chatbots, RAG systems, and custom web solutions.',
   keywords: 'AI solutions, IT solutions, custom software development, AI automation, digital transformation, Canadian tech company, Niagara Ontario',
   authors: [{ name: 'Karavan IT HUB' }],

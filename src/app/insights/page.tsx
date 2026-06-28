@@ -8,7 +8,7 @@ export const revalidate = 3600;
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Insights | Karavan Hub — Practical Tech Knowledge for Business Owners',
+  title: 'Insights — AI & Tech for Business Owners',
   description:
     'Practical guides on AI automation, web development, and digital growth for Canadian small businesses.',
   keywords:

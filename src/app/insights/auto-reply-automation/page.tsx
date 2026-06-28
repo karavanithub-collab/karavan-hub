@@ -7,7 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'What If You Never Had to Answer "What Are Your Hours?" Again? | Karavan Hub',
+  title: 'What If You Never Had to Answer "What Are Your Hours?" Again?',
   description:
     'Learn how AI-powered auto-reply systems save small businesses hours every week. A practical guide from Karavan IT HUB.',
   keywords:

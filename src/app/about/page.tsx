@@ -6,7 +6,7 @@ export const revalidate = 3600;
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'About Us | Karavan Hub — Technology That Feels Human',
+  title: 'About — Technology That Feels Human',
   description:
     'Meet the team behind Karavan IT HUB — AI and IT specialists serving SMBs across Canada since 2024.',
   keywords:

@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'RAG Systems for Small Business Canada | Karavan IT HUB',
+  title: 'RAG Systems for Small Business Canada',
   description:
     'Retrieval-Augmented Generation systems built for Canadian small businesses. Connect AI to your actual documents and knowledge — accurate answers, no hallucinations.',
   keywords:

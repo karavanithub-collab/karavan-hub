@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'AI Agents for Small Business Ontario | Karavan IT HUB',
+  title: 'AI Agents for Small Business Ontario',
   description:
     'Custom AI agents that handle intake, lead qualification, follow-up, and internal workflows for Ontario small businesses. Built by Karavan IT HUB.',
   keywords:

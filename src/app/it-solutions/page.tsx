@@ -8,7 +8,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'IT Solutions for Small & Medium Businesses | Karavan IT HUB',
+  title: 'IT Solutions for Small Business Ontario',
   description:
     'Web development, software, and digital transformation services for small businesses in Ontario and North America.',
   keywords:

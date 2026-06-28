@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'Custom AI Chatbot Ontario Small Business | Karavan IT HUB',
+  title: 'Custom AI Chatbot Ontario Small Business',
   description:
     'Custom AI chatbots built specifically for Ontario small businesses. Not a generic widget — a chatbot that knows your services, speaks in your voice, and converts.',
   keywords:
