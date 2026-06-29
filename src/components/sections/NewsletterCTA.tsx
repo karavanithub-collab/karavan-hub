@@ -25,18 +25,25 @@ export default function NewsletterCTA() {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error ?? 'Something went wrong. Please try again.');
+        return;
+      }
 
       setIsSuccess(true);
       setEmail('');
 
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 5000);
-    } catch (err) {
-      setError('Something went wrong. Please try again.');
+      setTimeout(() => setIsSuccess(false), 5000);
+    } catch {
+      setError('Network error. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }

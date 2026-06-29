@@ -44,6 +44,7 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -95,26 +96,28 @@ export default function ContactForm() {
     }
 
     setIsSubmitting(true);
+    setSubmitError(null);
 
     try {
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      setIsSuccess(true);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        interest: '',
-        message: '',
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       });
 
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 5000);
+      const data = await res.json();
+
+      if (!res.ok) {
+        setSubmitError(data.error ?? 'Something went wrong. Please try again.');
+        return;
+      }
+
+      setIsSuccess(true);
+      setFormData({ firstName: '', lastName: '', email: '', interest: '', message: '' });
+
+      setTimeout(() => setIsSuccess(false), 5000);
     } catch {
-      // Form submission failed — error handling managed by UI state
+      setSubmitError('Network error. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -155,6 +158,17 @@ export default function ContactForm() {
                 <p className="text-xs text-green-700">
                   You'll hear from a real person within 24 hours.
                 </p>
+              </div>
+            </div>
+          )}
+
+          {/* Error message */}
+          {submitError && (
+            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start gap-3">
+              <svg className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <div>
+                <p className="text-sm font-medium text-red-900">Message not sent</p>
+                <p className="text-xs text-red-700 mt-0.5">{submitError}</p>
               </div>
             </div>
           )}
