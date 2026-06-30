@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { HomeFAQ } from '@/components/sections/HomeFAQ';
+import HomepageForm from '@/components/sections/HomepageForm';
 
 export const revalidate = 3600;
 
@@ -1012,46 +1013,7 @@ export default function HomePage() {
               We start with the business problem, not the technology. Tell us what you&apos;re trying to accomplish.
             </p>
 
-            <div className="cta-form bg-white p-7 lg:p-10 rounded-[20px] shadow-[0_24px_64px_rgba(0,0,0,0.08)] border border-[var(--border-light)]">
-              <form className="space-y-4">
-                <div className="form-group">
-                  <label className="block text-sm font-medium mb-1.5 text-[var(--text-dark)]">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    className="w-full px-4 py-3.5 border border-[var(--border-light)] rounded-lg font-body text-[15px] transition-all duration-250 focus:outline-none focus:border-[var(--primary)] focus:shadow-[0_0_0_3px_var(--primary-light)]"
-                  />
-                </div>
-                <div className="form-group">
-                  <label className="block text-sm font-medium mb-1.5 text-[var(--text-dark)]">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="you@company.com"
-                    className="w-full px-4 py-3.5 border border-[var(--border-light)] rounded-lg font-body text-[15px] transition-all duration-250 focus:outline-none focus:border-[var(--primary)] focus:shadow-[0_0_0_3px_var(--primary-light)]"
-                  />
-                </div>
-                <div className="form-group">
-                  <label className="block text-sm font-medium mb-1.5 text-[var(--text-dark)]">
-                    What&apos;s on your mind?
-                  </label>
-                  <textarea
-                    placeholder="Tell us about your project, challenge, or question..."
-                    rows={4}
-                    className="w-full px-4 py-3.5 border border-[var(--border-light)] rounded-lg font-body text-[15px] transition-all duration-250 focus:outline-none focus:border-[var(--primary)] focus:shadow-[0_0_0_3px_var(--primary-light)] resize-none"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-[var(--primary)] text-white py-4 border-none rounded-lg font-body text-[15px] font-semibold cursor-pointer transition-all duration-250 mt-2 hover:bg-[var(--primary-dark)] hover:-translate-y-0.5 shadow-lg"
-                >
-                  Get a Free Assessment
-                </button>
-              </form>
-            </div>
+            <HomepageForm />
           </div>
         </div>
       </section>
