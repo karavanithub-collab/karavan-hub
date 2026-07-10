@@ -47,6 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: 'https://www.karavanhub.com/insights/llm-personal-admin',
+      lastModified: '2026-07-10T00:00:00.000Z',
+      changeFrequency: 'monthly',
+      priority: 0.65,
+    },
+    {
       url: 'https://www.karavanhub.com/insights/auto-reply-automation',
       lastModified: '2026-02-03T00:00:00.000Z',
       changeFrequency: 'monthly',
