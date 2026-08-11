@@ -36,6 +36,7 @@ type MobileSubmenus = {
 export default function Navbar() {
   const pathname = usePathname()
   const isInsights = pathname?.startsWith('/insights')
+  const isLightHero = isInsights || pathname?.startsWith('/free-fix')
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileSubmenus, setMobileSubmenus] = useState<MobileSubmenus>({
@@ -116,14 +117,14 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-0 no-underline">
             <span
               className={`font-headline text-2xl font-bold tracking-[-0.5px] transition-colors duration-300 ${
-                isScrolled || isInsights ? 'text-text-dark' : 'text-white'
+                isScrolled || isLightHero ? 'text-text-dark' : 'text-white'
               }`}
             >
               Karavan
             </span>
             <span
               className={`font-headline text-2xl font-bold tracking-[-0.5px] transition-colors duration-300 ${
-                isScrolled || isInsights
+                isScrolled || isLightHero
                   ? isInsights ? 'text-[#1A5A5A]' : 'text-primary'
                   : 'text-accent-cyan'
               }`}
@@ -139,7 +140,7 @@ export default function Navbar() {
               <Link
                 href="/ai-solutions"
                 className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline ${
-                  isScrolled || isInsights
+                  isScrolled || isLightHero
                     ? isInsights ? 'text-text-body group-hover:text-[#1A5A5A]' : 'text-text-body group-hover:text-primary'
                     : 'text-white/90 group-hover:text-accent-cyan'
                 }`}
@@ -174,7 +175,7 @@ export default function Navbar() {
               <Link
                 href="/it-solutions"
                 className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline ${
-                  isScrolled || isInsights
+                  isScrolled || isLightHero
                     ? isInsights ? 'text-text-body group-hover:text-[#1A5A5A]' : 'text-text-body group-hover:text-primary'
                     : 'text-white/90 group-hover:text-accent-cyan'
                 }`}
@@ -209,7 +210,7 @@ export default function Navbar() {
               <Link
                 href="/about"
                 className={`flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300 no-underline ${
-                  isScrolled || isInsights
+                  isScrolled || isLightHero
                     ? isInsights ? 'text-text-body group-hover:text-[#1A5A5A]' : 'text-text-body group-hover:text-primary'
                     : 'text-white/90 group-hover:text-accent-cyan'
                 }`}
@@ -275,7 +276,7 @@ export default function Navbar() {
           >
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                isScrolled || isInsights ? 'bg-text-dark' : 'bg-white'
+                isScrolled || isLightHero ? 'bg-text-dark' : 'bg-white'
               } ${
                 mobileMenuOpen
                   ? 'rotate-45 translate-y-[5px] translate-x-[5px]'
@@ -284,12 +285,12 @@ export default function Navbar() {
             ></span>
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                isScrolled || isInsights ? 'bg-text-dark' : 'bg-white'
+                isScrolled || isLightHero ? 'bg-text-dark' : 'bg-white'
               } ${mobileMenuOpen ? 'opacity-0' : ''}`}
             ></span>
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                isScrolled || isInsights ? 'bg-text-dark' : 'bg-white'
+                isScrolled || isLightHero ? 'bg-text-dark' : 'bg-white'
               } ${
                 mobileMenuOpen
                   ? '-rotate-45 -translate-y-[5px] translate-x-[5px]'

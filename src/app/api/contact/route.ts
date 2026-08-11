@@ -38,6 +38,75 @@ export async function POST(req: NextRequest) {
     const from = process.env.RESEND_FROM ?? 'Karavan Hub <noreply@karavanhub.com>';
     const ownerEmail = process.env.CONTACT_EMAIL ?? 'karavan.it.hub@gmail.com';
 
+    // ── Free-fix form: { name, email, businessName, painPoint } ──────────────
+    if ('businessName' in body) {
+      const { name, email, businessName, painPoint } = body;
+
+      if (!name?.trim() || !email?.trim() || !businessName?.trim()) {
+        return NextResponse.json({ error: 'Name, email and business name are required.' }, { status: 400 });
+      }
+      if (!EMAIL_RE.test(email)) {
+        return NextResponse.json({ error: 'Invalid email address.' }, { status: 400 });
+      }
+
+      const noPain = '<span style="color:#94a3b8;font-style:italic;">Not provided</span>';
+
+      const { error: sendError } = await resend.emails.send({
+        from,
+        to: ownerEmail,
+        replyTo: email,
+        subject: `Free fix request — ${name} (${businessName})`,
+        html: emailShell(
+          'Free Fix Request',
+          'karavanhub.com/free-fix',
+          `<table style="width:100%;border-collapse:collapse;">
+            <tr>
+              <td style="padding:10px 0;color:#64748b;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;width:130px;vertical-align:top;">Name</td>
+              <td style="padding:10px 0;font-weight:600;font-size:14px;">${name}</td>
+            </tr>
+            ${row('Email', `<a href="mailto:${email}" style="color:#2563eb;text-decoration:none;">${email}</a>`)}
+            ${row('Business', businessName)}
+            ${row('Pain point', painPoint?.trim() || noPain)}
+          </table>
+          <div style="margin-top:24px;padding:14px 16px;background:#eff6ff;border-radius:8px;font-size:13px;color:#1d4ed8;">
+            48-hour clock is running. Hit <strong>Reply</strong> to send ${name} their fix.
+          </div>`
+        ),
+      });
+
+      if (sendError) {
+        console.error('[contact] free-fix send failed:', sendError);
+        return NextResponse.json(
+          { error: 'Failed to send your request. Please try again or email us directly.' },
+          { status: 500 }
+        );
+      }
+
+      await resend.emails.send({
+        from,
+        to: email,
+        subject: `Got it, ${name.split(' ')[0]} — your fix lands within 48 hours`,
+        html: emailShell(
+          'Got it. Your fix is in the queue.',
+          '',
+          `<p style="margin:0 0 16px;font-size:14px;line-height:1.7;color:#334155;">Hi ${name.split(' ')[0]},</p>
+          <p style="margin:0 0 16px;font-size:14px;line-height:1.7;color:#334155;">
+            Thanks — we've got your request for <strong>${businessName}</strong>. We'll look at how a customer
+            actually finds and books you, and send back the one thing we'd fix first.
+          </p>
+          <p style="margin:0 0 32px;font-size:14px;line-height:1.7;color:#334155;">
+            One specific fix, by email, within 48 hours. No call, no mailing list.
+          </p>
+          <div style="border-top:1px solid #e2e8f0;padding-top:20px;font-size:12px;color:#94a3b8;">
+            Karavan IT HUB &middot; Niagara, Ontario &middot;
+            <a href="https://www.karavanhub.com" style="color:#2563eb;text-decoration:none;">karavanhub.com</a>
+          </div>`
+        ),
+      });
+
+      return NextResponse.json({ success: true });
+    }
+
     // ── Homepage form: { name, email, message } ──────────────────────────────
     if ('name' in body) {
       const { name, email, message } = body;
