@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function FreeFixForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState({ name: '', email: '', businessName: '', painPoint: '' });
   const [errors, setErrors] = useState<{ name?: string; email?: string; businessName?: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
   const validate = () => {
@@ -45,13 +46,14 @@ export default function FreeFixForm() {
 
       if (!res.ok) {
         setSubmitError(data.error ?? 'Something went wrong. Please try again.');
+        setIsSubmitting(false);
         return;
       }
 
-      setIsSuccess(true);
+      // stay in the submitting state while navigating to the thank-you page
+      router.push('/free-fix/thanks');
     } catch {
       setSubmitError('Network error. Please check your connection and try again.');
-    } finally {
       setIsSubmitting(false);
     }
   };
@@ -62,22 +64,6 @@ export default function FreeFixForm() {
         ? 'border-red-400 focus:border-red-500'
         : 'border-[var(--border-light)] focus:border-[var(--primary)]'
     }`;
-
-  if (isSuccess) {
-    return (
-      <div className="cta-form bg-white p-7 lg:p-10 rounded-[20px] shadow-[0_24px_64px_rgba(0,0,0,0.08)] border border-[var(--border-light)] flex flex-col items-center justify-center gap-4 min-h-[280px] text-center" role="status">
-        <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
-          <svg className="w-6 h-6 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="20 6 9 17 4 12" />
-          </svg>
-        </div>
-        <div>
-          <p className="font-headline text-lg font-bold text-[var(--text-dark)]">Got it. Your fix lands within 48 hours.</p>
-          <p className="text-sm text-[var(--text-muted)] mt-1">Check your inbox — a confirmation is on its way.</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="cta-form bg-white p-7 lg:p-10 rounded-[20px] shadow-[0_24px_64px_rgba(0,0,0,0.08)] border border-[var(--border-light)]">
