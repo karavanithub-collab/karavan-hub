@@ -9,8 +9,7 @@ export const metadata: Metadata = {
   },
 }
 
-// TODO: replace with the real 15-minute booking link before launch
-const BOOKING_URL = 'BOOKING_URL_PLACEHOLDER'
+const BOOKING_URL = 'https://cal.com/karavanhub/15min'
 
 export default function FreeFixThanksPage() {
   return (
@@ -85,6 +84,8 @@ export default function FreeFixThanksPage() {
           </p>
           <a
             href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-[var(--primary)] text-white px-8 py-4 rounded-lg font-headline text-[15px] font-semibold no-underline transition-all duration-300 hover:bg-[var(--primary-dark)] hover:-translate-y-0.5 shadow-lg"
           >
             Book a free 15-minute walkthrough
