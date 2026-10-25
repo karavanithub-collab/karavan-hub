@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: ['/opengraph-image'],
     type: 'article',
     title: 'Your Business Doesn\'t Need More Hours. It Needs an AI Admin.',
     description:
@@ -44,6 +45,7 @@ export const metadata: Metadata = {
     modifiedTime: '2026-07-10T00:00:00Z',
   },
   twitter: {
+    images: ['/twitter-image'],
     card: 'summary_large_image',
     title: 'Your Business Doesn\'t Need More Hours. It Needs an AI Admin.',
     description:
@@ -51,9 +53,9 @@ export const metadata: Metadata = {
   },
   other: {
     'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara Region',
-    'geo.position': '43.0896;-79.0849',
-    ICBM: '43.0896, -79.0849',
+    'geo.placename': 'Pelham, Ontario',
+    'geo.position': '43.0444;-79.2822',
+    ICBM: '43.0444, -79.2822',
   },
 };
 

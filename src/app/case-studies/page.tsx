@@ -23,35 +23,28 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Case Studies - Real Results for Real Businesses | Karavan Hub',
     description:
       'How we helped businesses fix broken systems and build what they actually needed. 7 projects with real numbers.',
     type: 'website',
     url: 'https://www.karavanhub.com/case-studies',
-    images: [
-      {
-        url: 'https://www.karavanhub.com/images/case-studies-og.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Karavan Hub Case Studies - Real Results for Real Businesses',
-      },
-    ],
     siteName: 'Karavan Hub',
     locale: 'en_CA',
   },
   twitter: {
+    images: ['/twitter-image'],
     card: 'summary_large_image',
     title: 'Case Studies | Karavan Hub',
     description:
       'How we helped businesses fix broken systems and build what they actually needed. 7 projects, real numbers.',
-    images: ['https://www.karavanhub.com/images/case-studies-twitter.jpg'],
   },
   authors: [{ name: 'Karavan Hub', url: 'https://www.karavanhub.com/about' }],
   other: {
     'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara, Ontario',
-    'geo.position': '43.0896;-79.0849',
-    ICBM: '43.0896, -79.0849',
+    'geo.placename': 'Pelham, Ontario',
+    'geo.position': '43.0444;-79.2822',
+    ICBM: '43.0444, -79.2822',
   },
 };
 
@@ -667,8 +660,8 @@ const jsonLdGraph = {
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: 43.0896,
-        longitude: -79.0849,
+        latitude: 43.0444,
+        longitude: -79.2822,
       },
       priceRange: '$$',
       openingHoursSpecification: {

@@ -30,33 +30,26 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: ['/opengraph-image'],
     type: 'website',
     url: 'https://www.karavanhub.com/about',
     title: 'About Karavan Hub — Technology That Feels Human',
     description:
       'Niagara-based IT consulting founded by a former Registered Nurse. Custom software, AI automation, and web solutions for Canadian SMBs.',
-    images: [
-      {
-        url: 'https://www.karavanhub.com/images/og-about.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Karavan Hub - About Us - Technology That Feels Human - Niagara, Ontario, Canada',
-      },
-    ],
     siteName: 'Karavan Hub',
     locale: 'en_CA',
   },
   twitter: {
+    images: ['/twitter-image'],
     card: 'summary_large_image',
     title: 'About Karavan Hub — Technology That Feels Human',
     description: 'Niagara IT consulting founded by a former RN. Custom software, AI, and web solutions for Canadian SMBs.',
-    images: ['https://www.karavanhub.com/images/twitter-about.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara, Ontario',
-    'geo.position': '43.0896;-79.0849',
-    ICBM: '43.0896, -79.0849',
+    'geo.placename': 'Pelham, Ontario',
+    'geo.position': '43.0444;-79.2822',
+    ICBM: '43.0444, -79.2822',
     'dc.title': 'About Karavan Hub — Technology That Feels Human',
     'dc.creator': 'Karavan Hub',
     'dc.subject': 'IT Consulting, AI Solutions, Web Development, Niagara Ontario',
@@ -100,7 +93,7 @@ const schema = {
         height: 512,
         caption: 'Karavan Hub Logo',
       },
-      image: 'https://www.karavanhub.com/images/og-about.jpg',
+      image: 'https://www.karavanhub.com/opengraph-image',
       description:
         'Karavan Hub is a Niagara-based technology consulting company founded by a former Registered Nurse. We specialize in human-centered IT solutions including custom software, web design, data analytics, and AI integration for Canadian small and medium businesses.',
       slogan: 'Technology That Feels Human',
@@ -286,7 +279,7 @@ const schema = {
       mainEntity: { '@id': 'https://www.karavanhub.com/#organization' },
       primaryImageOfPage: {
         '@type': 'ImageObject',
-        url: 'https://www.karavanhub.com/images/og-about.jpg',
+        url: 'https://www.karavanhub.com/opengraph-image',
       },
       breadcrumb: { '@id': 'https://www.karavanhub.com/about/#breadcrumb' },
       inLanguage: 'en-CA',

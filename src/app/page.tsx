@@ -24,32 +24,25 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: ['/opengraph-image'],
     type: 'website',
     url: 'https://www.karavanhub.com',
     title: 'Karavan IT HUB — AI & IT Solutions',
     description: 'We build the technology. You get your time back. Custom AI solutions and software for SMBs.',
     locale: 'en_CA',
-    images: [
-      {
-        url: 'https://www.karavanhub.com/images/og-homepage.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Karavan IT HUB'
-      }
-    ],
     siteName: 'Karavan IT HUB'
   },
   twitter: {
+    images: ['/twitter-image'],
     card: 'summary_large_image',
     title: 'Karavan IT HUB — AI & IT Solutions',
     description: 'We build the technology. You get your time back. Custom AI solutions and software for SMBs.',
-    images: ['https://www.karavanhub.com/images/twitter-homepage.jpg']
   },
   other: {
     'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara, Ontario',
-    'geo.position': '43.0896;-79.0849',
-    'ICBM': '43.0896, -79.0849',
+    'geo.placename': 'Pelham, Ontario',
+    'geo.position': '43.0444;-79.2822',
+    'ICBM': '43.0444, -79.2822',
     'theme-color': '#2563EB',
   }
 };
@@ -98,7 +91,7 @@ const schemaGraph = {
       name: 'Karavan IT HUB',
       description: 'Canadian-owned AI and IT solutions company providing custom software development, AI automation, web design, and digital transformation services.',
       url: 'https://www.karavanhub.com',
-      image: 'https://www.karavanhub.com/images/og-homepage.jpg',
+      image: 'https://www.karavanhub.com/opengraph-image',
       priceRange: '$$',
       address: {
         '@type': 'PostalAddress',
@@ -109,8 +102,8 @@ const schemaGraph = {
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: 43.0896,
-        longitude: -79.0849
+        latitude: 43.0444,
+        longitude: -79.2822
       },
       openingHoursSpecification: {
         '@type': 'OpeningHoursSpecification',
@@ -342,7 +335,7 @@ export default function HomePage() {
               className="hero-title font-headline font-bold text-white leading-[1.05] mb-7 tracking-[-1.5px]"
               style={{ fontSize: 'clamp(48px, 7vw, 80px)' }}
             >
-              We build the technology.
+              We build the technology.{' '}
               <span className="accent block font-bold bg-gradient-to-r from-white to-[#22d3ee] bg-clip-text text-transparent">
                 You get your time back.
               </span>

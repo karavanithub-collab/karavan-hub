@@ -32,34 +32,27 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: ['/opengraph-image'],
     type: 'website',
     url: 'https://www.karavanhub.com/insights',
     title: 'Insights — Practical Tech Knowledge for Business Owners',
     description:
       'Practical articles on AI automation, software, and digital strategy for SMBs. Written by real consultants.',
-    images: [
-      {
-        url: 'https://www.karavanhub.com/images/og-insights.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Karavan Hub Insights - Practical Tech Knowledge',
-      },
-    ],
     siteName: 'Karavan Hub',
     locale: 'en_CA',
   },
   twitter: {
+    images: ['/twitter-image'],
     card: 'summary_large_image',
     title: 'Insights — Practical Tech Knowledge | Karavan Hub',
     description:
       'AI automation, software, and digital strategy articles for business owners. Niagara, Ontario.',
-    images: ['https://www.karavanhub.com/images/twitter-insights.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara, Ontario',
-    'geo.position': '43.0896;-79.0849',
-    ICBM: '43.0896, -79.0849',
+    'geo.placename': 'Pelham, Ontario',
+    'geo.position': '43.0444;-79.2822',
+    ICBM: '43.0444, -79.2822',
   },
 };
 

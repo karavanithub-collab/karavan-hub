@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: ['/opengraph-image'],
     type: 'website',
     url: 'https://www.karavanhub.com/it-solutions',
     title: 'IT Solutions for Small & Medium Businesses | Karavan IT HUB',
@@ -36,27 +37,19 @@ export const metadata: Metadata = {
       'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation.',
     siteName: 'Karavan IT HUB',
     locale: 'en_CA',
-    images: [
-      {
-        url: 'https://www.karavanhub.com/images/og-it-solutions.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Karavan IT HUB IT Solutions',
-      },
-    ],
   },
   twitter: {
+    images: ['/twitter-image'],
     card: 'summary_large_image',
     title: 'IT Solutions for Small & Medium Businesses | Karavan IT HUB',
     description:
       'IT solutions built around how your business operates. Custom software, web design, data analytics, and digital transformation.',
-    images: ['https://www.karavanhub.com/images/twitter-it-solutions.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara, Ontario',
-    'geo.position': '43.0896;-79.0849',
-    ICBM: '43.0896, -79.0849',
+    'geo.placename': 'Pelham, Ontario',
+    'geo.position': '43.0444;-79.2822',
+    ICBM: '43.0444, -79.2822',
     'theme-color': '#2563EB',
   },
 };

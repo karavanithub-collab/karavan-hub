@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: ['/opengraph-image'],
     type: 'website',
     title: 'AI Solutions for Business | Karavan IT HUB',
     description:
@@ -29,27 +30,19 @@ export const metadata: Metadata = {
     url: 'https://www.karavanhub.com/ai-solutions',
     siteName: 'Karavan IT HUB',
     locale: 'en_CA',
-    images: [
-      {
-        url: 'https://www.karavanhub.com/images/og-ai-solutions.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Karavan Hub AI Solutions',
-      },
-    ],
   },
   twitter: {
+    images: ['/twitter-image'],
     card: 'summary_large_image',
     title: 'AI Solutions for Business | Karavan IT HUB',
     description:
       'Make AI work for your business. Vertical AI automation, custom AI software, and strategic consulting.',
-    images: ['https://www.karavanhub.com/images/twitter-ai-solutions.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara, Ontario',
-    'geo.position': '43.0896;-79.0849',
-    ICBM: '43.0896, -79.0849',
+    'geo.placename': 'Pelham, Ontario',
+    'geo.position': '43.0444;-79.2822',
+    ICBM: '43.0444, -79.2822',
   },
 };
 

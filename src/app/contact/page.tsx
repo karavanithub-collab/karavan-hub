@@ -31,33 +31,26 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: ['/opengraph-image'],
     type: 'website',
     url: 'https://www.karavanhub.com/contact',
     title: 'Contact Karavan Hub — Free IT Consultation',
     description:
       'Free 30-minute consultation. Real answers about your tech, your timeline, your budget. No follow-up spam. Response within 24 hours.',
-    images: [
-      {
-        url: 'https://www.karavanhub.com/images/og-contact.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Contact Karavan Hub - Free IT Consultation - Niagara, Ontario, Canada',
-      },
-    ],
     siteName: 'Karavan Hub',
     locale: 'en_CA',
   },
   twitter: {
+    images: ['/twitter-image'],
     card: 'summary_large_image',
     title: 'Contact Karavan Hub — Free IT Consultation',
     description: 'Free consultation, response within 24 hours. IT solutions for Canadian SMBs. Niagara, Ontario.',
-    images: ['https://www.karavanhub.com/images/twitter-contact.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara, Ontario',
-    'geo.position': '43.0896;-79.0849',
-    ICBM: '43.0896, -79.0849',
+    'geo.placename': 'Pelham, Ontario',
+    'geo.position': '43.0444;-79.2822',
+    ICBM: '43.0444, -79.2822',
     'dc.title': 'Contact Karavan Hub — Free IT Consultation',
     'dc.creator': 'Karavan Hub',
     'dc.subject': 'IT Consulting Contact, Free Consultation, Niagara Ontario',
@@ -124,7 +117,7 @@ const schema = {
         { '@type': 'City', name: 'Toronto' },
         {
           '@type': 'GeoCircle',
-          geoMidpoint: { '@type': 'GeoCoordinates', latitude: 43.0896, longitude: -79.0849 },
+          geoMidpoint: { '@type': 'GeoCoordinates', latitude: 43.0444, longitude: -79.2822 },
           geoRadius: '80000',
         },
       ],

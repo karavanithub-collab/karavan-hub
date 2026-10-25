@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: ['/opengraph-image'],
     type: 'article',
     title: 'What If You Never Had to Answer "What Are Your Hours?" Again?',
     description:
@@ -44,6 +45,7 @@ export const metadata: Metadata = {
     modifiedTime: '2026-02-26T00:00:00Z',
   },
   twitter: {
+    images: ['/twitter-image'],
     card: 'summary_large_image',
     title: 'What If You Never Had to Answer "What Are Your Hours?" Again?',
     description:
@@ -51,9 +53,9 @@ export const metadata: Metadata = {
   },
   other: {
     'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara Region',
-    'geo.position': '43.0896;-79.0849',
-    ICBM: '43.0896, -79.0849',
+    'geo.placename': 'Pelham, Ontario',
+    'geo.position': '43.0444;-79.2822',
+    ICBM: '43.0444, -79.2822',
   },
 };
 
@@ -85,8 +87,8 @@ const SCHEMA_LD = {
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: '43.0896',
-        longitude: '-79.0849',
+        latitude: '43.0444',
+        longitude: '-79.2822',
       },
       contactPoint: {
         '@type': 'ContactPoint',
@@ -133,7 +135,7 @@ const SCHEMA_LD = {
         {
           '@type': 'Place',
           name: 'Niagara Region',
-          geo: { '@type': 'GeoCoordinates', latitude: '43.0896', longitude: '-79.0849' },
+          geo: { '@type': 'GeoCoordinates', latitude: '43.0444', longitude: '-79.2822' },
         },
         { '@type': 'Place', name: 'Ontario, Canada' },
         { '@type': 'Thing', name: 'Small Business Automation' },

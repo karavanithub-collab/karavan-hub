@@ -73,21 +73,12 @@ export const metadata: Metadata = {
     title: 'Karavan Hub - AI & IT Solutions in Niagara, Ontario',
     description:
       'Canadian-owned AI and IT solutions company. Custom software, AI automation, web design for SMBs.',
-    images: [
-      {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Karavan Hub - AI & IT Solutions',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Karavan Hub - AI & IT Solutions',
     description:
       'Canadian-owned AI and IT solutions company in Niagara, Ontario.',
-    images: ['/images/twitter-card.jpg'],
   },
   alternates: {
     canonical: 'https://www.karavanhub.com',
@@ -98,9 +89,9 @@ export const metadata: Metadata = {
   },
   other: {
     'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara, Ontario',
-    'geo.position': '43.0896;-79.0849',
-    ICBM: '43.0896, -79.0849',
+    'geo.placename': 'Pelham, Ontario',
+    'geo.position': '43.0444;-79.2822',
+    ICBM: '43.0444, -79.2822',
   },
 }
 

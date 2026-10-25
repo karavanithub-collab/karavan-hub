@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    images: ['/opengraph-image'],
     type: 'website',
     title: 'RAG Systems for Small Business Canada | Karavan IT HUB',
     description:
@@ -26,27 +27,19 @@ export const metadata: Metadata = {
     url: 'https://www.karavanhub.com/rag-systems',
     siteName: 'Karavan IT HUB',
     locale: 'en_CA',
-    images: [
-      {
-        url: 'https://www.karavanhub.com/images/og-ai-solutions.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'RAG Systems for Small Business Canada — Karavan IT HUB',
-      },
-    ],
   },
   twitter: {
+    images: ['/twitter-image'],
     card: 'summary_large_image',
     title: 'RAG Systems for Small Business Canada | Karavan IT HUB',
     description:
       'Connect AI to your actual business documents and knowledge. Built by Karavan IT HUB for Canadian SMBs.',
-    images: ['https://www.karavanhub.com/images/twitter-ai-solutions.jpg'],
   },
   other: {
     'geo.region': 'CA-ON',
-    'geo.placename': 'Niagara, Ontario',
-    'geo.position': '43.0896;-79.0849',
-    ICBM: '43.0896, -79.0849',
+    'geo.placename': 'Pelham, Ontario',
+    'geo.position': '43.0444;-79.2822',
+    ICBM: '43.0444, -79.2822',
   },
 };
 
