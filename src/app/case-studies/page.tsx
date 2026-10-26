@@ -88,7 +88,7 @@ const caseStudies: CaseStudy[] = [
     id: 'travel-platform',
     category: 'Travel & Tourism',
     categoryTag: 'Cloud Migration',
-    title: 'Saudi Travel Platform',
+    title: 'Travel Booking Platform',
     intro:
       'Peak season hit and the booking system buckled. Pages timing out. Hotels getting duplicate reservations. The existing monolith was built for a smaller company, and growth had broken it.',
     gradientFrom: '#92400e',
@@ -235,7 +235,7 @@ const faqs: FAQItem[] = [
   {
     question: 'Where is Karavan Hub located?',
     answer:
-      'Niagara, Ontario. We work with clients across Canada, the US, and Saudi Arabia.',
+      'Pelham, in Niagara, Ontario. We work with businesses across Niagara, the GTA and Buffalo, and anywhere else in Canada and the US.',
   },
   {
     question: 'How long does a typical project take?',
@@ -443,7 +443,6 @@ const jsonLdGraph = {
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'Country', name: 'United States' },
-        { '@type': 'Country', name: 'Saudi Arabia' },
       ],
       knowsAbout: [
         'Custom Software Development',
@@ -516,7 +515,6 @@ const jsonLdGraph = {
         { '@type': 'State', name: 'Ontario' },
         { '@type': 'City', name: 'Niagara' },
         { '@type': 'Country', name: 'United States' },
-        { '@type': 'Country', name: 'Saudi Arabia' },
       ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',

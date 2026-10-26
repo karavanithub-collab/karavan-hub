@@ -83,7 +83,7 @@ const SCHEMA_LD = {
         email: 'karavan.it.hub@gmail.com',
         contactType: 'sales',
         availableLanguage: ['English'],
-        areaServed: ['CA', 'US', 'SA'],
+        areaServed: ['CA', 'US'],
       },
       founder: {
         '@type': 'Person',

@@ -81,7 +81,7 @@ const schema = {
         telephone: '+1-905-301-3936',
         contactType: 'customer service',
         email: 'karavan.it.hub@gmail.com',
-        areaServed: ['CA', 'US', 'SA'],
+        areaServed: ['CA', 'US'],
         availableLanguage: 'English',
         hoursAvailable: {
           '@type': 'OpeningHoursSpecification',
@@ -107,7 +107,6 @@ const schema = {
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'Country', name: 'United States' },
-        { '@type': 'Country', name: 'Saudi Arabia' },
         { '@type': 'AdministrativeArea', name: 'Ontario' },
         { '@type': 'City', name: 'Pelham' },
         { '@type': 'City', name: 'Niagara Falls' },
@@ -241,7 +240,7 @@ const schema = {
           name: 'Does Karavan Hub work with businesses outside Ontario?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "We are based in Niagara but we work with clients across Canada, the US, and Saudi Arabia. Everything is remote-first. As long as we can get on a call, we are good.",
+            text: "We are based in Niagara. We work with businesses across Niagara, the GTA and Buffalo, and anywhere else in Canada and the US. Everything is remote-first. As long as we can get on a call, we are good.",
           },
         },
       ],
@@ -269,7 +268,7 @@ export default function ContactPage() {
           <dt>Consultation</dt><dd>Free 30-minute consultation, no commitment</dd>
           <dt>Book online</dt><dd>https://calendly.com/karavanhub/30min</dd>
           <dt>Business hours</dt><dd>Monday to Friday, 9:00 AM to 5:00 PM EST</dd>
-          <dt>Service areas</dt><dd>Niagara Region, Ontario, Canada, United States, Saudi Arabia</dd>
+          <dt>Service areas</dt><dd>Niagara Region, Greater Toronto Area, Buffalo and Western New York</dd>
           <dt>Services offered</dt><dd>Custom software development, AI integration and automation, web design and development, data analytics and business intelligence, digital transformation strategy, workflow optimization</dd>
           <dt>Languages</dt><dd>English</dd>
         </dl>
@@ -611,7 +610,7 @@ export default function ContactPage() {
             <div className="bg-[#f8fafc] rounded-xl p-6 border-l-2 border-l-[#2563eb] transition-all duration-200 hover:bg-[#f0f4ff] hover:shadow-sm">
               <h3 className="text-[16px] font-semibold text-[var(--text-dark)] mb-2">Do you work with businesses outside Ontario?</h3>
               <p className="text-[15px] text-[var(--text-body)] leading-[1.7]">
-                We're based in Niagara but we work with clients across Canada, the US, and Saudi Arabia. Everything's remote-first. As long as we can get on a call, we're good.
+                We're based in Niagara. We work with businesses across Niagara, the GTA and Buffalo, and anywhere else in Canada and the US. Everything's remote-first. As long as we can get on a call, we're good.
               </p>
             </div>
           </div>

@@ -123,7 +123,6 @@ const schema = {
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'Country', name: 'United States' },
-        { '@type': 'Country', name: 'Saudi Arabia' },
         { '@type': 'AdministrativeArea', name: 'Ontario' },
         { '@type': 'City', name: 'Pelham' },
         { '@type': 'City', name: 'Niagara Falls' },
@@ -428,14 +427,14 @@ export default function AboutPage() {
       {/* Visually hidden summary for AEO — crawlable by search engines and AI */}
       <div className="sr-only" role="doc-abstract">
         <h2>About Karavan Hub</h2>
-        <p>Karavan Hub is an IT consulting company based in Pelham, Niagara, Ontario, Canada. Founded by Nyah S., a former Registered Nurse and Care Coordinator with Ontario Health, Karavan Hub builds custom software, AI automation, web solutions, and data analytics for small and medium businesses. The company serves clients across Canada, the United States, and Saudi Arabia.</p>
+        <p>Karavan Hub is an IT consulting company based in Pelham, Niagara, Ontario, Canada. Founded by Nyah S., a former Registered Nurse and Care Coordinator with Ontario Health, Karavan Hub builds custom software, AI automation, web solutions, and data analytics for small and medium businesses. The company serves clients in Niagara, the Greater Toronto Area and Buffalo, New York.</p>
         <p>What makes Karavan Hub different: the founder's healthcare background means every solution is built around the people who actually use it. Karavan Hub tells clients when AI is not the right fit and recommends simpler alternatives when appropriate.</p>
         <dl>
           <dt>Location</dt><dd>Pelham, Niagara Region, Ontario, Canada</dd>
           <dt>Founded</dt><dd>2024</dd>
           <dt>Founder</dt><dd>Nyah S., former Registered Nurse (Ontario Health)</dd>
           <dt>Services</dt><dd>Custom software development, web design, AI automation, data analytics, digital transformation</dd>
-          <dt>Markets</dt><dd>Canada, United States, Saudi Arabia</dd>
+          <dt>Markets</dt><dd>Niagara, Greater Toronto Area, Buffalo and Western New York</dd>
           <dt>Contact</dt><dd>905-301-3936, karavan.it.hub@gmail.com</dd>
         </dl>
       </div>

@@ -88,7 +88,6 @@ const jsonLdGraph = {
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'Country', name: 'United States' },
-        { '@type': 'Country', name: 'Saudi Arabia' },
       ],
       knowsAbout: [
         'Custom Software Development',

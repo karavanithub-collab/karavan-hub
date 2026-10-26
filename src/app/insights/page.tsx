@@ -76,7 +76,7 @@ const schema = {
         telephone: '+1-905-301-3936',
         contactType: 'customer service',
         email: 'karavan.it.hub@gmail.com',
-        areaServed: ['CA', 'US', 'SA'],
+        areaServed: ['CA', 'US'],
         availableLanguage: 'English',
       },
       address: {
@@ -89,7 +89,6 @@ const schema = {
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'Country', name: 'United States' },
-        { '@type': 'Country', name: 'Saudi Arabia' },
       ],
       sameAs: [
         'https://www.linkedin.com/company/karavanhub',

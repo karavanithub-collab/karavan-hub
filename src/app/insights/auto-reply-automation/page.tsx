@@ -76,7 +76,7 @@ const SCHEMA_LD = {
         url: 'https://www.karavanhub.com/logo.png',
       },
       description:
-        'AI and IT solutions company based in Niagara, Ontario. We build custom AI automation, software, and data systems for small and medium businesses across Canada, the US, and Saudi Arabia.',
+        'AI and IT solutions company based in Niagara, Ontario. We build custom AI automation, software, and data systems for small and medium businesses in Niagara, the GTA and Buffalo, and anywhere else in Canada and the US.',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Suite 31',
@@ -96,12 +96,11 @@ const SCHEMA_LD = {
         email: 'karavan.it.hub@gmail.com',
         contactType: 'sales',
         availableLanguage: ['English'],
-        areaServed: ['CA', 'US', 'SA'],
+        areaServed: ['CA', 'US'],
       },
       areaServed: [
         { '@type': 'Country', name: 'Canada' },
         { '@type': 'Country', name: 'United States' },
-        { '@type': 'Country', name: 'Saudi Arabia' },
       ],
       founder: {
         '@type': 'Person',
